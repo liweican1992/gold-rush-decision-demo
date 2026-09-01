@@ -80,7 +80,7 @@ type RouteDefinition = {
   results: [ResultDefinition, ResultDefinition, ResultDefinition]
 }
 
-export const INTRO_VIDEO = '/videos/demo/intro.mp4'
+export const INTRO_VIDEO = '/videos/web/intro.mp4'
 export const PRIMARY_CHOICE_ID = 'choice-primary' as const
 
 const SITUATION_SUBTITLES: Record<RouteId, SubtitleCue[]> = {
@@ -278,8 +278,8 @@ function createStoryNodes(): Record<StoryNodeId, StoryNode> {
     const choiceId = `choice-${route.id}` as SecondaryChoiceId
     nodes[situationId] = {
       kind: 'video', id: situationId, title: route.situationTitle,
-      expectedVideo: `/videos/demo/${route.situationFile}`,
-      video: `/videos/demo/${route.situationFile}`,
+      expectedVideo: `/videos/web/${route.situationFile}`,
+      video: `/videos/web/${route.situationFile}`,
       subtitles: SITUATION_SUBTITLES[route.id], synopsis: route.situationSynopsis, next: choiceId,
     }
     nodes[choiceId] = {
@@ -291,7 +291,7 @@ function createStoryNodes(): Record<StoryNodeId, StoryNode> {
       const endingId = `ending-${result.id}` as EndingId
       nodes[result.id] = {
         kind: 'video', id: result.id, title: result.videoTitle,
-        expectedVideo: `/videos/demo/${result.videoFile}`, subtitles: [], synopsis: result.videoSynopsis, next: endingId,
+        expectedVideo: `/videos/web/${result.videoFile}`, subtitles: [], synopsis: result.videoSynopsis, next: endingId,
       }
       nodes[endingId] = {
         kind: 'ending', id: endingId, resultId: result.id, title: result.endingTitle,

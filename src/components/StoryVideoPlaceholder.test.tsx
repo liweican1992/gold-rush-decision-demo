@@ -9,7 +9,7 @@ describe('StoryVideoPlaceholder', () => {
         nodeId="A0"
         title="山脊第三天：风暴提前"
         synopsis="横向暴雪提前抵达。"
-        expectedVideo="/videos/demo/route-a-situation.mp4"
+        expectedVideo="/videos/web/route-a-situation.mp4"
         onContinue={() => undefined}
       />,
     )

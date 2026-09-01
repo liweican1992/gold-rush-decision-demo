@@ -21,7 +21,7 @@ describe('three-layer classroom story graph', () => {
       const node = getNode(id)
       expect(node.kind).toBe('video')
       if (node.kind !== 'video') throw new Error(`${id} must be a video node`)
-      expect(node.video).toBe(`/videos/demo/route-${id[0].toLowerCase()}-situation.mp4`)
+      expect(node.video).toBe(`/videos/web/route-${id[0].toLowerCase()}-situation.mp4`)
       expect(node.subtitles.length).toBeGreaterThan(0)
       expect(node.subtitles.every((cue) => cue.start < cue.end)).toBe(true)
     }
