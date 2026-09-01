@@ -1,0 +1,13 @@
+node_modules/
+dist/
+tmp/
+短剧制作资料/
+public/source/
+public/videos/mainline-*.mp4
+
+public/videos/demo/*
+!public/videos/demo/intro.mp4
+!public/videos/demo/route-a-situation.mp4
+!public/videos/demo/route-b-situation.mp4
+!public/videos/demo/route-c-situation.mp4
+!public/videos/demo/route-d-situation.mp4

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+
+# Production source packs stay local; the GitHub repository is the playable Web app.
+短剧制作资料/
+tmp/
+public/source/
+public/videos/mainline-*.mp4
+
+# Retired prototype clips are not used by the current story graph.
+public/videos/demo/*
+!public/videos/demo/intro.mp4
+!public/videos/demo/route-a-situation.mp4
+!public/videos/demo/route-b-situation.mp4
+!public/videos/demo/route-c-situation.mp4
+!public/videos/demo/route-d-situation.mp4
+.vercel
