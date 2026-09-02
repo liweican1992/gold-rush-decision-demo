@@ -60,6 +60,56 @@ describe('three-layer classroom story graph', () => {
     expect(JSON.stringify(STORY_NODES)).not.toMatch(/激进型|稳妥型|保守型|观望型/)
   })
 
+  it('gives B3 a crossing mechanism that the equipment sacrifice actually enables', () => {
+    const choice = getNode('choice-B')
+    expect(choice.kind).toBe('choice')
+    if (choice.kind !== 'choice') throw new Error('choice-B must be a choice node')
+
+    const option = choice.options.find((item) => item.id === 'B3')
+    expect(option?.factHint).toContain('检修索桥')
+    expect(option?.factHint).toContain('重型设备无法通过')
+  })
+
+  it('makes the D-route reversal temporally explicit and ends in a full last-deadline registration', () => {
+    const situation = getNode('D0')
+    const choice = getNode('choice-D')
+    const ending = getNode('ending-D3')
+
+    expect(situation.kind).toBe('video')
+    expect(choice.kind).toBe('choice')
+    expect(ending.kind).toBe('ending')
+    if (situation.kind !== 'video' || choice.kind !== 'choice' || ending.kind !== 'ending') {
+      throw new Error('D route nodes must keep their expected kinds')
+    }
+
+    expect(situation.title).toContain('撤离第六天')
+    expect(situation.synopsis).toContain('购买勘探资料')
+    expect(choice.options.find((item) => item.id === 'D3')?.label).toBe('取消撤离，轻装抢登记')
+    expect(ending.metrics.days).toBe('最后时限')
+    expect(ending.metrics.claim).toBe('完成登记')
+    expect(ending.metrics.capability).toContain('补给')
+  })
+
+  it('foreshadows the transport capability before C3 offers it as an option', () => {
+    const situation = getNode('C0')
+    const choice = getNode('choice-C')
+    expect(situation.kind).toBe('video')
+    expect(choice.kind).toBe('choice')
+    if (situation.kind !== 'video' || choice.kind !== 'choice') {
+      throw new Error('C route nodes must keep their expected kinds')
+    }
+    expect(situation.synopsis).toContain('当地运输队')
+    expect(choice.prompt).toContain('当地运输队')
+  })
+
+  it('states the competitor offer on the D choice screen so the retained clip remains usable', () => {
+    const choice = getNode('choice-D')
+    expect(choice.kind).toBe('choice')
+    if (choice.kind !== 'choice') throw new Error('choice-D must be a choice node')
+    expect(choice.prompt).toContain('竞争者')
+    expect(choice.prompt).toContain('收购勘探资料')
+  })
+
   it('has no dead links and all twelve endings are reachable', () => {
     const report = validateStoryGraph()
     expect(report.errors).toEqual([])
@@ -107,7 +157,7 @@ describe('three-layer classroom story graph', () => {
       currentNodeId: 'ending-D3' as const,
       decisions: [
         { choiceNodeId: PRIMARY_CHOICE_ID, optionId: 'D', label: '等待 3–4 周安全撤离' },
-        { choiceNodeId: 'choice-D' as const, optionId: 'D3', label: '利用天气窗口重返矿区' },
+        { choiceNodeId: 'choice-D' as const, optionId: 'D3', label: '取消撤离，轻装抢登记' },
       ],
       failedVideoIds: [],
     }
