@@ -8,9 +8,10 @@ type DemoVideoStageProps = {
   onError: () => void
   subtitles?: SubtitleCue[]
   children?: ReactNode
+  freezeAtEnd?: boolean
 }
 
-export function DemoVideoStage({ src, badge, onEnded, onError, subtitles = [], children }: DemoVideoStageProps) {
+export function DemoVideoStage({ src, badge, onEnded, onError, subtitles = [], children, freezeAtEnd = false }: DemoVideoStageProps) {
   const [videoError, setVideoError] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const activeSubtitle = findSubtitle(subtitles, currentTime)
@@ -18,7 +19,13 @@ export function DemoVideoStage({ src, badge, onEnded, onError, subtitles = [], c
   useEffect(() => {
     setVideoError(false)
     setCurrentTime(0)
-  }, [src])
+  }, [src, freezeAtEnd])
+
+  const freezeOnLastFrame = (video: HTMLVideoElement) => {
+    if (!freezeAtEnd || !Number.isFinite(video.duration)) return
+    video.pause()
+    video.currentTime = Math.max(0, video.duration - 1 / 24)
+  }
 
   return (
     <section className="demo-video-stage">
@@ -30,11 +37,18 @@ export function DemoVideoStage({ src, badge, onEnded, onError, subtitles = [], c
         </div>
       ) : (
         <video
-          autoPlay
-          key={src}
+          autoPlay={!freezeAtEnd}
+          key={`${src}-${freezeAtEnd ? 'frozen' : 'playing'}`}
           playsInline
           preload="auto"
           src={src}
+          onLoadedMetadata={(event) => freezeOnLastFrame(event.currentTarget)}
+          onSeeked={(event) => {
+            if (freezeAtEnd) {
+              event.currentTarget.pause()
+              setCurrentTime(event.currentTarget.currentTime)
+            }
+          }}
           onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}
           onEnded={onEnded}
           onError={() => {

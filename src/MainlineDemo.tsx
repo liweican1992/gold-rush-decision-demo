@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react'
+import { useReducer } from 'react'
 import { DemoVideoStage } from './components/DemoVideoStage'
 import { RouteChoiceOverlay } from './components/RouteChoiceOverlay'
 import { RouteResult } from './components/RouteResult'
@@ -8,6 +8,7 @@ import {
   INITIAL_HUD,
   INTRO_VIDEO,
   PRIMARY_CHOICE_ID,
+  getChoiceBackdropVideo,
   getNode,
   type StoryMetrics,
 } from './demo/story'
@@ -34,17 +35,14 @@ function stageLabel(nodeId: string, kind?: string) {
 
 export default function MainlineDemo() {
   const [state, dispatch] = useReducer(reduceDemoState, INITIAL_DEMO_STATE)
-  const [choiceUsesIntroTail, setChoiceUsesIntroTail] = useState(true)
   const node = state.currentNodeId === 'launch' ? undefined : getNode(state.currentNodeId)
   const ending = node?.kind === 'ending' ? node : undefined
 
   const restart = () => {
-    setChoiceUsesIntroTail(true)
     dispatch({ type: 'RESTART' })
   }
 
   const backToPrimaryChoice = () => {
-    setChoiceUsesIntroTail(false)
     dispatch({ type: 'BACK_TO_CHOICE', choiceNodeId: PRIMARY_CHOICE_ID })
   }
 
@@ -75,7 +73,7 @@ export default function MainlineDemo() {
       <DemoHud metrics={ending?.metrics} />
 
       <section className="demo-stage">
-        {(node.id === 'intro' || (node.id === PRIMARY_CHOICE_ID && choiceUsesIntroTail)) && (
+        {node.id === 'intro' && (
           <DemoVideoStage
             badge="AI剧情 · 公共开场"
             src={INTRO_VIDEO}
@@ -83,21 +81,22 @@ export default function MainlineDemo() {
             onEnded={() => dispatch({ type: 'VIDEO_ENDED' })}
             onError={() => dispatch({ type: 'VIDEO_FAILED' })}
           >
-            {node.kind === 'choice' && (
-              <RouteChoiceOverlay
-                choice={node}
-                onSelect={(optionId) => dispatch({ type: 'SELECT_OPTION', optionId })}
-              />
-            )}
           </DemoVideoStage>
         )}
 
-        {node.kind === 'choice' && !(node.id === PRIMARY_CHOICE_ID && choiceUsesIntroTail) && (
-          <RouteChoiceOverlay
-            choice={node}
-            variant="static"
-            onSelect={(optionId) => dispatch({ type: 'SELECT_OPTION', optionId })}
-          />
+        {node.kind === 'choice' && (
+          <DemoVideoStage
+            badge={`${node.id === PRIMARY_CHOICE_ID ? '公共开场' : `${node.id.replace('choice-', '')}路线`} · 局面停留`}
+            src={getChoiceBackdropVideo(node.id)}
+            freezeAtEnd
+            onEnded={() => undefined}
+            onError={() => undefined}
+          >
+            <RouteChoiceOverlay
+              choice={node}
+              onSelect={(optionId) => dispatch({ type: 'SELECT_OPTION', optionId })}
+            />
+          </DemoVideoStage>
         )}
 
         {node.kind === 'video' && node.id !== 'intro' && node.video && (

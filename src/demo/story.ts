@@ -83,6 +83,29 @@ type RouteDefinition = {
 export const INTRO_VIDEO = '/videos/web/intro.mp4'
 export const PRIMARY_CHOICE_ID = 'choice-primary' as const
 
+// These clips already include burned-in subtitles and transition cards.
+// Keep every unfinished result undefined so the demo can still show its synopsis placeholder.
+const COMPLETED_RESULT_VIDEOS: Partial<Record<ResultId, string>> = {
+  A1: '/videos/web/route-a1-press-on.mp4',
+  A2: '/videos/web/route-a2-bivouac.mp4',
+  A3: '/videos/web/route-a3-switch-valley.mp4',
+  B1: '/videos/web/route-b1-ford.mp4',
+}
+
+// Timings are measured against the final concatenated web clips, not the generation prompt.
+const COMPLETED_RESULT_SUBTITLES: Partial<Record<ResultId, SubtitleCue[]>> = {
+  A1: [
+    { start: 10.14, end: 17.14, text: '山口过了' },
+    { start: 17.14, end: 18.6, text: '设备丢了一箱' },
+    { start: 18.6, end: 20.28, text: '你的手撑不住了' },
+  ],
+  A3: [
+    { start: 10.14, end: 17.54, text: '折返三天' },
+    { start: 17.54, end: 18.78, text: '再走山谷' },
+    { start: 18.78, end: 20.24, text: '赶不上登记了' },
+  ],
+}
+
 const SITUATION_SUBTITLES: Record<RouteId, SubtitleCue[]> = {
   A: [
     { start: 6.14, end: 7.26, text: '山口就在前面' },
@@ -99,9 +122,9 @@ const SITUATION_SUBTITLES: Record<RouteId, SubtitleCue[]> = {
     { start: 8.1, end: 9.76, text: '可窗口也只剩一天半' },
   ],
   D: [
-    { start: 4.84, end: 6.18, text: '我们已经决定保人' },
-    { start: 6.56, end: 8.16, text: '但还没决定' },
-    { start: 8.66, end: 10.12, text: '怎样退出' },
+    { start: 0, end: 4, text: '你们做好决定了吗' },
+    { start: 4, end: 8.12, text: '我们已经决定保人' },
+    { start: 8.12, end: 9.86, text: '但还没决定怎样退出' },
   ],
 }
 
@@ -289,9 +312,11 @@ function createStoryNodes(): Record<StoryNodeId, StoryNode> {
     }
     for (const result of route.results) {
       const endingId = `ending-${result.id}` as EndingId
+      const completedVideo = COMPLETED_RESULT_VIDEOS[result.id]
       nodes[result.id] = {
         kind: 'video', id: result.id, title: result.videoTitle,
-        expectedVideo: `/videos/web/${result.videoFile}`, subtitles: [], synopsis: result.videoSynopsis, next: endingId,
+        expectedVideo: `/videos/web/${result.videoFile}`, video: completedVideo,
+        subtitles: COMPLETED_RESULT_SUBTITLES[result.id] ?? [], synopsis: result.videoSynopsis, next: endingId,
       }
       nodes[endingId] = {
         kind: 'ending', id: endingId, resultId: result.id, title: result.endingTitle,
@@ -307,6 +332,14 @@ export const STORY_NODES = createStoryNodes()
 export const VIDEO_NODE_IDS = Object.values(STORY_NODES)
   .filter((node): node is VideoNode => node.kind === 'video')
   .map((node) => node.id)
+
+export function getChoiceBackdropVideo(choiceId: ChoiceNode['id']) {
+  if (choiceId === PRIMARY_CHOICE_ID) return INTRO_VIDEO
+  const routeId = choiceId.replace('choice-', '') as RouteId
+  const route = ROUTE_DEFINITIONS.find((item) => item.id === routeId)
+  if (!route) throw new Error(`missing route backdrop for ${choiceId}`)
+  return `/videos/web/${route.situationFile}`
+}
 
 export function getNode(id: StoryNodeId): StoryNode {
   return STORY_NODES[id]

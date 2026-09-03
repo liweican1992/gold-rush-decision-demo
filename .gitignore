@@ -17,3 +17,7 @@ public/videos/demo/*
 !public/videos/demo/route-c-situation.mp4
 !public/videos/demo/route-d-situation.mp4
 .vercel
+
+# Local agent working notes; the source-of-truth production material lives under
+# 短剧制作资料/ and is deliberately kept out of the playable-web repository.
+docs/superpowers/

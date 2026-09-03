@@ -4,6 +4,7 @@ import {
   PRIMARY_CHOICE_ID,
   STORY_NODES,
   VIDEO_NODE_IDS,
+  getChoiceBackdropVideo,
   getNode,
   validateStoryGraph,
 } from './story'
@@ -27,11 +28,52 @@ describe('three-layer classroom story graph', () => {
     }
   })
 
-  it('syncs A and C subtitles to the spoken words in the rendered clips', () => {
+  it('uses the preceding situation video as the frozen backdrop for every choice page', () => {
+    expect(getChoiceBackdropVideo('choice-primary')).toBe('/videos/web/intro.mp4')
+    expect(getChoiceBackdropVideo('choice-A')).toBe('/videos/web/route-a-situation.mp4')
+    expect(getChoiceBackdropVideo('choice-B')).toBe('/videos/web/route-b-situation.mp4')
+    expect(getChoiceBackdropVideo('choice-C')).toBe('/videos/web/route-c-situation.mp4')
+    expect(getChoiceBackdropVideo('choice-D')).toBe('/videos/web/route-d-situation.mp4')
+  })
+
+  it('plays the completed A1, A2, A3, and B1 outcome clips instead of the missing-video placeholder', () => {
+    const a1 = getNode('A1')
+    const a2 = getNode('A2')
+    const a3 = getNode('A3')
+    const b1 = getNode('B1')
+
+    expect(a1.kind).toBe('video')
+    expect(a2.kind).toBe('video')
+    expect(a3.kind).toBe('video')
+    expect(b1.kind).toBe('video')
+    if (a1.kind !== 'video' || a2.kind !== 'video' || a3.kind !== 'video' || b1.kind !== 'video') {
+      throw new Error('A1, A2, A3, and B1 must be video nodes')
+    }
+
+    expect(a1.video).toBe('/videos/web/route-a1-press-on.mp4')
+    expect(a2.video).toBe('/videos/web/route-a2-bivouac.mp4')
+    expect(a3.video).toBe('/videos/web/route-a3-switch-valley.mp4')
+    expect(b1.video).toBe('/videos/web/route-b1-ford.mp4')
+    expect(a1.subtitles).toEqual([
+      { start: 10.14, end: 17.14, text: '山口过了' },
+      { start: 17.14, end: 18.6, text: '设备丢了一箱' },
+      { start: 18.6, end: 20.28, text: '你的手撑不住了' },
+    ])
+    expect(a2.subtitles).toEqual([])
+    expect(a3.subtitles).toEqual([
+      { start: 10.14, end: 17.54, text: '折返三天' },
+      { start: 17.54, end: 18.78, text: '再走山谷' },
+      { start: 18.78, end: 20.24, text: '赶不上登记了' },
+    ])
+    expect(b1.subtitles).toEqual([])
+  })
+
+  it('syncs A, C, and the refreshed D subtitles to the spoken words in the rendered clips', () => {
     const routeA = getNode('A0')
     const routeC = getNode('C0')
-    if (routeA.kind !== 'video' || routeC.kind !== 'video') {
-      throw new Error('A0 and C0 must be video nodes')
+    const routeD = getNode('D0')
+    if (routeA.kind !== 'video' || routeC.kind !== 'video' || routeD.kind !== 'video') {
+      throw new Error('A0, C0, and D0 must be video nodes')
     }
 
     expect(routeA.subtitles).toEqual([
@@ -42,6 +84,11 @@ describe('three-layer classroom story graph', () => {
     expect(routeC.subtitles).toEqual([
       { start: 6.6, end: 7.44, text: '答案有了' },
       { start: 8.1, end: 9.76, text: '可窗口也只剩一天半' },
+    ])
+    expect(routeD.subtitles).toEqual([
+      { start: 0, end: 4, text: '你们做好决定了吗' },
+      { start: 4, end: 8.12, text: '我们已经决定保人' },
+      { start: 8.12, end: 9.86, text: '但还没决定怎样退出' },
     ])
   })
 
