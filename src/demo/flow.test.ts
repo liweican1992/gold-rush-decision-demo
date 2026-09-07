@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { INITIAL_DEMO_STATE, reduceDemoState } from './flow'
+import { INITIAL_DEMO_STATE, reduceDemoState, type DemoState } from './flow'
+import * as story from './story'
 import {
   PRIMARY_CHOICE_ID,
   STORY_NODES,
@@ -8,13 +9,16 @@ import {
   getNode,
   validateStoryGraph,
 } from './story'
+import { replayDecisions } from './strategy'
 
-describe('three-layer classroom story graph', () => {
-  it('defines one intro, four situation clips, and twelve result clips', () => {
-    expect(VIDEO_NODE_IDS).toHaveLength(17)
+describe('five-decision classroom story graph', () => {
+  it('defines route, shared-decision, and six ending video nodes', () => {
+    expect(VIDEO_NODE_IDS).toHaveLength(26)
     expect(VIDEO_NODE_IDS.filter((id) => id === 'intro')).toHaveLength(1)
     expect(VIDEO_NODE_IDS.filter((id) => /^[A-D]0$/.test(id))).toHaveLength(4)
     expect(VIDEO_NODE_IDS.filter((id) => /^[A-D][1-3]$/.test(id))).toHaveLength(12)
+    expect(VIDEO_NODE_IDS.filter((id) => /^X[1-3]$/.test(id))).toHaveLength(3)
+    expect(VIDEO_NODE_IDS.filter((id) => /^END-F[1-6]$/.test(id))).toHaveLength(6)
   })
 
   it('plays all four completed route situation videos with timed subtitles', () => {
@@ -34,6 +38,22 @@ describe('three-layer classroom story graph', () => {
     expect(getChoiceBackdropVideo('choice-B')).toBe('/videos/web/route-b-situation.mp4')
     expect(getChoiceBackdropVideo('choice-C')).toBe('/videos/web/route-c-situation.mp4')
     expect(getChoiceBackdropVideo('choice-D')).toBe('/videos/web/route-d-situation.mp4')
+    expect(getChoiceBackdropVideo('choice-X1')).toBe('/videos/web/shared-x1-priority-v2.mp4')
+    expect(getChoiceBackdropVideo('choice-X2')).toBe('/videos/web/shared-x2-control-v3.mp4')
+    expect(getChoiceBackdropVideo('choice-X3')).toBe('/videos/web/shared-x3-final-commitment-v2.mp4')
+  })
+
+  it('maps every choice page to a real tail frame extracted from its preceding video', () => {
+    const getChoiceBackdropFrame = (story as typeof story & {
+      getChoiceBackdropFrame?: (choiceId: 'choice-primary' | 'choice-A' | 'choice-B' | 'choice-C' | 'choice-D') => string
+    }).getChoiceBackdropFrame
+
+    expect(getChoiceBackdropFrame).toBeTypeOf('function')
+    expect(getChoiceBackdropFrame?.('choice-primary')).toBe('/images/choice-frames/choice-primary.webp')
+    expect(getChoiceBackdropFrame?.('choice-A')).toBe('/images/choice-frames/choice-A.webp')
+    expect(getChoiceBackdropFrame?.('choice-B')).toBe('/images/choice-frames/choice-B.webp')
+    expect(getChoiceBackdropFrame?.('choice-C')).toBe('/images/choice-frames/choice-C.webp')
+    expect(getChoiceBackdropFrame?.('choice-D')).toBe('/images/choice-frames/choice-D.webp')
   })
 
   it('plays the completed A1, A2, A3, and B1 outcome clips instead of the missing-video placeholder', () => {
@@ -68,6 +88,38 @@ describe('three-layer classroom story graph', () => {
     expect(b1.subtitles).toEqual([])
   })
 
+  it('plays B2 and B3 with subtitles that begin after the measured speech onset', () => {
+    const b2 = getNode('B2')
+    const b3 = getNode('B3')
+
+    expect(b2.kind).toBe('video')
+    expect(b3.kind).toBe('video')
+    if (b2.kind !== 'video' || b3.kind !== 'video') {
+      throw new Error('B2 and B3 must be video nodes')
+    }
+
+    expect(b2.video).toBe('/videos/web/route-b2-detour.mp4')
+    expect(b2.subtitles).toEqual([
+      { start: 0.68, end: 1.76, text: '这座桥带不了重装' },
+      { start: 2.78, end: 5.18, text: '走山谷，人和样本都不过河' },
+      { start: 5.98, end: 6.93, text: '积雪里要八天' },
+      { start: 7.97, end: 8.5, text: '更安全' },
+      { start: 9.01, end: 9.95, text: '但会耗尽期限' },
+    ])
+
+    expect(b3.video).toBe('/videos/web/route-b3-drop-equipment.mp4')
+    expect(b3.subtitles).toEqual([
+      { start: 0.5, end: 1.68, text: '这座桥只容轻装' },
+      { start: 2.78, end: 4.37, text: '核心样本和资料随人走' },
+      { start: 4.88, end: 5.71, text: '重装留在这里' },
+      { start: 7.68, end: 8.3, text: '换回速度' },
+      { start: 8.68, end: 10.04, text: '也失去后续重勘能力' },
+    ])
+
+    expect(b2.subtitles[0].start).toBeGreaterThan(0.61)
+    expect(b3.subtitles[0].start).toBeGreaterThan(0.42)
+  })
+
   it('syncs A, C, and the refreshed D subtitles to the spoken words in the rendered clips', () => {
     const routeA = getNode('A0')
     const routeC = getNode('C0')
@@ -89,6 +141,20 @@ describe('three-layer classroom story graph', () => {
       { start: 0, end: 4, text: '你们做好决定了吗' },
       { start: 4, end: 8.12, text: '我们已经决定保人' },
       { start: 8.12, end: 9.86, text: '但还没决定怎样退出' },
+    ])
+  })
+
+  it('syncs the accepted B0 subtitles after each measured speech onset', () => {
+    const routeB = getNode('B0')
+    if (routeB.kind !== 'video') throw new Error('B0 must be a video node')
+
+    expect(routeB.subtitles).toEqual([
+      { start: 3.2, end: 4.88, text: '上游有检修索桥' },
+      { start: 5.32, end: 6.38, text: '只能走人和轻装' },
+      { start: 6.68, end: 7.44, text: '重装备过不去' },
+      { start: 8.21, end: 8.92, text: '我们只剩八天' },
+      { start: 9.73, end: 10.56, text: '沿山谷绕行' },
+      { start: 11.1, end: 12.12, text: '会把登记窗口耗尽' },
     ])
   })
 
@@ -117,24 +183,31 @@ describe('three-layer classroom story graph', () => {
     expect(option?.factHint).toContain('重型设备无法通过')
   })
 
+  it('keeps the B2 choice wording consistent with the accepted eight-day video', () => {
+    const choice = getNode('choice-B')
+    expect(choice.kind).toBe('choice')
+    if (choice.kind !== 'choice') throw new Error('choice-B must be a choice node')
+
+    expect(choice.prompt).toContain('只剩八天')
+    expect(choice.options.find((item) => item.id === 'B2')).toEqual(expect.objectContaining({
+      label: '沿山谷绕行',
+      factHint: expect.stringContaining('耗尽剩余八天'),
+    }))
+  })
+
   it('makes the D-route reversal temporally explicit and ends in a full last-deadline registration', () => {
     const situation = getNode('D0')
     const choice = getNode('choice-D')
-    const ending = getNode('ending-D3')
 
     expect(situation.kind).toBe('video')
     expect(choice.kind).toBe('choice')
-    expect(ending.kind).toBe('ending')
-    if (situation.kind !== 'video' || choice.kind !== 'choice' || ending.kind !== 'ending') {
+    if (situation.kind !== 'video' || choice.kind !== 'choice') {
       throw new Error('D route nodes must keep their expected kinds')
     }
 
-    expect(situation.title).toContain('撤离第六天')
+    expect(situation.title).toContain('等待决定后的第六天')
     expect(situation.synopsis).toContain('购买勘探资料')
     expect(choice.options.find((item) => item.id === 'D3')?.label).toBe('取消撤离，轻装抢登记')
-    expect(ending.metrics.days).toBe('最后时限')
-    expect(ending.metrics.claim).toBe('完成登记')
-    expect(ending.metrics.capability).toContain('补给')
   })
 
   it('foreshadows the transport capability before C3 offers it as an option', () => {
@@ -157,27 +230,120 @@ describe('three-layer classroom story graph', () => {
     expect(choice.prompt).toContain('收购勘探资料')
   })
 
-  it('has no dead links and all twelve endings are reachable', () => {
-    const report = validateStoryGraph()
-    expect(report.errors).toEqual([])
-    expect(report.reachableEndingIds).toHaveLength(12)
+  it('changes X2 wording when an earlier choice already established the partner or sale process', () => {
+    const x2 = getNode('choice-X2')
+    expect(x2.kind).toBe('choice')
+    if (x2.kind !== 'choice') throw new Error('choice-X2 must be a choice node')
+
+    const afterPartner = story.getChoiceOptions(x2, replayDecisions(['C', 'C3']))
+    expect(afterPartner.find((item) => item.id === 'X2-STAGED-ALLIANCE')?.label).toBe('把现有合作改为分阶段安排')
+
+    const afterOffer = story.getChoiceOptions(x2, replayDecisions(['D', 'D2']))
+    expect(afterOffer.find((item) => item.id === 'X2-SALE-NEGOTIATION')?.label).toBe('继续交易尽调')
   })
 
-  it('runs intro, primary choice, route situation, secondary choice, result video, and ending', () => {
+  it('has no dead links and all six objective endings are reachable', () => {
+    const report = validateStoryGraph()
+    expect(report.errors).toEqual([])
+    expect(report.reachableEndingIds).toHaveLength(6)
+  })
+
+  it('routes each route result into the shared X1 decision layer', () => {
     const intro = reduceDemoState(INITIAL_DEMO_STATE, { type: 'START' })
     const primaryChoice = reduceDemoState(intro, { type: 'VIDEO_ENDED' })
     const situation = reduceDemoState(primaryChoice, { type: 'SELECT_OPTION', optionId: 'A' })
     const secondaryChoice = reduceDemoState(situation, { type: 'VIDEO_ENDED' })
     const resultVideo = reduceDemoState(secondaryChoice, { type: 'SELECT_OPTION', optionId: 'A2' })
-    const ending = reduceDemoState(resultVideo, { type: 'VIDEO_ENDED' })
+    const x1Video = reduceDemoState(resultVideo, { type: 'VIDEO_ENDED' })
 
     expect(intro.currentNodeId).toBe('intro')
     expect(primaryChoice.currentNodeId).toBe('choice-primary')
     expect(situation.currentNodeId).toBe('A0')
     expect(secondaryChoice.currentNodeId).toBe('choice-A')
     expect(resultVideo.currentNodeId).toBe('A2')
-    expect(ending.currentNodeId).toBe('ending-A2')
-    expect(ending.decisions.map((decision) => decision.optionId)).toEqual(['A', 'A2'])
+    expect(x1Video.currentNodeId).toBe('X1')
+    expect(x1Video.decisions.map((decision) => decision.optionId)).toEqual(['A', 'A2'])
+  })
+
+  it('records every forward step so navigation can return through the actual visited path', () => {
+    const intro = reduceDemoState(INITIAL_DEMO_STATE, { type: 'START' })
+    const primaryChoice = reduceDemoState(intro, { type: 'VIDEO_ENDED' })
+    const situation = reduceDemoState(primaryChoice, { type: 'SELECT_OPTION', optionId: 'A' })
+    const secondaryChoice = reduceDemoState(situation, { type: 'VIDEO_ENDED' })
+
+    expect((secondaryChoice as typeof secondaryChoice & { history?: string[] }).history).toEqual([
+      'launch',
+      'intro',
+      'choice-primary',
+      'A0',
+    ])
+  })
+
+  it('returns one real step at a time from intro, route situation, and secondary choice', () => {
+    const intro = reduceDemoState(INITIAL_DEMO_STATE, { type: 'START' })
+    const launch = reduceDemoState(intro, { type: 'GO_BACK' } as never)
+    expect(launch.currentNodeId).toBe('launch')
+
+    const primaryChoice = reduceDemoState(intro, { type: 'VIDEO_ENDED' })
+    const situation = reduceDemoState(primaryChoice, { type: 'SELECT_OPTION', optionId: 'A' })
+    const backToPrimary = reduceDemoState(situation, { type: 'GO_BACK' } as never)
+    expect(backToPrimary.currentNodeId).toBe('choice-primary')
+    expect(backToPrimary.decisions).toEqual([])
+
+    const secondaryChoice = reduceDemoState(situation, { type: 'VIDEO_ENDED' })
+    const backToSituation = reduceDemoState(secondaryChoice, { type: 'GO_BACK' } as never)
+    expect(backToSituation.currentNodeId).toBe('A0')
+    expect(backToSituation.decisions.map((decision) => decision.optionId)).toEqual(['A'])
+  })
+
+  it('runs X1, X2, X3, resolves an ending, then opens the report', () => {
+    const intro = reduceDemoState(INITIAL_DEMO_STATE, { type: 'START' })
+    const primaryChoice = reduceDemoState(intro, { type: 'VIDEO_ENDED' })
+    const situation = reduceDemoState(primaryChoice, { type: 'SELECT_OPTION', optionId: 'A' })
+    const secondaryChoice = reduceDemoState(situation, { type: 'VIDEO_ENDED' })
+    const resultVideo = reduceDemoState(secondaryChoice, { type: 'SELECT_OPTION', optionId: 'A2' })
+    const x1 = reduceDemoState(resultVideo, { type: 'VIDEO_ENDED' })
+    const choiceX1 = reduceDemoState(x1, { type: 'VIDEO_ENDED' })
+    const x2 = reduceDemoState(choiceX1, { type: 'SELECT_OPTION', optionId: 'X1-PEOPLE' })
+    const choiceX2 = reduceDemoState(x2, { type: 'VIDEO_ENDED' })
+    const x3 = reduceDemoState(choiceX2, { type: 'SELECT_OPTION', optionId: 'X2-INDEPENDENT' })
+    const choiceX3 = reduceDemoState(x3, { type: 'VIDEO_ENDED' })
+    const endingVideo = reduceDemoState(choiceX3, { type: 'SELECT_OPTION', optionId: 'X3-SUBMIT-NOW' })
+    const report = reduceDemoState(endingVideo, { type: 'VIDEO_ENDED' })
+
+    expect(choiceX1.currentNodeId).toBe('choice-X1')
+    expect(x2.currentNodeId).toBe('X2')
+    expect(choiceX2.currentNodeId).toBe('choice-X2')
+    expect(x3.currentNodeId).toBe('X3')
+    expect(choiceX3.currentNodeId).toBe('choice-X3')
+    expect(endingVideo.currentNodeId).toBe('END-F1')
+    expect(report.currentNodeId).toBe('REPORT')
+    expect(report.decisions.map((decision) => decision.optionId)).toEqual(['A', 'A2', 'X1-PEOPLE', 'X2-INDEPENDENT', 'X3-SUBMIT-NOW'])
+    expect(report.strategy.evidence).toHaveLength(5)
+  })
+
+  it('reaches every F1-F6 ending through a valid five-choice path', () => {
+    const play = (choices: [string, string, string, string, string]) => {
+      let state = reduceDemoState(INITIAL_DEMO_STATE, { type: 'START' })
+      state = reduceDemoState(state, { type: 'VIDEO_ENDED' })
+      state = reduceDemoState(state, { type: 'SELECT_OPTION', optionId: choices[0] })
+      state = reduceDemoState(state, { type: 'VIDEO_ENDED' })
+      state = reduceDemoState(state, { type: 'SELECT_OPTION', optionId: choices[1] })
+      state = reduceDemoState(state, { type: 'VIDEO_ENDED' })
+      state = reduceDemoState(state, { type: 'VIDEO_ENDED' })
+      state = reduceDemoState(state, { type: 'SELECT_OPTION', optionId: choices[2] })
+      state = reduceDemoState(state, { type: 'VIDEO_ENDED' })
+      state = reduceDemoState(state, { type: 'SELECT_OPTION', optionId: choices[3] })
+      state = reduceDemoState(state, { type: 'VIDEO_ENDED' })
+      return reduceDemoState(state, { type: 'SELECT_OPTION', optionId: choices[4] })
+    }
+
+    expect(play(['A', 'A2', 'X1-PEOPLE', 'X2-INDEPENDENT', 'X3-SUBMIT-NOW']).currentNodeId).toBe('END-F1')
+    expect(play(['A', 'A1', 'X1-SPRINT', 'X2-INDEPENDENT', 'X3-SUBMIT-NOW']).currentNodeId).toBe('END-F2')
+    expect(play(['C', 'C3', 'X1-CAPABILITY', 'X2-STAGED-ALLIANCE', 'X3-JOINT-SUBMIT']).currentNodeId).toBe('END-F3')
+    expect(play(['D', 'D2', 'X1-EVIDENCE', 'X2-SALE-NEGOTIATION', 'X3-FINALIZE-SALE']).currentNodeId).toBe('END-F4')
+    expect(play(['A', 'A2', 'X1-PEOPLE', 'X2-INDEPENDENT', 'X3-SAFE-WITHDRAW']).currentNodeId).toBe('END-F5')
+    expect(play(['A', 'A3', 'X1-SPRINT', 'X2-INDEPENDENT', 'X3-LATE-FILE']).currentNodeId).toBe('END-F6')
   })
 
   it('uses the same deterministic route on repeated selections', () => {
@@ -192,6 +358,7 @@ describe('three-layer classroom story graph', () => {
     const state = {
       ...INITIAL_DEMO_STATE,
       currentNodeId: 'B0' as const,
+      history: ['launch', 'intro', PRIMARY_CHOICE_ID] as DemoState['history'],
       decisions: [{ choiceNodeId: PRIMARY_CHOICE_ID, optionId: 'B', label: '改走山谷' }],
     }
     const next = reduceDemoState(state, { type: 'VIDEO_FAILED' })
@@ -201,12 +368,13 @@ describe('three-layer classroom story graph', () => {
 
   it('returns to a secondary choice without replaying its situation video', () => {
     const state = {
-      currentNodeId: 'ending-D3' as const,
+      ...INITIAL_DEMO_STATE,
+      currentNodeId: 'X1' as const,
       decisions: [
         { choiceNodeId: PRIMARY_CHOICE_ID, optionId: 'D', label: '等待 3–4 周安全撤离' },
         { choiceNodeId: 'choice-D' as const, optionId: 'D3', label: '取消撤离，轻装抢登记' },
       ],
-      failedVideoIds: [],
+      history: ['launch', 'intro', PRIMARY_CHOICE_ID, 'D0', 'choice-D', 'D3'] as DemoState['history'],
     }
     const back = reduceDemoState(state, { type: 'BACK_TO_CHOICE', choiceNodeId: 'choice-D' })
     expect(back.currentNodeId).toBe('choice-D')

@@ -18,9 +18,9 @@ export function RouteChoiceOverlay({
       </div>
 
       <div className={`route-choice-grid route-choice-grid-${choice.options.length}`}>
-        {choice.options.map((option) => (
+        {choice.options.map((option, index) => (
           <button key={option.id} type="button" onClick={() => onSelect(option.id)}>
-            <b>{option.id}</b>
+            <b>{choice.id.startsWith('choice-X') ? String(index + 1).padStart(2, '0') : option.id}</b>
             <strong>{option.label}</strong>
             <small>{option.factHint}</small>
           </button>

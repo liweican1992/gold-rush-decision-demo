@@ -1,25 +1,29 @@
 import { useReducer } from 'react'
 import { DemoVideoStage } from './components/DemoVideoStage'
 import { RouteChoiceOverlay } from './components/RouteChoiceOverlay'
-import { RouteResult } from './components/RouteResult'
 import { StoryVideoPlaceholder } from './components/StoryVideoPlaceholder'
+import { StrategyReport } from './components/StrategyReport'
 import { INITIAL_DEMO_STATE, reduceDemoState } from './demo/flow'
 import {
-  INITIAL_HUD,
-  INTRO_VIDEO,
   PRIMARY_CHOICE_ID,
+  getChoiceBackdropFrame,
   getChoiceBackdropVideo,
+  getChoiceOptions,
   getNode,
-  type StoryMetrics,
+  type StoryNode,
 } from './demo/story'
+import type { StrategyProgress } from './demo/strategy'
 
-function DemoHud({ metrics = INITIAL_HUD }: { metrics?: StoryMetrics }) {
+function DemoHud({ progress }: { progress: StrategyProgress }) {
+  const { objective } = progress
   return (
     <div className="demo-hud" aria-label="当前状态">
-      <div><span>矿权期限</span><strong>{metrics.days}</strong></div>
-      <div><span>人员状态</span><strong>{metrics.people}</strong></div>
-      <div><span>团队能力</span><strong>{metrics.capability}</strong></div>
-      <div><span>矿权状态</span><strong>{metrics.claim}</strong></div>
+      <div><span>登记期限</span><strong>剩余 {objective.time_remaining} 天</strong></div>
+      <div><span>人员健康</span><strong>{objective.health}</strong></div>
+      <div><span>执行能力</span><strong>{objective.execution}</strong></div>
+      <div><span>信息质量</span><strong>{objective.information}</strong></div>
+      <div><span>控制空间</span><strong>{objective.control}</strong></div>
+      <div><span>资本回收</span><strong>{objective.capital_recovery}</strong></div>
     </div>
   )
 }
@@ -28,22 +32,48 @@ function stageLabel(nodeId: string, kind?: string) {
   if (nodeId === 'launch') return '启动'
   if (nodeId === 'intro') return '共同剧情'
   if (nodeId === PRIMARY_CHOICE_ID) return '一级路线选择'
+  if (nodeId === 'X1' || nodeId === 'choice-X1') return '资源优先级'
+  if (nodeId === 'X2' || nodeId === 'choice-X2') return '组织边界'
+  if (nodeId === 'X3' || nodeId === 'choice-X3') return '最终承诺'
+  if (nodeId.startsWith('END-F')) return '客观结局'
+  if (nodeId === 'REPORT') return '战略画像报告'
   if (kind === 'choice') return '路线局面决策'
-  if (kind === 'ending') return '战略复盘'
   return `${nodeId} · 剧情节点`
+}
+
+export function DemoFooterActions({
+  nodeKind,
+  canGoBack,
+  onBack,
+  onSkip,
+}: {
+  nodeKind: StoryNode['kind']
+  canGoBack: boolean
+  onBack: () => void
+  onSkip: () => void
+}) {
+  return (
+    <div className="demo-footer-actions">
+      {canGoBack && (
+        <button className="demo-footer-back" type="button" onClick={onBack}>
+          <span aria-hidden="true">←</span> 返回上一步
+        </button>
+      )}
+      {nodeKind === 'video' && (
+        <button className="demo-footer-skip" type="button" onClick={onSkip}>
+          跳过剧情 <span aria-hidden="true">→</span>
+        </button>
+      )}
+    </div>
+  )
 }
 
 export default function MainlineDemo() {
   const [state, dispatch] = useReducer(reduceDemoState, INITIAL_DEMO_STATE)
   const node = state.currentNodeId === 'launch' ? undefined : getNode(state.currentNodeId)
-  const ending = node?.kind === 'ending' ? node : undefined
 
   const restart = () => {
     dispatch({ type: 'RESTART' })
-  }
-
-  const backToPrimaryChoice = () => {
-    dispatch({ type: 'BACK_TO_CHOICE', choiceNodeId: PRIMARY_CHOICE_ID })
   }
 
   if (!node) {
@@ -53,7 +83,7 @@ export default function MainlineDemo() {
         <div className="launch-content">
           <span>STRATEGY CLASS · INTERACTIVE MOVIE</span>
           <h1>淘金决策局</h1>
-          <p>一段共同剧情 · 四条战略路线 · 十二种可比较结果</p>
+          <p>五次连续决策 · 四条战略路线 · 六类客观结局</p>
           <button type="button" onClick={() => dispatch({ type: 'START' })}>开始游戏 <strong>→</strong></button>
           <small>桌面端本地演示 · 真实视频开场 · 缺失场景自动降级</small>
         </div>
@@ -70,18 +100,18 @@ export default function MainlineDemo() {
         <div className="demo-local"><i /> 本地演示</div>
       </header>
 
-      <DemoHud metrics={ending?.metrics} />
+      <DemoHud progress={state.strategy} />
 
       <section className="demo-stage">
-        {node.id === 'intro' && (
+        {node.kind === 'video' && node.video && (
           <DemoVideoStage
-            badge="AI剧情 · 公共开场"
-            src={INTRO_VIDEO}
-            subtitles={node.kind === 'video' ? node.subtitles : []}
+            badge={node.id === 'intro' ? 'AI剧情 · 公共开场' : node.id.startsWith('END-F') ? `${node.id} · 客观结局` : `${node.id} · 真实剧情`}
+            src={node.video}
+            subtitles={node.subtitles}
+            captionSrc={node.captionSrc}
             onEnded={() => dispatch({ type: 'VIDEO_ENDED' })}
             onError={() => dispatch({ type: 'VIDEO_FAILED' })}
-          >
-          </DemoVideoStage>
+          />
         )}
 
         {node.kind === 'choice' && (
@@ -89,27 +119,18 @@ export default function MainlineDemo() {
             badge={`${node.id === PRIMARY_CHOICE_ID ? '公共开场' : `${node.id.replace('choice-', '')}路线`} · 局面停留`}
             src={getChoiceBackdropVideo(node.id)}
             freezeAtEnd
+            freezeFrameSrc={getChoiceBackdropFrame(node.id)}
             onEnded={() => undefined}
             onError={() => undefined}
           >
             <RouteChoiceOverlay
-              choice={node}
-              onSelect={(optionId) => dispatch({ type: 'SELECT_OPTION', optionId })}
+              choice={{ ...node, options: getChoiceOptions(node, state.strategy) }}
+              onSelect={(optionId) => dispatch({ type: 'SELECT_OPTION', optionId, timestamp: new Date().toISOString() })}
             />
           </DemoVideoStage>
         )}
 
-        {node.kind === 'video' && node.id !== 'intro' && node.video && (
-          <DemoVideoStage
-            badge={`${node.id} · 真实剧情`}
-            src={node.video}
-            subtitles={node.subtitles}
-            onEnded={() => dispatch({ type: 'VIDEO_ENDED' })}
-            onError={() => dispatch({ type: 'VIDEO_FAILED' })}
-          />
-        )}
-
-        {node.kind === 'video' && node.id !== 'intro' && !node.video && (
+        {node.kind === 'video' && !node.video && (
           <StoryVideoPlaceholder
             nodeId={node.id}
             title={node.title}
@@ -119,23 +140,23 @@ export default function MainlineDemo() {
           />
         )}
 
-        {ending && (
-          <RouteResult
-            ending={ending}
+        {node.kind === 'report' && (
+          <StrategyReport
+            progress={state.strategy}
             decisions={state.decisions}
-            videoFailed={state.failedVideoIds.includes(ending.resultId)}
-            onBackToRouteChoice={() => dispatch({ type: 'BACK_TO_CHOICE', choiceNodeId: ending.parentChoiceId })}
-            onBackToPrimaryChoice={backToPrimaryChoice}
             onRestart={restart}
           />
         )}
       </section>
 
       <footer className="demo-footer">
-        <span><i /> 固定两层分支 · 4条路线 · 12种结果</span>
-        {node.id !== PRIMARY_CHOICE_ID && (
-          <button type="button" onClick={backToPrimaryChoice}>直接看一级选择</button>
-        )}
+        <span><i /> 单人决策 · 5次选择 · 6类结局 · 战略画像</span>
+        <DemoFooterActions
+          nodeKind={node.kind}
+          canGoBack={state.history.length > 0}
+          onBack={() => dispatch({ type: 'GO_BACK' })}
+          onSkip={() => dispatch({ type: 'VIDEO_ENDED' })}
+        />
       </footer>
     </main>
   )

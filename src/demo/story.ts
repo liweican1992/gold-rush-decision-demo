@@ -1,11 +1,32 @@
-import { INTRO_SUBTITLES, type SubtitleCue } from './subtitles'
+import {
+  END_F3_SUBTITLES,
+  END_F4_SUBTITLES,
+  END_F5_SUBTITLES,
+  END_F6_SUBTITLES,
+  END_SUBMIT_SHARED_SUBTITLES,
+  INTRO_SUBTITLES,
+  SHARED_X1_SUBTITLES,
+  SHARED_X2_SUBTITLES,
+  SHARED_X3_SUBTITLES,
+  type SubtitleCue,
+} from './subtitles'
+import {
+  DECISION_DEFINITIONS,
+  ENDING_OUTCOMES,
+  getAvailableX3Options,
+  type EndingOutcomeId,
+  type StrategyProgress,
+} from './strategy'
 
 export type RouteId = 'A' | 'B' | 'C' | 'D'
 export type ResultId = `${RouteId}${1 | 2 | 3}`
 export type SituationId = `${RouteId}0`
 export type SecondaryChoiceId = `choice-${RouteId}`
 export type EndingId = `ending-${ResultId}`
-export type StoryNodeId = 'intro' | 'choice-primary' | SituationId | SecondaryChoiceId | ResultId | EndingId
+export type SharedVideoId = 'X1' | 'X2' | 'X3'
+export type SharedChoiceId = `choice-${SharedVideoId}`
+export type ReportId = 'REPORT'
+export type StoryNodeId = 'intro' | 'choice-primary' | SituationId | SecondaryChoiceId | ResultId | SharedVideoId | SharedChoiceId | EndingOutcomeId | ReportId
 
 export type StoryMetrics = {
   days: string
@@ -16,25 +37,26 @@ export type StoryMetrics = {
 
 export type VideoNode = {
   kind: 'video'
-  id: 'intro' | SituationId | ResultId
+  id: 'intro' | SituationId | ResultId | SharedVideoId | EndingOutcomeId
   title: string
   expectedVideo: string
   video?: string
   subtitles: SubtitleCue[]
+  captionSrc?: string
   synopsis: string
-  next: 'choice-primary' | SecondaryChoiceId | EndingId
+  next: StoryNodeId
 }
 
 export type ChoiceOption = {
-  id: RouteId | ResultId
+  id: string
   label: string
   factHint: string
-  target: SituationId | ResultId
+  target?: StoryNodeId
 }
 
 export type ChoiceNode = {
   kind: 'choice'
-  id: 'choice-primary' | SecondaryChoiceId
+  id: 'choice-primary' | SecondaryChoiceId | SharedChoiceId
   eyebrow: string
   prompt: string
   context: string
@@ -53,7 +75,13 @@ export type EndingNode = {
   parentChoiceId: SecondaryChoiceId
 }
 
-export type StoryNode = VideoNode | ChoiceNode | EndingNode
+export type ReportNode = {
+  kind: 'report'
+  id: ReportId
+  title: string
+}
+
+export type StoryNode = VideoNode | ChoiceNode | ReportNode
 
 type ResultDefinition = {
   id: ResultId
@@ -83,13 +111,14 @@ type RouteDefinition = {
 export const INTRO_VIDEO = '/videos/web/intro.mp4'
 export const PRIMARY_CHOICE_ID = 'choice-primary' as const
 
-// These clips already include burned-in subtitles and transition cards.
 // Keep every unfinished result undefined so the demo can still show its synopsis placeholder.
 const COMPLETED_RESULT_VIDEOS: Partial<Record<ResultId, string>> = {
   A1: '/videos/web/route-a1-press-on.mp4',
   A2: '/videos/web/route-a2-bivouac.mp4',
   A3: '/videos/web/route-a3-switch-valley.mp4',
   B1: '/videos/web/route-b1-ford.mp4',
+  B2: '/videos/web/route-b2-detour.mp4',
+  B3: '/videos/web/route-b3-drop-equipment.mp4',
 }
 
 // Timings are measured against the final concatenated web clips, not the generation prompt.
@@ -104,6 +133,20 @@ const COMPLETED_RESULT_SUBTITLES: Partial<Record<ResultId, SubtitleCue[]>> = {
     { start: 17.54, end: 18.78, text: '再走山谷' },
     { start: 18.78, end: 20.24, text: '赶不上登记了' },
   ],
+  B2: [
+    { start: 0.68, end: 1.76, text: '这座桥带不了重装' },
+    { start: 2.78, end: 5.18, text: '走山谷，人和样本都不过河' },
+    { start: 5.98, end: 6.93, text: '积雪里要八天' },
+    { start: 7.97, end: 8.5, text: '更安全' },
+    { start: 9.01, end: 9.95, text: '但会耗尽期限' },
+  ],
+  B3: [
+    { start: 0.5, end: 1.68, text: '这座桥只容轻装' },
+    { start: 2.78, end: 4.37, text: '核心样本和资料随人走' },
+    { start: 4.88, end: 5.71, text: '重装留在这里' },
+    { start: 7.68, end: 8.3, text: '换回速度' },
+    { start: 8.68, end: 10.04, text: '也失去后续重勘能力' },
+  ],
 }
 
 const SITUATION_SUBTITLES: Record<RouteId, SubtitleCue[]> = {
@@ -113,9 +156,12 @@ const SITUATION_SUBTITLES: Record<RouteId, SubtitleCue[]> = {
     { start: 8.94, end: 9.96, text: '比预报早了一天' },
   ],
   B: [
-    { start: 5.5, end: 7.34, text: '绕过去至少再多四天' },
-    { start: 8.08, end: 9.08, text: '照这个速度' },
-    { start: 9.2, end: 10.14, text: '十四天不够' },
+    { start: 3.2, end: 4.88, text: '上游有检修索桥' },
+    { start: 5.32, end: 6.38, text: '只能走人和轻装' },
+    { start: 6.68, end: 7.44, text: '重装备过不去' },
+    { start: 8.21, end: 8.92, text: '我们只剩八天' },
+    { start: 9.73, end: 10.56, text: '沿山谷绕行' },
+    { start: 11.1, end: 12.12, text: '会把登记窗口耗尽' },
   ],
   C: [
     { start: 6.6, end: 7.44, text: '答案有了' },
@@ -178,8 +224,8 @@ export const ROUTE_DEFINITIONS: RouteDefinition[] = [
     factHint: '预计 2–3 周；人员风险较低，但可能错过期限',
     situationTitle: '山谷第六天：木桥被冲断',
     situationFile: 'route-b-situation.mp4',
-    situationSynopsis: '融雪让河道突然上涨，原有木桥被冲断；队伍安全，但设备拖慢了速度。',
-    choicePrompt: '绕行至少再多四天，十四天已经不够。队伍如何通过河道？',
+    situationSynopsis: '第六天，融雪让河道上涨并冲断木桥；上游检修索桥只能通过人员和轻装，重型设备无法通过，登记期限只剩八天。',
+    choicePrompt: '只剩八天：断桥无法通行，检修索桥只能走轻装。队伍如何通过河道？',
     reflectionQuestion: '一条更安全的路径，如果不能实现目标，是否仍然是好战略？',
     results: [
       {
@@ -191,8 +237,8 @@ export const ROUTE_DEFINITIONS: RouteDefinition[] = [
         lesson: '局部最优动作可能给整个战略系统带来连锁后果。',
       },
       {
-        id: 'B2', label: '绕行四天', factHint: '人员和设备最安全；矿权很可能进入公开程序',
-        videoFile: 'route-b2-detour.mp4', videoTitle: '绕行河谷四天',
+        id: 'B2', label: '沿山谷绕行', factHint: '人员、样本和设备更安全；积雪路程会耗尽剩余八天',
+        videoFile: 'route-b2-detour.mp4', videoTitle: '沿山谷绕行',
         videoSynopsis: '全员和设备安全抵达，但矿权已经进入公开程序。',
         endingTitle: '执行很安全，战略目标却已失配', endingSummary: '团队把沿途风险降到最低，却没有在期限内实现矿权登记。',
         metrics: { days: '已超期', people: '全员安全', capability: '设备完整', claim: '进入公开程序' },
@@ -248,10 +294,10 @@ export const ROUTE_DEFINITIONS: RouteDefinition[] = [
     id: 'D',
     label: '等待 3–4 周安全撤离',
     factHint: '人员安全优先；主动放弃当前登记时间窗口',
-    situationTitle: '撤离第六天：竞争者提出报价',
+    situationTitle: '等待决定后的第六天：竞争者提出报价',
     situationFile: 'route-d-situation.mp4',
-    situationSynopsis: '撤离准备进入第六天，风雪短暂减弱，同时收到竞争者购买勘探资料的报价。',
-    choicePrompt: '撤离第六天，竞争者提出收购勘探资料，天气也短暂转好。继续退出，还是重新争取机会？',
+    situationSynopsis: '作出等待决定后的第六天，队伍仍在营地整理装备；风雪短暂减弱，同时收到竞争者购买勘探资料的报价。',
+    choicePrompt: '等待决定后的第六天，竞争者提出收购勘探资料，天气也短暂转好。继续退出，还是重新争取机会？',
     reflectionQuestion: '主动退出是失败，还是另一种资源配置决策？',
     results: [
       {
@@ -273,7 +319,7 @@ export const ROUTE_DEFINITIONS: RouteDefinition[] = [
       {
         id: 'D3', label: '取消撤离，轻装抢登记', factHint: '剩余八天重新争取机会；设备留守且补给余量很小',
         videoFile: 'route-d3-return.mp4', videoTitle: '取消撤离后轻装抢登记',
-        videoSynopsis: '队伍在撤离第六天反转战略，留下重装赶往登记地，在最后时限完成登记。',
+        videoSynopsis: '队伍在作出等待决定后的第六天反转战略，留下重装赶往登记地，在最后时限完成登记。',
         endingTitle: '战略反转追回机会，也耗尽了调整余量', endingSummary: '团队在最后时限完成登记，但设备留守、补给接近耗尽，所有缓冲都已消失。',
         metrics: { days: '最后时限', people: '疲劳明显', capability: '设备留守、补给将尽', claim: '完成登记' },
         lesson: '战略反转不是免费重来，转换成本会侵蚀新方案的价值。',
@@ -311,20 +357,74 @@ function createStoryNodes(): Record<StoryNodeId, StoryNode> {
       options: route.results.map((result) => ({ id: result.id, label: result.label, factHint: result.factHint, target: result.id })),
     }
     for (const result of route.results) {
-      const endingId = `ending-${result.id}` as EndingId
       const completedVideo = COMPLETED_RESULT_VIDEOS[result.id]
       nodes[result.id] = {
         kind: 'video', id: result.id, title: result.videoTitle,
         expectedVideo: `/videos/web/${result.videoFile}`, video: completedVideo,
-        subtitles: COMPLETED_RESULT_SUBTITLES[result.id] ?? [], synopsis: result.videoSynopsis, next: endingId,
-      }
-      nodes[endingId] = {
-        kind: 'ending', id: endingId, resultId: result.id, title: result.endingTitle,
-        summary: result.endingSummary, metrics: result.metrics, lesson: result.lesson,
-        reflectionQuestion: route.reflectionQuestion, parentChoiceId: choiceId,
+        subtitles: COMPLETED_RESULT_SUBTITLES[result.id] ?? [], synopsis: result.videoSynopsis, next: 'X1',
       }
     }
   }
+
+  nodes.X1 = {
+    kind: 'video', id: 'X1', title: '只能保住一项',
+    expectedVideo: '/videos/web/shared-x1-priority-v2.mp4', video: '/videos/web/shared-x1-priority-v2.mp4',
+    subtitles: SHARED_X1_SUBTITLES, captionSrc: '/subtitles/shared-x1-priority-v2.vtt', synopsis: '时间只够优先处理一项：人员、样本、运载能力或马上赶路。', next: 'choice-X1',
+  }
+  nodes['choice-X1'] = {
+    kind: 'choice', id: 'choice-X1', eyebrow: '第三次决策 · 资源优先级',
+    prompt: '时间只够优先处理一项，你决定先保住什么？',
+    context: '每一项投入都会占用时间，并改变下一阶段的能力基础。',
+    options: ['X1-PEOPLE', 'X1-EVIDENCE', 'X1-CAPABILITY', 'X1-SPRINT'].map((id) => {
+      const rule = DECISION_DEFINITIONS[id]
+      return { id, label: rule.label, factHint: `${rule.directGoal}；代价：${rule.sacrifice}`, target: 'X2' as const }
+    }),
+  }
+  nodes.X2 = {
+    kind: 'video', id: 'X2', title: '控制权还是可行性',
+    expectedVideo: '/videos/web/shared-x2-control-v3.mp4', video: '/videos/web/shared-x2-control-v3.mp4',
+    subtitles: SHARED_X2_SUBTITLES, captionSrc: '/subtitles/shared-x2-control-v3.vtt', synopsis: '外部合作与交易方案到达，团队也可以继续独立推进。', next: 'choice-X2',
+  }
+  nodes['choice-X2'] = {
+    kind: 'choice', id: 'choice-X2', eyebrow: '第四次决策 · 组织边界',
+    prompt: '两种外部方案都已到达。你要独立推进、分阶段合作，还是进入交易核验？',
+    context: '控制权、执行能力和资本回收无法同时最大化。',
+    options: ['X2-INDEPENDENT', 'X2-STAGED-ALLIANCE', 'X2-SALE-NEGOTIATION'].map((id) => {
+      const rule = DECISION_DEFINITIONS[id]
+      return { id, label: rule.label, factHint: `${rule.directGoal}；代价：${rule.sacrifice}`, target: 'X3' as const }
+    }),
+  }
+  nodes.X3 = {
+    kind: 'video', id: 'X3', title: '最后承诺',
+    expectedVideo: '/videos/web/shared-x3-final-commitment-v2.mp4', video: '/videos/web/shared-x3-final-commitment-v2.mp4',
+    subtitles: SHARED_X3_SUBTITLES, captionSrc: '/subtitles/shared-x3-final-commitment-v2.vtt', synopsis: '所有状态已经核对，下一步是本轮最后一次不可逆承诺。', next: 'choice-X3',
+  }
+  nodes['choice-X3'] = {
+    kind: 'choice', id: 'choice-X3', eyebrow: '第五次决策 · 不可逆承诺',
+    prompt: '这是本轮最后一次不可逆承诺。你现在真正能执行哪一步？',
+    context: '页面只会显示当前时间、控制空间和承诺模式允许的行动。',
+    options: ['X3-SUBMIT-NOW', 'X3-VERIFY-SUBMIT', 'X3-JOINT-SUBMIT', 'X3-FINALIZE-SALE', 'X3-LATE-FILE', 'X3-SAFE-WITHDRAW'].map((id) => {
+      const rule = DECISION_DEFINITIONS[id]
+      return { id, label: rule.label, factHint: `${rule.directGoal}；代价：${rule.sacrifice}` }
+    }),
+  }
+
+  const endingMedia: Record<EndingOutcomeId, { video: string; subtitles: SubtitleCue[]; captionSrc: string }> = {
+    'END-F1': { video: '/videos/web/ending-submit-shared-v2.mp4', subtitles: END_SUBMIT_SHARED_SUBTITLES, captionSrc: '/subtitles/ending-submit-shared-v2.vtt' },
+    'END-F2': { video: '/videos/web/ending-submit-shared-v2.mp4', subtitles: END_SUBMIT_SHARED_SUBTITLES, captionSrc: '/subtitles/ending-submit-shared-v2.vtt' },
+    'END-F3': { video: '/videos/web/ending-f3-limited-control-submit-v2.mp4', subtitles: END_F3_SUBTITLES, captionSrc: '/subtitles/ending-f3-limited-control-submit-v2.vtt' },
+    'END-F4': { video: '/videos/web/ending-f4-capital-recovery-exit-v2.mp4', subtitles: END_F4_SUBTITLES, captionSrc: '/subtitles/ending-f4-capital-recovery-exit-v2.vtt' },
+    'END-F5': { video: '/videos/web/ending-f5-safe-withdraw-v2.mp4', subtitles: END_F5_SUBTITLES, captionSrc: '/subtitles/ending-f5-safe-withdraw-v2.vtt' },
+    'END-F6': { video: '/videos/web/ending-f6-window-closed-v2.mp4', subtitles: END_F6_SUBTITLES, captionSrc: '/subtitles/ending-f6-window-closed-v2.vtt' },
+  }
+  for (const [id, outcome] of Object.entries(ENDING_OUTCOMES) as Array<[EndingOutcomeId, (typeof ENDING_OUTCOMES)[EndingOutcomeId]]>) {
+    const media = endingMedia[id]
+    nodes[id] = {
+      kind: 'video', id, title: outcome.name, expectedVideo: media.video, video: media.video,
+      subtitles: media.subtitles, captionSrc: media.captionSrc, synopsis: outcome.result, next: 'REPORT',
+    }
+  }
+  nodes.REPORT = { kind: 'report', id: 'REPORT', title: '战略决策画像报告' }
   return nodes
 }
 
@@ -335,14 +435,38 @@ export const VIDEO_NODE_IDS = Object.values(STORY_NODES)
 
 export function getChoiceBackdropVideo(choiceId: ChoiceNode['id']) {
   if (choiceId === PRIMARY_CHOICE_ID) return INTRO_VIDEO
+  if (choiceId === 'choice-X1') return '/videos/web/shared-x1-priority-v2.mp4'
+  if (choiceId === 'choice-X2') return '/videos/web/shared-x2-control-v3.mp4'
+  if (choiceId === 'choice-X3') return '/videos/web/shared-x3-final-commitment-v2.mp4'
   const routeId = choiceId.replace('choice-', '') as RouteId
   const route = ROUTE_DEFINITIONS.find((item) => item.id === routeId)
   if (!route) throw new Error(`missing route backdrop for ${choiceId}`)
   return `/videos/web/${route.situationFile}`
 }
 
+export function getChoiceBackdropFrame(choiceId: ChoiceNode['id']) {
+  return `/images/choice-frames/${choiceId}.webp`
+}
+
 export function getNode(id: StoryNodeId): StoryNode {
   return STORY_NODES[id]
+}
+
+export function getChoiceOptions(node: ChoiceNode, progress?: StrategyProgress) {
+  if (node.id === 'choice-X2' && progress) {
+    return node.options.map((option) => {
+      if (option.id === 'X2-STAGED-ALLIANCE' && progress.flags.includes('partnerPresent')) {
+        return { ...option, label: '把现有合作改为分阶段安排' }
+      }
+      if (option.id === 'X2-SALE-NEGOTIATION' && progress.flags.includes('offerAcceptedPreliminary')) {
+        return { ...option, label: '继续交易尽调' }
+      }
+      return option
+    })
+  }
+  if (node.id !== 'choice-X3' || !progress) return node.options
+  const available = new Set(getAvailableX3Options(progress).map((option) => option.id))
+  return node.options.filter((option) => available.has(option.id))
 }
 
 export function validateStoryGraph() {
@@ -361,15 +485,17 @@ export function validateStoryGraph() {
     visited.add(id)
     if (node.kind === 'video') stack.push(node.next)
     if (node.kind === 'choice') {
-      for (const option of node.options) {
-        if (!STORY_NODES[option.target]) errors.push(`dead link: ${node.id} -> ${option.target}`)
+      if (node.id === 'choice-X3') {
+        for (const endingId of Object.keys(ENDING_OUTCOMES) as EndingOutcomeId[]) stack.push(endingId)
+      } else for (const option of node.options) {
+        if (!option.target || !STORY_NODES[option.target]) errors.push(`dead link: ${node.id} -> ${option.target}`)
         else stack.push(option.target)
       }
     }
   }
 
   const endingIds = Object.values(STORY_NODES)
-    .filter((node): node is EndingNode => node.kind === 'ending')
+    .filter((node): node is VideoNode => node.kind === 'video' && node.id.startsWith('END-F'))
     .map((node) => node.id)
   const reachableEndingIds = endingIds.filter((id) => visited.has(id))
   for (const id of endingIds) if (!visited.has(id)) errors.push(`unreachable ending: ${id}`)
