@@ -22,7 +22,7 @@ describe('keyframe review displays', () => {
     expect(html).toContain('样本/资料')
     expect(html).toContain('源SHA-256')
     expect(html).toContain('禁止用于该节点')
-    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(96)
+    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(105)
     expect(html).not.toContain('本节点已有关键帧')
   })
   it('shows an independent finale K03 when available instead of the inherited parent K01', () => {
@@ -31,6 +31,13 @@ describe('keyframe review displays', () => {
     expect(html).toContain('独立K03结果帧待验收')
     expect(html).toContain('generated-a1-1-k03-v1.png')
     expect(html).not.toContain('继承 A1 K03')
+  })
+  it('prefers the independent B finale K03 over its inherited parent K01', () => {
+    const html = renderToStaticMarkup(<InheritedInputFrame nodeId="B3-3" parentNodeId="B3" scene="资料小组先行提交" />)
+    expect(html).toContain('data-finale-frame="B3-3"')
+    expect(html).toContain('独立K03结果帧待验收')
+    expect(html).toContain('generated-b3-3-k03-v1.png')
+    expect(html).not.toContain('继承 B3 K03')
   })
   it.each(['A2', 'A3', 'B1', 'B3', 'C3', 'D1'])('does not embed rejected %s material in the process area', nodeId => {
     const html = renderToStaticMarkup(<ProcessMaterials nodeId={nodeId} />)
