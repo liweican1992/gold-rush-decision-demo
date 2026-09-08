@@ -3,9 +3,9 @@ import { existsSync, readFileSync, statSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
-import { REDESIGNED_STORY } from './redesignedStory'
+import { REDESIGNED_STORY } from '../src/demo/redesignedStory'
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..')
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const packageRoot = resolve(root, '短剧制作资料/17_正式Pavo制作包_v3.0')
 const requiredFiles = [
   '00_节点状态卡.md',
