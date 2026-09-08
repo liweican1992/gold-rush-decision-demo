@@ -1576,6 +1576,141 @@
         "targetSha256": "b70ed3858a5b6b7a07a0d37647e92357f329a7888f18afe40d07fc2b02cfd965",
         "verified": true
       }
+    },
+    {
+      "id": "generated-c1-1-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C1/C1-1/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "819e60c8dc8f0f96367b23d80cc50cd940a7b3c8792aba385e363826f112e9de",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c1-1-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C1 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C1-1正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c1-1-k03-v1.png",
+        "targetSha256": "819e60c8dc8f0f96367b23d80cc50cd940a7b3c8792aba385e363826f112e9de",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c1-2-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C1/C1-2/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "d4b892c309ecccf342614e33fad572cb63d3b5618ebf1c2055d95c462e43b7d0",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c1-2-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C1 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C1-2正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c1-2-k03-v1.png",
+        "targetSha256": "d4b892c309ecccf342614e33fad572cb63d3b5618ebf1c2055d95c462e43b7d0",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c1-3-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C1/C1-3/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "c3cf4f375f49f2d6651162988c5d809462dc1706e0bccf3f8f4a747ef7814b52",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c1-3-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C1 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C1-3正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c1-3-k03-v1.png",
+        "targetSha256": "c3cf4f375f49f2d6651162988c5d809462dc1706e0bccf3f8f4a747ef7814b52",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c2-1-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C2/C2-1/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "9d5f9e6e6aa3cd5e34bf3e65aa7645b0d1e8582b9a2357d8890b56dcda0866a1",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c2-1-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C2 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C2-1正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c2-1-k03-v1.png",
+        "targetSha256": "9d5f9e6e6aa3cd5e34bf3e65aa7645b0d1e8582b9a2357d8890b56dcda0866a1",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c2-2-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C2/C2-2/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "eba3721002e72cc1f07bbcce3da85453d26e6e4215aa50ade50af0bf90a4e8ca",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c2-2-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C2 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C2-2正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c2-2-k03-v1.png",
+        "targetSha256": "eba3721002e72cc1f07bbcce3da85453d26e6e4215aa50ade50af0bf90a4e8ca",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c2-3-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C2/C2-3/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "eb6b2454a3aed061157d7931bedf6eb17a40253c9c6a27551ab398a7066d5d53",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c2-3-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C2 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C2-3正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c2-3-k03-v1.png",
+        "targetSha256": "eb6b2454a3aed061157d7931bedf6eb17a40253c9c6a27551ab398a7066d5d53",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c3-1-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C3/C3-1/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "82e9c6d680e85b45f2fd0ddf10917ec0e69b29f4893f2d6cf34bfff0f09d7fd2",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c3-1-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C3 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C3-1正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c3-1-k03-v1.png",
+        "targetSha256": "82e9c6d680e85b45f2fd0ddf10917ec0e69b29f4893f2d6cf34bfff0f09d7fd2",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c3-2-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C3/C3-2/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "553f8e2ae8785903920f69f7aa23f3d9c5247a48f180d5785cf9ad0da9aa078c",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c3-2-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C3 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C3-2正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c3-2-k03-v1.png",
+        "targetSha256": "553f8e2ae8785903920f69f7aa23f3d9c5247a48f180d5785cf9ad0da9aa078c",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c3-3-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C3/C3-3/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "a5344538d7219ff3e4f561a2e848c2e69520609b751243d6e4e277da9af4f2e0",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c3-3-k03-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以C3 K03候选为身份与环境参考生成；客观第三人称构图，主人公镜外，并按C3-3正式终局事实制作。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c3-3-k03-v1.png",
+        "targetSha256": "a5344538d7219ff3e4f561a2e848c2e69520609b751243d6e4e277da9af4f2e0",
+        "verified": true
+      }
     }
   ],
   "usages": [
@@ -7264,6 +7399,501 @@
         "reviewer": "Codex视觉核验",
         "date": "2026-09-09",
         "evidence": "原分辨率目视对照B3-3节点状态卡、关键帧提示词、承接契约及B3 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c1-1-k03-v1-use",
+      "assetId": "generated-c1-1-k03-v1",
+      "nodeId": "C1-1",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "提前按时提交完整记录与有限样本；后续价值评估范围受限",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C1-1节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "远程雪地登记站接收室和金属接收台清晰可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人身份服装与C1母版连续，无额外人物；队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "轻装背包、红色医疗包和闭合档案箱保留，未恢复其他路线设备。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "台面一只只装少量岩芯的透明盒与厚防水记录箱并置，资料完整而样本数量有限。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C1母版连续。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "有限岩芯与厚资料箱形成明确体量对比，直接表达按时提交后评估范围仍受限。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C1-1节点状态卡、关键帧提示词、承接契约及C1 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c1-2-k03-v1-use",
+      "assetId": "generated-c1-2-k03-v1",
+      "nodeId": "C1-2",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "用一天整理后在最后一天提交；记录更清楚，样本有限且人员疲劳增加",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C1-2节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "远程雪地登记站整理台和接收区域清晰可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人身份服装与C1母版连续，无额外人物；队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "多只闭合防水档案箱与轻装随队，未出现其他路线重装。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "整齐分格的极少量样本与多只闭合档案箱同台，清楚表达档案整理收益和样本限制。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C1母版连续。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "三人疲态、末日日光和档案/样本体量差共同表达整理耗时与有限样本不恢复。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C1-2节点状态卡、关键帧提示词、承接契约及C1 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c1-3-k03-v1-use",
+      "assetId": "generated-c1-3-k03-v1",
+      "nodeId": "C1-3",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "资料小组按时提交，阿杰确认画外队长安全跟进；团队临时分开且样本仍有限",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C1-3节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "远程雪地登记小屋、开放门口和来路处于同一连续空间。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚与老周在室内，阿杰在雪路边持无线电；三人身份服装与C1母版连续，队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "室内闭合资料箱和小样本盒、阿杰红色医疗包与通讯设备均符合分工。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "前组接收台只有少量样本盒和完整资料箱，未恢复样本数量。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C1母版连续。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "门框与空间距离把前组提交和阿杰照护后组明确分开，直接表达团队临时分开。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C1-3节点状态卡、关键帧提示词、承接契约及C1 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c2-1-k03-v1-use",
+      "assetId": "generated-c2-1-k03-v1",
+      "nodeId": "C2-1",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "全员和核心设备安全回到基地；撤离周期与资本占用较长，当前机会终止",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C2-1节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "雪地基地院落、器材棚与返回雪橇清晰可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人身份服装与C2母版连续，无额外人物；队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "多只完整核心设备箱和雪橇均已返回，绑带仍在复核且无损毁。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "封闭硬箱随核心设备安全返回；画面没有虚构登记、出售或样本丢失。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C2母版连续。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "雪泥器材、未完成的复核动作与三人疲态表达安全返回所需的较长撤离周期。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C2-1节点状态卡、关键帧提示词、承接契约及C2 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c2-2-k03-v1-use",
+      "assetId": "generated-c2-2-k03-v1",
+      "nodeId": "C2-2",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "安全带回完整天气路线和样本复盘档案，放弃部分低价值物资，当前机会终止",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C2-2节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "安全返回后的基地档案工棚与门外雪谷清晰可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人身份服装与C2母版连续，无额外人物；队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "核心档案硬箱保留，门外仅有低价值旧补给与空罐，未冒充核心设备。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "闭合天气、路线、照片与样本资料包被完整封入黑色档案箱，纸面不可读。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C2母版连续。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "完整档案集中留存而低价值补给留在门外，直接表达组织知识优先与部分物资放弃。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C2-2节点状态卡、关键帧提示词、承接契约及C2 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c2-3-k03-v1-use",
+      "assetId": "generated-c2-3-k03-v1",
+      "nodeId": "C2-3",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "全部设备和样本保留；人员疲劳与资本占用达到最高，当前机会终止",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C2-3节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "漫长撤收后的雪地基地院落与器材棚清晰可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人身份服装与C2母版连续，无额外人物；队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "大量完整设备箱、绳索、仪器雪橇和补给密集到达，未出现资产缺失。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "样本与资料随全部资产封闭保留，没有提交、出售或丢弃表现。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C2母版连续。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "设备密度、黄昏临时灯和三人最强疲态共同表达全部保留换取最高人员与资本占用。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C2-3节点状态卡、关键帧提示词、承接契约及C2 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c3-1-k03-v1-use",
+      "assetId": "generated-c3-1-k03-v1",
+      "nodeId": "C3-1",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "双方按原条件联合行动并按时提交；运输瓶颈解除，部分未来控制让渡",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C3-1节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "雪地登记站接收棚、履带运输车和货橇清晰可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰与独立运输伙伴四人身份服装明确，伙伴与老周可区分；队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "运输车、货橇、密封样本箱和闭合资料箱共同到达接收台。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚控制的闭合记录箱与密封样本箱随联合队伍完成交付，纸面不可读。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C3母版连续。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "运输伙伴与队伍共同围绕货物完成接收动作；未来权益让渡由C3-1正式状态外部建立。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C3-1节点状态卡、关键帧提示词、承接契约及C3 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c3-2-k03-v1-use",
+      "assetId": "generated-c3-2-k03-v1",
+      "nodeId": "C3-2",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "耗时明确运输、资料与决策边界后按时提交；权益让渡持续且时间余量减少",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C3-2节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "雪地登记棚有顶装载区、车辆侧与队内接收侧清晰可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰与运输伙伴四人身份明确，分成两个工作区；队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "伙伴控制车辆与货橇，队内控制闭合资料箱和接收区，分工边界可见。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚把闭合原始资料箱抱在胸前，资料未进入伙伴一侧且无可读纸面。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C3母版连续。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "两个工作区之间的空带直观表达边界已明确；耗时一天和未来权益让渡由C3-2正式状态外部建立。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C3-2节点状态卡、关键帧提示词、承接契约及C3 K03母版；主人公手未出现，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c3-3-k03-v1-use",
+      "assetId": "generated-c3-3-k03-v1",
+      "nodeId": "C3-3",
+      "shotId": "K03-target-candidate",
+      "stage": "独立终局",
+      "action": "伙伴只负责运输，队内保管原始资料并按时提交；权益让渡与协调负担持续",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C3-3节点状态卡锁定正式时间与结果；静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "雪地登记站装载区、履带运输车与队内接收区域清晰可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰与运输伙伴四人身份服装明确，伙伴与老周可区分；队长镜外。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "伙伴从车辆递出捆扎设备，阿杰在队伍侧接收，运输职责明确。"
+        },
+        "伤势": {
+          "result": "external",
+          "evidence": "队长伤势由正式状态承接；主人公完全镜外，画面未制造伤势冲突。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚始终在队内一侧抱住闭合原始资料箱，资料未进入伙伴手中或车辆。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "寒冷积雪、山地光线和衣物状态与C3母版连续。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "设备交接与资料控制的空间分离直接表达流程控制；未来权益让渡由C3-3正式状态外部建立。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-09",
+        "evidence": "原分辨率目视对照C3-3节点状态卡、关键帧提示词、承接契约及C3 K03母版；主人公手未出现，等待用户验收。"
       }
     }
   ]
