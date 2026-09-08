@@ -746,3 +746,6 @@ blockquote { margin: 0; padding: var(--space-md) var(--space-lg); border-inline-
 .reuse-review p, .reuse-process p { line-height: 1.6; }
 .reuse-process a { color: #e3c279; }
 .reuse-process figure { margin: 1rem 0; }
+@media (max-width: 76rem) {
+  .reuse-review { max-width: calc(100vw - 4rem); margin-inline: 0; }
+}

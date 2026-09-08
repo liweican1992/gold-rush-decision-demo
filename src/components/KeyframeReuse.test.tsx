@@ -1,8 +1,8 @@
 import { renderToStaticMarkup } from 'react-dom/server'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { MainFrame, ReuseReview, ProcessMaterials, ReviewImage } from './KeyframeReuse'
 import { data, getProcesses } from '../demo/keyframeReuse'
-import type { Manifest } from '../demo/keyframeReuse.types'
+import { CHECKS, type Usage, type Manifest } from '../demo/keyframeReuse.types'
 
 describe('keyframe review displays', () => {
   it.each(['INTRO', 'PRIMARY', 'A0', 'A1', 'A2', 'A3', 'B0', 'C0', 'D0'])('removes the old %s main image without falling back', nodeId => {
@@ -52,4 +52,26 @@ describe('keyframe review displays', () => {
     const a2 = data.assets.find(a => a.sourcePath.includes('山口下方整装'))!
     expect(html).not.toContain(`data-review-asset="${a2.id}"`)
   })
+})
+
+it('routes the image error event to the unavailable state callback', () => {
+  const onFailed = vi.fn()
+  const image = ReviewImage({ src: '/images/choice-frames/review-only/test.png', alt: '仅审查·未验收', onFailed })
+  image.props.onError()
+  expect(onFailed).toHaveBeenCalledOnce()
+  const failed = renderToStaticMarkup(<ReviewImage src="/images/choice-frames/review-only/test.png" alt="仅审查·未验收" failed />)
+  expect(failed).toContain('素材无法加载·仍未验收')
+  expect(failed).not.toContain('<img')
+})
+
+it('uses the actual main binding state in both the main and review areas', () => {
+  const asset = { ...data.assets[0], watermark: 'none' as const, plannedTargetPath: 'public/images/choice-frames/legacy-candidates/test.png', copy: { targetPath: 'public/images/choice-frames/legacy-candidates/test.png', targetSha256: data.assets[0].sourceSha256, verified: true } }
+  const usage: Usage = { ...data.usages[0], nodeId: 'D1', assetId: asset.id, stage: '节点决策状态', judgment: '候选待审', placement: 'main', stageMatchesNode: true, conflicts: [], continuityIssues: [], checks: Object.fromEntries(CHECKS.map(k => [k, { result: 'external', evidence: `D1正式事实：${k}（测试夹具）` }])) as Usage['checks'] }
+  const manifest: Manifest = { version: 1, assets: [asset], usages: [usage] }
+  const main = renderToStaticMarkup(<MainFrame nodeId="D1" scene="等待结束" manifest={manifest} />)
+  const review = renderToStaticMarkup(<ReuseReview filter="ALL" manifest={manifest} />)
+  expect(main).toContain('候选已绑定·未验收')
+  expect(review).toContain('候选已绑定·未验收')
+  expect(review).toContain('用途绑定：节点主图')
+  expect(review).not.toContain('候选待审·未绑定')
 })
