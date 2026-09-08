@@ -1,5 +1,6 @@
 import { InheritedInputFrame, MainFrame, ReuseReview, ProcessMaterials } from './KeyframeReuse'
 import { useMemo, useState } from 'react'
+import { data as keyframeManifest, getMain } from '../demo/keyframeReuse'
 import {
   REDESIGNED_STORY,
   getTerminalPathCount,
@@ -93,6 +94,7 @@ function OutcomeCard({ node, onOpen }: { node: StoryOutcome; onOpen: (detail: Re
 function FinaleCard({ node, onOpen }: { node: StoryFinale; onOpen: (detail: ReviewDetail) => void }) {
   const ending = REDESIGNED_STORY.endingTypes.find((item) => item.id === node.endingType)!
   const parentId = node.id.split('-')[0]
+  const hasIndependentK03 = Boolean(getMain(node.id, keyframeManifest))
 
   return (
     <button
@@ -112,7 +114,7 @@ function FinaleCard({ node, onOpen }: { node: StoryFinale; onOpen: (detail: Revi
         endingDefinition: ending.definition,
         profile: ending.profile,
         video: node.video,
-        status: '剧本已锁定 · K01继承父节点候选 · K03待生成',
+        status: hasIndependentK03 ? '剧本已锁定 · 独立K03候选已生成但未验收 · K01仍继承父节点候选' : '剧本已锁定 · K01继承父节点候选 · K03待生成',
         parentId,
       })}
     >
@@ -158,6 +160,8 @@ function AuditOverview() {
   const errors = validateRedesignedStory()
   const finales = REDESIGNED_STORY.routes.flatMap((route) => route.outcomes.flatMap((outcome) => outcome.finales))
   const uniqueVideos = new Set(finales.map((item) => item.video)).size
+  const independentFrames = finales.filter((item) => getMain(item.id, keyframeManifest)).length
+  const inheritedFrames = finales.length - independentFrames
 
   return (
     <section className="story-map-audit" aria-label="剧情验收总览">
@@ -173,7 +177,7 @@ function AuditOverview() {
       </div>
       <div className="story-map-production-gate">
         <strong>结构节点候选已覆盖</strong>
-        <p><b>INTRO、PRIMARY、A0—D3 共18个结构节点</b>均已有主候选图；34 / 34 条结局已显示继承K01输入帧，独立K03结果帧仍为 0 / 34。</p>
+        <p><b>INTRO、PRIMARY、A0—D3 共18个结构节点</b>均已有主候选图；{independentFrames} / {finales.length} 条结局已有独立K03结果候选，其余 {inheritedFrames} 条继续显示继承K01输入帧。</p>
         <span>脚本通过 ≠ 成片通过 · 每条视频仍需首尾帧、人物、动作、对白与字幕校时验收</span>
         <span>该校验不覆盖图片事实和声画连续性</span>
       </div>

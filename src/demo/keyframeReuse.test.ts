@@ -55,15 +55,20 @@ describe('keyframe eligibility', () => {
   })
   it('registers every batch file conservatively with the exact six stages', () => {
     expect(STAGES).toEqual(['公共入口', '节点决策状态', '行动开始', '行动过程', '直接后果', '独立终局'])
-    expect(data.assets).toHaveLength(87)
+    expect(data.assets).toHaveLength(96)
     expect(data.usages.every(row => row.acceptance === '未验收')).toBe(true)
-    expect(data.usages.filter(row => row.placement === 'main').map(row => row.nodeId).sort()).toEqual(['A0', 'A1', 'A2', 'A3', 'B0', 'B1', 'B2', 'B3', 'C0', 'C1', 'C2', 'C3', 'D0', 'D1', 'D2', 'D3', 'INTRO', 'PRIMARY'])
+    expect(data.usages.filter(row => row.placement === 'main').map(row => row.nodeId).sort()).toEqual(['A0', 'A1', 'A1-1', 'A1-2', 'A1-3', 'A2', 'A2-1', 'A2-2', 'A2-3', 'A3', 'A3-1', 'A3-2', 'A3-3', 'B0', 'B1', 'B2', 'B3', 'C0', 'C1', 'C2', 'C3', 'D0', 'D1', 'D2', 'D3', 'INTRO', 'PRIMARY'])
     expect(getMain('INTRO', data)?.asset.id).toBe('generated-intro-k03-v1')
     expect(getMain('PRIMARY', data)?.asset.id).toBe('generated-primary-k03-v1')
     expect(getMain('A0', data)?.asset.id).toBe('reused-a0-k03-v1')
     expect(getMain('A1', data)?.asset.id).toBe('generated-a1-k03-v1')
     expect(getMain('A2', data)?.asset.id).toBe('generated-a2-k03-v1')
     expect(getMain('A3', data)?.asset.id).toBe('generated-a3-k03-v1')
+    for (const id of ['A1-1', 'A1-2', 'A1-3', 'A2-1', 'A2-2', 'A2-3', 'A3-1', 'A3-2', 'A3-3']) {
+      expect(getMain(id, data)?.asset.id).toBe(`generated-${id.toLowerCase()}-k03-v1`)
+      expect(getMain(id, data)?.usage.stage).toBe('独立终局')
+      expect(getMain(id, data)?.usage.acceptance).toBe('未验收')
+    }
     expect(getMain('B0', data)?.asset.id).toBe('generated-b0-k03-v1')
     expect(getMain('B1', data)?.asset.id).toBe('generated-b1-k03-v1')
     expect(getMain('B2', data)?.asset.id).toBe('generated-b2-k03-v1')
