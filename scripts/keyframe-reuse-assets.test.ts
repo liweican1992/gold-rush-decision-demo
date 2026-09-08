@@ -15,6 +15,7 @@ async function fixture() {
   const root = await mkdtemp(join(tmpdir(), 'keyframe-test-')); roots.push(root);
   await mkdir(join(root, 'public/images/choice-frames'), { recursive: true });
   await mkdir(join(root, '短剧制作资料/09_路线制作包'), { recursive: true });
+  await mkdir(join(root, '短剧制作资料/17_正式Pavo制作包_v3.0'), { recursive: true });
   const sourcePath = 'public/images/choice-frames/test.webp';
   await writeFile(join(root, sourcePath), 'fixture bytes');
   const asset = { id: 'test', version: 1, sourcePath, sourceSha256: await sha256(join(root, sourcePath)), origin: 'legacy-image', watermark: 'unknown', plannedTargetPath: 'public/images/choice-frames/review-only/test.webp' };
@@ -64,6 +65,15 @@ describe('immutable keyframe copies', () => {
     expect(first.verified).toBe(true);
     expect(await copyExact(root, asset)).toEqual(first);
     expect(await readFile(join(root, asset.sourcePath), 'utf8')).toBe('fixture bytes');
+  });
+  it('registers generated production keyframes as immutable candidate sources', async () => {
+    const { root, asset, manifest } = await fixture();
+    const sourcePath = '短剧制作资料/17_正式Pavo制作包_v3.0/03_B路线/B1/关键帧/K03_目标尾帧候选_v1.png';
+    await mkdir(join(root, '短剧制作资料/17_正式Pavo制作包_v3.0/03_B路线/B1/关键帧'), { recursive: true });
+    await writeFile(join(root, sourcePath), 'generated keyframe');
+    const generated = { ...asset, id: 'generated', sourcePath, sourceSha256: await sha256(join(root, sourcePath)), origin: 'target-image', watermark: 'none', plannedTargetPath: 'public/images/choice-frames/review-only/generated.png' };
+    const copied = await runManifest(root, { ...manifest, assets: [asset, generated] }, 'copy');
+    expect(copied.assets.find(row => row.id === 'generated')?.copy?.verified).toBe(true);
   });
   it('rejects a different existing target without overwriting', async () => {
     const { root, asset } = await fixture();

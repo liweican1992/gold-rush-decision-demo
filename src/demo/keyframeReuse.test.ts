@@ -55,9 +55,11 @@ describe('keyframe eligibility', () => {
   })
   it('registers every batch file conservatively with the exact six stages', () => {
     expect(STAGES).toEqual(['公共入口', '节点决策状态', '行动开始', '行动过程', '直接后果', '独立终局'])
-    expect(data.assets).toHaveLength(69)
+    expect(data.assets).toHaveLength(70)
     expect(data.usages.every(row => row.acceptance === '未验收')).toBe(true)
-    expect(data.usages.every(row => row.placement === 'review')).toBe(true)
+    expect(data.usages.filter(row => row.placement === 'main').map(row => row.nodeId).sort()).toEqual(['B1', 'D1'])
+    expect(getMain('B1', data)?.asset.id).toBe('generated-b1-k03-v1')
+    expect(getMain('D1', data)?.asset.id).toBe('legacy-c6e8059a5ca2')
     expect(data.assets.every(row => /^[a-f0-9]{64}$/.test(row.sourceSha256))).toBe(true)
     const departure = data.assets.find(row => row.sourcePath.includes('山口下方整装'))!
     expect(data.usages.filter(row => row.assetId === departure.id).map(row => row.judgment)).toEqual(['仅作参考', '禁止用于该节点'])

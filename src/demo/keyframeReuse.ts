@@ -8,7 +8,7 @@ const endings = new Set<string>(REDESIGNED_STORY.routes.flatMap(r => r.outcomes.
 const hash = /^[a-f0-9]{64}$/
 const targetPattern = /^public\/images\/choice-frames\/(legacy-candidates|review-only)\/[a-zA-Z0-9_-]+\.(png|jpe?g|webp)$/
 const sourceAllowed = (path: string) => !path.split('/').some(part => part === '..' || part === '.') &&
-  (/^public\/images\/choice-frames\/[^/]+\.(png|webp)$/i.test(path) || /^短剧制作资料\/09_路线制作包\/.+\.(png|jpe?g|webp)$/i.test(path))
+  (/^public\/images\/choice-frames\/[^/]+\.(png|webp)$/i.test(path) || /^短剧制作资料\/09_路线制作包\/.+\.(png|jpe?g|webp)$/i.test(path) || /^短剧制作资料\/17_正式Pavo制作包_v3\.0\/.+\/关键帧\/[^/]+\.(png|jpe?g|webp)$/i.test(path))
 
 export function stageCompatible(u: Usage) {
   if (common.has(u.nodeId)) return u.stage === '公共入口'

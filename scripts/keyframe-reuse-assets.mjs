@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const PUBLIC = 'public/images/choice-frames';
 const LEGACY = '短剧制作资料/09_路线制作包';
+const PRODUCTION = '短剧制作资料/17_正式Pavo制作包_v3.0';
 const HASH = /^[a-f0-9]{64}$/;
 export const STAGES = ['公共入口', '节点决策状态', '行动开始', '行动过程', '直接后果', '独立终局'];
 export const CHECKS = ['时间', '地点', '人物', '装备', '伤势', '样本/资料', '天气', '不可逆后果'];
@@ -35,7 +36,7 @@ export async function safePath(root, path) {
   }
   return full;
 }
-function validSource(path) { return (path.startsWith(`${LEGACY}/`) || (path.startsWith(`${PUBLIC}/`) && !path.slice(PUBLIC.length + 1).includes('/'))) && /\.(png|jpe?g|webp)$/i.test(path); }
+function validSource(path) { return (path.startsWith(`${LEGACY}/`) || (path.startsWith(`${PRODUCTION}/`) && path.includes('/关键帧/')) || (path.startsWith(`${PUBLIC}/`) && !path.slice(PUBLIC.length + 1).includes('/'))) && /\.(png|jpe?g|webp)$/i.test(path); }
 function validTarget(path) { return typeof path === 'string' && new RegExp(`^${PUBLIC}/(review-only|legacy-candidates)/[^/]+\\.(png|jpe?g|webp)$`, 'i').test(path); }
 export async function inventory(root) {
   const paths = [];
@@ -48,7 +49,7 @@ export async function inventory(root) {
       else if (entry.isFile() && /\.(png|jpe?g|webp)$/i.test(entry.name)) paths.push(child);
     }
   }
-  await walk(PUBLIC, false); await walk(LEGACY, true);
+  await walk(PUBLIC, false); await walk(LEGACY, true); await walk(PRODUCTION, true);
   return Promise.all(paths.sort().map(async sourcePath => ({ sourcePath, sourceSha256: await sha256(await safePath(root, sourcePath)) })));
 }
 async function preflight(root, asset) {

@@ -593,9 +593,9 @@
       "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B1_立即涉水/00_历史导入/03_新结果段首帧_抵达登记站.png",
       "sourceSha256": "d221a462a4ad0ad4812f2bf93d5223a372f23aa8e39c965afa8b9689e2c240d3",
       "origin": "legacy-image",
-      "watermark": "unknown",
+      "watermark": "none",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9ea574a2f35f.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "provenanceNote": "2026-09-08逐像素级人工目视核验：画面无Pavo或其他可见水印；来源仍按历史图片登记，不凭文件名认证。",
       "copy": {
         "targetPath": "public/images/choice-frames/review-only/legacy-9ea574a2f35f.png",
         "targetSha256": "d221a462a4ad0ad4812f2bf93d5223a372f23aa8e39c965afa8b9689e2c240d3",
@@ -608,9 +608,9 @@
       "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B1_立即涉水/00_历史导入/04_新目标尾帧_材料受损审核不确定.png",
       "sourceSha256": "8afa59eb47b00b33bb6e6af45b3e3408d65f7d68b70e6f00e5eaa4437a3cebb3",
       "origin": "legacy-image",
-      "watermark": "unknown",
+      "watermark": "none",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-8d28d278141a.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "provenanceNote": "2026-09-08逐像素级人工目视核验：画面无Pavo或其他可见水印；来源仍按历史图片登记，不凭文件名认证。",
       "copy": {
         "targetPath": "public/images/choice-frames/review-only/legacy-8d28d278141a.png",
         "targetSha256": "8afa59eb47b00b33bb6e6af45b3e3408d65f7d68b70e6f00e5eaa4437a3cebb3",
@@ -968,11 +968,11 @@
       "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D1_安全撤离/00_历史导入/02_目标尾帧_完整打包后继续安全撤离.png",
       "sourceSha256": "d709d2b3541d49e7c7d619748f8851c61ab433b4b7299ffd8d72d863aeeb7ce0",
       "origin": "legacy-image",
-      "watermark": "unknown",
-      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-c6e8059a5ca2.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/legacy-c6e8059a5ca2.png",
+      "provenanceNote": "2026-09-08逐像素级人工目视核验：画面无Pavo或其他可见水印；与D1输入参考帧的人物、服装、营地及道具连续，作为主图候选待用户验收。",
       "copy": {
-        "targetPath": "public/images/choice-frames/review-only/legacy-c6e8059a5ca2.png",
+        "targetPath": "public/images/choice-frames/legacy-candidates/legacy-c6e8059a5ca2.png",
         "targetSha256": "d709d2b3541d49e7c7d619748f8851c61ab433b4b7299ffd8d72d863aeeb7ce0",
         "verified": true
       }
@@ -1034,6 +1034,21 @@
       "copy": {
         "targetPath": "public/images/choice-frames/review-only/legacy-4f94d720b7d2.png",
         "targetSha256": "65d166af741b57e6150e546d1e2456468d0c536bf41216df031e8f96ff01c51c",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-b1-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/03_B路线/B1/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "80014792e3f6a222221a88e33f7fbe3affd27344d8ae793ad5adf16254822c55",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-b1-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以B1旧图04为编辑母版生成；保留人物、机位与登记点，仅重绘材料分区；完整提示词见B1/关键帧/K03_目标尾帧候选_v1_生成记录.md。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-b1-k03-v1.png",
+        "targetSha256": "80014792e3f6a222221a88e33f7fbe3affd27344d8ae793ad5adf16254822c55",
         "verified": true
       }
     }
@@ -3172,50 +3187,56 @@
       "nodeId": "B1",
       "shotId": "historical-reference",
       "stage": "节点决策状态",
-      "action": "登记站附近材料检查参考；待核实第13天、余1天及资料/样本状态",
+      "action": "队伍携受潮样本袋抵达登记地附近；可参考人物、湿冷质感与抵达构图，不替代K03材料分区检查",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
       "checks": {
         "时间": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "external",
+          "evidence": "B1/00_节点状态卡锁定为第13天、剩余1天；静帧本身不含可读时间信息。"
         },
         "地点": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "画面可见雪山谷地中的简易登记检查建筑与金属检查台，符合登记地附近构图。"
         },
         "人物": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人脸型、发型与服装和B1历史输入/过河参考帧连续；无额外人物。"
         },
         "装备": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "可见三人背包、绳索、阿杰胸前红色医疗包与共同搬运的蓝色样本袋。"
         },
         "伤势": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "第一人称队长左手白色绷带在前景清晰可见，未左右颠倒。"
         },
         "样本/资料": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "conflict",
+          "evidence": "蓝色袋体泥湿，但袋子闭合；无法看见湿样本、湿补给、防水资料和少量干燥核心样本的分区状态。"
         },
         "天气": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "阴冷雪山环境、湿泥地面和人物湿衣与强渡后天气连续。"
         },
         "不可逆后果": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "conflict",
+          "evidence": "画面只证明湿冷抵达，不能证明部分样本与补给已经受潮且防水资料仍完整。"
         }
       },
-      "continuityIssues": [
-        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      "continuityIssues": [],
+      "conflicts": [
+        "该帧表现抵达而非K03要求的材料检查完成状态，不得绑定为B1主图。"
       ],
-      "conflicts": [],
-      "stageMatchesNode": true,
-      "placement": "review"
+      "stageMatchesNode": false,
+      "placement": "review",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照B1节点状态卡、关键帧提示词、首尾帧契约及同目录01/02参考帧。"
+      }
     },
     {
       "id": "legacy-8d28d278141a-use",
@@ -3223,50 +3244,56 @@
       "nodeId": "B1",
       "shotId": "historical-reference",
       "stage": "节点决策状态",
-      "action": "登记站附近材料检查参考；待核实第13天、余1天及资料/样本状态",
+      "action": "登记地附近开包检查样本；可参考人物、检查台和受潮质感，但不得声称三类材料状态已完整呈现",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
       "checks": {
         "时间": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "external",
+          "evidence": "B1/00_节点状态卡锁定为第13天、剩余1天；静帧本身不含可读时间信息。"
         },
         "地点": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "简易登记检查建筑、金属检查台及雪山谷地均清晰可见，符合登记地附近。"
         },
         "人物": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人脸型、发型、服装和B1历史输入/过河参考帧连续；无额外人物。"
         },
         "装备": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "可见绳索、阿杰胸前红色医疗包、蓝色样本袋与金属检查台。"
         },
         "伤势": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "第一人称队长左手白色绷带在前景清晰可见，未左右颠倒。"
         },
         "样本/资料": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "conflict",
+          "evidence": "画面有多袋样本和泥湿袋体，但看不出湿样本与湿补给分区，也未出现完整防水资料和单独保留的干燥核心样本。"
         },
         "天气": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "阴冷雪山、湿泥地面、湿衣和泥点与强渡后的天气及环境连续。"
         },
         "不可逆后果": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "conflict",
+          "evidence": "受潮迹象可见，但受潮范围与资料完好这一组合后果没有被明确可视化。"
         }
       },
-      "continuityIssues": [
-        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      "continuityIssues": [],
+      "conflicts": [
+        "核心教学事实未分层呈现；只能作K03重生成时的构图与角色参考。"
       ],
-      "conflicts": [],
       "stageMatchesNode": true,
-      "placement": "review"
+      "placement": "review",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照B1节点状态卡、关键帧提示词、首尾帧契约及同目录01/02/03参考帧。"
+      }
     },
     {
       "id": "legacy-501b1737dca3-use",
@@ -4475,52 +4502,56 @@
       "id": "legacy-c6e8059a5ca2-use",
       "assetId": "legacy-c6e8059a5ca2",
       "nodeId": "D1",
-      "shotId": "historical-reference",
+      "shotId": "K03-target-candidate",
       "stage": "节点决策状态",
-      "action": "等待结束后的撤收准备参考；机会进入公开竞争，不表示对方取得机会",
-      "judgment": "仅作参考",
+      "action": "天气稳定后，全员在原营地整理样本与完整设备并开始装载雪橇；登记窗口关闭、机会进入公开竞争由正式剧情状态承接",
+      "judgment": "候选待审",
       "repair": "无需修复待验",
       "acceptance": "未验收",
       "checks": {
         "时间": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "external",
+          "evidence": "D1/00_节点状态卡锁定为登记窗口关闭后、等待天气稳定；静帧本身不出现文字倒计时。"
         },
         "地点": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "帐篷、木箱、雪橇及雪山营地与同目录D1输入参考帧保持同一原营地空间。"
         },
         "人物": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人脸型、年龄、发型和服装与D1输入参考帧连续，无额外人物。"
         },
         "装备": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "画面明确显示帐篷仍在、成组木箱与卷包完整、雪橇正在捆扎，形成开始完整撤收的动作。"
         },
         "伤势": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "第一人称队长左手白色绷带在前景清晰可见，未左右颠倒。"
         },
         "样本/资料": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "external",
+          "evidence": "画面可见沈岚将实体矿样装箱；资料与样本仍在营地并完整由D1/00_节点状态卡和D1/05_首尾帧承接契约共同锁定。"
         },
         "天气": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "visible",
+          "evidence": "云层打开、能见度良好、无降雪或风暴迹象，符合天气稳定后的安全撤收时刻。"
         },
         "不可逆后果": {
-          "result": "pending",
-          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+          "result": "external",
+          "evidence": "D1/00_节点状态卡明确登记窗口已关闭、原优先机会终止并进入公开竞争；画面不添加竞争者已取得机会的错误事实。"
         }
       },
-      "continuityIssues": [
-        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
-      ],
+      "continuityIssues": [],
       "conflicts": [],
       "stageMatchesNode": true,
-      "placement": "review"
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照D1节点状态卡、关键帧提示词、首尾帧契约及同目录输入参考帧；仅升格为Web主图候选，未作制作验收。"
+      }
     },
     {
       "id": "legacy-2d4e901ba615-use",
@@ -4729,6 +4760,61 @@
       ],
       "stageMatchesNode": false,
       "placement": "review"
+    },
+    {
+      "id": "generated-b1-k03-v1-use",
+      "assetId": "generated-b1-k03-v1",
+      "nodeId": "B1",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "登记地附近完成材料检查：受潮样本与补给、防水资料、少量干燥核心样本三类清晰分区",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "B1/00_节点状态卡锁定为第13天、剩余1天；静帧不添加可读倒计时。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "雪山谷地中的简易登记检查建筑与金属检查台清晰可见，和B1旧图03/04空间连续。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人身份、脸型、发型、服装和旧图母版连续，无额外人物。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "绳索、阿杰胸前红色医疗包、蓝色样本袋与检查台均保留，人物装备未跳变。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长左手白色绷带在前景清晰可见，未左右颠倒。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "开放蓝袋中左侧为有水珠和泥污的受潮样本，右后为湿补给；沈岚举起内部干燥的透明防水资料袋，阿杰和右前小袋分别呈现少量干燥核心样本。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "阴冷雪山、湿泥地面、湿衣与泥点保持强渡后的湿冷环境。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "大部分材料的受潮痕迹与少量干燥核心样本形成明确数量对比，且防水资料单独保持干燥。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照B1节点状态卡、关键帧提示词、首尾帧契约和编辑母版；仅进入Web候选位，等待用户最终验收。"
+      }
     }
   ]
 }

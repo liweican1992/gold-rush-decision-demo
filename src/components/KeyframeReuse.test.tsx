@@ -21,7 +21,7 @@ describe('keyframe review displays', () => {
     expect(html).toContain('样本/资料')
     expect(html).toContain('源SHA-256')
     expect(html).toContain('禁止用于该节点')
-    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(69)
+    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(70)
     expect(html).not.toContain('本节点已有关键帧')
   })
   it.each(['A2', 'A3', 'B1', 'B3', 'C3', 'D1'])('does not embed rejected %s material in the process area', nodeId => {
