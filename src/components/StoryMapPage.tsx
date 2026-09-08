@@ -1,3 +1,4 @@
+import { MainFrame, ReuseReview, ProcessMaterials } from './KeyframeReuse'
 import { useMemo, useState } from 'react'
 import {
   REDESIGNED_STORY,
@@ -27,7 +28,6 @@ type ReviewDetail = {
   profile?: string
   video?: string
   status?: string
-  keyframe?: string
 }
 
 const FILTERS: Array<{ id: StoryRouteFilter; label: string }> = [
@@ -45,16 +45,6 @@ function statusLabel(status: StorySituation['status'] | StoryOutcome['status']) 
   return '新剧情 · 待生成'
 }
 
-function Frame({ src, scene }: { src?: string; scene: string }) {
-  if (src) return <img className="story-map-frame" src={src} alt="本节点已有关键帧" />
-  return (
-    <div className="story-map-frame story-map-frame-missing">
-      <strong>关键帧待生成</strong>
-      <span>{scene}</span>
-    </div>
-  )
-}
-
 function SituationCard({ node, onOpen }: { node: StorySituation; onOpen: (detail: ReviewDetail) => void }) {
   return (
     <button
@@ -63,10 +53,10 @@ function SituationCard({ node, onOpen }: { node: StorySituation; onOpen: (detail
       onClick={() => onOpen({
         id: node.id, title: node.title, eyebrow: '路线局面', time: node.time,
         scene: node.scene, facts: node.facts, dialogue: node.dialogue,
-        coursePoint: node.coursePoint, status: statusLabel(node.status), keyframe: node.keyframe,
+        coursePoint: node.coursePoint, status: statusLabel(node.status),
       })}
     >
-      <Frame src={node.keyframe} scene={node.scene} />
+      <MainFrame nodeId={node.id} scene={node.scene} />
       <span className="story-map-node-id">{node.id} · 路线局面</span>
       <strong>{node.title}</strong>
       <small>{node.time}</small>
@@ -83,10 +73,10 @@ function OutcomeCard({ node, onOpen }: { node: StoryOutcome; onOpen: (detail: Re
       onClick={() => onOpen({
         id: node.id, title: node.title, eyebrow: '二级行动与直接后果', time: node.time,
         scene: node.scene, facts: node.facts, coursePoint: node.coursePoint,
-        finales: node.finales, status: statusLabel(node.status), keyframe: node.keyframe,
+        finales: node.finales, status: statusLabel(node.status),
       })}
     >
-      <Frame src={node.keyframe} scene={node.scene} />
+      <MainFrame nodeId={node.id} scene={node.scene} />
       <span className="story-map-node-id">{node.id} · 二级行动</span>
       <strong>{node.title}</strong>
       <small>{node.time}</small>
@@ -141,7 +131,8 @@ function DetailPanel({ detail, onClose }: { detail: ReviewDetail; onClose: () =>
         <span>{detail.eyebrow} · {detail.id}</span>
         <h2 id="story-detail-title">{detail.title}</h2>
         {detail.time && <strong className="story-map-detail-time">{detail.time}</strong>}
-        <Frame src={detail.keyframe} scene={detail.scene} />
+        <MainFrame key={detail.id} nodeId={detail.id} scene={detail.scene} />
+        <ProcessMaterials nodeId={detail.id} onReview={onClose} />
         <section><h3>镜头与剧情</h3><p>{detail.scene}</p></section>
         {detail.facts && <section><h3>玩家在选择前已知的事实</h3><ul>{detail.facts.map((fact) => <li key={fact}>{fact}</li>)}</ul></section>}
         {detail.dialogue && <section><h3>对白与声音要点</h3>{detail.dialogue.map((line) => <p key={line}>{line}</p>)}</section>}
@@ -178,6 +169,7 @@ function AuditOverview() {
         <strong>先补前置事实</strong>
         <p><b>A0、B0、C0、D0、A3</b>优先复核或补拍；随后完成A1—D3的十二个选择事实段，最后才放行34条结果视频。</p>
         <span>脚本通过 ≠ 成片通过 · 每条视频仍需首尾帧、人物、动作、对白与字幕校时验收</span>
+        <span>该校验不覆盖图片事实和声画连续性</span>
       </div>
       {errors.length > 0 && <ul className="story-map-audit-errors">{errors.map((error) => <li key={error}>{error}</li>)}</ul>}
     </section>
@@ -207,6 +199,7 @@ export function StoryMapPage() {
       </section>
 
       <AuditOverview />
+      <ReuseReview filter={filter} />
 
       <nav className="story-map-filters" aria-label="查看剧情路线">
         {FILTERS.map((item) => <button type="button" key={item.id} className={filter === item.id ? 'active' : ''} onClick={() => setFilter(item.id)}>{item.label}</button>)}
@@ -215,8 +208,8 @@ export function StoryMapPage() {
 
       <section className="story-map-common" aria-label="公共开场">
         {REDESIGNED_STORY.common.map((node, index) => (
-          <button key={node.id} className="story-map-card story-map-common-card" type="button" onClick={() => setDetail({ id: node.id, title: node.title, eyebrow: index === 0 ? '序章' : '一级路线选择', time: node.time, scene: node.scene, keyframe: node.keyframe })}>
-            <Frame src={node.keyframe} scene={node.scene} />
+          <button key={node.id} className="story-map-card story-map-common-card" type="button" onClick={() => setDetail({ id: node.id, title: node.title, eyebrow: index === 0 ? '序章' : '一级路线选择', time: node.time, scene: node.scene })}>
+            <MainFrame nodeId={node.id} scene={node.scene} />
             <span className="story-map-node-id">0{index + 1} · {node.id}</span>
             <strong>{node.title}</strong>
             <small>{node.time}</small>

@@ -21,7 +21,7 @@ describe('story map page', () => {
     const html = renderToStaticMarkup(<StoryMapPage />)
 
     for (const label of ['全部剧情', 'A 翻山', 'B 山谷', 'C 预报', 'D 撤离']) expect(html).toContain(label)
-    expect(html).toContain('关键帧待生成')
+    expect(html).toContain('未绑定合格帧')
     expect(html).toContain('队伍获得雪地运输能力')
     expect(html).toContain('D2-1')
     expect(html).toContain('自动结果')
@@ -57,3 +57,17 @@ describe('story map page', () => {
     expect(html).toContain('复盘重构型')
   })
 })
+
+ it('renders all card mains through the audited mapping and review copies separately', () => {
+   const html = renderToStaticMarkup(<StoryMapPage />)
+   expect((html.match(/data-main-node=/g) ?? []).length).toBe(18)
+   for (const id of ['INTRO', 'PRIMARY', 'A0', 'A1', 'A2', 'A3', 'B0', 'C0', 'D0']) {
+     expect(html).toContain(`data-main-node="${id}"`)
+   }
+   expect(html).not.toContain('本节点已有关键帧')
+   expect(html).not.toContain('src="/images/choice-frames/outcome-A2.png"')
+   expect(html).not.toContain('src="/images/choice-frames/choice-primary.webp"')
+   expect(html).toContain('id="reuse-review"')
+   expect(html).toContain('该校验不覆盖图片事实和声画连续性')
+   expect(html).toContain('/images/choice-frames/review-only/')
+ })
