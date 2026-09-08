@@ -166,8 +166,8 @@ function AuditOverview() {
         <article><small>正式结构</small><strong>4 × 3 → 34</strong><span>四路线、十二个二级节点</span></article>
       </div>
       <div className="story-map-production-gate">
-        <strong>先补前置事实</strong>
-        <p><b>A0、B0、C0、D0、A3</b>优先复核或补拍；随后完成A1—D3的十二个选择事实段，最后才放行34条结果视频。</p>
+        <strong>结构节点候选已覆盖</strong>
+        <p><b>INTRO、PRIMARY、A0—D3 共18个结构节点</b>均已有主候选图；候选仍须逐节点人工验收，随后才生成并放行34条独立结果视频。</p>
         <span>脚本通过 ≠ 成片通过 · 每条视频仍需首尾帧、人物、动作、对白与字幕校时验收</span>
         <span>该校验不覆盖图片事实和声画连续性</span>
       </div>

@@ -5,14 +5,7 @@ import { data, getProcesses } from '../demo/keyframeReuse'
 import { CHECKS, type Usage, type Manifest } from '../demo/keyframeReuse.types'
 
 describe('keyframe review displays', () => {
-  it.each(['A1', 'A2'])('removes the old %s main image without falling back', nodeId => {
-    const html = renderToStaticMarkup(<MainFrame nodeId={nodeId} scene="正式状态" />)
-    expect(html).toContain(`data-main-node="${nodeId}"`)
-    expect(html).toContain('未绑定合格帧')
-    expect(html).not.toContain('<img')
-    expect(html).not.toContain('本节点已有关键帧')
-  })
-  it.each(['INTRO', 'PRIMARY', 'A0', 'A3', 'B0', 'B1', 'B3', 'C0', 'C2', 'D0', 'D1', 'D3'])('binds the audited %s candidate without presenting it as accepted', nodeId => {
+  it.each(['INTRO', 'PRIMARY', 'A0', 'A1', 'A2', 'A3', 'B0', 'B1', 'B2', 'B3', 'C0', 'C1', 'C2', 'C3', 'D0', 'D1', 'D2', 'D3'])('binds the audited %s candidate without presenting it as accepted', nodeId => {
     const html = renderToStaticMarkup(<MainFrame nodeId={nodeId} scene="正式状态" />)
     expect(html).toContain(`data-main-node="${nodeId}"`)
     expect(html).toContain('<img')
@@ -29,7 +22,7 @@ describe('keyframe review displays', () => {
     expect(html).toContain('样本/资料')
     expect(html).toContain('源SHA-256')
     expect(html).toContain('禁止用于该节点')
-    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(81)
+    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(87)
     expect(html).not.toContain('本节点已有关键帧')
   })
   it.each(['A2', 'A3', 'B1', 'B3', 'C3', 'D1'])('does not embed rejected %s material in the process area', nodeId => {

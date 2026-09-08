@@ -17,11 +17,13 @@ describe('story map page', () => {
     expect(html).not.toContain('可达 F')
   })
 
-  it('offers all route filters and text-first missing-keyframe cards', () => {
+  it('offers all route filters and audited structural-node candidates', () => {
     const html = renderToStaticMarkup(<StoryMapPage />)
 
     for (const label of ['全部剧情', 'A 翻山', 'B 山谷', 'C 预报', 'D 撤离']) expect(html).toContain(label)
-    expect(html).toContain('未绑定合格帧')
+    expect(html).not.toContain('未绑定合格帧')
+    expect((html.match(/data-main-node=/g) ?? []).length).toBe(18)
+    expect(html).toContain('候选已绑定·未验收')
     expect(html).toContain('队伍获得雪地运输能力')
     expect(html).toContain('D2-1')
     expect(html).toContain('自动结果')
@@ -34,11 +36,11 @@ describe('story map page', () => {
     expect(html).toContain('34 / 34')
     expect(html).toContain('校验错误')
     expect(html).toContain('0 项')
-    expect(html).toContain('先补前置事实')
-    expect(html).toContain('A0、B0、C0、D0、A3')
+    expect(html).toContain('结构节点候选已覆盖')
+    expect(html).toContain('INTRO、PRIMARY、A0—D3 共18个结构节点')
     expect(html).toContain('第4天 · 剩余10天')
     expect(html).toContain('原有土地购买机会进入公开竞争')
-    expect(html).toContain('交易对象是完整勘探资料')
+    expect(html).toContain('队伍接受报价')
     expect(html).toContain('重型设备永久留弃')
     expect(html).toContain('受潮造成的完整度损失无法消除')
     expect(html).toContain('有限样本仍会限制后续价值评估')

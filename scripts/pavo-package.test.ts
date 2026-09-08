@@ -98,4 +98,16 @@ describe('v3 Pavo production package', () => {
       for (const contract of ['输入来源', '目标尾帧']) expect(handoff).toContain(contract)
     }
   })
+
+  it('defaults future first-person shots to no visible protagonist hand', () => {
+    const guide = readFileSync(resolve(packageRoot, '00_总控/07_制作文件规范.md'), 'utf8')
+    expect(guide).toContain('第一人称不等于手必须入镜：默认不露手')
+    for (const unit of units) {
+      for (const file of ['03_Pavo正式提示词.md', '04_关键帧生成提示词.md']) {
+        const content = readFileSync(resolve(unit.directory, file), 'utf8')
+        expect(content, `${unit.id}/${file} still forces the hand into frame`).not.toContain('第一人称队长不露脸，左手缠白色绷带')
+        expect(content, `${unit.id}/${file} still requires a visible bandage in every shot`).not.toContain('无白色绷带消失')
+      }
+    }
+  })
 })

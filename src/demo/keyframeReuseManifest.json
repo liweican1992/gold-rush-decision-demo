@@ -1216,6 +1216,96 @@
         "targetSha256": "2979773618849052d821397f636c0be4419b2cc51efa82f25cd739743058768e",
         "verified": true
       }
+    },
+    {
+      "id": "generated-a1-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/02_A路线/A1/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "f2ae4e1a65dbe58d329dc75d88c4897f0b2a3a9ba82adebbfd94e4fb75500db5",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-a1-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以A1旧图03为编辑母版生成；保留人物和越岭环境，补齐伤势加重、资料样本及设备缺口。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-a1-k03-v1.png",
+        "targetSha256": "f2ae4e1a65dbe58d329dc75d88c4897f0b2a3a9ba82adebbfd94e4fb75500db5",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-a2-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/02_A路线/A2/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "b54b8f95d9a93cf9f19b86c311dca6153658deb4cb2242c256968c95454022cd",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-a2-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以A2旧成片尾帧为编辑母版生成；移除水印并推进至次日清晨，将完整设备分为轻重两组。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-a2-k03-v1.png",
+        "targetSha256": "b54b8f95d9a93cf9f19b86c311dca6153658deb4cb2242c256968c95454022cd",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-b2-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/03_B路线/B2/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "aee4ce8bc74befd9a977ebd5d4888d00c27db50287424d42ce02bbdc32197375",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-b2-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以B2旧图02为编辑母版生成；保留完整重装与河谷，将行动开始态推进为长路结束后的超期撤收点。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-b2-k03-v1.png",
+        "targetSha256": "aee4ce8bc74befd9a977ebd5d4888d00c27db50287424d42ce02bbdc32197375",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c1-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C1/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "751549cfe0414081290b09daa9753f3d19b5eafa6911a626d0f4c209edf522df",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c1-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以C1旧图02为编辑母版生成；保留人物，推进至登记地前并明确封闭山脊、少量样本、完整记录与疲劳状态。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c1-k03-v1.png",
+        "targetSha256": "751549cfe0414081290b09daa9753f3d19b5eafa6911a626d0f4c209edf522df",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c3-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C3/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "0ffbabe132a83fe9f10333c644e7c78acdd200a0b34272c05e7f82a56330fc47",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c3-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以C3旧图02为编辑母版生成；保留运输伙伴和车辆，删除样本交易暗示并强化原始资料仍由队内控制。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c3-k03-v1.png",
+        "targetSha256": "0ffbabe132a83fe9f10333c644e7c78acdd200a0b34272c05e7f82a56330fc47",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-d2-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/05_D路线/D2/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "f60e1ad06104a276d3e875696cb0070f7829219bd4c448a2d815f7db2ff67dc5",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-d2-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以D2旧图02为编辑母版生成；删除矿样交付暗示，将交易对象限定为四类勘探资料并分离样本箱。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-d2-k03-v1.png",
+        "targetSha256": "f60e1ad06104a276d3e875696cb0070f7829219bd4c448a2d815f7db2ff67dc5",
+        "verified": true
+      }
     }
   ],
   "usages": [
@@ -5529,6 +5619,336 @@
         "reviewer": "Codex视觉核验",
         "date": "2026-09-08",
         "evidence": "原分辨率目视对照C2节点卡、关键帧提示词、承接契约及旧图02母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-a1-k03-v1-use",
+      "assetId": "generated-a1-k03-v1",
+      "nodeId": "A1",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "越过山脊后停在背风坡，队长伤势加重、部分设备遗失，核心样本与防水资料仍在",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "A1节点卡锁定第9天、剩余5天；静帧不添加可读时间。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "已越过的山脊位于身后，队伍停在背风坡。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "三名队员身份、服装与路线母版连续。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "医疗包、绳索与空置固定带共同表现部分设备遗失。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "队长左手绷带状态明显恶化。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚保留闭合核心样本容器与防水资料袋。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "山脊仍受强风影响，背风坡相对平静。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "越岭已完成，伤势加重与设备缺口已经形成。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照A1节点卡、关键帧提示词、承接契约及旧图母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-a2-k03-v1-use",
+      "assetId": "generated-a2-k03-v1",
+      "nodeId": "A2",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "第4天清晨在山口前整队，人员、样本与装备完整，轻重两组准备分批通行",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "visible",
+          "evidence": "冷色清晨天光与A2第4天出发状态一致。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "队伍仍在避风整备点，山口位于前方而非身后。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "三名队员均在场，身份与服装连续。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "轻装组与重装雪橇组同时完整呈现。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "队长左手白色绷带保持既定伤势状态。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "核心样本容器和防水资料袋均随队。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "清晨风势较缓、山口能见度可用。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "节点卡锁定等待已消耗一天；画面保持尚未越岭。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照A2节点卡、关键帧提示词、承接契约及旧图母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-b2-k03-v1-use",
+      "assetId": "generated-b2-k03-v1",
+      "nodeId": "B2",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "长途绕行后抵达撤离判断点，人员、重装、样本与资料仍完整，但期限压力已无法回避",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "期限状态由B2节点卡锁定；画面不添加钟表或文字。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "队伍在绕行山谷的撤离判断点重新集结。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "三名队员完整在场且身份连续。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "重型设备箱、雪橇、绳索和医疗包仍完整。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "队长左手白色绷带维持既定状态。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "闭合样本容器与防水资料袋仍随队。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "山谷天气稳定，允许队伍停下判断。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "长途绕行已经消耗登记期限，继续机会已丧失，由正式节点卡锁定。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照B2节点卡、关键帧提示词、承接契约及旧图母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c1-k03-v1-use",
+      "assetId": "generated-c1-k03-v1",
+      "nodeId": "C1",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "利用天气窗口越过山脊，接近登记地时山脊已在身后封闭，资料完整但只剩少量干燥样本",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "已接近登记阶段由C1节点卡锁定，静帧不添加可读日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "关闭的山脊位于身后，队伍进入登记地前的雪谷。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "三名疲惫队员仍完整同行。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "轻装、医疗包和必要器材仍在，未夸大成完整重装。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "队长左手白色绷带与连续镜头一致。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚持完整防水资料袋，旁边仅有少量闭合干燥样本。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "队伍所在雪谷尚可通行，后方山脊已被低云和风雪封闭。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "越岭已完成且样本数量缩减，无法回到越岭前状态。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照C1节点卡、关键帧提示词、承接契约及旧图母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c3-k03-v1-use",
+      "assetId": "generated-c3-k03-v1",
+      "nodeId": "C3",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "队伍在车辆旁接受运输合作，沈岚继续保管原始资料，合作边界仍未完全解决",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "合作发生时点由C3节点卡锁定，画面不添加时间文字。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "雪地运输车辆和装载区明确表现合作现场。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "老周、阿杰、沈岚与一名运输方代表共四人。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "车辆、雪橇与闭合设备箱位于合作现场。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "队长白色绷带左手参与握手，伤势状态连续。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚仍持黑色资料箱，夹板无可读文字，画面无裸露矿石。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "天气稳定、能见度足以进行装载交接。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "握手与车辆装载状态表明合作已接受，但原始资料仍由队伍保管。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照C3节点卡、关键帧提示词、承接契约及旧图母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-d2-k03-v1-use",
+      "assetId": "generated-d2-k03-v1",
+      "nodeId": "D2",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "核验后进入交付状态，四类文件位于交付区，样本与设备保持分离，队伍准备离场",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "核验完成后的交付阶段由D2节点卡锁定，画面不添加日期。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "室内登记交付桌、出入口和外部车辆共同明确交付现场。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "买方代表接收文件，三名队员在场并准备离开。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "设备箱与交付桌分区摆放，未混作交易物。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "队长左手白色绷带维持既定状态。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "交付区仅有四类文件组合，样本容器单独闭合放置，手中无矿石。"
+        },
+        "天气": {
+          "result": "external",
+          "evidence": "室内镜头不承担天气叙事，外部雪地环境与路线连续。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "文件已递交给买方代表，队伍朝出口移动，交付动作已经发生。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照D2节点卡、关键帧提示词、承接契约及旧图母版；等待用户验收。"
       }
     },
     {
