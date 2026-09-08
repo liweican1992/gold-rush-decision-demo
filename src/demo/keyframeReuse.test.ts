@@ -55,10 +55,15 @@ describe('keyframe eligibility', () => {
   })
   it('registers every batch file conservatively with the exact six stages', () => {
     expect(STAGES).toEqual(['公共入口', '节点决策状态', '行动开始', '行动过程', '直接后果', '独立终局'])
-    expect(data.assets).toHaveLength(70)
+    expect(data.assets).toHaveLength(75)
     expect(data.usages.every(row => row.acceptance === '未验收')).toBe(true)
-    expect(data.usages.filter(row => row.placement === 'main').map(row => row.nodeId).sort()).toEqual(['B1', 'D1'])
+    expect(data.usages.filter(row => row.placement === 'main').map(row => row.nodeId).sort()).toEqual(['A0', 'A3', 'B0', 'B1', 'C0', 'D0', 'D1'])
+    expect(getMain('A0', data)?.asset.id).toBe('reused-a0-k03-v1')
+    expect(getMain('A3', data)?.asset.id).toBe('generated-a3-k03-v1')
+    expect(getMain('B0', data)?.asset.id).toBe('generated-b0-k03-v1')
     expect(getMain('B1', data)?.asset.id).toBe('generated-b1-k03-v1')
+    expect(getMain('C0', data)?.asset.id).toBe('generated-c0-k03-v1')
+    expect(getMain('D0', data)?.asset.id).toBe('generated-d0-k03-v1')
     expect(getMain('D1', data)?.asset.id).toBe('legacy-c6e8059a5ca2')
     expect(data.assets.every(row => /^[a-f0-9]{64}$/.test(row.sourceSha256))).toBe(true)
     const departure = data.assets.find(row => row.sourcePath.includes('山口下方整装'))!

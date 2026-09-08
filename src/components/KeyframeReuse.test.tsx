@@ -5,11 +5,19 @@ import { data, getProcesses } from '../demo/keyframeReuse'
 import { CHECKS, type Usage, type Manifest } from '../demo/keyframeReuse.types'
 
 describe('keyframe review displays', () => {
-  it.each(['INTRO', 'PRIMARY', 'A0', 'A1', 'A2', 'A3', 'B0', 'C0', 'D0'])('removes the old %s main image without falling back', nodeId => {
+  it.each(['INTRO', 'PRIMARY', 'A1', 'A2'])('removes the old %s main image without falling back', nodeId => {
     const html = renderToStaticMarkup(<MainFrame nodeId={nodeId} scene="正式状态" />)
     expect(html).toContain(`data-main-node="${nodeId}"`)
     expect(html).toContain('未绑定合格帧')
     expect(html).not.toContain('<img')
+    expect(html).not.toContain('本节点已有关键帧')
+  })
+  it.each(['A0', 'A3', 'B0', 'B1', 'C0', 'D0', 'D1'])('binds the audited %s candidate without presenting it as accepted', nodeId => {
+    const html = renderToStaticMarkup(<MainFrame nodeId={nodeId} scene="正式状态" />)
+    expect(html).toContain(`data-main-node="${nodeId}"`)
+    expect(html).toContain('<img')
+    expect(html).toContain('候选已绑定·未验收')
+    expect(html).not.toContain('未绑定合格帧')
     expect(html).not.toContain('本节点已有关键帧')
   })
   it('discloses audit limits, four dimensions, paths and all evidence', () => {
@@ -21,7 +29,7 @@ describe('keyframe review displays', () => {
     expect(html).toContain('样本/资料')
     expect(html).toContain('源SHA-256')
     expect(html).toContain('禁止用于该节点')
-    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(70)
+    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(75)
     expect(html).not.toContain('本节点已有关键帧')
   })
   it.each(['A2', 'A3', 'B1', 'B3', 'C3', 'D1'])('does not embed rejected %s material in the process area', nodeId => {

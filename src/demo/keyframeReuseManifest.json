@@ -278,9 +278,9 @@
       "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A0_风暴局面/00_历史导入/03_目标尾帧_老周回望队长.png",
       "sourceSha256": "05d3a7bd72e2178997bc4b09b05b09fee55325fe3ecdcb6063bbb5652035dc72",
       "origin": "legacy-image",
-      "watermark": "unknown",
+      "watermark": "none",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-c77a5b00e06c.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "provenanceNote": "2026-09-08原分辨率目视核验无可见水印；画面被无覆盖复制到A0正式制作文件夹，原件保留。",
       "copy": {
         "targetPath": "public/images/choice-frames/review-only/legacy-c77a5b00e06c.png",
         "targetSha256": "05d3a7bd72e2178997bc4b09b05b09fee55325fe3ecdcb6063bbb5652035dc72",
@@ -458,9 +458,9 @@
       "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A3_撤回山谷/00_历史导入/03_第二段尾帧_河谷路线结果.png",
       "sourceSha256": "485eb94989b479318ff1e76a374dcab5927833f130d3086c7f0114f2f665dfc7",
       "origin": "legacy-image",
-      "watermark": "unknown",
+      "watermark": "none",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ed1db0b93fab.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "provenanceNote": "2026-09-08原分辨率目视核验无可见水印；作为A3局部重绘母版，原件保留。",
       "copy": {
         "targetPath": "public/images/choice-frames/review-only/legacy-ed1db0b93fab.png",
         "targetSha256": "485eb94989b479318ff1e76a374dcab5927833f130d3086c7f0114f2f665dfc7",
@@ -503,9 +503,9 @@
       "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B0_断桥局面/00_历史导入/03_目标尾帧_沈岚指出断桥与设备.png",
       "sourceSha256": "98d93ddcfd5f38d2ebdec315177436e1824335203d0d98137673b8a01ae6b7bd",
       "origin": "legacy-image",
-      "watermark": "unknown",
+      "watermark": "none",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-a12c724ef41f.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "provenanceNote": "2026-09-08原分辨率目视核验无可见水印；作为B0局部重绘母版，原件保留。",
       "copy": {
         "targetPath": "public/images/choice-frames/review-only/legacy-a12c724ef41f.png",
         "targetSha256": "98d93ddcfd5f38d2ebdec315177436e1824335203d0d98137673b8a01ae6b7bd",
@@ -713,9 +713,9 @@
       "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C0_窗口局面/00_历史导入/03_目标尾帧_老周给出天气窗口.png",
       "sourceSha256": "fd52d01ef64df5084e0b948be995b28b6f24ac692cd4a2e0db40b12bc7c78cf8",
       "origin": "legacy-image",
-      "watermark": "unknown",
+      "watermark": "none",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-8b73199d6315.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "provenanceNote": "2026-09-08原分辨率目视核验无可见水印；作为C0局部重绘母版，原件保留。",
       "copy": {
         "targetPath": "public/images/choice-frames/review-only/legacy-8b73199d6315.png",
         "targetSha256": "fd52d01ef64df5084e0b948be995b28b6f24ac692cd4a2e0db40b12bc7c78cf8",
@@ -893,9 +893,9 @@
       "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D0_报价局面/00_历史导入/03_目标尾帧_沈岚拿起无线电与矿石.png",
       "sourceSha256": "46b0c2c45577daca651cf5a9f844f2305c2ac2dec91920424eaef215f68923b8",
       "origin": "legacy-image",
-      "watermark": "unknown",
+      "watermark": "none",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0b1f89f93d97.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "provenanceNote": "2026-09-08原分辨率目视核验无可见水印；作为D0局部重绘母版，原件保留。",
       "copy": {
         "targetPath": "public/images/choice-frames/review-only/legacy-0b1f89f93d97.png",
         "targetSha256": "46b0c2c45577daca651cf5a9f844f2305c2ac2dec91920424eaef215f68923b8",
@@ -1049,6 +1049,81 @@
       "copy": {
         "targetPath": "public/images/choice-frames/legacy-candidates/generated-b1-k03-v1.png",
         "targetSha256": "80014792e3f6a222221a88e33f7fbe3affd27344d8ae793ad5adf16254822c55",
+        "verified": true
+      }
+    },
+    {
+      "id": "reused-a0-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/02_A路线/A0/关键帧/K03_目标尾帧候选_复用旧图_v1.png",
+      "sourceSha256": "05d3a7bd72e2178997bc4b09b05b09fee55325fe3ecdcb6063bbb5652035dc72",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/reused-a0-k03-v1.png",
+      "provenanceNote": "2026-09-08从A0历史目标尾帧无覆盖复制；人物、机位、绷带左手、受风固定绳、前方山口与侧后岩壁均保留，原件未改。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/reused-a0-k03-v1.png",
+        "targetSha256": "05d3a7bd72e2178997bc4b09b05b09fee55325fe3ecdcb6063bbb5652035dc72",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-a3-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/02_A路线/A3/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "04731c183b25f3bc6557aa59e8942b83101ff0f645ea117d59fd17d09b0ebff3",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-a3-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以A3旧图03为编辑母版生成；保留人物、下撤方向和山谷，仅补资料样本及部分可回收设备。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-a3-k03-v1.png",
+        "targetSha256": "04731c183b25f3bc6557aa59e8942b83101ff0f645ea117d59fd17d09b0ebff3",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-b0-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/03_B路线/B0/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "b68e5959cc924aa24d35c72e72ea555e690681e472958c9d816c0b315959405d",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-b0-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以B0旧图03为编辑母版生成；保留断桥、暴涨河水、重装和人物，仅补上游轻型检修索桥。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-b0-k03-v1.png",
+        "targetSha256": "b68e5959cc924aa24d35c72e72ea555e690681e472958c9d816c0b315959405d",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c0-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C0/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "cb68ddc97c852fd619accfce85e8ebe9073e5cf18c9f136811a98d555e44afe7",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c0-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以C0旧图03为编辑母版生成；保留帐篷与人物，补无线电、明确天气图和沈岚控制的原始资料。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c0-k03-v1.png",
+        "targetSha256": "cb68ddc97c852fd619accfce85e8ebe9073e5cf18c9f136811a98d555e44afe7",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-d0-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/05_D路线/D0/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "306d3c455d8a52d183da1f0b1349acf193223868f70c07f2b0dfc659f88c9f3a",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-d0-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以D0旧图03为编辑母版生成；保留营地、全员和完整设备，将报价对象改为勘探资料并把实体样本分开。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-d0-k03-v1.png",
+        "targetSha256": "306d3c455d8a52d183da1f0b1349acf193223868f70c07f2b0dfc659f88c9f3a",
         "verified": true
       }
     }
@@ -4814,6 +4889,281 @@
         "reviewer": "Codex视觉核验",
         "date": "2026-09-08",
         "evidence": "原分辨率目视对照B1节点状态卡、关键帧提示词、首尾帧契约和编辑母版；仅进入Web候选位，等待用户最终验收。"
+      }
+    },
+    {
+      "id": "reused-a0-k03-v1-use",
+      "assetId": "reused-a0-k03-v1",
+      "nodeId": "A0",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "横风山口决策点：固定绳受风拉紧，绷带左手失力，山口仍在前方，侧后岩壁可供临时避风",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "A0/00_节点状态卡锁定为第3天、剩余11天；静帧不添加可读时间。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "前方未越过的狭窄山口、横向雪坡与侧后大块岩壁空间关系清楚。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人身份、脸型、服装与同组旧帧连续，无额外人物。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "固定绳、背包、阿杰红色医疗包与通讯耳机均可见。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手握绳并处于受力位置。"
+        },
+        "样本/资料": {
+          "result": "external",
+          "evidence": "资料样本仍由队伍背包携带的状态由A0节点卡与公共开场承接契约锁定，画面未表现遗失。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "密集横向风雪、绳索受力和低能见度明确表现暴风提前。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "伤手持续受力且山口尚未越过，符合已耗时3天并面临继续或避风的决策状态。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照A0节点状态卡、关键帧提示词和同目录成片帧；旧图无覆盖复制进入正式制作文件夹。"
+      }
+    },
+    {
+      "id": "generated-a3-k03-v1-use",
+      "assetId": "generated-a3-k03-v1",
+      "nodeId": "A3",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "全员已从高风险山脊下撤至山谷路线，资料样本仍在，部分设备可回收，等待确定撤收优先级",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "A3/00_节点状态卡锁定为山谷行程结束、登记窗口已关闭；静帧不添加可读时间。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "画面显示从高处风雪山脊下撤到开阔编织河谷的连续路线。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "三名队员的身份、脸型、服装与A0/A3旧图母版连续，无额外人物。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "背包、绳索、医疗包以及地面两只完整但有限的设备箱清晰可见。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手仍在前景握绳。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚同时控制路线图、防水资料夹和独立样本箱，和普通设备箱明确区分。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "高处仍有风雪，开阔山谷能见度改善，符合规避山脊暴风后的环境。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "登记窗口关闭及原机会终止由A3节点卡与首尾帧契约锁定；画面没有继续赶路登记或提交成功。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照A3节点状态卡、关键帧提示词、首尾帧契约及旧图03母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-b0-k03-v1-use",
+      "assetId": "generated-b0-k03-v1",
+      "nodeId": "B0",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "河岸决策广角同时展示断裂原木桥、暴涨河水、上游单人宽检修索桥和本岸重型设备箱",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "B0/00_节点状态卡锁定为第6天、剩余8天；静帧不添加可读时间。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "断桥、暴涨河道、远处上游索桥与同岸前景重装的空间关系完整。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "沈岚、老周、阿杰三人身份、脸型和服装与旧图母版连续，无额外人物。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "多只黑黄重装箱、金属设备、绳索、医疗包和通讯耳机清楚可见。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手在前景，方向正确。"
+        },
+        "样本/资料": {
+          "result": "external",
+          "evidence": "资料与样本仍随队且未受潮由B0节点卡承接；封闭设备箱未表现损失。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "融雪河激流、雪谷与阴天共同建立河水上涨状态。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "原木桥主体已折断并被激流淹没，无法继续使用；远处索桥视觉上仅容人员轻装。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照B0节点状态卡、关键帧提示词、首尾帧契约及旧图03母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c0-k03-v1-use",
+      "assetId": "generated-c0-k03-v1",
+      "nodeId": "C0",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "帐篷内确认天气窗：老周指向逼近山脊的风暴图，无线电保持运输队通话，沈岚控制原始资料",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C0/00_节点状态卡锁定等待2天后、剩余12天、天气窗36小时；具体时长由对白交代。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "同一原营地帐篷内景、桌面天气研判区和帐外雪山清楚可见。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "三名队员身份、脸型、服装与C0旧图母版连续，无运输队或额外人物入镜。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "主动无线电、天气图、阿杰通讯耳机与医疗包完整可见。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手在前景，方向正确。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚将装有原始地图与路线照片的密封硬质资料夹贴身控制。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "天气图的风暴锋面逼近山脊，帐外冷蓝云层与研判内容一致。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "已等待2天、只剩36小时天气窗，以及运输队索取部分未来权益，由C0节点卡与无线电对白锁定。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照C0节点状态卡、关键帧提示词、首尾帧契约及旧图03母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-d0-k03-v1-use",
+      "assetId": "generated-d0-k03-v1",
+      "nodeId": "D0",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "天气短暂转好的原营地中，无线电保持报价通话，沈岚展示完整勘探资料，实体样本与设备分开",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "D0/00_节点状态卡锁定等待决定后第6天、剩余8天；具体期限由对白交代。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "帐篷、雪橇与成组木箱证明队伍仍在原营地。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "三名队员身份、脸型、服装与D0旧图母版连续，无报价方入镜。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "帐篷、雪橇、成组设备箱、阿杰医疗包和通讯耳机保持完整。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手在前景，方向正确。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚手持地图、路线照片等勘探资料夹；实体矿样单独放在右侧样本箱内，未混作交易物。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "无降雪、云层打开且能见度良好，符合天气短暂转好。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "报价只针对完整勘探资料且尚未成交，由D0节点卡与无线电对白锁定；画面未表现矿权或土地已转移。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照D0节点状态卡、关键帧提示词、首尾帧契约及旧图03母版；等待用户验收。"
       }
     }
   ]
