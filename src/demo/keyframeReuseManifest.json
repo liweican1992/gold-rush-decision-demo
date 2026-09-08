@@ -1171,6 +1171,51 @@
         "targetSha256": "73f6ae663d078f94a123ce431d295b620da669a3fc6d9a5b9cdc2abe7f5e2f16",
         "verified": true
       }
+    },
+    {
+      "id": "generated-b3-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/03_B路线/B3/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "980f9fa3196c2e37e97cda4587bab96dbf164665c0235fdc07e125cde3fe1e29",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-b3-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以B3旧图02为编辑母版生成；保留人物与河谷，将状态推进为全员已过索桥、重装留在对岸。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-b3-k03-v1.png",
+        "targetSha256": "980f9fa3196c2e37e97cda4587bab96dbf164665c0235fdc07e125cde3fe1e29",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-c2-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/04_C路线/C2/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "d10d869e9035033417a76f6db8e4b51d6a678df51c97eba7df7afc6d361ef668",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-c2-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以C2旧图02为编辑母版生成；保留完整人员设备和山谷环境，推进为避开风暴后的超期撤收状态。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-c2-k03-v1.png",
+        "targetSha256": "d10d869e9035033417a76f6db8e4b51d6a678df51c97eba7df7afc6d361ef668",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-d3-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/05_D路线/D3/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "2979773618849052d821397f636c0be4419b2cc51efa82f25cd739743058768e",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-d3-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以D3旧图02为编辑母版生成；保留人物与伤手，将重装和营地留在远后方，推进到登记地最后路段。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-d3-k03-v1.png",
+        "targetSha256": "2979773618849052d821397f636c0be4419b2cc51efa82f25cd739743058768e",
+        "verified": true
+      }
     }
   ],
   "usages": [
@@ -5374,6 +5419,171 @@
         "reviewer": "Codex哈希核验",
         "date": "2026-09-08",
         "evidence": "PRIMARY K01与INTRO K03候选SHA-256均为73f6ae663d078f94a123ce431d295b620da669a3fc6d9a5b9cdc2abe7f5e2f16；仍随上游候选等待人工验收。"
+      }
+    },
+    {
+      "id": "generated-b3-k03-v1-use",
+      "assetId": "generated-b3-k03-v1",
+      "nodeId": "B3",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "全员与核心资料已过检修索桥，近岸轻装容量有限，远岸重装清晰留置",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "B3正式节点卡锁定为已接近登记地；静帧不添加可读时间。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "三人位于索桥近岸，窄桥跨河回连远岸，空间关系完整。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "老周、阿杰、沈岚三人身份、脸型、服装与B3旧图母版连续。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "近岸只保留轻装与小型箱，远岸多只重装箱和金属框架明确留置。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手在前景，方向正确。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚随身控制小型核心样本箱及资料载体，未随重装留在远岸。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "河谷寒冷但能见度稳定，无涉水受潮或暴风灾害。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "河流与索桥将队伍和远岸重装明确分隔，已完成轻装过桥的代价成立。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照B3节点卡、关键帧提示词、承接契约及旧图02母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-c2-k03-v1-use",
+      "assetId": "generated-c2-k03-v1",
+      "nodeId": "C2",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "避开封闭山脊后抵达超期撤收点，人员、重装、样本资料和天气记录保持完整",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "C2正式节点卡锁定等待与长路叠加后登记期限已过；静帧不添加可读时间。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "队伍位于安全山谷撤收点，封闭山脊和厚云在远后方。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "老周、阿杰、沈岚三人身份、脸型和服装与C2旧图母版连续。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "两组雪橇、重型设备箱、绳索、医疗包和通讯耳机均完整。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手仍在雪橇把手前景。"
+        },
+        "样本/资料": {
+          "result": "external",
+          "evidence": "样本、防水资料与天气记录随完整箱组保存，由C2节点卡和封闭箱组共同锁定，画面未表现遗失。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "山谷能见度稳定，远后方山脊被低云封闭，符合正确避开暴风。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "登记窗口已经关闭且当前机会进入公开程序由C2正式节点卡锁定；画面不表现提交成功。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照C2节点卡、关键帧提示词、承接契约及旧图02母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-d3-k03-v1-use",
+      "assetId": "generated-d3-k03-v1",
+      "nodeId": "D3",
+      "shotId": "K03-target-candidate",
+      "stage": "节点决策状态",
+      "action": "轻装队伍抵达登记地最后路段，资料样本随身，重装与营地留在远后方，补给余量极低",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "D3正式节点卡锁定已到登记地最后路段、调整缓冲几乎耗尽；静帧不添加可读时间。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "三人位于雪谷最后路段，原营地帐篷与重装在远后方。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "老周、阿杰、沈岚三人身份、脸型和服装与D3旧图母版连续。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "近景队伍仅携轻装、医疗包和小型器材，重型设备箱与雪橇留在远处营地。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手在前景抓握不稳。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚抱持闭合防水资料袋与小型核心样本容器，二者随身。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "天气暂稳、夕光接近结束，路线可行但缓冲有限。"
+        },
+        "不可逆后果": {
+          "result": "visible",
+          "evidence": "远后方营地和成组重装与近景轻装队伍分离，留下重装的选择已发生且未恢复。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照D3节点卡、关键帧提示词、承接契约及旧图02母版；等待用户验收。"
       }
     }
   ]
