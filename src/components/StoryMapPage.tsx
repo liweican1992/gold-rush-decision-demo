@@ -1,4 +1,4 @@
-import { MainFrame, ReuseReview, ProcessMaterials } from './KeyframeReuse'
+import { InheritedInputFrame, MainFrame, ReuseReview, ProcessMaterials } from './KeyframeReuse'
 import { useMemo, useState } from 'react'
 import {
   REDESIGNED_STORY,
@@ -28,6 +28,7 @@ type ReviewDetail = {
   profile?: string
   video?: string
   status?: string
+  parentId?: string
 }
 
 const FILTERS: Array<{ id: StoryRouteFilter; label: string }> = [
@@ -91,6 +92,7 @@ function OutcomeCard({ node, onOpen }: { node: StoryOutcome; onOpen: (detail: Re
 
 function FinaleCard({ node, onOpen }: { node: StoryFinale; onOpen: (detail: ReviewDetail) => void }) {
   const ending = REDESIGNED_STORY.endingTypes.find((item) => item.id === node.endingType)!
+  const parentId = node.id.split('-')[0]
 
   return (
     <button
@@ -110,9 +112,11 @@ function FinaleCard({ node, onOpen }: { node: StoryFinale; onOpen: (detail: Revi
         endingDefinition: ending.definition,
         profile: ending.profile,
         video: node.video,
-        status: '剧本已锁定 · 关键帧待生成',
+        status: '剧本已锁定 · K01继承父节点候选 · K03待生成',
+        parentId,
       })}
     >
+      <InheritedInputFrame nodeId={node.id} parentNodeId={parentId} scene={node.scene} />
       <span>{node.mode === 'automatic' ? '自动结果' : '第三次选择'} · {node.id}</span>
       <strong>{node.label}</strong>
       <div className="story-map-finale-result"><small>确定结尾剧情</small><p>{node.result}</p></div>
@@ -131,7 +135,9 @@ function DetailPanel({ detail, onClose }: { detail: ReviewDetail; onClose: () =>
         <span>{detail.eyebrow} · {detail.id}</span>
         <h2 id="story-detail-title">{detail.title}</h2>
         {detail.time && <strong className="story-map-detail-time">{detail.time}</strong>}
-        <MainFrame key={detail.id} nodeId={detail.id} scene={detail.scene} />
+        {detail.parentId
+          ? <InheritedInputFrame key={detail.id} nodeId={detail.id} parentNodeId={detail.parentId} scene={detail.scene} />
+          : <MainFrame key={detail.id} nodeId={detail.id} scene={detail.scene} />}
         <ProcessMaterials nodeId={detail.id} onReview={onClose} />
         <section><h3>镜头与剧情</h3><p>{detail.scene}</p></section>
         {detail.facts && <section><h3>玩家在选择前已知的事实</h3><ul>{detail.facts.map((fact) => <li key={fact}>{fact}</li>)}</ul></section>}
@@ -167,7 +173,7 @@ function AuditOverview() {
       </div>
       <div className="story-map-production-gate">
         <strong>结构节点候选已覆盖</strong>
-        <p><b>INTRO、PRIMARY、A0—D3 共18个结构节点</b>均已有主候选图；候选仍须逐节点人工验收，随后才生成并放行34条独立结果视频。</p>
+        <p><b>INTRO、PRIMARY、A0—D3 共18个结构节点</b>均已有主候选图；34 / 34 条结局已显示继承K01输入帧，独立K03结果帧仍为 0 / 34。</p>
         <span>脚本通过 ≠ 成片通过 · 每条视频仍需首尾帧、人物、动作、对白与字幕校时验收</span>
         <span>该校验不覆盖图片事实和声画连续性</span>
       </div>

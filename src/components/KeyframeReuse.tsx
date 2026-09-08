@@ -33,6 +33,21 @@ export function MainFrame({ nodeId, scene, manifest = data }: { nodeId: string; 
     </div>}
   </div>
 }
+export function InheritedInputFrame({ nodeId, parentNodeId, scene, manifest = data }: { nodeId: string; parentNodeId: string; scene: string; manifest?: Manifest }) {
+  const row = getMain(parentNodeId, manifest)
+  const [failed, setFailed] = useState(false)
+  return <div data-finale-frame={nodeId} className="reuse-main reuse-inherited">
+    {row && !failed ? <>
+      <img className="story-map-frame" src={imageUrl(row.asset.copy!.targetPath)}
+        alt={`${nodeId} K01输入首帧待验收：继承 ${parentNodeId} K03候选；${scene}`}
+        onError={() => setFailed(true)} />
+      <span className="reuse-candidate">继承 {parentNodeId} K03 · K01输入帧待验收</span>
+    </> : <div className="story-map-frame story-map-frame-missing">
+      <strong>{failed ? '父节点候选加载失败' : '父节点K03尚未绑定'}</strong>
+      <span>{nodeId} 的K01输入帧待补</span><span>{scene}</span>
+    </div>}
+  </div>
+}
 export function ProcessMaterials({ nodeId, manifest = data, onReview }: { nodeId: string; manifest?: Manifest; onReview?: () => void }) {
   const rows = getProcesses(nodeId, manifest)
   const hasLegacy = manifest.usages.some(u => u.nodeId === nodeId)
