@@ -1,0 +1,4405 @@
+{
+  "version": 1,
+  "directoryPolicy": "legacy-candidates/和review-only/均非Pavo生产输入目录。历史原件不删除、不覆盖、不移动、不改名。",
+  "assets": [
+    {
+      "id": "legacy-991df60a074e",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/choice-A.webp",
+      "sourceSha256": "6ce4f0bff81ab6957967b3b6d962ff32ef0ed771d78455cbe407025d54052c14",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-991df60a074e.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-7ec600811153",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/choice-B.webp",
+      "sourceSha256": "57b99393b5465ad4d35c2526c5effc801cbf2ab0c09b933b17176f864fb3e7bf",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-7ec600811153.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-ee1cba9d469b",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/choice-C.webp",
+      "sourceSha256": "7eb530ab25033db8265c6ecb416a7d6062c6df3a0d637fde5449f16760fbd5e1",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ee1cba9d469b.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-94788db4c7a8",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/choice-D.webp",
+      "sourceSha256": "a2b07cddbd62bf79323e6e6704f53202466fcf19a52ae76fdbf6ab05fbd27378",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-94788db4c7a8.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-4deffbb2df87",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/choice-X1.webp",
+      "sourceSha256": "3a65ca620321295dd915b7c31a90ded023ef75acaf65276ce96fdae4a1eb053f",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-4deffbb2df87.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-0b2357001a25",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/choice-X2.webp",
+      "sourceSha256": "ca0adc398037493cafbb51e5b58854639641ce5952f8817f6ff8cc37f5e22fef",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0b2357001a25.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-515d26420cba",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/choice-X3.webp",
+      "sourceSha256": "2d3177b8f7d35138f3a0cdea4b287723dfca1b19e21a12bffb541c35f4b830d2",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-515d26420cba.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-09bf1d7be49e",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/choice-primary.webp",
+      "sourceSha256": "dea08d9504c78784123f91eda165f6ba96b786efdb74174c6bff6f93b0cc6fa4",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-09bf1d7be49e.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-828d0cfa9b2b",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/ending-f3.webp",
+      "sourceSha256": "75f5e984a8129d0b09f34294370386b95c7d54ba816b31b67fc9217df1109466",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-828d0cfa9b2b.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-bcd19e1c33ef",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/ending-f4.webp",
+      "sourceSha256": "526df00b2d29b96722ac7c5d2a015ac7f6e8f18e3a389afc3640712944afa8ae",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-bcd19e1c33ef.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-9644bed535ec",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/ending-f5.webp",
+      "sourceSha256": "7b25900d281cb28a1cc39f8555c1d8c6eb1fde9808e86b11d244ea23f797d11a",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9644bed535ec.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-61f1dc8b079d",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/ending-f6.webp",
+      "sourceSha256": "9f90f2961868cea567805299138130c6585c499303a49388a6c31d42a935ca4f",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-61f1dc8b079d.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-a88f0ef6912d",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/ending-submit-shared.webp",
+      "sourceSha256": "c91926577f6661be6a0de3f0a223bdead2dc44585802e5fa95b310f8e1a27bac",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-a88f0ef6912d.webp",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-1599e2a370f6",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/outcome-A1.png",
+      "sourceSha256": "a3b9129e155baefc1b8c3eb385c5d779ea4961091af7f21abf21a03308cf1396",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-1599e2a370f6.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-90ff878054c3",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/outcome-A2.png",
+      "sourceSha256": "1c9c37ac4b496a2a5e4bbc97825cebda0260fbcfe34e261fcea27ba4b91909d5",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-90ff878054c3.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-0935b2c8b709",
+      "version": 1,
+      "sourcePath": "public/images/choice-frames/outcome-A3.png",
+      "sourceSha256": "6139e277e1e92c23e83ca81fcad1cabdfdc093c7566fd6e3281dded79c07a46f",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0935b2c8b709.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-0feb4d5658e6",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A0_风暴局面/00_历史导入/01_上一镜真实尾帧_三名队友等待决定.png",
+      "sourceSha256": "1e074a7b1f6c73a987011d84bd36b1bcc37add71d140feddf8e38b2cb33ec933",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0feb4d5658e6.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-a55e5809cd10",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A0_风暴局面/00_历史导入/02_局面首帧_队伍沿绳前进.png",
+      "sourceSha256": "116cdf73df263c2884ace2607db89d202425e93dfcc1b78075eb17fb8055806b",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-a55e5809cd10.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-c77a5b00e06c",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A0_风暴局面/00_历史导入/03_目标尾帧_老周回望队长.png",
+      "sourceSha256": "05d3a7bd72e2178997bc4b09b05b09fee55325fe3ecdcb6063bbb5652035dc72",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-c77a5b00e06c.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-de59302d4060",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A0_风暴局面/00_历史导入/05_成片验收帧/01_真实帧.png",
+      "sourceSha256": "0b2ae1020c97bdd3474af8a7fff941771cd13ea31f61a0d412a9cedca2a85bf1",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-de59302d4060.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-5059e1e17f6d",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A0_风暴局面/00_历史导入/05_成片验收帧/02_真实帧.png",
+      "sourceSha256": "66569020c2b45d4ebb3552090c61cc7bfa8116e327459860222c7c588c998212",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-5059e1e17f6d.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-9d592501dc5e",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A0_风暴局面/00_历史导入/05_成片验收帧/03_真实帧.png",
+      "sourceSha256": "bed19d2096d41946859b3c6f9f533f4826f102c03765f676e2e81a38eee0cf38",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9d592501dc5e.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-98c8744e43e2",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A1_冲过山口/00_历史导入/01_第一段首帧_山口前.png",
+      "sourceSha256": "900e6e601e1687a4c5f33577a3ff27ff791156b2eaf96524c3e11a89598a7bbc",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-98c8744e43e2.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-26b3a9e254ad",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A1_冲过山口/00_历史导入/02_第一段尾帧兼第二段首帧_越岭后.png",
+      "sourceSha256": "8dad2c32cb830bd439e7f734681e55f5cda2140cc130c682364c2ea78580a6ba",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-26b3a9e254ad.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-b4c29552c129",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A1_冲过山口/00_历史导入/03_第二段尾帧_背风坡结果.png",
+      "sourceSha256": "47fada440e8afebb5127619b4e92b9b187cfea36fc5d699dc566e8aeb8e0a6a2",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-b4c29552c129.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-45a49984a930",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A2_背风扎营/00_历史导入/02_现有成片真实尾帧_背风营地.png",
+      "sourceSha256": "893d4dae36bd46432c8b7a6e4e011199209bc973de84e2b64dd009b2b1229152",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-45a49984a930.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-0fcf36bc9038",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A2_背风扎营/00_历史导入/03_新结果段首帧_山口下方整装待发.png",
+      "sourceSha256": "a6c908b46967de46607e15b47b539feb5f0c0d71dc20ade7ef2fafbcc00eaeb9",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0fcf36bc9038.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-5559a7e0d239",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A2_背风扎营/00_历史导入/04_新目标尾帧_次日越过山口.png",
+      "sourceSha256": "ca934d1571a1e1443e9aa790ec942901a6301dcb8c11882d44b9c09b2963498b",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-5559a7e0d239.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-f6e4d695d62b",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A3_撤回山谷/00_历史导入/01_第一段首帧_山脊决定点.png",
+      "sourceSha256": "900e6e601e1687a4c5f33577a3ff27ff791156b2eaf96524c3e11a89598a7bbc",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-f6e4d695d62b.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-7a80bd6e667f",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A3_撤回山谷/00_历史导入/02_第一段尾帧兼第二段首帧_下撤雪坡.png",
+      "sourceSha256": "d6d7d587f3ba4224176cac619b2c041cac3844c0d85500ea90ff2995ddb75102",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-7a80bd6e667f.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-ed1db0b93fab",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/A_翻山路线/A3_撤回山谷/00_历史导入/03_第二段尾帧_河谷路线结果.png",
+      "sourceSha256": "485eb94989b479318ff1e76a374dcab5927833f130d3086c7f0114f2f665dfc7",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ed1db0b93fab.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-f95da8fa128d",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B0_断桥局面/00_历史导入/01_片头真实尾帧_人物参考.png",
+      "sourceSha256": "1e074a7b1f6c73a987011d84bd36b1bcc37add71d140feddf8e38b2cb33ec933",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-f95da8fa128d.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-946de7c3d8f1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B0_断桥局面/00_历史导入/02_局面首帧_队伍发现断桥.png",
+      "sourceSha256": "a1895ebc92ab949a8865d3de9b38decde62ba1a210ec54c6d886df7880db452c",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-946de7c3d8f1.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-a12c724ef41f",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B0_断桥局面/00_历史导入/03_目标尾帧_沈岚指出断桥与设备.png",
+      "sourceSha256": "98d93ddcfd5f38d2ebdec315177436e1824335203d0d98137673b8a01ae6b7bd",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-a12c724ef41f.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-9d6efcc32a40",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B0_断桥局面/00_历史导入/05_成片验收帧/01_真实帧.png",
+      "sourceSha256": "58bd0427e06498bbc1c02fb3185370f666882015b45174ad0112c960a06ad01e",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9d6efcc32a40.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-29541a6b22f9",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B0_断桥局面/00_历史导入/05_成片验收帧/02_真实帧.png",
+      "sourceSha256": "2afe8102a01db380e004380813fcf4bc4548323fe129dee40744c1c2db2936f1",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-29541a6b22f9.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-ae55981860c0",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B0_断桥局面/00_历史导入/05_成片验收帧/03_真实帧.png",
+      "sourceSha256": "b4134d535dfa1cf12cfae0d43db2ef0ce9d07831eba8b542098cca9894563e68",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ae55981860c0.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-6fbc79836d73",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B1_立即涉水/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "b4134d535dfa1cf12cfae0d43db2ef0ce9d07831eba8b542098cca9894563e68",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-6fbc79836d73.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-47ad9f01b665",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B1_立即涉水/00_历史导入/02_目标尾帧_强渡后检查浸水样本.png",
+      "sourceSha256": "c25f77ee5e23be95c2dc8a384e70113b6e49e5c16e52828f4d3680a0bce51e6d",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-47ad9f01b665.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-9ea574a2f35f",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B1_立即涉水/00_历史导入/03_新结果段首帧_抵达登记站.png",
+      "sourceSha256": "d221a462a4ad0ad4812f2bf93d5223a372f23aa8e39c965afa8b9689e2c240d3",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9ea574a2f35f.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-8d28d278141a",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B1_立即涉水/00_历史导入/04_新目标尾帧_材料受损审核不确定.png",
+      "sourceSha256": "8afa59eb47b00b33bb6e6af45b3e3408d65f7d68b70e6f00e5eaa4437a3cebb3",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-8d28d278141a.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-501b1737dca3",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B2_绕行四天/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "b4134d535dfa1cf12cfae0d43db2ef0ce9d07831eba8b542098cca9894563e68",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-501b1737dca3.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-7b64e4c82366",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B2_绕行四天/00_历史导入/02_目标尾帧_队伍拖行设备开始绕路.png",
+      "sourceSha256": "d03fb2d3dd23ab6f37591afbf0601faf5e1181d0b37d5461fdae9ff3442d34ce",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-7b64e4c82366.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-ec35c3be7d40",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B3_丢弃重装/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "b4134d535dfa1cf12cfae0d43db2ef0ce9d07831eba8b542098cca9894563e68",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ec35c3be7d40.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-6fcd0e6b5219",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/B_山谷路线/B3_丢弃重装/00_历史导入/02_目标尾帧_留下重型设备轻装前进.png",
+      "sourceSha256": "03f0c5dce5a6fddc78bac064805bbd6fa4a109c7fb9fb9a66e4ec667b951e5ea",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-6fcd0e6b5219.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-5318704de154",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C0_窗口局面/00_历史导入/01_片头真实尾帧_人物参考.png",
+      "sourceSha256": "1e074a7b1f6c73a987011d84bd36b1bcc37add71d140feddf8e38b2cb33ec933",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-5318704de154.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-047bd270f430",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C0_窗口局面/00_历史导入/02_局面首帧_老周研判天气图.png",
+      "sourceSha256": "cb21c6edc1f1a11b1a4ec1ce1188c5ef043306ec8788e9f3f67bebb588c5791e",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-047bd270f430.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-8b73199d6315",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C0_窗口局面/00_历史导入/03_目标尾帧_老周给出天气窗口.png",
+      "sourceSha256": "fd52d01ef64df5084e0b948be995b28b6f24ac692cd4a2e0db40b12bc7c78cf8",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-8b73199d6315.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-086beec07631",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C0_窗口局面/00_历史导入/05_成片验收帧/01_真实帧.png",
+      "sourceSha256": "48ef1ad9b741475740b934ff69537b074743d8949dd14c22fe7673ae68759363",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-086beec07631.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-12309e400446",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C0_窗口局面/00_历史导入/05_成片验收帧/02_真实帧.png",
+      "sourceSha256": "c175f2e1393467db3f9c29d1fd3db6d60f9aa5c55618fb9b3b4c23921d0594a0",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-12309e400446.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-8ac7eb6a6c06",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C0_窗口局面/00_历史导入/05_成片验收帧/03_真实帧.png",
+      "sourceSha256": "983c01e92d33e24dc3c1bb18d8087b0e129ea7f66ffe067982f14107bedccddb",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-8ac7eb6a6c06.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-51c3a36c0d0c",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C1_轻装翻山/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "983c01e92d33e24dc3c1bb18d8087b0e129ea7f66ffe067982f14107bedccddb",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-51c3a36c0d0c.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-4981a3627477",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C1_轻装翻山/00_历史导入/02_目标尾帧_队伍轻装奔赴山口.png",
+      "sourceSha256": "be915c67ef8b4dbdafde8fd9e9eebc307f794d3065eee18604c8a01df7db46c7",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-4981a3627477.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-c050283eadcd",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C2_改走山谷/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "983c01e92d33e24dc3c1bb18d8087b0e129ea7f66ffe067982f14107bedccddb",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-c050283eadcd.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-57488ffad09c",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C2_改走山谷/00_历史导入/02_目标尾帧_队伍携完整设备转向山谷.png",
+      "sourceSha256": "fae3537e138ceca437e93aa35b40cb29024458f54b07b4d9bfdf34cb50459bc3",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-57488ffad09c.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-018f0e05c5c3",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C3_引入运输/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "983c01e92d33e24dc3c1bb18d8087b0e129ea7f66ffe067982f14107bedccddb",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-018f0e05c5c3.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-618db7252abd",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/C_预报路线/C3_引入运输/00_历史导入/02_目标尾帧_与运输伙伴达成合作.png",
+      "sourceSha256": "692f0b208274740f73dbaba44b62dcc8a30f62bc24ea58128459adb3b6e65a9e",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-618db7252abd.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-e9375aa9ee53",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D0_报价局面/00_历史导入/01_片头真实尾帧_人物参考.png",
+      "sourceSha256": "1e074a7b1f6c73a987011d84bd36b1bcc37add71d140feddf8e38b2cb33ec933",
+      "origin": "legacy-image",
+      "watermark": "pavo",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-e9375aa9ee53.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-4ad7abc2ca91",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D0_报价局面/00_历史导入/02_局面首帧_队伍打包撤离.png",
+      "sourceSha256": "7cc11dc1612a48e441cc96ab7d7916865b4abe52952352af5411aa8ca7080be5",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-4ad7abc2ca91.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-0b1f89f93d97",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D0_报价局面/00_历史导入/03_目标尾帧_沈岚拿起无线电与矿石.png",
+      "sourceSha256": "46b0c2c45577daca651cf5a9f844f2305c2ac2dec91920424eaef215f68923b8",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0b1f89f93d97.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-0a04b4869347",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D0_报价局面/00_历史导入/05_成片验收帧/01_真实帧.png",
+      "sourceSha256": "0722a769b0622c92cb11f58d180228c9367592828b6f2f47bb6f34cc8fda8fa3",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0a04b4869347.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-5b7428745201",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D0_报价局面/00_历史导入/05_成片验收帧/02_真实帧.png",
+      "sourceSha256": "59b136a074cebe0c1a5d248df4d7df888d772b4aac68c2b75dbc28432e1a9b67",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-5b7428745201.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-1857d78dcc78",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D0_报价局面/00_历史导入/05_成片验收帧/03_真实帧.png",
+      "sourceSha256": "acaa107e15b0e9eb46148c34f1320062bee7d0606f5733dc094c6b8151b4f0a1",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-1857d78dcc78.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-118c8c8fa9b5",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D1_安全撤离/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "acaa107e15b0e9eb46148c34f1320062bee7d0606f5733dc094c6b8151b4f0a1",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-118c8c8fa9b5.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-c6e8059a5ca2",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D1_安全撤离/00_历史导入/02_目标尾帧_完整打包后继续安全撤离.png",
+      "sourceSha256": "d709d2b3541d49e7c7d619748f8851c61ab433b4b7299ffd8d72d863aeeb7ce0",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-c6e8059a5ca2.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-2d4e901ba615",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D2_出售资料/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "acaa107e15b0e9eb46148c34f1320062bee7d0606f5733dc094c6b8151b4f0a1",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-2d4e901ba615.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-eb0478bb849b",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D2_出售资料/00_历史导入/02_目标尾帧_向竞争者交付勘探资料.png",
+      "sourceSha256": "75b29727d7c7b65b1d0e7ec41793cd9429559546cff0f3fa3f0b73953a2f6708",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-eb0478bb849b.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-019b2f259f34",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D3_轻装抢登记/00_历史导入/01_输入首帧_承接真实尾帧.png",
+      "sourceSha256": "acaa107e15b0e9eb46148c34f1320062bee7d0606f5733dc094c6b8151b4f0a1",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-019b2f259f34.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    },
+    {
+      "id": "legacy-4f94d720b7d2",
+      "version": 1,
+      "sourcePath": "短剧制作资料/09_路线制作包/D_安全撤离路线/D3_轻装抢登记/00_历史导入/02_目标尾帧_重新选择装备并返回矿区.png",
+      "sourceSha256": "65d166af741b57e6150e546d1e2456468d0c536bf41216df031e8f96ff01c51c",
+      "origin": "legacy-image",
+      "watermark": "unknown",
+      "plannedTargetPath": "public/images/choice-frames/review-only/legacy-4f94d720b7d2.png",
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+    }
+  ],
+  "usages": [
+    {
+      "id": "legacy-991df60a074e-use",
+      "assetId": "legacy-991df60a074e",
+      "nodeId": "A0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "choice-A（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-7ec600811153-use",
+      "assetId": "legacy-7ec600811153",
+      "nodeId": "B0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "choice-B（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-ee1cba9d469b-use",
+      "assetId": "legacy-ee1cba9d469b",
+      "nodeId": "C0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "choice-C（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-94788db4c7a8-use",
+      "assetId": "legacy-94788db4c7a8",
+      "nodeId": "D0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "choice-D（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-4deffbb2df87-use",
+      "assetId": "legacy-4deffbb2df87",
+      "nodeId": "X1",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "choice-X1（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧共享节点/结局不是v3.0独立剧情；只保留历史审查，不绑定34条正式终局。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-0b2357001a25-use",
+      "assetId": "legacy-0b2357001a25",
+      "nodeId": "X2",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "choice-X2（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧共享节点/结局不是v3.0独立剧情；只保留历史审查，不绑定34条正式终局。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-515d26420cba-use",
+      "assetId": "legacy-515d26420cba",
+      "nodeId": "X3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "choice-X3（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧共享节点/结局不是v3.0独立剧情；只保留历史审查，不绑定34条正式终局。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-09bf1d7be49e-use",
+      "assetId": "legacy-09bf1d7be49e",
+      "nodeId": "PRIMARY",
+      "shotId": "historical-reference",
+      "stage": "公共入口",
+      "action": "choice-primary（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-09bf1d7be49e-intro",
+      "assetId": "legacy-09bf1d7be49e",
+      "nodeId": "INTRO",
+      "shotId": "historical-reference",
+      "stage": "公共入口",
+      "action": "现有公共开场共用水印图，仅审查",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-828d0cfa9b2b-use",
+      "assetId": "legacy-828d0cfa9b2b",
+      "nodeId": "F3",
+      "shotId": "historical-reference",
+      "stage": "独立终局",
+      "action": "ending-f3（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧共享节点/结局不是v3.0独立剧情；只保留历史审查，不绑定34条正式终局。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-bcd19e1c33ef-use",
+      "assetId": "legacy-bcd19e1c33ef",
+      "nodeId": "F4",
+      "shotId": "historical-reference",
+      "stage": "独立终局",
+      "action": "ending-f4（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧共享节点/结局不是v3.0独立剧情；只保留历史审查，不绑定34条正式终局。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-9644bed535ec-use",
+      "assetId": "legacy-9644bed535ec",
+      "nodeId": "F5",
+      "shotId": "historical-reference",
+      "stage": "独立终局",
+      "action": "ending-f5（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧共享节点/结局不是v3.0独立剧情；只保留历史审查，不绑定34条正式终局。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-61f1dc8b079d-use",
+      "assetId": "legacy-61f1dc8b079d",
+      "nodeId": "F6",
+      "shotId": "historical-reference",
+      "stage": "独立终局",
+      "action": "ending-f6（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧共享节点/结局不是v3.0独立剧情；只保留历史审查，不绑定34条正式终局。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-a88f0ef6912d-use",
+      "assetId": "legacy-a88f0ef6912d",
+      "nodeId": "F-SHARED",
+      "shotId": "historical-reference",
+      "stage": "独立终局",
+      "action": "ending-submit-shared（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧共享节点/结局不是v3.0独立剧情；只保留历史审查，不绑定34条正式终局。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-1599e2a370f6-use",
+      "assetId": "legacy-1599e2a370f6",
+      "nodeId": "A1",
+      "shotId": "historical-reference",
+      "stage": "直接后果",
+      "action": "越岭后背风坡参考；需核实队长伤势加重、装备损失与人物连续性",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-90ff878054c3-use",
+      "assetId": "legacy-90ff878054c3",
+      "nodeId": "A2",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "outcome-A2（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "conflict",
+          "evidence": "画面已越岭；A2为第4天清晨、剩余10天、尚未越岭。原图禁止A2主图及正式过程展示。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "画面已越岭；A2为第4天清晨、剩余10天、尚未越岭。原图禁止A2主图及正式过程展示。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-0935b2c8b709-use",
+      "assetId": "legacy-0935b2c8b709",
+      "nodeId": "A3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "outcome-A3（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "下撤或指向河谷的过程不能证明山谷行程结束且超期。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-0feb4d5658e6-use",
+      "assetId": "legacy-0feb4d5658e6",
+      "nodeId": "INTRO",
+      "shotId": "historical-reference",
+      "stage": "公共入口",
+      "action": "01_上一镜真实尾帧_三名队友等待决定（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-a55e5809cd10-use",
+      "assetId": "legacy-a55e5809cd10",
+      "nodeId": "A0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "02_局面首帧_队伍沿绳前进（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-c77a5b00e06c-use",
+      "assetId": "legacy-c77a5b00e06c",
+      "nodeId": "A0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "03_目标尾帧_老周回望队长（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-de59302d4060-use",
+      "assetId": "legacy-de59302d4060",
+      "nodeId": "A0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "01_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-5059e1e17f6d-use",
+      "assetId": "legacy-5059e1e17f6d",
+      "nodeId": "A0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "02_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-9d592501dc5e-use",
+      "assetId": "legacy-9d592501dc5e",
+      "nodeId": "A0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "03_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-98c8744e43e2-use",
+      "assetId": "legacy-98c8744e43e2",
+      "nodeId": "A1",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "01_第一段首帧_山口前（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-26b3a9e254ad-use",
+      "assetId": "legacy-26b3a9e254ad",
+      "nodeId": "A1",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "02_第一段尾帧兼第二段首帧_越岭后（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-b4c29552c129-use",
+      "assetId": "legacy-b4c29552c129",
+      "nodeId": "A1",
+      "shotId": "historical-reference",
+      "stage": "直接后果",
+      "action": "越岭后背风坡参考；需核实队长伤势加重、装备损失与人物连续性",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-45a49984a930-use",
+      "assetId": "legacy-45a49984a930",
+      "nodeId": "A2",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "背风搭营过程参考；不能证明已过夜到第4天清晨",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-0fcf36bc9038-use",
+      "assetId": "legacy-0fcf36bc9038",
+      "nodeId": "A2",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "山口下方整装/起行参考；不是A2背风平台上的决策状态",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-0fcf36bc9038-denied-decision",
+      "assetId": "legacy-0fcf36bc9038",
+      "nodeId": "A2",
+      "shotId": "decision-denied",
+      "stage": "节点决策状态",
+      "action": "暂禁作为A2决策主图",
+      "judgment": "禁止用于该节点",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "整装起行不能代替背风平台上尚未越岭的A2决策状态。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-5559a7e0d239-use",
+      "assetId": "legacy-5559a7e0d239",
+      "nodeId": "A2",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "04_新目标尾帧_次日越过山口（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "conflict",
+          "evidence": "画面已越岭；A2为第4天清晨、剩余10天、尚未越岭。原图禁止A2主图及正式过程展示。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "画面已越岭；A2为第4天清晨、剩余10天、尚未越岭。原图禁止A2主图及正式过程展示。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-f6e4d695d62b-use",
+      "assetId": "legacy-f6e4d695d62b",
+      "nodeId": "A3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "01_第一段首帧_山脊决定点（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "下撤或指向河谷的过程不能证明山谷行程结束且超期。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-7a80bd6e667f-use",
+      "assetId": "legacy-7a80bd6e667f",
+      "nodeId": "A3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "02_第一段尾帧兼第二段首帧_下撤雪坡（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "下撤或指向河谷的过程不能证明山谷行程结束且超期。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-ed1db0b93fab-use",
+      "assetId": "legacy-ed1db0b93fab",
+      "nodeId": "A3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "03_第二段尾帧_河谷路线结果（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "下撤或指向河谷的过程不能证明山谷行程结束且超期。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-f95da8fa128d-use",
+      "assetId": "legacy-f95da8fa128d",
+      "nodeId": "INTRO",
+      "shotId": "historical-reference",
+      "stage": "公共入口",
+      "action": "01_片头真实尾帧_人物参考（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-946de7c3d8f1-use",
+      "assetId": "legacy-946de7c3d8f1",
+      "nodeId": "B0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "02_局面首帧_队伍发现断桥（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-a12c724ef41f-use",
+      "assetId": "legacy-a12c724ef41f",
+      "nodeId": "B0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "03_目标尾帧_沈岚指出断桥与设备（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-9d6efcc32a40-use",
+      "assetId": "legacy-9d6efcc32a40",
+      "nodeId": "B0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "01_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-29541a6b22f9-use",
+      "assetId": "legacy-29541a6b22f9",
+      "nodeId": "B0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "02_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-ae55981860c0-use",
+      "assetId": "legacy-ae55981860c0",
+      "nodeId": "B0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "03_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-6fbc79836d73-use",
+      "assetId": "legacy-6fbc79836d73",
+      "nodeId": "B1",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "河岸画面不能代表强渡结束后第13天接近登记站的节点完成状态。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-47ad9f01b665-use",
+      "assetId": "legacy-47ad9f01b665",
+      "nodeId": "B1",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "02_目标尾帧_强渡后检查浸水样本（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "河岸画面不能代表强渡结束后第13天接近登记站的节点完成状态。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-9ea574a2f35f-use",
+      "assetId": "legacy-9ea574a2f35f",
+      "nodeId": "B1",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "登记站附近材料检查参考；待核实第13天、余1天及资料/样本状态",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-8d28d278141a-use",
+      "assetId": "legacy-8d28d278141a",
+      "nodeId": "B1",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "登记站附近材料检查参考；待核实第13天、余1天及资料/样本状态",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-501b1737dca3-use",
+      "assetId": "legacy-501b1737dca3",
+      "nodeId": "B2",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-7b64e4c82366-use",
+      "assetId": "legacy-7b64e4c82366",
+      "nodeId": "B2",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "02_目标尾帧_队伍拖行设备开始绕路（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-ec35c3be7d40-use",
+      "assetId": "legacy-ec35c3be7d40",
+      "nodeId": "B3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "人物和重装仍在同一岸；不能证明人员资料已过河、重装留在对岸。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-6fcd0e6b5219-use",
+      "assetId": "legacy-6fcd0e6b5219",
+      "nodeId": "B3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "02_目标尾帧_留下重型设备轻装前进（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "人物和重装仍在同一岸；不能证明人员资料已过河、重装留在对岸。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-5318704de154-use",
+      "assetId": "legacy-5318704de154",
+      "nodeId": "INTRO",
+      "shotId": "historical-reference",
+      "stage": "公共入口",
+      "action": "01_片头真实尾帧_人物参考（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-047bd270f430-use",
+      "assetId": "legacy-047bd270f430",
+      "nodeId": "C0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "02_局面首帧_老周研判天气图（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-8b73199d6315-use",
+      "assetId": "legacy-8b73199d6315",
+      "nodeId": "C0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "03_目标尾帧_老周给出天气窗口（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-086beec07631-use",
+      "assetId": "legacy-086beec07631",
+      "nodeId": "C0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "01_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-12309e400446-use",
+      "assetId": "legacy-12309e400446",
+      "nodeId": "C0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "02_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-8ac7eb6a6c06-use",
+      "assetId": "legacy-8ac7eb6a6c06",
+      "nodeId": "C0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "03_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-51c3a36c0d0c-use",
+      "assetId": "legacy-51c3a36c0d0c",
+      "nodeId": "C1",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-4981a3627477-use",
+      "assetId": "legacy-4981a3627477",
+      "nodeId": "C1",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "02_目标尾帧_队伍轻装奔赴山口（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-c050283eadcd-use",
+      "assetId": "legacy-c050283eadcd",
+      "nodeId": "C2",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-57488ffad09c-use",
+      "assetId": "legacy-57488ffad09c",
+      "nodeId": "C2",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "02_目标尾帧_队伍携完整设备转向山谷（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-018f0e05c5c3-use",
+      "assetId": "legacy-018f0e05c5c3",
+      "nodeId": "C3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "握手仅表明合作建立过程，不能证明第11天接近登记地或原始资料归属。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-618db7252abd-use",
+      "assetId": "legacy-618db7252abd",
+      "nodeId": "C3",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "02_目标尾帧_与运输伙伴达成合作（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "握手仅表明合作建立过程，不能证明第11天接近登记地或原始资料归属。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-e9375aa9ee53-use",
+      "assetId": "legacy-e9375aa9ee53",
+      "nodeId": "INTRO",
+      "shotId": "historical-reference",
+      "stage": "公共入口",
+      "action": "01_片头真实尾帧_人物参考（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-4ad7abc2ca91-use",
+      "assetId": "legacy-4ad7abc2ca91",
+      "nodeId": "D0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "02_局面首帧_队伍打包撤离（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-0b1f89f93d97-use",
+      "assetId": "legacy-0b1f89f93d97",
+      "nodeId": "D0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "03_目标尾帧_沈岚拿起无线电与矿石（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-0a04b4869347-use",
+      "assetId": "legacy-0a04b4869347",
+      "nodeId": "D0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "01_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-5b7428745201-use",
+      "assetId": "legacy-5b7428745201",
+      "nodeId": "D0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "02_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-1857d78dcc78-use",
+      "assetId": "legacy-1857d78dcc78",
+      "nodeId": "D0",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "03_真实帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "旧画面未完成新版局面重构，只回收人物、场景与构图底稿；不得占节点主图。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-118c8c8fa9b5-use",
+      "assetId": "legacy-118c8c8fa9b5",
+      "nodeId": "D1",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "等待结束后的撤收准备参考；机会进入公开竞争，不表示对方取得机会",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-c6e8059a5ca2-use",
+      "assetId": "legacy-c6e8059a5ca2",
+      "nodeId": "D1",
+      "shotId": "historical-reference",
+      "stage": "节点决策状态",
+      "action": "等待结束后的撤收准备参考；机会进入公开竞争，不表示对方取得机会",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-2d4e901ba615-use",
+      "assetId": "legacy-2d4e901ba615",
+      "nodeId": "D2",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "前景矿石、箱体与握手容易表达连实物样本一起出售；D2仅出售地图、照片、坐标和勘探记录。人物、外部收购方及握手构图只可拆解参考，不继承交付语义。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-eb0478bb849b-use",
+      "assetId": "legacy-eb0478bb849b",
+      "nodeId": "D2",
+      "shotId": "historical-reference",
+      "stage": "行动过程",
+      "action": "02_目标尾帧_向竞争者交付勘探资料（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "禁止用于该节点",
+      "repair": "需换帧",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "前景矿石、箱体与握手容易表达连实物样本一起出售；D2仅出售地图、照片、坐标和勘探记录。人物、外部收购方及握手构图只可拆解参考，不继承交付语义。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-019b2f259f34-use",
+      "assetId": "legacy-019b2f259f34",
+      "nodeId": "D3",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    },
+    {
+      "id": "legacy-4f94d720b7d2-use",
+      "assetId": "legacy-4f94d720b7d2",
+      "nodeId": "D3",
+      "shotId": "historical-reference",
+      "stage": "行动开始",
+      "action": "02_目标尾帧_重新选择装备并返回矿区（历史文件名；不构成v3.0完成状态证明）",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "地点": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "人物": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "装备": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "伤势": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "样本/资料": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "天气": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        },
+        "不可逆后果": {
+          "result": "pending",
+          "evidence": "尚未完成此文件与v3.0正式事实、相邻镜头及对白的逐项核对；不作为准入证据。"
+        }
+      },
+      "continuityIssues": [
+        "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
+      ],
+      "conflicts": [
+        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
+      ],
+      "stageMatchesNode": false,
+      "placement": "review"
+    }
+  ]
+}
