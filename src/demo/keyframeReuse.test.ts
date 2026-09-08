@@ -73,3 +73,16 @@ describe('keyframe eligibility', () => {
     expect(rows.some(row => row.sourcePath.includes('/A2_'))).toBe(false)
   })
 })
+
+it('does not infer target-frame actions or elapsed time from an input-frame directory', () => {
+  for (const asset of data.assets.filter(a => a.sourcePath.includes('01_输入首帧_承接真实尾帧'))) {
+    for (const usage of data.usages.filter(u => u.assetId === asset.id)) {
+      expect(usage.action).toContain('承接上一镜')
+      expect(usage.action).toContain('待核实')
+      expect(usage.action).not.toMatch(/撤收准备|握手|出售/)
+      expect(usage.conflicts).toEqual([])
+      expect(usage.stageMatchesNode).toBe(false)
+      expect(usage.placement).toBe('review')
+    }
+  }
+})

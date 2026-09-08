@@ -3067,8 +3067,8 @@
       "assetId": "legacy-6fbc79836d73",
       "nodeId": "B1",
       "shotId": "historical-reference",
-      "stage": "行动过程",
-      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "stage": "行动开始",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
@@ -3109,9 +3109,7 @@
       "continuityIssues": [
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
-      "conflicts": [
-        "河岸画面不能代表强渡结束后第13天接近登记站的节点完成状态。"
-      ],
+      "conflicts": [],
       "stageMatchesNode": false,
       "placement": "review"
     },
@@ -3276,7 +3274,7 @@
       "nodeId": "B2",
       "shotId": "historical-reference",
       "stage": "行动开始",
-      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
@@ -3317,9 +3315,7 @@
       "continuityIssues": [
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
-      "conflicts": [
-        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
-      ],
+      "conflicts": [],
       "stageMatchesNode": false,
       "placement": "review"
     },
@@ -3381,8 +3377,8 @@
       "assetId": "legacy-ec35c3be7d40",
       "nodeId": "B3",
       "shotId": "historical-reference",
-      "stage": "行动过程",
-      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "stage": "行动开始",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
@@ -3423,9 +3419,7 @@
       "continuityIssues": [
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
-      "conflicts": [
-        "人物和重装仍在同一岸；不能证明人员资料已过河、重装留在对岸。"
-      ],
+      "conflicts": [],
       "stageMatchesNode": false,
       "placement": "review"
     },
@@ -3804,7 +3798,7 @@
       "nodeId": "C1",
       "shotId": "historical-reference",
       "stage": "行动开始",
-      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
@@ -3845,9 +3839,7 @@
       "continuityIssues": [
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
-      "conflicts": [
-        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
-      ],
+      "conflicts": [],
       "stageMatchesNode": false,
       "placement": "review"
     },
@@ -3910,7 +3902,7 @@
       "nodeId": "C2",
       "shotId": "historical-reference",
       "stage": "行动开始",
-      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
@@ -3951,9 +3943,7 @@
       "continuityIssues": [
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
-      "conflicts": [
-        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
-      ],
+      "conflicts": [],
       "stageMatchesNode": false,
       "placement": "review"
     },
@@ -4015,8 +4005,8 @@
       "assetId": "legacy-018f0e05c5c3",
       "nodeId": "C3",
       "shotId": "historical-reference",
-      "stage": "行动过程",
-      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "stage": "行动开始",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
@@ -4057,9 +4047,7 @@
       "continuityIssues": [
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
-      "conflicts": [
-        "握手仅表明合作建立过程，不能证明第11天接近登记地或原始资料归属。"
-      ],
+      "conflicts": [],
       "stageMatchesNode": false,
       "placement": "review"
     },
@@ -4437,8 +4425,8 @@
       "assetId": "legacy-118c8c8fa9b5",
       "nodeId": "D1",
       "shotId": "historical-reference",
-      "stage": "节点决策状态",
-      "action": "等待结束后的撤收准备参考；机会进入公开竞争，不表示对方取得机会",
+      "stage": "行动开始",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
@@ -4480,7 +4468,7 @@
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
       "conflicts": [],
-      "stageMatchesNode": true,
+      "stageMatchesNode": false,
       "placement": "review"
     },
     {
@@ -4539,10 +4527,10 @@
       "assetId": "legacy-2d4e901ba615",
       "nodeId": "D2",
       "shotId": "historical-reference",
-      "stage": "行动过程",
-      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
-      "judgment": "禁止用于该节点",
-      "repair": "需换帧",
+      "stage": "行动开始",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
       "acceptance": "未验收",
       "checks": {
         "时间": {
@@ -4581,9 +4569,7 @@
       "continuityIssues": [
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
-      "conflicts": [
-        "前景矿石、箱体与握手容易表达连实物样本一起出售；D2仅出售地图、照片、坐标和勘探记录。人物、外部收购方及握手构图只可拆解参考，不继承交付语义。"
-      ],
+      "conflicts": [],
       "stageMatchesNode": false,
       "placement": "review"
     },
@@ -4646,7 +4632,7 @@
       "nodeId": "D3",
       "shotId": "historical-reference",
       "stage": "行动开始",
-      "action": "01_输入首帧_承接真实尾帧（历史文件名；不构成v3.0完成状态证明）",
+      "action": "承接上一镜；当前画面内容与拟用行动开始阶段待核实，不继承目标尾帧事实",
       "judgment": "仅作参考",
       "repair": "无需修复待验",
       "acceptance": "未验收",
@@ -4687,9 +4673,7 @@
       "continuityIssues": [
         "人物外貌、服装、第一人称受伤左手及空间/昼夜连续性尚未逐项关闭。"
       ],
-      "conflicts": [
-        "行动开始素材不能代表正式二级节点行动完成后的直接后果。"
-      ],
+      "conflicts": [],
       "stageMatchesNode": false,
       "placement": "review"
     },
