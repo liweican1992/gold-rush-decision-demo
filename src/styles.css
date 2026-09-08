@@ -731,3 +731,18 @@ blockquote { margin: 0; padding: var(--space-md) var(--space-lg); border-inline-
   .demo-actions button,
   .demo-footer button { transition-duration: 150ms; }
 }
+
+/* Historical keyframe review: these styles do not change story card layout. */
+.reuse-candidate { color: #e3c279; border: 1px solid currentColor; padding: .2rem .45rem; }
+.reuse-review { margin: 1rem auto; max-width: 112rem; padding: 1rem; border: 1px solid #6c737b; }
+.reuse-review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem; }
+.reuse-review img, .reuse-process img { display: block; width: 100%; height: auto; object-fit: contain; }
+.reuse-review article { overflow-wrap: anywhere; min-width: 0; padding: .75rem; border: 1px solid #616971; }
+.reuse-review dt { font-weight: 700; }
+.reuse-review dd { margin: .25rem 0 .65rem; }
+.reuse-review .reuse-denied { color: #f1a394; }
+.reuse-review summary { cursor: pointer; padding: .6rem 0; }
+.reuse-review :focus-visible, .reuse-process :focus-visible { outline: 2px solid #e3c279; outline-offset: 3px; }
+.reuse-review p, .reuse-process p { line-height: 1.6; }
+.reuse-process a { color: #e3c279; }
+.reuse-process figure { margin: 1rem 0; }
