@@ -1126,6 +1126,51 @@
         "targetSha256": "306d3c455d8a52d183da1f0b1349acf193223868f70c07f2b0dfc659f88c9f3a",
         "verified": true
       }
+    },
+    {
+      "id": "generated-intro-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/01_公共开场/INTRO/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "73f6ae663d078f94a123ce431d295b620da669a3fc6d9a5b9cdc2abe7f5e2f16",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-intro-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以旧公共开场尾帧为编辑母版生成；保留三名人物、帐篷、机位与绷带左手，移除水印并补齐样本、地图、照片和防水资料袋。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-intro-k03-v1.png",
+        "targetSha256": "73f6ae663d078f94a123ce431d295b620da669a3fc6d9a5b9cdc2abe7f5e2f16",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-primary-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/01_公共开场/PRIMARY/关键帧/K03_目标尾帧候选_v1.png",
+      "sourceSha256": "9bbc59c64c2e7f52c283136ed3e34bbd985c08bd05b3596ffb06bf05db7a9dd7",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-primary-k03-v1.png",
+      "provenanceNote": "2026-09-08由OpenAI内置imagegen以INTRO K03候选为连续性母版生成；保持人物、服装、机位和伤手不变，将样本落桌并补充无线电，形成中性等待决策画面。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-primary-k03-v1.png",
+        "targetSha256": "9bbc59c64c2e7f52c283136ed3e34bbd985c08bd05b3596ffb06bf05db7a9dd7",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-primary-k01-inherit-intro-k03-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/01_公共开场/PRIMARY/关键帧/K01_输入首帧候选_继承INTRO-K03_v1.png",
+      "sourceSha256": "73f6ae663d078f94a123ce431d295b620da669a3fc6d9a5b9cdc2abe7f5e2f16",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/review-only/generated-primary-k01-inherit-intro-k03-v1.png",
+      "provenanceNote": "2026-09-08从INTRO K03候选无覆盖复制，SHA-256完全一致；仅用于验证公共开场到一级选择的逐像素输入承接，不作为PRIMARY节点主图。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/generated-primary-k01-inherit-intro-k03-v1.png",
+        "targetSha256": "73f6ae663d078f94a123ce431d295b620da669a3fc6d9a5b9cdc2abe7f5e2f16",
+        "verified": true
+      }
     }
   ],
   "usages": [
@@ -5164,6 +5209,171 @@
         "reviewer": "Codex视觉核验",
         "date": "2026-09-08",
         "evidence": "原分辨率目视对照D0节点状态卡、关键帧提示词、首尾帧契约及旧图03母版；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-intro-k03-v1-use",
+      "assetId": "generated-intro-k03-v1",
+      "nodeId": "INTRO",
+      "shotId": "K03-target-candidate",
+      "stage": "公共入口",
+      "action": "发现黄金当天，三名队友与桌面证据共同面向第一人称队长，等待进入战略说明",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "INTRO/00_节点状态卡锁定为发现黄金当天、登记窗口剩余14天；静帧不添加可读倒计时。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "寒地主帐篷、木桌、暖色营灯与帐外冷蓝雪山共同建立公共开场空间。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "老周位于左侧、阿杰居中、沈岚位于右侧，三人脸型、年龄、职责装备与旧片尾母版连续，无额外人物。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "阿杰黑色通讯耳机、胸前红色医疗包、老周绳索及桌面防水文件袋清晰可见。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手位于画面下缘，方向正确且不出现玩家正脸。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "沈岚控制高品位矿样；桌面地图、现场照片与闭合防水文件袋分区可见，纸面没有可读文字。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "帐外为寒地冷蓝暮色和远山，画面没有提前出现暴风、断桥或其他路线事件。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "土地购买期权、14天登记窗口与伤手影响由INTRO正式脚本和对白锁定；画面未暗示已经取得矿权。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照INTRO节点状态卡、关键帧提示词、首尾帧契约及旧公共开场母版；仅进入Web候选位，等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-primary-k03-v1-use",
+      "assetId": "generated-primary-k03-v1",
+      "nodeId": "PRIMARY",
+      "shotId": "K03-target-candidate",
+      "stage": "公共入口",
+      "action": "同一帐篷内完成四种一级策略说明后，三名队友停止动作并中性等待第一人称玩家决定",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "PRIMARY/00_节点状态卡锁定为发现黄金当天、剩余14天，与INTRO连续；静帧不添加可读时间。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "帐篷、木桌、人物站位、营灯与帐外雪山均与INTRO K03保持同一空间和机位。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "老周、阿杰、沈岚沿用INTRO K03相同脸型、发型、服装和站位，三人都看向玩家。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "路线绳索、阿杰黑色耳机和红色医疗包、沈岚一侧的现场无线电及防水文件袋均完整。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称队长白色绷带左手仍在画面下缘，和INTRO K03的手位及方向连续。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "矿样已落在地图旁，照片、地图和防水资料袋保持在桌面且没有可读文字。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "仍是同一寒地暮色营地；画面不预演暴风、断桥、运输队或竞争者。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "A/B/C/D四种策略只由PRIMARY对白说明，画面中无人行动、投票或替玩家宣布选择。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "main",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex视觉核验",
+        "date": "2026-09-08",
+        "evidence": "原分辨率目视对照PRIMARY节点状态卡、关键帧提示词和首尾帧契约，并与INTRO K03候选逐项比对；等待用户验收。"
+      }
+    },
+    {
+      "id": "generated-primary-k01-inherit-intro-k03-v1-use",
+      "assetId": "generated-primary-k01-inherit-intro-k03-v1",
+      "nodeId": "PRIMARY",
+      "shotId": "K01-input-inheritance-candidate",
+      "stage": "公共入口",
+      "action": "逐像素承接上一镜INTRO K03候选；只证明输入连续性，不代表PRIMARY完成状态",
+      "judgment": "仅作参考",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": {
+          "result": "external",
+          "evidence": "INTRO与PRIMARY均为发现黄金当天、剩余14天，时间不跨越。"
+        },
+        "地点": {
+          "result": "visible",
+          "evidence": "文件与INTRO K03候选逐像素相同，帐篷、木桌和机位无跳变。"
+        },
+        "人物": {
+          "result": "visible",
+          "evidence": "三名队友的脸型、服装、站位与INTRO K03逐像素相同。"
+        },
+        "装备": {
+          "result": "visible",
+          "evidence": "绳索、耳机、医疗包和防水资料袋与INTRO K03逐像素相同。"
+        },
+        "伤势": {
+          "result": "visible",
+          "evidence": "第一人称白色绷带左手与INTRO K03逐像素相同。"
+        },
+        "样本/资料": {
+          "result": "visible",
+          "evidence": "矿样、地图、照片与资料袋与INTRO K03逐像素相同。"
+        },
+        "天气": {
+          "result": "visible",
+          "evidence": "帐外寒地暮色与INTRO K03逐像素相同，没有新增路线天气。"
+        },
+        "不可逆后果": {
+          "result": "external",
+          "evidence": "该文件仅承接上游画面；路线选择尚未发生，由PRIMARY正式脚本锁定。"
+        }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": false,
+      "placement": "review",
+      "reviewEvidence": {
+        "objectVersion": 1,
+        "reviewer": "Codex哈希核验",
+        "date": "2026-09-08",
+        "evidence": "PRIMARY K01与INTRO K03候选SHA-256均为73f6ae663d078f94a123ce431d295b620da669a3fc6d9a5b9cdc2abe7f5e2f16；仍随上游候选等待人工验收。"
       }
     }
   ]
