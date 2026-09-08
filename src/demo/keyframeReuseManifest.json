@@ -10,7 +10,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-991df60a074e.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-991df60a074e.webp",
+        "targetSha256": "6ce4f0bff81ab6957967b3b6d962ff32ef0ed771d78455cbe407025d54052c14",
+        "verified": true
+      }
     },
     {
       "id": "legacy-7ec600811153",
@@ -20,7 +25,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-7ec600811153.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-7ec600811153.webp",
+        "targetSha256": "57b99393b5465ad4d35c2526c5effc801cbf2ab0c09b933b17176f864fb3e7bf",
+        "verified": true
+      }
     },
     {
       "id": "legacy-ee1cba9d469b",
@@ -30,7 +40,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ee1cba9d469b.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-ee1cba9d469b.webp",
+        "targetSha256": "7eb530ab25033db8265c6ecb416a7d6062c6df3a0d637fde5449f16760fbd5e1",
+        "verified": true
+      }
     },
     {
       "id": "legacy-94788db4c7a8",
@@ -40,7 +55,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-94788db4c7a8.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-94788db4c7a8.webp",
+        "targetSha256": "a2b07cddbd62bf79323e6e6704f53202466fcf19a52ae76fdbf6ab05fbd27378",
+        "verified": true
+      }
     },
     {
       "id": "legacy-4deffbb2df87",
@@ -50,7 +70,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-4deffbb2df87.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-4deffbb2df87.webp",
+        "targetSha256": "3a65ca620321295dd915b7c31a90ded023ef75acaf65276ce96fdae4a1eb053f",
+        "verified": true
+      }
     },
     {
       "id": "legacy-0b2357001a25",
@@ -60,7 +85,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0b2357001a25.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-0b2357001a25.webp",
+        "targetSha256": "ca0adc398037493cafbb51e5b58854639641ce5952f8817f6ff8cc37f5e22fef",
+        "verified": true
+      }
     },
     {
       "id": "legacy-515d26420cba",
@@ -70,7 +100,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-515d26420cba.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-515d26420cba.webp",
+        "targetSha256": "2d3177b8f7d35138f3a0cdea4b287723dfca1b19e21a12bffb541c35f4b830d2",
+        "verified": true
+      }
     },
     {
       "id": "legacy-09bf1d7be49e",
@@ -80,7 +115,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-09bf1d7be49e.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-09bf1d7be49e.webp",
+        "targetSha256": "dea08d9504c78784123f91eda165f6ba96b786efdb74174c6bff6f93b0cc6fa4",
+        "verified": true
+      }
     },
     {
       "id": "legacy-828d0cfa9b2b",
@@ -90,7 +130,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-828d0cfa9b2b.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-828d0cfa9b2b.webp",
+        "targetSha256": "75f5e984a8129d0b09f34294370386b95c7d54ba816b31b67fc9217df1109466",
+        "verified": true
+      }
     },
     {
       "id": "legacy-bcd19e1c33ef",
@@ -100,7 +145,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-bcd19e1c33ef.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-bcd19e1c33ef.webp",
+        "targetSha256": "526df00b2d29b96722ac7c5d2a015ac7f6e8f18e3a389afc3640712944afa8ae",
+        "verified": true
+      }
     },
     {
       "id": "legacy-9644bed535ec",
@@ -110,7 +160,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9644bed535ec.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-9644bed535ec.webp",
+        "targetSha256": "7b25900d281cb28a1cc39f8555c1d8c6eb1fde9808e86b11d244ea23f797d11a",
+        "verified": true
+      }
     },
     {
       "id": "legacy-61f1dc8b079d",
@@ -120,7 +175,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-61f1dc8b079d.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-61f1dc8b079d.webp",
+        "targetSha256": "9f90f2961868cea567805299138130c6585c499303a49388a6c31d42a935ca4f",
+        "verified": true
+      }
     },
     {
       "id": "legacy-a88f0ef6912d",
@@ -130,7 +190,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-a88f0ef6912d.webp",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-a88f0ef6912d.webp",
+        "targetSha256": "c91926577f6661be6a0de3f0a223bdead2dc44585802e5fa95b310f8e1a27bac",
+        "verified": true
+      }
     },
     {
       "id": "legacy-1599e2a370f6",
@@ -140,7 +205,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-1599e2a370f6.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-1599e2a370f6.png",
+        "targetSha256": "a3b9129e155baefc1b8c3eb385c5d779ea4961091af7f21abf21a03308cf1396",
+        "verified": true
+      }
     },
     {
       "id": "legacy-90ff878054c3",
@@ -150,7 +220,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-90ff878054c3.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-90ff878054c3.png",
+        "targetSha256": "1c9c37ac4b496a2a5e4bbc97825cebda0260fbcfe34e261fcea27ba4b91909d5",
+        "verified": true
+      }
     },
     {
       "id": "legacy-0935b2c8b709",
@@ -160,7 +235,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0935b2c8b709.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-0935b2c8b709.png",
+        "targetSha256": "6139e277e1e92c23e83ca81fcad1cabdfdc093c7566fd6e3281dded79c07a46f",
+        "verified": true
+      }
     },
     {
       "id": "legacy-0feb4d5658e6",
@@ -170,7 +250,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0feb4d5658e6.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-0feb4d5658e6.png",
+        "targetSha256": "1e074a7b1f6c73a987011d84bd36b1bcc37add71d140feddf8e38b2cb33ec933",
+        "verified": true
+      }
     },
     {
       "id": "legacy-a55e5809cd10",
@@ -180,7 +265,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-a55e5809cd10.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-a55e5809cd10.png",
+        "targetSha256": "116cdf73df263c2884ace2607db89d202425e93dfcc1b78075eb17fb8055806b",
+        "verified": true
+      }
     },
     {
       "id": "legacy-c77a5b00e06c",
@@ -190,7 +280,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-c77a5b00e06c.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-c77a5b00e06c.png",
+        "targetSha256": "05d3a7bd72e2178997bc4b09b05b09fee55325fe3ecdcb6063bbb5652035dc72",
+        "verified": true
+      }
     },
     {
       "id": "legacy-de59302d4060",
@@ -200,7 +295,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-de59302d4060.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-de59302d4060.png",
+        "targetSha256": "0b2ae1020c97bdd3474af8a7fff941771cd13ea31f61a0d412a9cedca2a85bf1",
+        "verified": true
+      }
     },
     {
       "id": "legacy-5059e1e17f6d",
@@ -210,7 +310,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-5059e1e17f6d.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-5059e1e17f6d.png",
+        "targetSha256": "66569020c2b45d4ebb3552090c61cc7bfa8116e327459860222c7c588c998212",
+        "verified": true
+      }
     },
     {
       "id": "legacy-9d592501dc5e",
@@ -220,7 +325,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9d592501dc5e.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-9d592501dc5e.png",
+        "targetSha256": "bed19d2096d41946859b3c6f9f533f4826f102c03765f676e2e81a38eee0cf38",
+        "verified": true
+      }
     },
     {
       "id": "legacy-98c8744e43e2",
@@ -230,7 +340,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-98c8744e43e2.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-98c8744e43e2.png",
+        "targetSha256": "900e6e601e1687a4c5f33577a3ff27ff791156b2eaf96524c3e11a89598a7bbc",
+        "verified": true
+      }
     },
     {
       "id": "legacy-26b3a9e254ad",
@@ -240,7 +355,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-26b3a9e254ad.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-26b3a9e254ad.png",
+        "targetSha256": "8dad2c32cb830bd439e7f734681e55f5cda2140cc130c682364c2ea78580a6ba",
+        "verified": true
+      }
     },
     {
       "id": "legacy-b4c29552c129",
@@ -250,7 +370,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-b4c29552c129.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-b4c29552c129.png",
+        "targetSha256": "47fada440e8afebb5127619b4e92b9b187cfea36fc5d699dc566e8aeb8e0a6a2",
+        "verified": true
+      }
     },
     {
       "id": "legacy-45a49984a930",
@@ -260,7 +385,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-45a49984a930.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-45a49984a930.png",
+        "targetSha256": "893d4dae36bd46432c8b7a6e4e011199209bc973de84e2b64dd009b2b1229152",
+        "verified": true
+      }
     },
     {
       "id": "legacy-0fcf36bc9038",
@@ -270,7 +400,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0fcf36bc9038.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-0fcf36bc9038.png",
+        "targetSha256": "a6c908b46967de46607e15b47b539feb5f0c0d71dc20ade7ef2fafbcc00eaeb9",
+        "verified": true
+      }
     },
     {
       "id": "legacy-5559a7e0d239",
@@ -280,7 +415,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-5559a7e0d239.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-5559a7e0d239.png",
+        "targetSha256": "ca934d1571a1e1443e9aa790ec942901a6301dcb8c11882d44b9c09b2963498b",
+        "verified": true
+      }
     },
     {
       "id": "legacy-f6e4d695d62b",
@@ -290,7 +430,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-f6e4d695d62b.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-f6e4d695d62b.png",
+        "targetSha256": "900e6e601e1687a4c5f33577a3ff27ff791156b2eaf96524c3e11a89598a7bbc",
+        "verified": true
+      }
     },
     {
       "id": "legacy-7a80bd6e667f",
@@ -300,7 +445,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-7a80bd6e667f.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-7a80bd6e667f.png",
+        "targetSha256": "d6d7d587f3ba4224176cac619b2c041cac3844c0d85500ea90ff2995ddb75102",
+        "verified": true
+      }
     },
     {
       "id": "legacy-ed1db0b93fab",
@@ -310,7 +460,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ed1db0b93fab.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-ed1db0b93fab.png",
+        "targetSha256": "485eb94989b479318ff1e76a374dcab5927833f130d3086c7f0114f2f665dfc7",
+        "verified": true
+      }
     },
     {
       "id": "legacy-f95da8fa128d",
@@ -320,7 +475,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-f95da8fa128d.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-f95da8fa128d.png",
+        "targetSha256": "1e074a7b1f6c73a987011d84bd36b1bcc37add71d140feddf8e38b2cb33ec933",
+        "verified": true
+      }
     },
     {
       "id": "legacy-946de7c3d8f1",
@@ -330,7 +490,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-946de7c3d8f1.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-946de7c3d8f1.png",
+        "targetSha256": "a1895ebc92ab949a8865d3de9b38decde62ba1a210ec54c6d886df7880db452c",
+        "verified": true
+      }
     },
     {
       "id": "legacy-a12c724ef41f",
@@ -340,7 +505,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-a12c724ef41f.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-a12c724ef41f.png",
+        "targetSha256": "98d93ddcfd5f38d2ebdec315177436e1824335203d0d98137673b8a01ae6b7bd",
+        "verified": true
+      }
     },
     {
       "id": "legacy-9d6efcc32a40",
@@ -350,7 +520,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9d6efcc32a40.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-9d6efcc32a40.png",
+        "targetSha256": "58bd0427e06498bbc1c02fb3185370f666882015b45174ad0112c960a06ad01e",
+        "verified": true
+      }
     },
     {
       "id": "legacy-29541a6b22f9",
@@ -360,7 +535,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-29541a6b22f9.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-29541a6b22f9.png",
+        "targetSha256": "2afe8102a01db380e004380813fcf4bc4548323fe129dee40744c1c2db2936f1",
+        "verified": true
+      }
     },
     {
       "id": "legacy-ae55981860c0",
@@ -370,7 +550,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ae55981860c0.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-ae55981860c0.png",
+        "targetSha256": "b4134d535dfa1cf12cfae0d43db2ef0ce9d07831eba8b542098cca9894563e68",
+        "verified": true
+      }
     },
     {
       "id": "legacy-6fbc79836d73",
@@ -380,7 +565,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-6fbc79836d73.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-6fbc79836d73.png",
+        "targetSha256": "b4134d535dfa1cf12cfae0d43db2ef0ce9d07831eba8b542098cca9894563e68",
+        "verified": true
+      }
     },
     {
       "id": "legacy-47ad9f01b665",
@@ -390,7 +580,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-47ad9f01b665.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-47ad9f01b665.png",
+        "targetSha256": "c25f77ee5e23be95c2dc8a384e70113b6e49e5c16e52828f4d3680a0bce51e6d",
+        "verified": true
+      }
     },
     {
       "id": "legacy-9ea574a2f35f",
@@ -400,7 +595,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-9ea574a2f35f.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-9ea574a2f35f.png",
+        "targetSha256": "d221a462a4ad0ad4812f2bf93d5223a372f23aa8e39c965afa8b9689e2c240d3",
+        "verified": true
+      }
     },
     {
       "id": "legacy-8d28d278141a",
@@ -410,7 +610,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-8d28d278141a.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-8d28d278141a.png",
+        "targetSha256": "8afa59eb47b00b33bb6e6af45b3e3408d65f7d68b70e6f00e5eaa4437a3cebb3",
+        "verified": true
+      }
     },
     {
       "id": "legacy-501b1737dca3",
@@ -420,7 +625,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-501b1737dca3.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-501b1737dca3.png",
+        "targetSha256": "b4134d535dfa1cf12cfae0d43db2ef0ce9d07831eba8b542098cca9894563e68",
+        "verified": true
+      }
     },
     {
       "id": "legacy-7b64e4c82366",
@@ -430,7 +640,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-7b64e4c82366.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-7b64e4c82366.png",
+        "targetSha256": "d03fb2d3dd23ab6f37591afbf0601faf5e1181d0b37d5461fdae9ff3442d34ce",
+        "verified": true
+      }
     },
     {
       "id": "legacy-ec35c3be7d40",
@@ -440,7 +655,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-ec35c3be7d40.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-ec35c3be7d40.png",
+        "targetSha256": "b4134d535dfa1cf12cfae0d43db2ef0ce9d07831eba8b542098cca9894563e68",
+        "verified": true
+      }
     },
     {
       "id": "legacy-6fcd0e6b5219",
@@ -450,7 +670,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-6fcd0e6b5219.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-6fcd0e6b5219.png",
+        "targetSha256": "03f0c5dce5a6fddc78bac064805bbd6fa4a109c7fb9fb9a66e4ec667b951e5ea",
+        "verified": true
+      }
     },
     {
       "id": "legacy-5318704de154",
@@ -460,7 +685,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-5318704de154.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-5318704de154.png",
+        "targetSha256": "1e074a7b1f6c73a987011d84bd36b1bcc37add71d140feddf8e38b2cb33ec933",
+        "verified": true
+      }
     },
     {
       "id": "legacy-047bd270f430",
@@ -470,7 +700,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-047bd270f430.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-047bd270f430.png",
+        "targetSha256": "cb21c6edc1f1a11b1a4ec1ce1188c5ef043306ec8788e9f3f67bebb588c5791e",
+        "verified": true
+      }
     },
     {
       "id": "legacy-8b73199d6315",
@@ -480,7 +715,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-8b73199d6315.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-8b73199d6315.png",
+        "targetSha256": "fd52d01ef64df5084e0b948be995b28b6f24ac692cd4a2e0db40b12bc7c78cf8",
+        "verified": true
+      }
     },
     {
       "id": "legacy-086beec07631",
@@ -490,7 +730,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-086beec07631.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-086beec07631.png",
+        "targetSha256": "48ef1ad9b741475740b934ff69537b074743d8949dd14c22fe7673ae68759363",
+        "verified": true
+      }
     },
     {
       "id": "legacy-12309e400446",
@@ -500,7 +745,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-12309e400446.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-12309e400446.png",
+        "targetSha256": "c175f2e1393467db3f9c29d1fd3db6d60f9aa5c55618fb9b3b4c23921d0594a0",
+        "verified": true
+      }
     },
     {
       "id": "legacy-8ac7eb6a6c06",
@@ -510,7 +760,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-8ac7eb6a6c06.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-8ac7eb6a6c06.png",
+        "targetSha256": "983c01e92d33e24dc3c1bb18d8087b0e129ea7f66ffe067982f14107bedccddb",
+        "verified": true
+      }
     },
     {
       "id": "legacy-51c3a36c0d0c",
@@ -520,7 +775,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-51c3a36c0d0c.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-51c3a36c0d0c.png",
+        "targetSha256": "983c01e92d33e24dc3c1bb18d8087b0e129ea7f66ffe067982f14107bedccddb",
+        "verified": true
+      }
     },
     {
       "id": "legacy-4981a3627477",
@@ -530,7 +790,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-4981a3627477.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-4981a3627477.png",
+        "targetSha256": "be915c67ef8b4dbdafde8fd9e9eebc307f794d3065eee18604c8a01df7db46c7",
+        "verified": true
+      }
     },
     {
       "id": "legacy-c050283eadcd",
@@ -540,7 +805,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-c050283eadcd.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-c050283eadcd.png",
+        "targetSha256": "983c01e92d33e24dc3c1bb18d8087b0e129ea7f66ffe067982f14107bedccddb",
+        "verified": true
+      }
     },
     {
       "id": "legacy-57488ffad09c",
@@ -550,7 +820,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-57488ffad09c.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-57488ffad09c.png",
+        "targetSha256": "fae3537e138ceca437e93aa35b40cb29024458f54b07b4d9bfdf34cb50459bc3",
+        "verified": true
+      }
     },
     {
       "id": "legacy-018f0e05c5c3",
@@ -560,7 +835,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-018f0e05c5c3.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-018f0e05c5c3.png",
+        "targetSha256": "983c01e92d33e24dc3c1bb18d8087b0e129ea7f66ffe067982f14107bedccddb",
+        "verified": true
+      }
     },
     {
       "id": "legacy-618db7252abd",
@@ -570,7 +850,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-618db7252abd.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-618db7252abd.png",
+        "targetSha256": "692f0b208274740f73dbaba44b62dcc8a30f62bc24ea58128459adb3b6e65a9e",
+        "verified": true
+      }
     },
     {
       "id": "legacy-e9375aa9ee53",
@@ -580,7 +865,12 @@
       "origin": "legacy-image",
       "watermark": "pavo",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-e9375aa9ee53.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-e9375aa9ee53.png",
+        "targetSha256": "1e074a7b1f6c73a987011d84bd36b1bcc37add71d140feddf8e38b2cb33ec933",
+        "verified": true
+      }
     },
     {
       "id": "legacy-4ad7abc2ca91",
@@ -590,7 +880,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-4ad7abc2ca91.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-4ad7abc2ca91.png",
+        "targetSha256": "7cc11dc1612a48e441cc96ab7d7916865b4abe52952352af5411aa8ca7080be5",
+        "verified": true
+      }
     },
     {
       "id": "legacy-0b1f89f93d97",
@@ -600,7 +895,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0b1f89f93d97.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-0b1f89f93d97.png",
+        "targetSha256": "46b0c2c45577daca651cf5a9f844f2305c2ac2dec91920424eaef215f68923b8",
+        "verified": true
+      }
     },
     {
       "id": "legacy-0a04b4869347",
@@ -610,7 +910,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-0a04b4869347.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-0a04b4869347.png",
+        "targetSha256": "0722a769b0622c92cb11f58d180228c9367592828b6f2f47bb6f34cc8fda8fa3",
+        "verified": true
+      }
     },
     {
       "id": "legacy-5b7428745201",
@@ -620,7 +925,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-5b7428745201.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-5b7428745201.png",
+        "targetSha256": "59b136a074cebe0c1a5d248df4d7df888d772b4aac68c2b75dbc28432e1a9b67",
+        "verified": true
+      }
     },
     {
       "id": "legacy-1857d78dcc78",
@@ -630,7 +940,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-1857d78dcc78.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-1857d78dcc78.png",
+        "targetSha256": "acaa107e15b0e9eb46148c34f1320062bee7d0606f5733dc094c6b8151b4f0a1",
+        "verified": true
+      }
     },
     {
       "id": "legacy-118c8c8fa9b5",
@@ -640,7 +955,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-118c8c8fa9b5.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-118c8c8fa9b5.png",
+        "targetSha256": "acaa107e15b0e9eb46148c34f1320062bee7d0606f5733dc094c6b8151b4f0a1",
+        "verified": true
+      }
     },
     {
       "id": "legacy-c6e8059a5ca2",
@@ -650,7 +970,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-c6e8059a5ca2.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-c6e8059a5ca2.png",
+        "targetSha256": "d709d2b3541d49e7c7d619748f8851c61ab433b4b7299ffd8d72d863aeeb7ce0",
+        "verified": true
+      }
     },
     {
       "id": "legacy-2d4e901ba615",
@@ -660,7 +985,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-2d4e901ba615.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-2d4e901ba615.png",
+        "targetSha256": "acaa107e15b0e9eb46148c34f1320062bee7d0606f5733dc094c6b8151b4f0a1",
+        "verified": true
+      }
     },
     {
       "id": "legacy-eb0478bb849b",
@@ -670,7 +1000,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-eb0478bb849b.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-eb0478bb849b.png",
+        "targetSha256": "75b29727d7c7b65b1d0e7ec41793cd9429559546cff0f3fa3f0b73953a2f6708",
+        "verified": true
+      }
     },
     {
       "id": "legacy-019b2f259f34",
@@ -680,7 +1015,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-019b2f259f34.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-019b2f259f34.png",
+        "targetSha256": "acaa107e15b0e9eb46148c34f1320062bee7d0606f5733dc094c6b8151b4f0a1",
+        "verified": true
+      }
     },
     {
       "id": "legacy-4f94d720b7d2",
@@ -690,7 +1030,12 @@
       "origin": "legacy-image",
       "watermark": "unknown",
       "plannedTargetPath": "public/images/choice-frames/review-only/legacy-4f94d720b7d2.png",
-      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。"
+      "provenanceNote": "已登记原文件；目标图/真实视频帧来源及时间码尚待证实，不凭文件名认证。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/review-only/legacy-4f94d720b7d2.png",
+        "targetSha256": "65d166af741b57e6150e546d1e2456468d0c536bf41216df031e8f96ff01c51c",
+        "verified": true
+      }
     }
   ],
   "usages": [
