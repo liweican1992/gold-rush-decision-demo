@@ -55,9 +55,9 @@ describe('keyframe eligibility', () => {
   })
   it('registers every batch file conservatively with the exact six stages', () => {
     expect(STAGES).toEqual(['公共入口', '节点决策状态', '行动开始', '行动过程', '直接后果', '独立终局'])
-    expect(data.assets).toHaveLength(114)
+    expect(data.assets).toHaveLength(121)
     expect(data.usages.every(row => row.acceptance === '未验收')).toBe(true)
-    expect(data.usages.filter(row => row.placement === 'main').map(row => row.nodeId).sort()).toEqual(['A0', 'A1', 'A1-1', 'A1-2', 'A1-3', 'A2', 'A2-1', 'A2-2', 'A2-3', 'A3', 'A3-1', 'A3-2', 'A3-3', 'B0', 'B1', 'B1-1', 'B1-2', 'B1-3', 'B2', 'B2-1', 'B2-2', 'B2-3', 'B3', 'B3-1', 'B3-2', 'B3-3', 'C0', 'C1', 'C1-1', 'C1-2', 'C1-3', 'C2', 'C2-1', 'C2-2', 'C2-3', 'C3', 'C3-1', 'C3-2', 'C3-3', 'D0', 'D1', 'D2', 'D3', 'INTRO', 'PRIMARY'])
+    expect(data.usages.filter(row => row.placement === 'main').map(row => row.nodeId).sort()).toEqual(['A0', 'A1', 'A1-1', 'A1-2', 'A1-3', 'A2', 'A2-1', 'A2-2', 'A2-3', 'A3', 'A3-1', 'A3-2', 'A3-3', 'B0', 'B1', 'B1-1', 'B1-2', 'B1-3', 'B2', 'B2-1', 'B2-2', 'B2-3', 'B3', 'B3-1', 'B3-2', 'B3-3', 'C0', 'C1', 'C1-1', 'C1-2', 'C1-3', 'C2', 'C2-1', 'C2-2', 'C2-3', 'C3', 'C3-1', 'C3-2', 'C3-3', 'D0', 'D1', 'D1-1', 'D1-2', 'D1-3', 'D2', 'D2-1', 'D3', 'D3-1', 'D3-2', 'D3-3', 'INTRO', 'PRIMARY'])
     expect(getMain('INTRO', data)?.asset.id).toBe('generated-intro-k03-v1')
     expect(getMain('PRIMARY', data)?.asset.id).toBe('generated-primary-k03-v1')
     expect(getMain('A0', data)?.asset.id).toBe('reused-a0-k03-v1')
@@ -91,6 +91,11 @@ describe('keyframe eligibility', () => {
     expect(getMain('D1', data)?.asset.id).toBe('legacy-c6e8059a5ca2')
     expect(getMain('D2', data)?.asset.id).toBe('generated-d2-k03-v1')
     expect(getMain('D3', data)?.asset.id).toBe('generated-d3-k03-v1')
+    for (const id of ['D1-1', 'D1-2', 'D1-3', 'D2-1', 'D3-1', 'D3-2', 'D3-3']) {
+      expect(getMain(id, data)?.asset.id).toBe(`generated-${id.toLowerCase()}-k03-v1`)
+      expect(getMain(id, data)?.usage.stage).toBe('独立终局')
+      expect(getMain(id, data)?.usage.acceptance).toBe('未验收')
+    }
     expect(data.assets.every(row => /^[a-f0-9]{64}$/.test(row.sourceSha256))).toBe(true)
     const departure = data.assets.find(row => row.sourcePath.includes('山口下方整装'))!
     expect(data.usages.filter(row => row.assetId === departure.id).map(row => row.judgment)).toEqual(['仅作参考', '禁止用于该节点'])
