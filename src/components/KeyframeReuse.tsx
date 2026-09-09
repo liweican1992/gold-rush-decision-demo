@@ -58,7 +58,7 @@ export function ProcessMaterials({ nodeId, manifest = data, onReview }: { nodeId
     <h3>过程素材</h3><p>历史过程参考·未验收，不代表本节点完成状态</p>
     {rows.length ? rows.map(({ asset, usage }) => <figure key={usage.id} data-process-asset={asset.id}>
       <SafeImage key={asset.id} src={imageUrl(asset.copy!.targetPath)} alt={`${nodeId} ${usage.stage}：过程素材·仅参考；${usage.action}`} />
-      <figcaption>{usage.stage} · {usage.action} · 过程素材·仅参考 · 未验收</figcaption>
+      <figcaption>K02动作构图参考 · {usage.stage} · {usage.action} · 过程素材·仅参考 · 未验收</figcaption>
     </figure>) : <p>暂无通过过程展示初审的图片</p>}
     {hasLegacy && <a href="#reuse-review" onClick={onReview}>查看历史素材审查</a>}
   </section>
@@ -66,8 +66,8 @@ export function ProcessMaterials({ nodeId, manifest = data, onReview }: { nodeId
 export function ReuseReview({ filter, manifest = data }: { filter: string; manifest?: Manifest }) {
   const assets = getReviewAssets(filter, manifest)
   return <section id="reuse-review" tabIndex={-1} className="reuse-review" aria-labelledby="reuse-review-title">
-    <h2 id="reuse-review-title">历史关键帧复用审查</h2>
-    <p>共{assets.length}份历史资产 · 未验收。Pavo水印仅限本审查区，原图保留；水印未知也不得进入主图或过程区。</p>
+    <h2 id="reuse-review-title">关键帧资产审查</h2>
+    <p>共{assets.length}份登记资产 · 未验收。Pavo水印仅限本审查区，原图保留；水印未知也不得进入主图或过程区。</p>
     <p>legacy-candidates/与review-only/均非Pavo生产输入目录。复制验证仅证明字节一致，不代表剧情、人物或制作验收通过。</p>
     <details><summary>展开审查清单与图片（{assets.length}份）</summary>
       <div className="reuse-review-grid">{assets.map(asset => {

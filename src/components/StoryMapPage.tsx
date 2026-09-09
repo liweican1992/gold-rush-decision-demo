@@ -1,6 +1,6 @@
 import { InheritedInputFrame, MainFrame, ReuseReview, ProcessMaterials } from './KeyframeReuse'
 import { useMemo, useState } from 'react'
-import { data as keyframeManifest, getMain } from '../demo/keyframeReuse'
+import { data as keyframeManifest, getMain, getProcesses } from '../demo/keyframeReuse'
 import {
   REDESIGNED_STORY,
   getTerminalPathCount,
@@ -162,6 +162,7 @@ function AuditOverview() {
   const uniqueVideos = new Set(finales.map((item) => item.video)).size
   const independentFrames = finales.filter((item) => getMain(item.id, keyframeManifest)).length
   const inheritedFrames = finales.length - independentFrames
+  const processFrames = finales.filter((item) => getProcesses(item.id, keyframeManifest).length > 0).length
   const reviewedFrames = finales.filter((item) => Boolean(getMain(item.id, keyframeManifest)?.usage.reviewEvidence)).length
   const acceptedFrames = finales.filter((item) => {
     const acceptance = getMain(item.id, keyframeManifest)?.usage.acceptance
@@ -183,7 +184,7 @@ function AuditOverview() {
       <div className="story-map-production-gate">
         <strong>结构节点候选已覆盖</strong>
         <p><b>INTRO、PRIMARY、A0—D3 共18个结构节点</b>均已有主候选图；{independentFrames} / {finales.length} 条结局已有独立K03结果候选，其余 {inheritedFrames} 条继续显示继承K01输入帧。</p>
-        <p><b>内部视觉复核 {reviewedFrames} / {finales.length}</b> · 用户验收 {acceptedFrames} / {finales.length} · 尚未放行 Pavo</p>
+        <p><b>内部视觉复核 {reviewedFrames} / {finales.length}</b> · K02动作构图候选 {processFrames} / {finales.length} · 用户验收 {acceptedFrames} / {finales.length} · 尚未放行 Pavo</p>
         <span>脚本通过 ≠ 成片通过 · 每条视频仍需首尾帧、人物、动作、对白与字幕校时验收</span>
         <span>该校验不覆盖图片事实和声画连续性</span>
       </div>

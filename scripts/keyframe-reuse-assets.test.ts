@@ -39,6 +39,13 @@ describe('immutable keyframe copies', () => {
     await expect(runManifest(root, copied, 'verify')).resolves.toMatchObject({ version: 1 });
     expect(copied.usages.every(row => row.acceptance === '未验收')).toBe(true);
   });
+  it('accepts an audited finale K02 as process-only material without approving production', async () => {
+    const { root, asset, manifest } = await fixture();
+    asset.watermark = 'none'; asset.plannedTargetPath = 'public/images/choice-frames/legacy-candidates/test.webp';
+    const row = { ...usage(asset.id), nodeId: 'A1-1', stage: '行动过程', placement: 'process', shotId: 'K02-action-composition-candidate' };
+    const copied = await runManifest(root, { ...manifest, usages: [row] }, 'copy');
+    expect(copied.usages[0]).toMatchObject({ nodeId: 'A1-1', placement: 'process', acceptance: '未验收' });
+  });
   it.each(['stage', 'evidence', 'acceptance', 'duplicate', 'node'])('rejects invalid usage %s', async kind => {
     const { root, asset, manifest } = await fixture();
     const row = usage(asset.id);

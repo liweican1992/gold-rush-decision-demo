@@ -20,7 +20,7 @@ function stageCompatible(usage) {
 function eligible(asset, usage) {
   if (asset.watermark !== 'none' || usage.judgment === '禁止用于该节点' || usage.repair !== '无需修复待验' || usage.continuityIssues.length || usage.conflicts.length) return false;
   if (!CHECKS.every(key => ['visible', 'external'].includes(usage.checks[key].result) && usage.checks[key].evidence.trim())) return false;
-  if (usage.placement === 'process') return DECISIONS.has(usage.nodeId) && ['行动开始', '行动过程'].includes(usage.stage);
+  if (usage.placement === 'process') return (DECISIONS.has(usage.nodeId) || ENDINGS.has(usage.nodeId)) && ['行动开始', '行动过程'].includes(usage.stage);
   return usage.placement === 'main' && usage.judgment === '候选待审' && usage.stageMatchesNode && stageCompatible(usage);
 }
 export async function sha256(path) { return createHash('sha256').update(await readFile(path)).digest('hex'); }

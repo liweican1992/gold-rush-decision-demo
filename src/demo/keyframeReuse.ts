@@ -59,7 +59,7 @@ export function canShow(a: Asset, u: Usage, p: Placement): boolean {
   if (!a.copy.targetPath.startsWith('public/images/choice-frames/legacy-candidates/')) return false
   if (u.repair !== '无需修复待验' || u.continuityIssues.length || u.conflicts.length) return false
   if (!CHECKS.every(k => ['visible', 'external'].includes(u.checks[k]?.result) && u.checks[k]?.evidence.trim())) return false
-  if (p === 'process') return decisions.has(u.nodeId) && ['行动开始', '行动过程'].includes(u.stage)
+  if (p === 'process') return (decisions.has(u.nodeId) || endings.has(u.nodeId)) && ['行动开始', '行动过程'].includes(u.stage)
   return u.judgment === '候选待审' && u.stageMatchesNode && stageCompatible(u)
 }
 function rows(nodeId: string, m: Manifest, placement: Placement) {

@@ -42,6 +42,7 @@ describe('story map page', () => {
     expect(html).toContain('其余 0 条继续显示继承K01输入帧')
     expect(html).toContain('内部视觉复核 34 / 34')
     expect(html).toContain('用户验收 0 / 34')
+    expect(html).toContain('K02动作构图候选 3 / 34')
     expect(html).toContain('尚未放行 Pavo')
     expect(html).toContain('第4天 · 剩余10天')
     expect(html).toContain('原有土地购买机会进入公开竞争')

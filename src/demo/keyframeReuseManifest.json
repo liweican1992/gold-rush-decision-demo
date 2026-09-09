@@ -1816,6 +1816,51 @@
         "targetSha256": "82454076ade2b14a7fb8eb5b83698eb12222c8504fd60db8e6205c4d6efbe5f0",
         "verified": true
       }
+    },
+    {
+      "id": "generated-a1-1-k02-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/02_A路线/A1/A1-1/关键帧/K02_动作构图候选_v1.png",
+      "sourceSha256": "3310634842c4d9c7cfef053c5948ef7d4b1f09ac201b71ca570dad2bbb4993ae",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-a1-1-k02-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以A1父状态与A1-1 K03为身份、环境和结果连续性参考生成；客观第三人称动作构图，主人公完全镜外。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-a1-1-k02-v1.png",
+        "targetSha256": "3310634842c4d9c7cfef053c5948ef7d4b1f09ac201b71ca570dad2bbb4993ae",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-a1-2-k02-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/02_A路线/A1/A1-2/关键帧/K02_动作构图候选_v1.png",
+      "sourceSha256": "e927c6d527a3848260267bbb3474be718952b28d42087f260f3e33731c9efcd7",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-a1-2-k02-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以A1父状态与A1-2 K03为身份、环境和结果连续性参考生成；客观第三人称动作构图，主人公完全镜外。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-a1-2-k02-v1.png",
+        "targetSha256": "e927c6d527a3848260267bbb3474be718952b28d42087f260f3e33731c9efcd7",
+        "verified": true
+      }
+    },
+    {
+      "id": "generated-a1-3-k02-v1",
+      "version": 1,
+      "sourcePath": "短剧制作资料/17_正式Pavo制作包_v3.0/02_A路线/A1/A1-3/关键帧/K02_动作构图候选_v1.png",
+      "sourceSha256": "f1e40435b460c2f96efa7090aeb84b01f40550dd13c91aff9f5eb2ac68d5afbf",
+      "origin": "target-image",
+      "watermark": "none",
+      "plannedTargetPath": "public/images/choice-frames/legacy-candidates/generated-a1-3-k02-v1.png",
+      "provenanceNote": "2026-09-09由OpenAI内置imagegen以A1父状态与A1-3 K03为身份、环境和结果连续性参考生成；客观第三人称动作构图，主人公完全镜外。",
+      "copy": {
+        "targetPath": "public/images/choice-frames/legacy-candidates/generated-a1-3-k02-v1.png",
+        "targetSha256": "f1e40435b460c2f96efa7090aeb84b01f40550dd13c91aff9f5eb2ac68d5afbf",
+        "verified": true
+      }
     }
   ],
   "usages": [
@@ -8385,6 +8430,84 @@
         "date": "2026-09-09",
         "evidence": "原分辨率目视对照D3-3节点状态卡、关键帧提示词、承接契约及D3 K03母版；主人公手未出现，等待用户验收。"
       }
+    },
+    {
+      "id": "generated-a1-1-k02-v1-use",
+      "assetId": "generated-a1-1-k02-v1",
+      "nodeId": "A1-1",
+      "shotId": "K02-action-composition-candidate",
+      "stage": "行动过程",
+      "action": "背风坡明确分队，沈岚和老周携资料先行，阿杰留后照护镜外队长",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": { "result": "external", "evidence": "A1-1节点卡锁定越岭后的分队时点；静帧不添加可读日期。" },
+        "地点": { "result": "visible", "evidence": "高山背风雪坡与通往登记地的下坡路线清楚。" },
+        "人物": { "result": "visible", "evidence": "沈岚、老周先行，阿杰停留后方；仅三名队友，主人公镜外。" },
+        "装备": { "result": "visible", "evidence": "三人保持轻装与既有设备缺口，阿杰携通讯耳机和医疗包。" },
+        "伤势": { "result": "external", "evidence": "阿杰回望镜外队长表达陪护；不展示主人公伤手。" },
+        "样本/资料": { "result": "visible", "evidence": "资料组随身携带闭合防水资料，未把资料留给后组。" },
+        "天气": { "result": "visible", "evidence": "风雪减弱后的冷灰山地天气与A1连续。" },
+        "不可逆后果": { "result": "visible", "evidence": "前后景距离建立临时分队，画面未恢复已遗失设备。" }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "process",
+      "reviewEvidence": { "objectVersion": 1, "reviewer": "Codex视觉核验", "date": "2026-09-09", "evidence": "原分辨率目视对照A1-1节点状态卡与K02要求；三人身份、分队方向和主人公镜外成立，等待用户验收。" }
+    },
+    {
+      "id": "generated-a1-2-k02-v1-use",
+      "assetId": "generated-a1-2-k02-v1",
+      "nodeId": "A1-2",
+      "shotId": "K02-action-composition-candidate",
+      "stage": "行动过程",
+      "action": "全队在背风坡再次减负，保留核心资料并重新分配轻装背包",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": { "result": "external", "evidence": "A1-2节点卡锁定越岭后赶往登记地前的再次减负；静帧不添加日期。" },
+        "地点": { "result": "visible", "evidence": "高山背风雪坡与A1父状态环境连续。" },
+        "人物": { "result": "visible", "evidence": "沈岚、老周、阿杰三人共同重分配负重，无额外人物；主人公镜外。" },
+        "装备": { "result": "visible", "evidence": "轻装背包与雪地留弃小件分区明确，已遗失设备未恢复。" },
+        "伤势": { "result": "external", "evidence": "队长伤势由A1-2正式状态承接；主人公完全镜外。" },
+        "样本/资料": { "result": "visible", "evidence": "沈岚贴身保管闭合资料袋，核心资料未进入留弃区。" },
+        "天气": { "result": "visible", "evidence": "冷灰风雪、积雪与人物湿冷状态延续A1。" },
+        "不可逆后果": { "result": "visible", "evidence": "非关键物资已放入留弃区，画面明确建立继续减负。" }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "process",
+      "reviewEvidence": { "objectVersion": 1, "reviewer": "Codex视觉核验", "date": "2026-09-09", "evidence": "原分辨率目视对照A1-2节点状态卡与K02要求；三人身份、减负动作和资料归属成立，等待用户验收。" }
+    },
+    {
+      "id": "generated-a1-3-k02-v1-use",
+      "assetId": "generated-a1-3-k02-v1",
+      "nodeId": "A1-3",
+      "shotId": "K02-action-composition-candidate",
+      "stage": "行动过程",
+      "action": "阿杰完成镜外队长临时处置后收起医疗包，全队转向山谷撤离",
+      "judgment": "候选待审",
+      "repair": "无需修复待验",
+      "acceptance": "未验收",
+      "checks": {
+        "时间": { "result": "external", "evidence": "A1-3节点卡锁定终止推进后的撤离动作；静帧不添加日期。" },
+        "地点": { "result": "visible", "evidence": "危险山口在后、山谷下撤路线在前，撤离方向明确。" },
+        "人物": { "result": "visible", "evidence": "沈岚、老周、阿杰三名队友身份服装连续，无第四人；主人公镜外。" },
+        "装备": { "result": "visible", "evidence": "阿杰保留红色医疗包，队伍维持轻装与既有设备缺口。" },
+        "伤势": { "result": "external", "evidence": "阿杰收起医疗包表达处置结束，不展示主人公伤手或制造恢复。" },
+        "样本/资料": { "result": "visible", "evidence": "沈岚继续贴身保管闭合资料袋与核心样本。" },
+        "天气": { "result": "visible", "evidence": "风雪减弱后的冷灰高山环境与A1连续。" },
+        "不可逆后果": { "result": "visible", "evidence": "三人身体与手势共同转向山谷，明确放弃继续登记推进。" }
+      },
+      "continuityIssues": [],
+      "conflicts": [],
+      "stageMatchesNode": true,
+      "placement": "process",
+      "reviewEvidence": { "objectVersion": 1, "reviewer": "Codex视觉核验", "date": "2026-09-09", "evidence": "原分辨率目视对照A1-3节点状态卡与K02要求；三人身份、撤离方向和主人公不露手成立，等待用户验收。" }
     }
   ]
 }

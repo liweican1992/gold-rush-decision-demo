@@ -15,14 +15,16 @@ describe('keyframe review displays', () => {
   })
   it('discloses audit limits, four dimensions, paths and all evidence', () => {
     const html = renderToStaticMarkup(<ReuseReview filter="ALL" />)
-    expect(html).toContain('历史关键帧复用审查')
+    expect(html).toContain('关键帧资产审查')
+    expect(html).toContain('共124份登记资产')
+    expect(html).not.toContain('共124份历史资产')
     expect(html).toContain('Pavo水印')
     expect(html).toContain('均非Pavo生产输入目录')
     expect(html).toContain('未验收')
     expect(html).toContain('样本/资料')
     expect(html).toContain('源SHA-256')
     expect(html).toContain('禁止用于该节点')
-    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(121)
+    expect((html.match(/data-review-asset=/g) ?? []).length).toBe(124)
     expect(html).not.toContain('本节点已有关键帧')
   })
   it('shows an independent finale K03 when available instead of the inherited parent K01', () => {
@@ -61,6 +63,14 @@ describe('keyframe review displays', () => {
     expect(html).toContain('href="#reuse-review"')
     const allowed = new Set(getProcesses(nodeId, data).map(r => r.asset.id))
     for (const asset of data.assets.filter(a => !allowed.has(a.id))) expect(html).not.toContain(`data-process-asset="${asset.id}"`)
+  })
+  it.each(['A1-1', 'A1-2', 'A1-3'])('shows the generated %s K02 only as an unaccepted process reference', nodeId => {
+    const html = renderToStaticMarkup(<ProcessMaterials nodeId={nodeId} />)
+    expect(getProcesses(nodeId, data)).toHaveLength(1)
+    expect(html).toContain(`data-process-asset="generated-${nodeId.toLowerCase()}-k02-v1"`)
+    expect(html).toContain('动作构图参考')
+    expect(html).toContain('过程素材·仅参考')
+    expect(html).toContain('未验收')
   })
   it('never loads an unverified source as a fallback', () => {
     const manifest: Manifest = { ...data, assets: data.assets.map(a => ({ ...a, copy: undefined })) }
