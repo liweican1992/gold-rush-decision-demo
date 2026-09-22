@@ -12,7 +12,7 @@ export const VIDEO_BRIDGES: Record<string, VideoBridge[]> = {
     {at:20.2,resumeAt:20.292,title:"第五天 · 山路后段",detail:"队友分担了装备，你们继续赶路，走到了最后一处容易折返的位置。"},
   ],
   "b-route-to-b02-choice.mp4": [
-    {at:15.8,resumeAt:15.917,title:"第六天 · 途中休整",detail:"队伍沿谷地走了六天。停下来时，沈岚重新核对了剩余路程。"},
+    {at:7.6,resumeAt:7.717,title:"第六天 · 途中休整",detail:"队伍沿谷地走了六天。停下来时，沈岚重新核对了剩余路程。"},
   ],
   "b-accelerate-to-b04-choice.mp4": [
     {at:12.15,resumeAt:12.25,title:"三天后",detail:"你们缩短午休，每天多赶一段路。现在停下来，检查进度和队员状态。"},
