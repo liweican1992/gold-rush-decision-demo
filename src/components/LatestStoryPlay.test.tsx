@@ -1,5 +1,7 @@
-import { describe, expect, it } from 'vitest'
-import { dayFromTime } from './LatestStoryPlay'
+import { afterEach, describe, expect, it, vi } from 'vitest'
+import { renderToStaticMarkup } from 'react-dom/server'
+import { dayFromTime, LatestStoryPlay } from './LatestStoryPlay'
+import { advanceSession, freshSession } from '../demo/storySession'
 
 describe('latest story day counter', () => {
   it('uses scene start for interval labels instead of future days', () => {
@@ -10,5 +12,17 @@ describe('latest story day counter', () => {
   it('ignores clock digits when reading the day', () => {
     expect(dayFromTime('Day 3 · 09:00')).toBe(3)
     expect(dayFromTime('Day 14 · 18:00')).toBe(14)
+  })
+})
+
+describe('opening briefing', () => {
+  afterEach(() => vi.unstubAllGlobals())
+
+  it('keeps the resume entry for an unfinished briefing', () => {
+    const session = advanceSession(freshSession(), 'INTRO')
+    vi.stubGlobal('window', { localStorage: { getItem: () => JSON.stringify(session) } })
+    const html = renderToStaticMarkup(<LatestStoryPlay />)
+    expect(html).toContain('继续上次行动')
+    expect(html).not.toContain('<video')
   })
 })

@@ -252,6 +252,21 @@ function ProductionVideo({
   )
 }
 
+function OpeningBriefing({ onContinue }: { onContinue: () => void }) {
+  return (
+    <main className="latest-opening-briefing" aria-labelledby="opening-briefing-title">
+      <section>
+        <small>故事开始之前</small>
+        <h1 id="opening-briefing-title">阿拉斯加 · 勘探营地</h1>
+        <p>你签下了一份为期三个月的购买期权，可以在期限内买下这片土地。</p>
+        <p>如今，你和队友终于发现了看起来品质很好的金矿。</p>
+        <p>但土地还不属于你。你必须在最后十四天内亲自赶回去，完成购买确认。</p>
+        <button autoFocus type="button" onClick={onContinue}>进入营地 <span aria-hidden="true">→</span></button>
+      </section>
+    </main>
+  )
+}
+
 function TimeTransition({ title, detail, onComplete }: NarrativeCard & { onComplete: () => void }) {
   const complete = useRef(onComplete)
   complete.current = onComplete
@@ -418,6 +433,8 @@ export function LatestStoryPlay() {
       <footer className="latest-launch-footer"><span>队伍：沈岚 · 老周 · 阿杰</span><span>01 / 行动开始</span></footer>
     </main>
   )
+
+  if (nodeId === 'INTRO' && !transitionDone) return <OpeningBriefing onContinue={() => setTransitionDone(true)} />
 
   const timeTransition = nodeId === 'RESULT' ? resultBridge(decisions) : LATEST_TIME_TRANSITIONS[nodeId]
   if (timeTransition && !transitionDone) return <TimeTransition key={nodeId} {...timeTransition} onComplete={() => setTransitionDone(true)} />

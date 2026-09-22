@@ -508,6 +508,13 @@
 }
 
 /* Full black intertitles separate actual omitted time or travel, not every cut. */
+.latest-opening-briefing { min-height: 100dvh; display: grid; place-items: center; padding: clamp(1.5rem, 6vw, 5rem); box-sizing: border-box; background: #030507; color: #f3f1e9; }
+.latest-opening-briefing section { width: 100%; max-width: 42rem; }
+.latest-opening-briefing small { color: #858780; letter-spacing: .16em; }
+.latest-opening-briefing h1 { margin-block: 1rem 2rem; font-size: clamp(1.6rem, 4.4vw, 2.8rem); line-height: 1.4; }
+.latest-opening-briefing p { margin-block: 1.2rem; font-size: clamp(1rem, 1.8vw, 1.3rem); line-height: 1.9; color: #c8c9c5; text-wrap: pretty; }
+.latest-opening-briefing button { display: inline-flex; align-items: center; gap: 2rem; margin-block-start: 1.5rem; padding: .85rem 1.4rem; min-height: 44px; border: 1px solid var(--color-accent); border-radius: var(--radius-sm); color: #101418; background: var(--color-accent); font: inherit; font-weight: 700; cursor: pointer; }
+.latest-opening-briefing button:focus-visible { outline: 2px solid #f3f1e9; outline-offset: 5px; }
 .latest-time-transition { position: fixed; inset: 0; z-index: 1000; background: #030507; color: #f3f1e9; }
 .latest-time-transition button { min-height: 100%; height: 100%; gap: 1.4rem; padding: clamp(1.5rem, 6vw, 5rem); background: #030507; }
 .latest-time-transition strong { max-width: 48rem; font-size: clamp(2rem, 4.4vw, 3.8rem); letter-spacing: .04em; line-height: 1.4; text-align: center; }
