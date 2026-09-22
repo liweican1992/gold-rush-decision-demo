@@ -316,12 +316,12 @@ function ChoiceStage({ node, options, decisions, onSelect }: { node: FinalNode; 
   return (
     <section className="latest-choice-stage" style={style}>
       <div className="latest-choice-head">
-        <span>DECISION REQUIRED · {node.id} · {node.time}</span>
+        <span>轮到你决定</span>
         <h1>{node.question ?? node.title}</h1>
         <p>{node.facts}</p>
       </div>
       <details className="latest-decision-note">
-        <summary>记下你为什么这样选（选填）</summary>
+        <summary>写下选择理由（选填）</summary>
         <label htmlFor="decision-reason">{node.id === 'P06' ? '你优先保住什么？愿意为此放弃什么？' : '哪条信息支持你的决定？什么变化会让你调整？'}</label>
         <textarea id="decision-reason" rows={2} maxLength={1200} value={reason} onChange={event => setReason(event.target.value)} placeholder="用一句话记录此刻的判断，结局后可以回来对照。" />
       </details>
@@ -329,7 +329,7 @@ function ChoiceStage({ node, options, decisions, onSelect }: { node: FinalNode; 
         {options.map((option, index) => (
           <button key={option.id} type="button" onClick={() => onSelect(option, reason.trim())} aria-label={`方案 ${index + 1}：${option.label}`}>
             <b>{String(index + 1).padStart(2, '0')}</b>
-            <div><small>行动方案</small><strong>{option.label}</strong></div>
+            <div><strong>{option.label}</strong></div>
             <span><i>需要权衡</i>{option.cost}</span>
             <em>确认选择 <u>↗</u></em>
           </button>
