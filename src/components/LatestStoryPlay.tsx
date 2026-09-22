@@ -392,7 +392,7 @@ export function LatestStoryPlay() {
       <div className="latest-launch-shade" />
       <header className="latest-launch-header">
         <div className="latest-brand-lockup"><span className="latest-brand-mark">14</span><div><small>ALASKA FIELD OPERATION</small><strong>最后十四天</strong></div></div>
-        <span>单人决策剧情 · 本地运行</span>
+        <span>单人决策剧情 · 第一人称体验</span>
       </header>
       <section className="latest-launch-layout">
         <div className="latest-launch-copy">
