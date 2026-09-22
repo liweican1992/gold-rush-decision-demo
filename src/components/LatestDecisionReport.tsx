@@ -52,10 +52,10 @@ function ReportBody({ report, onRestart, attemptId, archives, explored }: { repo
   return (
     <article id="latest-decision-report" className="latest-decision-report strategy-learning-report" aria-label="战略管理学习复盘">
       <header className="strategy-report-intro">
-        <span>从行动经历，到战略判断</span>
+        <span>走完这一路，你学到了什么</span>
         <h2>{report.title}</h2>
         <p>{report.summary}</p>
-        <p className="strategy-attempt-label">{explored ? '对照探索 · 曾返回或重选，不能作为未见结果的首次判断' : '首次行动记录'}</p>
+        <p className="strategy-attempt-label">{explored ? '再次尝试 · 你曾返回或重选，之前的选择已保留' : '首次行动记录'}</p>
       </header>
       <nav className="strategy-report-nav" aria-label="复盘章节">
         <a href="#strategy-evidence">选择与判断</a><a href="#strategy-concepts">课程知识联系</a>
@@ -63,7 +63,7 @@ function ReportBody({ report, onRestart, attemptId, archives, explored }: { repo
       </nav>
 
       <section className="strategy-section" id="strategy-evidence" aria-labelledby="evidence-heading">
-        <header><span>01 / 回到当时</span><h2 id="evidence-heading">你的选择，依据是什么？</h2><p>先看作决定时能知道什么，再用结果检验判断。</p></header>
+        <header><span>01 / 回到当时</span><h2 id="evidence-heading">你的选择，依据是什么？</h2><p>回到作决定的那一刻：你知道什么，又为什么这样选？</p></header>
         <ol className="strategy-evidence-list">
           {report.decisionEvidence.map((item, index) => <li key={item.optionId}>
             <header><span>{String(index + 1).padStart(2, '0')}</span><div><small>{item.stage}</small><h3>{item.choice}</h3></div></header>
@@ -106,7 +106,7 @@ function ReportBody({ report, onRestart, attemptId, archives, explored }: { repo
           </table></div>
         </details> : <p className="strategy-comparison-note">其他选择还会进入新的决策，无法只改最后一步就直接对照结局。可以重新体验，再比较不同的判断过程。</p>}
         <div className="strategy-behavior">
-          <h3>本局决策画像 · 行动记录</h3>
+          <h3>本局行动回顾</h3>
           <ul>{report.profile.observations.map(item => <li key={item}>{item}</li>)}</ul>
           <p>{report.profile.boundary}</p>
         </div>
@@ -121,11 +121,11 @@ function ReportBody({ report, onRestart, attemptId, archives, explored }: { repo
         </details>)}
       </section>}
       <section className="strategy-section strategy-reflection" id="strategy-reflection" aria-labelledby="reflection-heading">
-        <header><span>04 / 形成你的判断</span><h2 id="reflection-heading">把经历变成下一次可用的方法</h2><p>用自己的话补足选择理由。回答按本次尝试保存在此浏览器，也可下载用于课堂讨论。</p></header>
+        <header><span>04 / 形成你的判断</span><h2 id="reflection-heading">下次遇到类似问题，你会怎么判断？</h2><p>用自己的话补足选择理由。回答按本次尝试保存在此浏览器，也可下载用于课堂讨论。</p></header>
         <div className="strategy-reflection-grid">
-          {input('priority', '我优先保住什么？', '明确目标和不能突破的底线，并说明愿意放弃什么。')}
-          {input('reason', '事后回看，如何解释这个决定？', report.decisionEvidence.at(-1)?.question ?? '请引用当时的一条信息。')}
-          {input('trigger', '什么变化会让我调整？', '如果出现……，我会在……之前改为……。')}
+          {input('priority', '这一路，我最想保住什么？', '明确目标和不能突破的底线，并说明愿意放弃什么。')}
+          {input('reason', '回头看，哪次决定最值得再想一想？', report.decisionEvidence.at(-1)?.question ?? '请引用当时的一条信息。')}
+          {input('trigger', '出现什么情况，我会改变计划？', '如果出现……，我会在……之前改为……。')}
         </div>
         <div className="strategy-transfer-exercise"><small>迁移练习 · 不再是雪山</small><p>{report.scenario}</p>
           {input('transfer', report.transferPrompt, '用本局的目标、能力、信息或时间约束来解释，不只写“继续／退出”。')}

@@ -28,7 +28,7 @@ export const VIDEO_BRIDGES: Record<string, VideoBridge[]> = {
   ],
   "d-reverse-to-d05-choice.mp4": [
     {at:7.9,resumeAt:8,title:"离开营地后",detail:"你们收好地图和装备，沿低处山路出发，再向高处行进。"},
-    {at:21.4,resumeAt:21.5,title:"第九天 · 山路后段",detail:"队伍又走了几天。一次普通的延误，让你们停下重新核算时间。"},
+    {at:21.4,resumeAt:21.5,title:"第九天 · 山路后段",detail:"队伍又走了几天，有一段路比预计走得慢。你们停下来，重新核算剩余时间。"},
   ],
   "d-wait-to-result.mp4": [
     {at:9.9,resumeAt:10,title:"日子一天天过去",detail:"你们继续留在营地，等到天气真正稳定，再安排返程。"},
@@ -40,7 +40,7 @@ export const VIDEO_BRIDGES: Record<string, VideoBridge[]> = {
     {at:12.15,resumeAt:12.25,title:"离开营地后",detail:"你们收好装备，放弃等待山口消息，沿谷地开始返程。"},
   ],
   "c04va-day3-to-valley.mp4": [
-    {at:12.15,resumeAt:12.25,title:"离开营地后",detail:"队伍转入谷地。此前等待的三天，已经计入这趟行程。"},
+    {at:12.15,resumeAt:12.25,title:"离开营地后",detail:"你们收好装备，转入谷地。离开营地时，已经比最初晚了三天。"},
   ],
   "c04vb-day7-to-valley.mp4": [
     {at:12.15,resumeAt:12.25,title:"撤下山路后",detail:"你们离开高处，重新接上谷地路线，继续往镇上走。"},

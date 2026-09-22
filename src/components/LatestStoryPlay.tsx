@@ -42,7 +42,7 @@ function MissionHeader({ nodeId, title, route }: { nodeId: string; title: string
         <span className="latest-brand-mark">14</span>
         <div><small>ALASKA FIELD OPERATION</small><strong>最后十四天</strong></div>
       </div>
-      <div className="latest-current-mission"><small>当前任务</small><span>{title}</span></div>
+      <div className="latest-current-mission"><small>当前情况</small><span>{title}</span></div>
       <div className="latest-route-code"><small>{ROUTE_NAMES[route] ?? route}</small><b>{nodeId}</b></div>
     </header>
   )
@@ -55,14 +55,14 @@ function ExpeditionHud({ time, location, route, condition }: { time: string; loc
     <section className="latest-expedition-hud" aria-label="行动状态">
       <div className="latest-day-counter"><span>{spansTime ? '起始 DAY' : 'DAY'}</span><strong>{String(day).padStart(2, '0')}</strong><small>/ 14</small></div>
       <div className="latest-deadline-rail">
-        <div><span>行动窗口</span><strong>{time}</strong><small>截止 Day 14 · 09:00</small></div>
+        <div><span>行程时间</span><strong>{time}</strong><small>截止 Day 14 · 09:00</small></div>
         <div className="latest-day-ticks" aria-label={`${spansTime ? '本段开始于' : '当前'}第 ${day} 天；期限第 14 天`}>
           {Array.from({ length: 15 }, (_, index) => <i key={index} className={index <= day ? 'is-past' : ''} />)}
         </div>
       </div>
       <div className="latest-field-facts">
         <div><span>位置</span><strong>{location}</strong></div>
-        <div><span>路线</span><strong>{ROUTE_NAMES[route] ?? route}</strong></div>
+        <div><span>最初选择</span><strong>{route === 'PUBLIC' ? '尚未决定' : ROUTE_NAMES[route] ?? route}</strong></div>
       </div>
       <div className="latest-squad">
         <span>队伍</span>
@@ -227,7 +227,7 @@ function ProductionVideo({
         <div className="latest-media-loader" role="status" aria-live="polite">
           <div className="latest-media-loader-mark">14</div>
           <small>FIELD DATA · {index + 1} / {clips.length}</small>
-          <strong>{bufferPercent > 0 ? '正在缓冲行动记录' : '正在连接行动资料库'}</strong>
+          <strong>{bufferPercent > 0 ? '正在缓冲本段视频' : '正在加载本段视频'}</strong>
           <div
             className="latest-media-progress"
             role="progressbar"
@@ -238,13 +238,13 @@ function ProductionVideo({
           >
             <i style={{ width: `${Math.max(bufferPercent, 3)}%` }} />
           </div>
-          <span>{bufferPercent > 0 ? `可播放数据已缓冲 ${bufferPercent}%` : '正在加载视频…'}</span>
+          <span>{bufferPercent > 0 ? `已缓冲 ${bufferPercent}%` : '准备好后会自动播放'}</span>
         </div>
       )}
       {!failed && mediaReady && paused && <div className="latest-video-paused" aria-hidden="true"><b>▶</b><span>继续播放</span></div>}
       {!bridge && subtitle && <div className="latest-subtitle" aria-live="off">{subtitle}</div>}
       <div className="latest-video-tag"><i />现场记录</div>
-      <div className="latest-video-title"><small>CURRENT OBJECTIVE</small><strong>{title}</strong></div>
+      <div className="latest-video-title"><small>眼前的情况</small><strong>{title}</strong></div>
       {clips.length > 1 && <div className="latest-video-count">{index + 1} / {clips.length}</div>}
       <span className="latest-frame-corner latest-frame-corner-a" />
       <span className="latest-frame-corner latest-frame-corner-b" />
@@ -304,10 +304,9 @@ function ChoiceStage({ node, options, decisions, onSelect }: { node: FinalNode; 
         <span>DECISION REQUIRED · {node.id} · {node.time}</span>
         <h1>{node.question ?? node.title}</h1>
         <p>{node.facts}</p>
-        <small>这里只显示此刻已经掌握的信息，行动结果将在选择后揭示。</small>
       </div>
       <details className="latest-decision-note">
-        <summary>记下判断依据（选填，随本次选择保存）</summary>
+        <summary>记下你为什么这样选（选填）</summary>
         <label htmlFor="decision-reason">{node.id === 'P06' ? '你优先保住什么？愿意为此放弃什么？' : '哪条信息支持你的决定？什么变化会让你调整？'}</label>
         <textarea id="decision-reason" rows={2} maxLength={1200} value={reason} onChange={event => setReason(event.target.value)} placeholder="用一句话记录此刻的判断，结局后可以回来对照。" />
       </details>
@@ -316,7 +315,7 @@ function ChoiceStage({ node, options, decisions, onSelect }: { node: FinalNode; 
           <button key={option.id} type="button" onClick={() => onSelect(option, reason.trim())} aria-label={`方案 ${index + 1}：${option.label}`}>
             <b>{String(index + 1).padStart(2, '0')}</b>
             <div><small>行动方案</small><strong>{option.label}</strong></div>
-            <span><i>已知风险</i>{option.cost}</span>
+            <span><i>需要权衡</i>{option.cost}</span>
             <em>确认选择 <u>↗</u></em>
           </button>
         ))}
@@ -345,7 +344,7 @@ export function ResultStage({ decisions, onRestart, attemptId = "preview", archi
         <div className="latest-path">
           {decisions.map((decision) => <span key={`${decision.nodeId}-${decision.optionId}`}>{decision.label}</span>)}
         </div>
-        <a className="latest-report-jump" href="#latest-decision-report">进入战略学习复盘 <b>↓</b></a>
+        <a className="latest-report-jump" href="#latest-decision-report">回看这一路的选择 <b>↓</b></a>
       </div>
       <LatestDecisionReport decisions={decisions} onRestart={onRestart} attemptId={attemptId} archives={archives} explored={explored} />
     </section>
@@ -396,13 +395,13 @@ export function LatestStoryPlay() {
       </header>
       <section className="latest-launch-layout">
         <div className="latest-launch-copy">
-          <span>你是勘探队长 · 机会窗口已经开始倒数</span>
+          <span>你是勘探队长 · 返程期限只剩十四天</span>
           <h1><small>最后</small>十四天</h1>
-          <p>在天气、伤势与期限之间做出选择。每次行动都会留下代价，并形成你的决策画像。</p>
+          <p>发现了可能有金矿的土地，却还没有买下它。你必须在十四天内赶回去，亲自完成确认。山里天气未定，你的左手又受了伤。这一路，怎么走由你决定。</p>
           <div className="latest-launch-actions">
             {awaitResume ? <><button type="button" onClick={() => setAwaitResume(false)}>继续上次行动 <b>→</b></button><button type="button" onClick={newGame}>开始全新一局</button></>
               : <button type="button" onClick={() => go('INTRO')}>{session.explored ? '开始对照探索' : '开始行动'} <b>→</b></button>}
-            <small>全程第一人称 · 四条行动路线 · 结局由选择决定</small>
+            <small>和三位队友一起出发，在关键时刻作出决定</small>
           </div>
         </div>
         <aside className="latest-briefing-board" aria-label="行动简报">
@@ -412,7 +411,7 @@ export function LatestStoryPlay() {
             <div><dt>固定截止</dt><dd>Day 14 · 09:00</dd></div>
             <div><dt>当前限制</dt><dd>队长左手偶发失力</dd></div>
           </dl>
-          <div className="latest-briefing-window"><span>行动窗口</span><div>{Array.from({ length: 14 }, (_, index) => <i key={index} />)}</div><small>机会、时间和人员状态不能同时最大化</small></div>
+          <div className="latest-briefing-window"><span>返程期限</span><div>{Array.from({ length: 14 }, (_, index) => <i key={index} />)}</div><small>赶时间、避风雪、照顾伤手，你需要作出取舍。</small></div>
           <div className="latest-route-legend">{ROUTE_LEGEND.map(([code, label]) => <span key={code}><b>{code}</b>{label}</span>)}</div>
         </aside>
       </section>
@@ -427,7 +426,7 @@ export function LatestStoryPlay() {
     <main className="latest-shell latest-shell-video" data-route="PUBLIC">
       <MissionHeader nodeId="PROLOGUE" title="确认机会、期限与路线" route="PUBLIC" />
       <ProductionVideo clips={[LATEST_PUBLIC_VIDEO]} title="确认机会、期限与路线" onComplete={() => go('P06')} />
-      <footer className="latest-footer"><button type="button" onClick={back}>← 返回</button><button type="button" onClick={() => go('P06')}>跳过公共段 →</button></footer>
+      <footer className="latest-footer"><button type="button" onClick={back}>← 返回</button><button type="button" onClick={() => go('P06')}>跳过开场 →</button></footer>
     </main>
   )
 

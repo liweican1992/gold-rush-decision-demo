@@ -5,6 +5,27 @@ export function presentNode(id: string, decisions: LatestDecision[]) {
   const original = latestNode(id)
   if (!original) return undefined
   const node = { ...original }
+  // During play, describe the situation; reserve teaching conclusions for the report.
+  const titles: Record<string, string> = {
+    A01: '沿山路前进', A02: '风雪中的决定', A03A: '停下来检查伤手',
+    A03B: '暂避后重新出发', A04: '最后一处容易折返的位置',
+    B01: '沿谷地前进', B02: '重新核算行程', B03A: '连续三天赶路',
+    B03B: '按原节奏前进', B04: '接下来怎么赶路',
+    C01: '留在营地等消息', C02: '暴风消息到了', C03: '山口有了新消息',
+    C04M: '先沿低处上山', C05: '接近山口', C06: '风势比预想退得慢',
+    D01: '留营休整', D03: '风势减弱，重新商量', D04A: '继续留营等待',
+    D04B: '收拾装备，离营上山', D05: '再次核算剩余时间',
+    C2FB1: '再等一天消息', C6FB2: '放慢脚步，观察风势',
+  }
+  const questions: Record<string, string> = {
+    P06: '你准备怎么行动？', A02: '风雪变大，左手也刚失了力。接下来怎么办？',
+    A04: '继续走山路、放慢脚步，还是现在下撤？',
+    C02: '再等一天，还是现在改走山谷？', C03: '有了这份消息，接下来怎么行动？',
+    C06: '风比预想退得慢，还按原计划走吗？',
+    D03: '趁现在出发，还是继续等？', D05: '时间所剩不多，还要保持这个速度吗？',
+  }
+  node.title = titles[id] ?? node.title
+  if ('question' in node) node.question = questions[id] ?? node.question
   const chose = (option: string) => decisions.some(d => d.optionId === option)
   const rested = chose("A2-2")
   const times: Record<string, string> = {
@@ -27,7 +48,8 @@ export function presentNode(id: string, decisions: LatestDecision[]) {
   if (node.route === "C" && id !== "C01") condition = "左手休息后仍未痊愈"
   if (node.route === "D" && id !== "D01") condition = "休息后手较稳，仍需照护"
   if (id === "D05" || id.startsWith("D5FB")) condition = "体力再下降，时间余量很少"
-  if (id === "P06") node.facts = "截止第十四天上午九点，必须本人完成确认。翻山通常七到十天；山谷通常两到三周。等两天可确认暴风，再等一天可进一步判断山口。左手突然失力可能影响攀爬。"
+  if (id === "P06") node.facts = "截止第十四天上午九点，必须本人完成确认。翻山通常七到十天；山谷通常两到三周。等两天可确认是否有暴风，再等一天可进一步判断山口。左手突然失力可能影响攀爬。"
+  if (id === "C03") node.facts = "目前还不能确定山口会不会封住。最强的风过去后，天气预计会缓和，但没人能保证一路顺利。离期限还剩约十一天。"
   if (id === "A04") node.facts = rested
     ? "你已暂避约两天，手稳了一些，但时间余量减少。前方仍能走；这里是最后一个容易折返的位置，再深入就更难撤回。"
     : "你此前继续推进，时间还有余量，但伤手限制加重，队友已分担装备。这里是最后一个容易折返的位置，再深入就更难撤回。"
