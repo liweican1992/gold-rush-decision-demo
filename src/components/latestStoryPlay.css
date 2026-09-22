@@ -370,7 +370,7 @@
   overflow: hidden;
 }
 .latest-arrival-stage[data-tone='confirmed'] { --latest-outcome-color: var(--color-success); }
-.latest-arrival-stage[data-tone='closed'] { --latest-outcome-color: var(--color-error); }
+.latest-arrival-stage[data-tone='auction'] { --latest-outcome-color: var(--color-error); }
 .latest-arrival-stage[data-tone='safe'] { --latest-outcome-color: var(--color-accent); }
 .latest-arrival-stage::after { position: absolute; z-index: -1; inset: 0; border: var(--rule-hair) solid color-mix(in oklch, var(--latest-outcome-color) 42%, transparent); pointer-events: none; content: ''; }
 .latest-arrival-visual { position: relative; min-width: 0; min-height: 0; margin: 0; overflow: hidden; background: var(--color-paper); }

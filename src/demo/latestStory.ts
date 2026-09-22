@@ -46,7 +46,7 @@ export type LatestArrivalOutcome = {
   eyebrow: string
   title: string
   detail: string
-  tone: 'confirmed' | 'closed' | 'safe'
+  tone: 'confirmed' | 'auction' | 'safe'
 }
 
 export const LATEST_TIME_TRANSITIONS: Record<string, { title: string; detail: string }> = {
@@ -252,8 +252,9 @@ export function confirmationStatus(branch: FinalBranch) {
 export function arrivalOutcomeForDecisions(decisions: LatestDecision[]): LatestArrivalOutcome | undefined {
   const branch = branchForDecisions(decisions)
   if (!branch) return undefined
+  const light = branch.frameIds.includes('SH-TOWN-NIGHT') ? 'night' : 'day'
   if (branch.deadline === '按期') return {
-    image: '/images/decision-stills/arrival-confirmed.webp',
+    image: `/images/decision-stills/arrival-confirmed-${light}.webp`,
     eyebrow: `期限内抵达 · ${branch.completion}`,
     title: '最后确认已完成',
     detail: '队伍将矿样和文件送达办理点。这次机会被保住了，但人员状态和剩余缓冲由你沿途的选择共同决定。',
@@ -267,11 +268,11 @@ export function arrivalOutcomeForDecisions(decisions: LatestDecision[]): LatestA
     tone: 'safe',
   }
   return {
-    image: '/images/decision-stills/arrival-closed.webp',
+    image: `/images/decision-stills/arrival-auction-${light}.webp`,
     eyebrow: `抵达时间 · ${branch.completion}`,
-    title: '办理窗口已关闭',
-    detail: '队伍和资料最终到达，但原购买窗口已经失去。安全抵达和按期完成目标，是两个不同的结果。',
-    tone: 'closed',
+    title: '矿权进入重新拍卖',
+    detail: '队伍和资料最终到达，但原购买期限已经过去，矿权重新进入拍卖流程。安全抵达和按期完成目标，是两个不同的结果。',
+    tone: 'auction',
   }
 }
 

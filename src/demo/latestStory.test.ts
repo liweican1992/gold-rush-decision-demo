@@ -133,9 +133,10 @@ describe('当前 FINAL 剧情试玩', () => {
     expect(resultVideoForDecisions(decisions('P06-D', 'D3-1'))).toBeUndefined()
   })
 
-  it('抵达后根据期限结果显示完成、关闭或安全返回画面', () => {
+  it('抵达后根据期限结果显示完成、重新拍卖或安全返回画面', () => {
     expect(arrivalOutcomeForDecisions(decisions('P06-A', 'A2-1', 'A4-1'))?.tone).toBe('confirmed')
-    expect(arrivalOutcomeForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))?.tone).toBe('closed')
+    expect(arrivalOutcomeForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))?.tone).toBe('auction')
+    expect(arrivalOutcomeForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))?.title).toBe('矿权进入重新拍卖')
     expect(arrivalOutcomeForDecisions(decisions('P06-D', 'D3-1'))?.tone).toBe('safe')
   })
 
