@@ -172,6 +172,7 @@ function ProductionVideo({
   return (
     <section className="latest-video-wrap">
       {bridge && <TimeTransition key={`${activeClip}-${bridge.at}`} {...bridge} onComplete={resumeBridge} />}
+      <div className="latest-video-screen">
       {failed ? (
         <div className="latest-media-error">
           <strong>当前片段无法加载</strong>
@@ -243,11 +244,14 @@ function ProductionVideo({
       )}
       {!failed && mediaReady && paused && <div className="latest-video-paused" aria-hidden="true"><b>▶</b><span>继续播放</span></div>}
       {!bridge && subtitle && <div className="latest-subtitle" aria-live="off">{subtitle}</div>}
-      <div className="latest-video-tag"><i />现场记录</div>
-      <div className="latest-video-title"><small>眼前的情况</small><strong>{title}</strong></div>
-      {clips.length > 1 && <div className="latest-video-count">{index + 1} / {clips.length}</div>}
-      <span className="latest-frame-corner latest-frame-corner-a" />
-      <span className="latest-frame-corner latest-frame-corner-b" />
+      </div>
+      <div className="latest-video-caption">
+        <div className="latest-video-caption-title"><small>眼前的情况</small><strong>{title}</strong></div>
+        <div className="latest-video-caption-actions">
+          {clips.length > 1 && <span>片段 {index + 1} / {clips.length}</span>}
+          {!failed && <button type="button" onClick={togglePlayback} disabled={!mediaReady || !!bridge} aria-label={paused ? '继续播放视频' : '暂停视频'}>{paused ? '▶ 继续播放' : 'Ⅱ 暂停'}</button>}
+        </div>
+      </div>
     </section>
   )
 }
