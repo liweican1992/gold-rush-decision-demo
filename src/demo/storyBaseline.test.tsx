@@ -1,6 +1,4 @@
-// @ts-expect-error Node builtin used only by Vitest; this project has no @types/node.
 import { createHash } from 'node:crypto'
-// @ts-expect-error Node builtin used only by Vitest; do not add dependencies for this guard.
 import { readFileSync } from 'node:fs'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { it, expect } from 'vitest'

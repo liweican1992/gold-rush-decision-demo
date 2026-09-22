@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "subtitles:build": "python3 scripts/build_latest_subtitles.py",
+    "subtitles:check": "python3 scripts/validate_latest_subtitles.py",
     "test": "vitest",
     "typecheck": "tsc -b --pretty false"
   },
@@ -14,6 +16,7 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@types/node": "^26.6.2",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^4.6.0",

@@ -1,11 +1,12 @@
-import MainlineDemo from './MainlineDemo'
-import { StoryMapPage } from './components/StoryMapPage'
+import { LatestStoryPlay } from './components/LatestStoryPlay'
+import { ReviewedStoryMapPage } from './components/ReviewedStoryMapPage'
+import { TextStoryPlay } from './components/TextStoryPlay'
 
 export function appSurfaceForPath(pathname: string) {
-  return /^\/docs\/story-map\/?$/.test(pathname) ? 'story-map' : 'game'
+  return /^\/play\/story\/?$/.test(pathname) ? 'text-play' : /^\/docs\/story-map\/?$/.test(pathname) ? 'story-map' : 'game'
 }
 
 export default function App() {
   const pathname = typeof window === 'undefined' ? '/' : window.location.pathname
-  return appSurfaceForPath(pathname) === 'story-map' ? <StoryMapPage /> : <MainlineDemo />
+  return appSurfaceForPath(pathname) === 'text-play' ? <TextStoryPlay /> : appSurfaceForPath(pathname) === 'story-map' ? <ReviewedStoryMapPage /> : <LatestStoryPlay />
 }

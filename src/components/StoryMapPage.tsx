@@ -1,3 +1,5 @@
+// 历史地图：34条独立终局已废弃，不再由App挂载。仅保留旧素材审查与回溯代码。
+// 当前剧本地图为 ReviewedStoryMapPage.tsx；勿将本组件的“已锁定”文案视为当前验收。
 import { InheritedInputFrame, MainFrame, ReuseReview, ProcessMaterials } from './KeyframeReuse'
 import { useMemo, useState } from 'react'
 import { data as keyframeManifest, getMain, getProcesses } from '../demo/keyframeReuse'

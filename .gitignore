@@ -21,3 +21,13 @@ public/videos/demo/*
 # Local agent working notes; the source-of-truth production material lives under
 # 短剧制作资料/ and is deliberately kept out of the playable-web repository.
 docs/superpowers/
+
+# Local production workspaces and original media are not release inputs.
+/video-production/
+/手动Pavo生产包_FINAL_20260917/
+/当前视频生产工作集_20260916/
+/归档_旧Pavo成片_勿用于生产/
+/历史归档/线上压缩前视频_20260922/
+/WebGPT当前封版_隔离工作集_20260912/
+/WebGPT脑暴资料包/
+/部署交付/
