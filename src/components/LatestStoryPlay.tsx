@@ -3,6 +3,7 @@ import {
   LATEST_NODE_VIDEOS,
   LATEST_PUBLIC_VIDEO,
   LATEST_TIME_TRANSITIONS,
+  arrivalOutcomeForDecisions,
   branchForDecisions,
   confirmationStatus,
   latestFrames,
@@ -343,6 +344,31 @@ function ChoiceStage({ node, options, decisions, onSelect }: { node: FinalNode; 
   )
 }
 
+export function ArrivalOutcomeStage({ decisions, onContinue }: { decisions: LatestDecision[]; onContinue: () => void }) {
+  const branch = branchForDecisions(decisions)
+  const outcome = arrivalOutcomeForDecisions(decisions)
+  if (!branch || !outcome) return null
+  return (
+    <section className="latest-arrival-stage" data-tone={outcome.tone}>
+      <figure className="latest-arrival-visual">
+        <img src={outcome.image} alt={outcome.title} />
+        <figcaption>{outcome.eyebrow}</figcaption>
+      </figure>
+      <div className="latest-arrival-copy">
+        <span>ARRIVAL RECORD · {branch.id}</span>
+        <h1>{outcome.title}</h1>
+        <p>{outcome.detail}</p>
+        <dl>
+          <div><dt>期限结果</dt><dd>{branch.deadline}</dd></div>
+          <div><dt>人员状态</dt><dd>{branch.people}</dd></div>
+          <div><dt>核心取舍</dt><dd>{branch.tradeoff}</dd></div>
+        </dl>
+        <button autoFocus type="button" onClick={onContinue}>查看这一路的复盘 <b>→</b></button>
+      </div>
+    </section>
+  )
+}
+
 export function ResultStage({ decisions, onRestart, attemptId = "preview", archives = [], explored = false }: { decisions: LatestDecision[]; onRestart: () => void; attemptId?: string; archives?: AttemptRecord[]; explored?: boolean }) {
   const branch = branchForDecisions(decisions)
   if (!branch) return <section className="latest-result"><h1>路径尚未完成</h1><button type="button" onClick={onRestart}>重新开始</button></section>
@@ -376,8 +402,12 @@ export function LatestStoryPlay() {
     catch { return freshSession() }
   })
   const [awaitResume, setAwaitResume] = useState(session.nodeId !== 'launch')
+  const [arrivalSceneDone, setArrivalSceneDone] = useState(false)
   const [saveError, setSaveError] = useState(false)
   const { nodeId, decisions, mediaDone, transitionDone } = session
+  useEffect(() => {
+    if (nodeId !== 'RESULT' || !mediaDone) setArrivalSceneDone(false)
+  }, [nodeId, mediaDone, session.attemptId])
   useEffect(() => {
     if (awaitResume) return
     try { window.localStorage.setItem(SESSION_KEY, JSON.stringify(session)); setSaveError(false) }
@@ -456,6 +486,16 @@ export function LatestStoryPlay() {
       <MissionHeader nodeId="ARRIVAL" title={arrivalTitle} route="SHARED" />
       <ProductionVideo clips={[resultVideo]} title={arrivalTitle} onComplete={() => setMediaDone(true)} />
       <footer className="latest-footer"><button type="button" onClick={back}>← 返回上一步</button><button type="button" onClick={() => setMediaDone(true)}>跳过抵达镜头 →</button></footer>
+    </main>
+  )
+
+  if (nodeId === 'RESULT' && !arrivalSceneDone) return (
+    <main className="latest-shell latest-shell-arrival" data-route="SHARED">
+      <MissionHeader nodeId="OUTCOME" title="抵达与办理结果" route="SHARED" />
+      <section className="latest-stage">
+        <ArrivalOutcomeStage decisions={decisions} onContinue={() => setArrivalSceneDone(true)} />
+      </section>
+      <footer className="latest-footer"><button type="button" onClick={back}>← 返回上一步</button><button type="button" onClick={() => setArrivalSceneDone(true)}>进入复盘 →</button></footer>
     </main>
   )
 

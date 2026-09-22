@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { LATEST_NODE_VIDEOS, LATEST_RESULT_VIDEOS, LATEST_TIME_TRANSITIONS, branchForDecisions, confirmationStatus, nextLatestNode, optionTarget, resultVideoForDecisions, visibleOptions, type LatestDecision } from './latestStory'
+import { LATEST_NODE_VIDEOS, LATEST_RESULT_VIDEOS, LATEST_TIME_TRANSITIONS, arrivalOutcomeForDecisions, branchForDecisions, confirmationStatus, nextLatestNode, optionTarget, resultVideoForDecisions, visibleOptions, type LatestDecision } from './latestStory'
 import { FINAL_NODES } from './finalStoryMap'
 
 const decisions = (...optionIds: string[]): LatestDecision[] => optionIds.map((optionId) => ({
@@ -131,6 +131,12 @@ describe('当前 FINAL 剧情试玩', () => {
     expect(resultVideoForDecisions(decisions('P06-A', 'A2-2', 'A4-1'))).toBe(LATEST_RESULT_VIDEOS.day)
     expect(resultVideoForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))).toBe(LATEST_RESULT_VIDEOS.day)
     expect(resultVideoForDecisions(decisions('P06-D', 'D3-1'))).toBeUndefined()
+  })
+
+  it('抵达后根据期限结果显示完成、关闭或安全返回画面', () => {
+    expect(arrivalOutcomeForDecisions(decisions('P06-A', 'A2-1', 'A4-1'))?.tone).toBe('confirmed')
+    expect(arrivalOutcomeForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))?.tone).toBe('closed')
+    expect(arrivalOutcomeForDecisions(decisions('P06-D', 'D3-1'))?.tone).toBe('safe')
   })
 
   it('C线转谷地先播放整装反馈，再进入晚状态谷地', () => {

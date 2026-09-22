@@ -41,6 +41,14 @@ export const LATEST_RESULT_VIDEOS = {
   night: latestVideo('sh-town-night.mp4'),
 } as const
 
+export type LatestArrivalOutcome = {
+  image: string
+  eyebrow: string
+  title: string
+  detail: string
+  tone: 'confirmed' | 'closed' | 'safe'
+}
+
 export const LATEST_TIME_TRANSITIONS: Record<string, { title: string; detail: string }> = {
   A01: { title: '两天后 · 山路前段', detail: '离开营地后，你们沿山路赶路，已经走了两天。' },
   A03A: { title: '次日傍晚', detail: '你们顶着风雪继续推进。停下来时，阿杰再次检查你的左手。' },
@@ -239,6 +247,32 @@ export function confirmationStatus(branch: FinalBranch) {
   if (branch.deadline === '按期') return `已由本人完成最后确认 · ${branch.completion}`
   if (branch.deadline === '主动放弃') return '已主动放弃原窗口 · 未完成最后确认'
   return '原窗口已失去 · 未在期限内完成本人确认'
+}
+
+export function arrivalOutcomeForDecisions(decisions: LatestDecision[]): LatestArrivalOutcome | undefined {
+  const branch = branchForDecisions(decisions)
+  if (!branch) return undefined
+  if (branch.deadline === '按期') return {
+    image: '/images/decision-stills/arrival-confirmed.webp',
+    eyebrow: `期限内抵达 · ${branch.completion}`,
+    title: '最后确认已完成',
+    detail: '队伍将矿样和文件送达办理点。这次机会被保住了，但人员状态和剩余缓冲由你沿途的选择共同决定。',
+    tone: 'confirmed',
+  }
+  if (branch.deadline === '主动放弃') return {
+    image: '/images/decision-stills/arrival-safe.webp',
+    eyebrow: branch.completion,
+    title: '队伍安全返回',
+    detail: '原购买窗口已经过去，但人员、资料和后续行动能力得到了保护。这是明确的退出结果，不是过程中断。',
+    tone: 'safe',
+  }
+  return {
+    image: '/images/decision-stills/arrival-closed.webp',
+    eyebrow: `抵达时间 · ${branch.completion}`,
+    title: '办理窗口已关闭',
+    detail: '队伍和资料最终到达，但原购买窗口已经失去。安全抵达和按期完成目标，是两个不同的结果。',
+    tone: 'closed',
+  }
 }
 
 export function resultVideoForDecisions(decisions: LatestDecision[]) {
