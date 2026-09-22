@@ -8,6 +8,7 @@ describe("叙事过场",()=>{
   for(const [file,bridges] of Object.entries(VIDEO_BRIDGES)){
    const track=latestSubtitleTrack("/videos/latest/"+file)
    expect(track,file).toBeTruthy()
+   if(!track) throw new Error(`缺少字幕轨: ${file}`)
    let last=0
    for(const b of bridges){
     expect(b.at).toBeGreaterThan(last);expect(b.resumeAt).toBeGreaterThanOrEqual(b.at)

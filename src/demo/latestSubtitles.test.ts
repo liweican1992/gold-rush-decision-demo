@@ -55,6 +55,14 @@ describe('当前成片中文字幕', () => {
     expect(activeLatestSubtitle(track.cues, 10)).toBe('')
   })
 
+  it('视频切换到 CDN 域名后仍能按文件名匹配字幕', () => {
+    const track = latestSubtitleTrack(
+      'https://media.thu2026.online/gold-rush/videos/latest/b-final-dawn.mp4?version=20260922',
+    )
+    expect(track?.cues.some((cue) => cue.text === '天亮前走')).toBe(true)
+    expect(track?.src).toBe('/subtitles/latest/b-final-dawn.vtt')
+  })
+
   it('纯环境声片段保留空字幕轨，不伪造对白', () => {
     for (const video of [
       '/videos/latest/sh-town-day.mp4',

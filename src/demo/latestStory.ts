@@ -28,11 +28,17 @@ export type LatestVirtualNode = {
   frameIds: string[]
 }
 
-export const LATEST_PUBLIC_VIDEO = '/videos/latest/public-intro.mp4'
+const LATEST_VIDEO_BASE_URL = (import.meta.env.VITE_VIDEO_BASE_URL || '/videos/latest').replace(/\/+$/, '')
+
+function latestVideo(filename: string) {
+  return `${LATEST_VIDEO_BASE_URL}/${filename}`
+}
+
+export const LATEST_PUBLIC_VIDEO = latestVideo('public-intro.mp4')
 
 export const LATEST_RESULT_VIDEOS = {
-  day: '/videos/latest/sh-town-day.mp4',
-  night: '/videos/latest/sh-town-night.mp4',
+  day: latestVideo('sh-town-day.mp4'),
+  night: latestVideo('sh-town-night.mp4'),
 } as const
 
 export const LATEST_TIME_TRANSITIONS: Record<string, { title: string; detail: string }> = {
@@ -48,34 +54,34 @@ export const LATEST_TIME_TRANSITIONS: Record<string, { title: string; detail: st
 }
 
 export const LATEST_NODE_VIDEOS: Record<string, string[]> = {
-  A01: ['/videos/latest/a-route-to-a02-choice.mp4'],
-  A03A: ['/videos/latest/a-continue-to-a04-choice.mp4'],
-  A03B: ['/videos/latest/a03b-shelter-restart.mp4'],
-  A03R: ['/videos/latest/a4fb3-retreat-to-valley.mp4'],
-  A4FB1: ['/videos/latest/a4fb1.mp4'],
-  A4FB2: ['/videos/latest/a4fb2-slow-down.mp4'],
-  A4FB3: ['/videos/latest/a4fb3-retreat-to-valley.mp4'],
-  B01: ['/videos/latest/b-route-to-b02-choice.mp4'],
-  B03A: ['/videos/latest/b-accelerate-to-b04-choice.mp4'],
-  B03B: ['/videos/latest/b-steady-to-b04-choice.mp4'],
-  B4FBDAWN: ['/videos/latest/b-final-dawn.mp4'],
-  B4FBREST: ['/videos/latest/b-final-rest.mp4'],
-  C01: ['/videos/latest/c-route-to-c02-choice.mp4'],
-  C2FB1: ['/videos/latest/c2fb1-wait-one-more-day.mp4'],
-  C2FB2: ['/videos/latest/c2fb2-leave-for-valley.mp4'],
-  C03: ['/videos/latest/c03-second-information.mp4'],
-  C04M: ['/videos/latest/c04m-low-mountain-route.mp4'],
-  C04VA: ['/videos/latest/c04va-day3-to-valley.mp4'],
-  C05: ['/videos/latest/c05-information-proves-useful.mp4'],
-  C06: ['/videos/latest/c06-reality-update-choice.mp4'],
-  C6FB2: ['/videos/latest/c6fb2-observe-and-buffer.mp4'],
-  C04VB: ['/videos/latest/c04vb-day7-to-valley.mp4'],
-  C04V: ['/videos/latest/sh-valley-travel.mp4'],
-  D01: ['/videos/latest/d-route-to-d03-choice.mp4'],
-  D04A: ['/videos/latest/d-wait-to-result.mp4'],
-  D04B: ['/videos/latest/d-reverse-to-d05-choice.mp4'],
-  D5FB1: ['/videos/latest/d5fb1.mp4'],
-  D5FB2: ['/videos/latest/d5fb2.mp4'],
+  A01: [latestVideo('a-route-to-a02-choice.mp4')],
+  A03A: [latestVideo('a-continue-to-a04-choice.mp4')],
+  A03B: [latestVideo('a03b-shelter-restart.mp4')],
+  A03R: [latestVideo('a4fb3-retreat-to-valley.mp4')],
+  A4FB1: [latestVideo('a4fb1.mp4')],
+  A4FB2: [latestVideo('a4fb2-slow-down.mp4')],
+  A4FB3: [latestVideo('a4fb3-retreat-to-valley.mp4')],
+  B01: [latestVideo('b-route-to-b02-choice.mp4')],
+  B03A: [latestVideo('b-accelerate-to-b04-choice.mp4')],
+  B03B: [latestVideo('b-steady-to-b04-choice.mp4')],
+  B4FBDAWN: [latestVideo('b-final-dawn.mp4')],
+  B4FBREST: [latestVideo('b-final-rest.mp4')],
+  C01: [latestVideo('c-route-to-c02-choice.mp4')],
+  C2FB1: [latestVideo('c2fb1-wait-one-more-day.mp4')],
+  C2FB2: [latestVideo('c2fb2-leave-for-valley.mp4')],
+  C03: [latestVideo('c03-second-information.mp4')],
+  C04M: [latestVideo('c04m-low-mountain-route.mp4')],
+  C04VA: [latestVideo('c04va-day3-to-valley.mp4')],
+  C05: [latestVideo('c05-information-proves-useful.mp4')],
+  C06: [latestVideo('c06-reality-update-choice.mp4')],
+  C6FB2: [latestVideo('c6fb2-observe-and-buffer.mp4')],
+  C04VB: [latestVideo('c04vb-day7-to-valley.mp4')],
+  C04V: [latestVideo('sh-valley-travel.mp4')],
+  D01: [latestVideo('d-route-to-d03-choice.mp4')],
+  D04A: [latestVideo('d-wait-to-result.mp4')],
+  D04B: [latestVideo('d-reverse-to-d05-choice.mp4')],
+  D5FB1: [latestVideo('d5fb1.mp4')],
+  D5FB2: [latestVideo('d5fb2.mp4')],
 }
 
 const VIRTUAL_NODES: Record<string, LatestVirtualNode> = {

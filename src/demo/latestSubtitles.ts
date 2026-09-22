@@ -35,7 +35,9 @@ export const LATEST_SUBTITLE_TRACKS = Object.fromEntries(
 ) as Record<string, LatestSubtitleTrack>
 
 export function latestSubtitleTrack(video: string) {
-  return LATEST_SUBTITLE_TRACKS[video]
+  const cleanPath = video.split(/[?#]/, 1)[0]
+  const filename = cleanPath.split('/').at(-1)
+  return filename ? LATEST_SUBTITLE_TRACKS[videoPath(filename)] : undefined
 }
 
 export function activeLatestSubtitle(cues: LatestSubtitleCue[], time: number) {
