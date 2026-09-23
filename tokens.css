@@ -19,6 +19,14 @@
   --color-risk-3: oklch(75% 0.18 62);
   --color-risk-4: oklch(66% 0.21 28);
   --color-shadow: oklch(5% 0.01 250 / 0.58);
+  --color-brief-paper: oklch(96% 0.015 86);
+  --color-brief-panel: oklch(99% 0.007 86);
+  --color-brief-ink: oklch(22% 0.02 250);
+  --color-brief-muted: oklch(43% 0.025 250);
+  --color-brief-rule: oklch(80% 0.022 86);
+  --color-brief-gold: oklch(72% 0.14 82);
+  --color-brief-dark: oklch(15% 0.024 250);
+  --color-brief-blue: oklch(35% 0.075 245);
   --font-display: 'STHeiti', 'Microsoft YaHei', sans-serif;
   --font-body: 'PingFang SC', 'Noto Sans CJK SC', sans-serif;
   --font-outlier: 'DIN Condensed', 'Arial Narrow', sans-serif;
@@ -33,6 +41,7 @@
   --space-3xl: 6rem;
   --text-xs: 0.64rem;
   --text-sm: 0.8rem;
+  --text-brief-small: 0.9rem;
   --text-base: 1rem;
   --text-md: 1.25rem;
   --text-lg: 1.5625rem;
