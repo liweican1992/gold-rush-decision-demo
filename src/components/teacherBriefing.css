@@ -1,5 +1,5 @@
 /* Hallmark · genre: editorial field report · tone: calm, evidence-led · palette anchor: expedition gold
- * macrostructure: split evidence cover → causal loop → shared-world comparison → route crosswalk → classroom guide
+ * macrostructure: split evidence cover → real report excerpt → causal loop → route crosswalk → classroom guide
  * pre-emit critique: P5 H5 E4 S5 R5 V5 · contrast: pass (40–41) · mobile: pass (34, 49–57)
  */
 .teacher-page {
@@ -64,6 +64,31 @@
 .teacher-section-heading .teacher-kicker { margin-bottom: var(--space-sm); color: var(--color-brief-blue); }
 .teacher-section-heading > p { max-width: 28rem; margin: 0; color: var(--color-brief-muted); }
 
+.teacher-report-shell { border: var(--rule-hair) solid var(--color-brief-rule); background: var(--color-brief-panel); }
+.teacher-report-bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding: var(--space-md) var(--space-lg); color: var(--color-ink-soft); background: var(--color-brief-dark); font-size: var(--text-sm); }
+.teacher-report-bar span { font-weight: 800; letter-spacing: .06em; }
+.teacher-report-bar b { color: var(--color-accent-soft); font-weight: 850; white-space: nowrap; }
+.teacher-report-path { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; background: var(--color-brief-paper); }
+.teacher-report-path li { display: grid; align-content: start; gap: var(--space-xs); min-width: 0; padding: var(--space-md) var(--space-lg); border-right: var(--rule-hair) solid var(--color-brief-rule); }
+.teacher-report-path li:last-child { border-right: 0; }
+.teacher-report-path small { color: var(--color-brief-blue); font-size: var(--text-xs); font-weight: 900; }
+.teacher-report-path strong { color: var(--color-brief-ink); font-size: var(--text-base); line-height: 1.4; }
+.teacher-report-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-top: var(--rule-hair) solid var(--color-brief-rule); }
+.teacher-report-columns article { min-width: 0; padding: clamp(var(--space-lg), 3vw, var(--space-xl)); }
+.teacher-report-columns article + article { border-left: var(--rule-hair) solid var(--color-brief-rule); background: var(--color-brief-paper); }
+.teacher-report-columns article > span { color: var(--color-brief-blue); font-size: var(--text-xs); font-weight: 850; letter-spacing: .08em; }
+.teacher-report-columns h3 { margin: var(--space-md) 0; color: var(--color-brief-ink); font-size: clamp(var(--text-xl), 2.4vw, var(--text-2xl)); line-height: 1.25; }
+.teacher-report-columns p { margin: 0; color: var(--color-brief-muted); font-size: var(--text-sm); }
+.teacher-report-evidence dl { display: grid; gap: var(--space-md); margin: var(--space-lg) 0; }
+.teacher-report-evidence dl div { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: var(--space-md); padding-top: var(--space-sm); border-top: var(--rule-hair) solid var(--color-brief-rule); }
+.teacher-report-evidence dt, .teacher-report-concept b, .teacher-report-evidence > p b { color: var(--color-brief-blue); font-size: var(--text-xs); font-weight: 850; }
+.teacher-report-evidence dd { margin: 0; color: var(--color-brief-ink); font-size: var(--text-sm); line-height: 1.65; }
+.teacher-report-evidence > p { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: var(--space-md); padding-top: var(--space-sm); border-top: var(--rule-hair) solid var(--color-brief-rule); }
+.teacher-report-concept h3 { color: var(--color-brief-blue); }
+.teacher-report-concept > p { margin-bottom: var(--space-lg); color: var(--color-brief-ink); font-size: var(--text-base); }
+.teacher-report-concept > div { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: var(--space-md); padding-top: var(--space-sm); border-top: var(--rule-hair) solid var(--color-brief-rule); }
+.teacher-report-concept > div + div { margin-top: var(--space-md); }
+
 .teacher-world-panel { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: var(--space-xl) clamp(var(--space-xl), 6vw, var(--space-3xl)); padding: clamp(var(--space-lg), 4vw, var(--space-2xl)); color: var(--color-ink); background: var(--color-brief-dark); }
 .teacher-world h2 { margin: var(--space-sm) 0 var(--space-lg); color: var(--color-ink); }
 .teacher-world-intro > p:last-child { max-width: 39rem; margin: 0; color: var(--color-ink-soft); }
@@ -88,28 +113,6 @@
 .teacher-route-learning b { color: var(--color-brief-blue); font-size: var(--text-xs); white-space: nowrap; }
 .teacher-route-learning p { margin: 0; color: var(--color-brief-ink); font-size: var(--text-brief-small); line-height: 1.5; }
 
-.teacher-knowledge h2 { max-width: 50rem; margin-bottom: var(--space-xl); }
-.teacher-knowledge-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); }
-.teacher-knowledge-grid article { display: flex; flex-direction: column; min-width: 0; min-height: 20rem; padding: clamp(var(--space-lg), 3vw, var(--space-xl)); border-top: var(--rule-bold) solid var(--color-brief-gold); background: var(--color-brief-panel); }
-.teacher-knowledge-grid article:nth-child(2) { border-color: var(--color-brief-blue); }
-.teacher-knowledge-index { color: var(--color-brief-blue); font-size: var(--text-xs); font-weight: 900; letter-spacing: .1em; }
-.teacher-knowledge-grid h3 { max-width: 24rem; margin: var(--space-lg) 0 var(--space-md); color: var(--color-brief-ink); font-size: clamp(var(--text-lg), 2.4vw, var(--text-2xl)); line-height: 1.25; }
-.teacher-knowledge-grid p { max-width: 38rem; margin: 0 0 var(--space-xl); color: var(--color-brief-muted); }
-.teacher-knowledge-grid small { display: block; margin-top: auto; padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-brief-rule); color: var(--color-brief-blue); font-size: var(--text-sm); line-height: 1.6; }
-.teacher-knowledge-rule { display: grid; grid-template-columns: minmax(10rem, .25fr) minmax(0, 1fr); gap: var(--space-lg); align-items: baseline; margin: var(--space-lg) 0 0; padding: var(--space-lg); border-top: var(--rule-hair) solid var(--color-brief-rule); color: var(--color-brief-muted); background: var(--color-brief-panel); font-size: var(--text-sm); }
-.teacher-knowledge-rule b { color: var(--color-brief-blue); font-size: var(--text-base); }
-
-.teacher-example-timeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: var(--rule-bold) solid var(--color-brief-ink); border-bottom: var(--rule-hair) solid var(--color-brief-rule); }
-.teacher-example-timeline article { min-width: 0; padding: var(--space-lg); border-right: var(--rule-hair) solid var(--color-brief-rule); }
-.teacher-example-timeline article:first-child { padding-left: 0; }
-.teacher-example-timeline article:last-child { padding-right: 0; border-right: 0; }
-.teacher-example-timeline span { color: var(--color-brief-blue); font-size: var(--text-xs); font-weight: 850; letter-spacing: .12em; }
-.teacher-example-timeline h3 { margin: var(--space-lg) 0 var(--space-sm); font-size: var(--text-lg); }
-.teacher-example-timeline p { max-width: 25rem; margin: 0; color: var(--color-brief-muted); font-size: var(--text-sm); }
-.teacher-example-question, .teacher-example-transfer { display: flex; align-items: baseline; gap: var(--space-lg); max-width: 65rem; margin: var(--space-lg) 0 0; font-size: var(--text-md); }
-.teacher-example-transfer { margin-top: var(--space-md); padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-brief-rule); color: var(--color-brief-muted); font-size: var(--text-base); }
-.teacher-example-question b, .teacher-example-transfer b { flex: 0 0 auto; color: var(--color-brief-blue); font-size: var(--text-xs); white-space: nowrap; }
-
 .teacher-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-lg); }
 .teacher-steps article { min-width: 0; padding: var(--space-lg) 0; border-top: var(--rule-bold) solid var(--color-brief-ink); }
 .teacher-steps article > span { color: var(--color-brief-blue); font-family: var(--font-body); font-size: var(--text-lg); font-weight: 900; }
@@ -130,6 +133,8 @@
 
 @media (max-width: 66rem) {
   .teacher-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .teacher-report-columns { grid-template-columns: minmax(0, 1fr); }
+  .teacher-report-columns article + article { border-left: 0; border-top: var(--rule-hair) solid var(--color-brief-rule); }
   .teacher-route { grid-template-columns: minmax(7rem, 10rem) minmax(8rem, 11rem) minmax(0, 1fr); }
   .teacher-route-learning { grid-column: 2 / -1; }
 }
@@ -141,18 +146,17 @@
   .teacher-hero { grid-template-columns: minmax(0, 1fr); }
   .teacher-hero-copy { padding-block: var(--space-2xl); }
   .teacher-hero-figure, .teacher-hero-figure img { min-height: 20rem; max-height: 27rem; }
-  .teacher-thesis-grid, .teacher-section-heading, .teacher-knowledge-grid, .teacher-knowledge-rule, .teacher-world-panel, .teacher-world-memory, .teacher-evidence, .teacher-boundary-grid { grid-template-columns: minmax(0, 1fr); }
+  .teacher-thesis-grid, .teacher-section-heading, .teacher-world-panel, .teacher-world-memory, .teacher-evidence, .teacher-boundary-grid { grid-template-columns: minmax(0, 1fr); }
+  .teacher-report-bar { align-items: flex-start; flex-direction: column; }
+  .teacher-report-path { grid-template-columns: minmax(0, 1fr); }
+  .teacher-report-path li { grid-template-columns: 3rem minmax(0, 1fr); gap: var(--space-md); border-right: 0; border-bottom: var(--rule-hair) solid var(--color-brief-rule); }
+  .teacher-report-path li:last-child { border-bottom: 0; }
   .teacher-causal-loop { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .teacher-causal-loop li:nth-child(2) { border-right: 0; }
   .teacher-causal-loop li:nth-child(-n+2) { border-bottom: var(--rule-hair) solid var(--color-brief-rule); }
   .teacher-causal-loop li:nth-child(3) { padding-left: 0; }
   .teacher-world-memory { gap: var(--space-sm); }
   .teacher-steps { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .teacher-example-timeline { grid-template-columns: minmax(0, 1fr); }
-  .teacher-example-timeline article, .teacher-example-timeline article:first-child, .teacher-example-timeline article:last-child { padding: var(--space-lg) 0; border-right: 0; border-bottom: var(--rule-hair) solid var(--color-brief-rule); }
-  .teacher-example-timeline article:last-child { border-bottom: 0; }
-  .teacher-example-timeline h3 { margin-top: var(--space-sm); }
-  .teacher-example-question, .teacher-example-transfer { display: grid; gap: var(--space-xs); }
   .teacher-steps article { padding-block: var(--space-lg); }
   .teacher-steps h3 { margin-top: var(--space-sm); }
   .teacher-route { grid-template-columns: minmax(6rem, 9rem) minmax(0, 1fr); gap: var(--space-sm) var(--space-md); }
@@ -168,6 +172,7 @@
   .teacher-hero-actions { align-items: stretch; flex-direction: column; }
   .teacher-route-name h3 { font-size: var(--text-md); }
   .teacher-route-image { height: 7.8rem; }
+  .teacher-report-evidence dl div, .teacher-report-evidence > p, .teacher-report-concept > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
   .teacher-footer { align-items: stretch; flex-direction: column; }
   .teacher-footer a { justify-content: space-between; }
 }
