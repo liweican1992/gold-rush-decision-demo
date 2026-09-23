@@ -37,5 +37,6 @@ export default defineConfig({
   plugins: [react(), pruneArchivedMediaFromBuild()],
   test: {
     environment: 'node',
+    include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.{ts,tsx}'],
   },
 })

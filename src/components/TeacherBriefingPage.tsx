@@ -13,28 +13,28 @@ const exampleReport = buildLatestDecisionReport([
 
 const routes = [
   {
-    mark: 'A', image: '/images/decision-stills/A02.jpg', title: '立即翻山',
+    mark: 'A', image: '/images/decision-stills/A02.webp', title: '立即翻山',
     benefit: '前段确实更快，争取到时间余量。',
     echo: '暴风与伤手叠加；走得越深，折返越贵。',
     core: '环境与自身能力匹配、不可逆性',
     extension: '承诺升级与已投入成本',
   },
   {
-    mark: 'B', image: '/images/decision-stills/B02.jpg', title: '沿山谷前进',
+    mark: 'B', image: '/images/decision-stills/B02.webp', title: '沿山谷前进',
     benefit: '高地暴露较低，队伍稳定前行。',
     echo: '正常节奏赶不上期限；提速又要压缩休息。',
     core: '目标与取舍、时间压力',
     extension: '调整时机与缓冲价值',
   },
   {
-    mark: 'C', image: '/images/decision-stills/C02.jpg', title: '先等天气信息',
+    mark: 'C', image: '/images/decision-stills/C02.webp', title: '先等天气信息',
     benefit: '两天后确认暴风，再等一天可进一步判断山口。',
     echo: '信息仍非通行保证，等待已消耗行动时间。',
     core: '不确定性、时间与竞争压力',
     extension: '信息价值与停止等待',
   },
   {
-    mark: 'D', image: '/images/decision-stills/D03.jpg', title: '等待安全返回',
+    mark: 'D', image: '/images/decision-stills/D03.webp', title: '等待安全返回',
     benefit: '避开最强风雪，左手与体力得到恢复。',
     echo: '天气改善时已等了五天，重新翻山的余量很少。',
     core: '目标优先级、价值观与权衡',
@@ -60,6 +60,7 @@ export function TeacherBriefingPage() {
         <nav aria-label="页面导航">
           <a href="#report-example">报告样例</a>
           <a href="#teaching-map">路径与概念</a>
+          <a href="/docs/story-map">剧情与关键帧总览</a>
           <a href="#classroom">课堂使用</a>
           <a className="teacher-header-play" href="/">打开游戏 <span aria-hidden="true">↗</span></a>
         </nav>
@@ -76,13 +77,14 @@ export function TeacherBriefingPage() {
             <p><b>老师怎么用</b><span>先独立体验，再用结局报告讨论当时的依据。</span></p>
           </div>
           <div className="teacher-hero-actions">
-            <a className="teacher-primary-link" href="/">试玩一条路线 <span aria-hidden="true">↗</span></a>
+            <a className="teacher-primary-link" href="/docs/story-map">查看完整剧情与关键帧 <span aria-hidden="true">↗</span></a>
+            <a className="teacher-text-link" href="/">试玩一条路线 <span aria-hidden="true">↗</span></a>
             <a className="teacher-text-link" href="#report-example">看结局报告样例 <span aria-hidden="true">↓</span></a>
           </div>
           <p className="teacher-source-note">案例依据：蔡临宁《战略管理》课件第 9–13 页；具体人物、日期与分支结果属于互动改编。</p>
         </div>
         <figure className="teacher-hero-figure">
-          <img src="/images/decision-stills/P06.jpg" alt="勘探帐篷里，三名队友等待队长作出返程决定" />
+          <img src="/images/decision-stills/P06.webp" alt="勘探帐篷里，三名队友等待队长作出返程决定" />
           <figcaption><b>游戏中的第一次抉择</b><span>期权还剩十四天。山路快而险，山谷稳却慢；两天后能得到更多天气信息。</span></figcaption>
         </figure>
       </section>

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import {
   LATEST_NODE_VIDEOS,
   LATEST_PUBLIC_VIDEO,
+  LATEST_RESULT_VIDEOS,
   LATEST_TIME_TRANSITIONS,
   arrivalOutcomeForDecisions,
   branchForDecisions,
@@ -24,6 +25,7 @@ import { bridgesForVideo, pendingBridge, resultBridge, cardDuration, type Narrat
 
 import { presentNode, decisionBackdrop } from '../demo/storyPresentation'
 import { SESSION_KEY, freshSession, restoreSession, advanceSession, rewindSession, type AttemptRecord } from '../demo/storySession'
+import { measureVideoPackBytes, shouldAutoStartFullPack, shouldPromptBeforeStarting, type VideoPackStatus } from '../demo/videoPack'
 
 const ROUTE_NAMES: Record<string, string> = {
   PUBLIC: '公共开场', A: '立即翻山', B: '走山谷', C: '等待天气信息', D: '安全等待', SHARED: '结算',
@@ -32,6 +34,177 @@ const ROUTE_NAMES: Record<string, string> = {
 const ROUTE_LEGEND = [
   ['A', '立即翻山'], ['B', '走山谷'], ['C', '等待信息'], ['D', '安全等待'],
 ] as const
+
+// Bump this name when replacing public-intro.mp4 under the same URL.
+const CORE_VIDEO_CACHE_NAME = 'last-fourteen-days-core-v1'
+const FULL_VIDEO_CACHE_NAME = 'last-fourteen-days-full-v1'
+const downloadedVideos = new Map<string, { objectUrl: string; bytes: number }>()
+const ALL_LATEST_VIDEOS = [...new Set([
+  LATEST_PUBLIC_VIDEO,
+  ...Object.values(LATEST_NODE_VIDEOS).flat(),
+  ...Object.values(LATEST_RESULT_VIDEOS),
+])]
+
+type FullDownloadProgress = {
+  status: VideoPackStatus
+  completed: number
+  downloadedBytes: number
+  totalBytes: number
+  persistedCount: number
+}
+
+const initialFullDownloadProgress: FullDownloadProgress = {
+  status: 'idle', completed: 0, downloadedBytes: 0, totalBytes: 0, persistedCount: 0,
+}
+
+function formatMegabytes(bytes: number) {
+  return `${(bytes / 1024 ** 2).toFixed(1)} MiB`
+}
+
+async function writeCoreVideoCache(src: string, response: Response) {
+  if (!('caches' in window)) return
+  try {
+    const cache = await window.caches.open(CORE_VIDEO_CACHE_NAME)
+    await cache.put(src, response)
+  } catch {
+    // Continue with the in-memory copy when persistent browser storage is unavailable.
+  }
+}
+
+async function readStoredVideo(src: string) {
+  if (!('caches' in window)) return undefined
+  for (const cacheName of [FULL_VIDEO_CACHE_NAME, CORE_VIDEO_CACHE_NAME]) {
+    try {
+      const cache = await window.caches.open(cacheName)
+      const response = await cache.match(src)
+      if (response) return await response.blob()
+    } catch {
+      // The remote video remains available when browser storage is unavailable.
+    }
+  }
+  return undefined
+}
+
+async function downloadCompleteVideoPack(
+  signal: AbortSignal,
+  onProgress: (progress: Omit<FullDownloadProgress, 'status'>) => void,
+) {
+  let fullCache: Cache | undefined
+  if ('caches' in window) {
+    try { fullCache = await window.caches.open(FULL_VIDEO_CACHE_NAME) }
+    catch { fullCache = undefined }
+  }
+
+  let cursor = 0
+  let completed = 0
+  let downloadedBytes = 0
+  let totalBytes = await measureVideoPackBytes(ALL_LATEST_VIDEOS, signal)
+  let observedTotalBytes = 0
+  let persistedCount = 0
+  const publish = () => onProgress({ completed, downloadedBytes, totalBytes, persistedCount })
+  publish()
+
+  const downloadNext = async () => {
+    while (!signal.aborted) {
+      const src = ALL_LATEST_VIDEOS[cursor]
+      if (!src) return
+      cursor += 1
+
+      const storedBlob = await readStoredVideo(src)
+      const inMemory = downloadedVideos.get(src)
+      if (storedBlob) {
+        downloadedBytes += storedBlob.size
+        observedTotalBytes += storedBlob.size
+        persistedCount += 1
+        completed += 1
+        publish()
+        continue
+      }
+      if (inMemory) {
+        downloadedBytes += inMemory.bytes
+        observedTotalBytes += inMemory.bytes
+        completed += 1
+        publish()
+        continue
+      }
+
+      const response = await fetch(src, { signal })
+      if (!response.ok) throw new Error(`Video request failed: ${response.status}`)
+      let fileBytes = 0
+      const chunks: ArrayBuffer[] = []
+      if (response.body) {
+        const reader = response.body.getReader()
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+          fileBytes += value.byteLength
+          downloadedBytes += value.byteLength
+          chunks.push(value.buffer.slice(value.byteOffset, value.byteOffset + value.byteLength) as ArrayBuffer)
+          publish()
+        }
+      } else {
+        const buffer = await response.arrayBuffer()
+        chunks.push(buffer)
+        fileBytes = buffer.byteLength
+        downloadedBytes += fileBytes
+      }
+
+      const blob = new Blob(chunks, { type: response.headers.get('content-type') ?? 'video/mp4' })
+      observedTotalBytes += fileBytes
+      let persisted = false
+      if (fullCache) {
+        try {
+          await fullCache.put(src, new Response(blob, { headers: { 'Content-Type': 'video/mp4' } }))
+          persisted = true
+        } catch {
+          // Keep an in-memory copy if the browser refuses persistent storage.
+        }
+      }
+      if (persisted) persistedCount += 1
+      else downloadedVideos.set(src, { objectUrl: URL.createObjectURL(blob), bytes: blob.size })
+      completed += 1
+      publish()
+    }
+  }
+
+  await Promise.all(Array.from({ length: 2 }, () => downloadNext()))
+  if (signal.aborted) throw new DOMException('Download cancelled', 'AbortError')
+  if (!totalBytes) totalBytes = observedTotalBytes
+  return { completed, downloadedBytes, totalBytes, persistedCount }
+}
+
+function usePlayableVideoSource(src: string) {
+  const [resolved, setResolved] = useState<{ src: string; url: string } | null>(null)
+
+  useEffect(() => {
+    let active = true
+    let objectUrl: string | undefined
+    setResolved(null)
+
+    const inMemory = downloadedVideos.get(src)
+    if (inMemory) {
+      setResolved({ src, url: inMemory.objectUrl })
+      return () => { active = false }
+    }
+
+    void readStoredVideo(src).then((blob) => {
+      if (!active) return
+      if (blob) {
+        objectUrl = URL.createObjectURL(blob)
+        setResolved({ src, url: objectUrl })
+      } else {
+        setResolved({ src, url: src })
+      }
+    })
+
+    return () => {
+      active = false
+      if (objectUrl) URL.revokeObjectURL(objectUrl)
+    }
+  }, [src])
+
+  return resolved?.src === src ? resolved.url : undefined
+}
 
 export function dayFromTime(time: string) {
   return Number(time.match(/Day\s*(\d+)/)?.[1] ?? 0)
@@ -79,16 +252,80 @@ function isDecisionNode(node: ReturnType<typeof latestNode>): node is FinalNode 
   return Boolean(node && 'options' in node && node.options?.length)
 }
 
+function firstVideoFromTarget(targetId: string, decisions: LatestDecision[]) {
+  let candidateId: string | undefined = targetId
+  const visited = new Set<string>()
+
+  while (candidateId && !visited.has(candidateId)) {
+    visited.add(candidateId)
+    if (candidateId === 'RESULT') return resultVideoForDecisions(decisions)
+
+    const clips = LATEST_NODE_VIDEOS[candidateId]
+    if (clips?.length) return clips[0]
+
+    const candidateNode = latestNode(candidateId)
+    if (candidateNode && isDecisionNode(candidateNode)) return undefined
+    candidateId = nextLatestNode(candidateId)
+  }
+
+  return undefined
+}
+
+function videosAfterDecision(node: FinalNode, decisions: LatestDecision[]) {
+  return visibleOptions(node, decisions).flatMap((option) => {
+    const afterChoice = [...decisions, { nodeId: node.id, optionId: option.id, label: option.label }]
+    const video = firstVideoFromTarget(optionTarget(option), afterChoice)
+    return video ? [video] : []
+  })
+}
+
+function playbackPrefetchCandidates(nodeId: string, decisions: LatestDecision[]) {
+  if (nodeId === 'INTRO') {
+    const firstChoice = latestNode('P06')
+    return firstChoice && isDecisionNode(firstChoice) ? videosAfterDecision(firstChoice, decisions) : []
+  }
+
+  const activeNode = latestNode(nodeId)
+  if (activeNode && isDecisionNode(activeNode)) return [...new Set(videosAfterDecision(activeNode, decisions))]
+
+  const candidates: string[] = []
+  let candidateId = nextLatestNode(nodeId)
+  const visited = new Set([nodeId])
+
+  while (candidateId && !visited.has(candidateId)) {
+    visited.add(candidateId)
+    if (candidateId === 'RESULT') {
+      const resultVideo = resultVideoForDecisions(decisions)
+      if (resultVideo) candidates.push(resultVideo)
+      break
+    }
+
+    const clips = LATEST_NODE_VIDEOS[candidateId]
+    const candidateNode = latestNode(candidateId)
+    if (candidateNode && isDecisionNode(candidateNode)) {
+      if (clips?.length) candidates.push(clips[0])
+      candidates.push(...videosAfterDecision(candidateNode, decisions))
+      break
+    }
+    if (clips?.length) candidates.push(clips[0])
+    candidateId = nextLatestNode(candidateId)
+  }
+
+  return [...new Set(candidates)]
+}
+
 function ProductionVideo({
   clips,
   title,
   onComplete,
   fallback,
+  prefetchCandidates = [],
 }: {
   fallback?: string
   clips: string[]
   title: string
   onComplete: () => void
+  prefetchCandidates?: string[]
 }) {
   const [index, setIndex] = useState(0)
   const [failed, setFailed] = useState(false)
@@ -101,7 +338,9 @@ function ProductionVideo({
   const bridgeRef = useRef<VideoBridge | null>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const activeClip = clips[index]
+  const playableSource = usePlayableVideoSource(activeClip)
   const subtitleTrack = latestSubtitleTrack(activeClip)
+  const queuedPrefetch = [...new Set(prefetchCandidates)].filter((source) => source !== activeClip)
 
   useEffect(() => {
     setIndex(0)
@@ -174,6 +413,7 @@ function ProductionVideo({
   return (
     <section className="latest-video-wrap">
       {bridge && <TimeTransition key={`${activeClip}-${bridge.at}`} {...bridge} onComplete={resumeBridge} />}
+      {!failed && <PlaybackPrefetch videoRef={videoRef} sources={queuedPrefetch} enabled={mediaReady} />}
       <div className="latest-video-screen">
       {failed ? (
         <div className="latest-media-error">
@@ -186,7 +426,7 @@ function ProductionVideo({
         <video
           ref={videoRef}
           key={`${activeClip}-${retry}`}
-          src={activeClip}
+          src={playableSource}
           aria-label={`${title} · 片段 ${index + 1}；单击或按空格暂停与继续`}
           autoPlay
           playsInline
@@ -291,6 +531,119 @@ function TimeTransition({ title, detail, onComplete }: NarrativeCard & { onCompl
         <small>点击继续</small>
       </button>
     </section>
+  )
+}
+
+function VideoPreload({ src, onComplete }: {
+  src: string
+  onComplete?: () => void
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const playableSource = usePlayableVideoSource(src)
+  const complete = useRef(onComplete)
+  const completed = useRef(false)
+  complete.current = onComplete
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    completed.current = false
+    const checkComplete = () => {
+      if (completed.current || !Number.isFinite(video.duration) || video.duration <= 0 || video.buffered.length === 0) return
+      const bufferedEnd = video.buffered.end(video.buffered.length - 1)
+      if (bufferedEnd >= video.duration - 0.25) {
+        completed.current = true
+        complete.current?.()
+      }
+    }
+    video.addEventListener('progress', checkComplete)
+    video.addEventListener('loadedmetadata', checkComplete)
+    video.addEventListener('canplaythrough', checkComplete)
+    checkComplete()
+    return () => {
+      video.removeEventListener('progress', checkComplete)
+      video.removeEventListener('loadedmetadata', checkComplete)
+      video.removeEventListener('canplaythrough', checkComplete)
+    }
+  }, [src])
+
+  return (
+    <video
+      ref={videoRef}
+      src={playableSource}
+      preload="auto"
+      muted
+      playsInline
+      aria-hidden="true"
+      tabIndex={-1}
+      style={{ position: 'fixed', width: 1, height: 1, left: -2, bottom: -2, opacity: 0, pointerEvents: 'none' }}
+    />
+  )
+}
+
+function PlaybackPrefetch({
+  videoRef,
+  sources,
+  enabled,
+}: {
+  videoRef: { current: HTMLVideoElement | null }
+  sources: string[]
+  enabled: boolean
+}) {
+  const [index, setIndex] = useState(0)
+  const sourceKey = sources.join('|')
+  const source = sources[index]
+
+  useEffect(() => {
+    setIndex(0)
+  }, [sourceKey])
+
+  const [bufferAllowsPrefetch, setBufferAllowsPrefetch] = useState(false)
+  useEffect(() => {
+    if (!enabled) {
+      setBufferAllowsPrefetch(false)
+      return
+    }
+
+    const inspect = () => {
+      const activeVideo = videoRef.current
+      if (!activeVideo) {
+        setBufferAllowsPrefetch(false)
+      } else if (activeVideo.paused) {
+        setBufferAllowsPrefetch(true)
+      } else {
+        let bufferedAhead = 0
+        for (let range = 0; range < activeVideo.buffered.length; range += 1) {
+          const start = activeVideo.buffered.start(range)
+          const end = activeVideo.buffered.end(range)
+          if (activeVideo.currentTime >= start - 0.1 && activeVideo.currentTime <= end) {
+            bufferedAhead = end - activeVideo.currentTime
+            break
+          }
+        }
+        setBufferAllowsPrefetch((allowed) => allowed ? bufferedAhead >= 6 : bufferedAhead >= 18)
+      }
+    }
+
+    const activeVideo = videoRef.current
+    if (!activeVideo) return
+    const events = ['canplay', 'loadedmetadata', 'pause', 'play', 'playing', 'progress', 'timeupdate', 'waiting'] as const
+    for (const event of events) activeVideo.addEventListener(event, inspect)
+    inspect()
+    return () => {
+      for (const event of events) activeVideo.removeEventListener(event, inspect)
+    }
+  }, [enabled, videoRef])
+
+  if (!enabled || !source || !bufferAllowsPrefetch) return null
+  return (
+    <VideoPreload
+      key={source}
+      src={source}
+      onComplete={() => {
+        setIndex((current) => current + 1)
+      }}
+    />
   )
 }
 
@@ -402,13 +755,102 @@ export function LatestStoryPlay() {
     catch { return freshSession() }
   })
   const [awaitResume, setAwaitResume] = useState(session.nodeId !== 'launch')
+  const [showStartPrompt, setShowStartPrompt] = useState(false)
+  const [startIntent, setStartIntent] = useState<'new' | 'resume'>('new')
   const [saveError, setSaveError] = useState(false)
   const { nodeId, decisions, mediaDone, transitionDone, arrivalSceneDone } = session
+  const isLaunchScreen = nodeId === 'launch' || awaitResume
   useEffect(() => {
     if (awaitResume) return
     try { window.localStorage.setItem(SESSION_KEY, JSON.stringify(session)); setSaveError(false) }
     catch { setSaveError(true) }
   }, [session, awaitResume])
+  const isFreshLaunch = nodeId === 'launch' && !awaitResume
+  const [startupLoadState, setStartupLoadState] = useState<'loading' | 'ready' | 'failed'>('loading')
+  const [startupLoadedBytes, setStartupLoadedBytes] = useState(0)
+  const [startupTotalBytes, setStartupTotalBytes] = useState(0)
+  const [startupRetry, setStartupRetry] = useState(0)
+  const [fullDownload, setFullDownload] = useState(initialFullDownloadProgress)
+  const fullDownloadController = useRef<AbortController | null>(null)
+
+  useEffect(() => () => {
+    fullDownloadController.current?.abort()
+    fullDownloadController.current = null
+  }, [])
+
+  useEffect(() => {
+    if (!isFreshLaunch) return
+    const existing = downloadedVideos.get(LATEST_PUBLIC_VIDEO)
+    if (existing) {
+      setStartupLoadedBytes(existing.bytes)
+      setStartupTotalBytes(existing.bytes)
+      setStartupLoadState('ready')
+      return
+    }
+
+    const controller = new AbortController()
+    let active = true
+    setStartupLoadState('loading')
+    setStartupLoadedBytes(0)
+    setStartupTotalBytes(0)
+
+    const downloadCoreVideo = async () => {
+      const cachedBlob = await readStoredVideo(LATEST_PUBLIC_VIDEO)
+      if (cachedBlob) {
+        const objectUrl = URL.createObjectURL(cachedBlob)
+        downloadedVideos.set(LATEST_PUBLIC_VIDEO, { objectUrl, bytes: cachedBlob.size })
+        if (active) {
+          setStartupLoadedBytes(cachedBlob.size)
+          setStartupTotalBytes(cachedBlob.size)
+          setStartupLoadState('ready')
+        }
+        return
+      }
+
+      const response = await fetch(LATEST_PUBLIC_VIDEO, { signal: controller.signal })
+      if (!response.ok) throw new Error(`Core video request failed: ${response.status}`)
+      const cacheWrite = writeCoreVideoCache(LATEST_PUBLIC_VIDEO, response.clone())
+      const totalBytes = Number(response.headers.get('content-length')) || 0
+      if (active) setStartupTotalBytes(totalBytes)
+
+      let loadedBytes = 0
+      let blob: Blob
+      if (!response.body) {
+        blob = await response.blob()
+        loadedBytes = blob.size
+      } else {
+        const reader = response.body.getReader()
+        const chunks: ArrayBuffer[] = []
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+          loadedBytes += value.byteLength
+          chunks.push(value.buffer.slice(value.byteOffset, value.byteOffset + value.byteLength) as ArrayBuffer)
+          if (active) setStartupLoadedBytes(loadedBytes)
+        }
+        blob = new Blob(chunks, { type: response.headers.get('content-type') ?? 'video/mp4' })
+      }
+
+      await cacheWrite
+      const objectUrl = URL.createObjectURL(blob)
+      downloadedVideos.set(LATEST_PUBLIC_VIDEO, { objectUrl, bytes: loadedBytes })
+      if (active) {
+        setStartupLoadedBytes(loadedBytes)
+        setStartupTotalBytes(totalBytes || loadedBytes)
+        setStartupLoadState('ready')
+      }
+    }
+
+    void downloadCoreVideo().catch((error: unknown) => {
+      if (!active || (error instanceof DOMException && error.name === 'AbortError')) return
+      setStartupLoadState('failed')
+    })
+
+    return () => {
+      active = false
+      controller.abort()
+    }
+  }, [isFreshLaunch, startupRetry])
   const view = presentNode(nodeId, decisions)
   const node = view?.node
   const videos = LATEST_NODE_VIDEOS[nodeId] ?? []
@@ -425,7 +867,53 @@ export function LatestStoryPlay() {
     go(optionTarget(option), [...decisions, { nodeId, optionId: option.id, label: option.label, reason, recordedAt: new Date().toISOString() }])
   }
   const back = () => setSession(rewindSession)
-  const newGame = () => { setSession(freshSession()); setAwaitResume(false) }
+  const cancelFullDownloadForGameplay = () => {
+    if (!fullDownloadController.current) return
+    fullDownloadController.current.abort()
+    fullDownloadController.current = null
+    setFullDownload((progress) => ({ ...progress, status: 'idle' }))
+  }
+  const downloadFullPack = () => {
+    if (fullDownloadController.current) return
+    const controller = new AbortController()
+    fullDownloadController.current = controller
+    setFullDownload({ ...initialFullDownloadProgress, status: 'estimating' })
+    void downloadCompleteVideoPack(controller.signal, (progress) => {
+      setFullDownload({ ...progress, status: 'downloading' })
+    }).then((progress) => {
+      setFullDownload({ ...progress, status: 'ready' })
+    }).catch((error: unknown) => {
+      if (error instanceof DOMException && error.name === 'AbortError') return
+      controller.abort()
+      setFullDownload((progress) => ({ ...progress, status: 'failed' }))
+    }).finally(() => {
+      if (fullDownloadController.current === controller) fullDownloadController.current = null
+    })
+  }
+  useEffect(() => {
+    if (!shouldAutoStartFullPack({
+      launchVisible: isLaunchScreen,
+      coreVideoPending: isFreshLaunch && startupLoadState === 'loading',
+      requestActive: Boolean(fullDownloadController.current),
+      status: fullDownload.status,
+    })) return
+    downloadFullPack()
+  }, [isLaunchScreen, isFreshLaunch, startupLoadState, fullDownload.status])
+  const enterAction = (intent: 'new' | 'resume') => {
+    setShowStartPrompt(false)
+    cancelFullDownloadForGameplay()
+    if (intent === 'resume') setAwaitResume(false)
+    else go('INTRO')
+  }
+  const requestStart = (intent: 'new' | 'resume') => {
+    if (shouldPromptBeforeStarting(fullDownload.status)) {
+      setStartIntent(intent)
+      setShowStartPrompt(true)
+      return
+    }
+    enterAction(intent)
+  }
+  const newGame = () => { cancelFullDownloadForGameplay(); setSession(freshSession()); setAwaitResume(false) }
   const restart = () => {
     setSession(s => ({ ...freshSession(), explored: true, seenOutcome: s.seenOutcome,
       archives: [...s.archives, { id: s.attemptId, nodeId: s.nodeId, decisions: s.decisions, completed: s.nodeId === 'RESULT', savedAt: new Date().toISOString() }] }))
@@ -433,6 +921,29 @@ export function LatestStoryPlay() {
   }
 
   if (nodeId === 'launch' || awaitResume) return (
+    <>
+    {showStartPrompt && <div className="latest-start-confirm-backdrop">
+      <section className="latest-start-confirm" role="dialog" aria-modal="true" aria-labelledby="latest-start-confirm-title" aria-describedby="latest-start-confirm-description">
+        <span>资源包下载提示</span>
+        <h2 id="latest-start-confirm-title">{fullDownload.status === 'ready' ? '完整资源包已就绪' : '完整资源包尚未下载完成'}</h2>
+        <p id="latest-start-confirm-description">
+          {fullDownload.status === 'ready'
+            ? '全部视频已经缓存，可以开始行动。'
+            : fullDownload.status === 'estimating'
+              ? '正在统计完整资源包的总量，随后会自动继续下载。'
+              : fullDownload.status === 'downloading'
+                ? `当前已下载 ${formatMegabytes(fullDownload.downloadedBytes)}${fullDownload.totalBytes ? ` / ${formatMegabytes(fullDownload.totalBytes)}` : ''}，完成 ${fullDownload.completed} / ${ALL_LATEST_VIDEOS.length} 段。`
+                : fullDownload.status === 'failed'
+                  ? `资源包下载中断，已完成 ${fullDownload.completed} / ${ALL_LATEST_VIDEOS.length} 段；可以留在首页重试，也可以继续开始。`
+                  : '完整资源包还未就绪，可以留在首页等待下载，也可以现在开始。'}
+        </p>
+        {fullDownload.status !== 'ready' && <small>现在开始会暂停完整包下载，已完成的视频会保留；剧情视频之后按需加载。</small>}
+        <div className="latest-start-confirm-actions">
+          <button type="button" autoFocus onClick={() => setShowStartPrompt(false)}>{fullDownload.status === 'ready' ? '返回首页' : fullDownload.status === 'failed' ? '留在首页重试下载' : '留在首页继续下载'}</button>
+          <button type="button" onClick={() => enterAction(startIntent)}>{startIntent === 'resume' ? '继续上次行动' : '仍然开始行动'}</button>
+        </div>
+      </section>
+    </div>}
     <main className="latest-launch">
       <div className="latest-launch-shade" />
       <header className="latest-launch-header">
@@ -445,10 +956,33 @@ export function LatestStoryPlay() {
           <h1><small>最后</small>十四天</h1>
           <p>发现了可能有金矿的土地，却还没有买下它。你必须在十四天内赶回去，亲自完成确认。山里天气未定，你的左手又受了伤。这一路，怎么走由你决定。</p>
           <div className="latest-launch-actions">
-            {awaitResume ? <><button type="button" onClick={() => setAwaitResume(false)}>继续上次行动 <b>→</b></button><button type="button" onClick={newGame}>开始全新一局</button></>
-              : <button type="button" onClick={() => go('INTRO')}>{session.explored ? '开始对照探索' : '开始行动'} <b>→</b></button>}
+            {awaitResume ? <><button type="button" onClick={() => requestStart('resume')}>继续上次行动 <b>→</b></button><button type="button" onClick={newGame}>开始全新一局</button></>
+              : <button type="button" disabled={startupLoadState !== 'ready'} onClick={() => requestStart('new')}>{startupLoadState === 'ready' ? (session.explored ? '开始对照探索' : '开始行动') : '正在准备核心资源…'} {startupLoadState === 'ready' && <b>→</b>}</button>}
             <small>和三位队友一起出发，在关键时刻作出决定</small>
           </div>
+          {isLaunchScreen && <section className="latest-launch-full-pack" aria-label="下载完整视频资源包">
+            <div className="latest-launch-preload-heading"><span>自动预下载 · {ALL_LATEST_VIDEOS.length} 段视频</span><strong>{fullDownload.status === 'ready' ? '全部就绪' : fullDownload.status === 'estimating' ? '正在统计总量' : fullDownload.status === 'downloading' ? '正在下载' : fullDownload.status === 'failed' ? '下载中断' : '首次进入自动开始'}</strong></div>
+            <p>完整资源包约 100 MiB，首次进入此页会自动下载并缓存到当前浏览器，之后切换路线可少等一会儿。</p>
+            <div className={`latest-launch-preload-progress${fullDownload.status === 'estimating' ? ' is-indeterminate' : ''}`} role="progressbar" aria-label="完整资源包下载进度" aria-valuemin={0} aria-valuemax={fullDownload.totalBytes || ALL_LATEST_VIDEOS.length} aria-valuenow={fullDownload.status === 'estimating' ? undefined : fullDownload.totalBytes ? Math.min(fullDownload.totalBytes, fullDownload.downloadedBytes) : fullDownload.completed}>
+              <i style={{ width: `${Math.min(100, fullDownload.totalBytes ? fullDownload.downloadedBytes / fullDownload.totalBytes * 100 : fullDownload.completed / ALL_LATEST_VIDEOS.length * 100)}%` }} />
+            </div>
+            <div className="latest-launch-preload-detail"><span>{fullDownload.completed} / {ALL_LATEST_VIDEOS.length} 段视频已准备</span><b>{fullDownload.status === 'idle' ? '即将自动开始' : `${formatMegabytes(fullDownload.downloadedBytes)}${fullDownload.totalBytes ? ` / ${formatMegabytes(fullDownload.totalBytes)}` : fullDownload.status === 'estimating' ? ' · 正在统计总量' : fullDownload.status === 'ready' ? ' · 总量统计不可用' : ' · 总量暂不可用'}`}</b></div>
+            <small className="latest-launch-preload-note">未下载完成时点击开始会先提示；继续开始会暂停完整包下载，剧情视频仍会按需加载。</small>
+            {fullDownload.status === 'ready' && <small className="latest-launch-preload-note">已保存到浏览器缓存：{fullDownload.persistedCount} / {ALL_LATEST_VIDEOS.length} 段{fullDownload.persistedCount === ALL_LATEST_VIDEOS.length ? '，下次访问可复用。' : '；其余素材本次打开期间可直接播放。'}</small>}
+            {fullDownload.status === 'failed' && <small className="latest-launch-full-pack-error">有视频下载失败。已完成的素材保留在缓存中，可以重试剩余部分。</small>}
+            <button type="button" onClick={downloadFullPack} disabled={fullDownload.status === 'estimating' || fullDownload.status === 'downloading' || fullDownload.status === 'ready' || (isFreshLaunch && startupLoadState !== 'ready')}>
+              {fullDownload.status === 'ready' ? '完整资源包已就绪' : fullDownload.status === 'estimating' ? '正在统计总量…' : fullDownload.status === 'downloading' ? '完整资源包下载中…' : fullDownload.status === 'failed' ? '重试下载剩余视频' : isFreshLaunch && startupLoadState !== 'ready' ? '开场视频准备好后自动下载' : '开始下载完整资源包'}
+            </button>
+          </section>}
+          {isFreshLaunch && <section className="latest-launch-preload" aria-label="核心游戏资源下载">
+            <div className="latest-launch-preload-heading"><span>CORE DATA · 01 / 01</span><strong>{startupLoadState === 'ready' ? '已就绪' : startupLoadState === 'failed' ? '下载未完成' : '正在下载开场视频'}</strong></div>
+            <div className={`latest-launch-preload-progress${startupTotalBytes ? '' : ' is-indeterminate'}`} role="progressbar" aria-label="核心资源下载进度" aria-valuemin={0} aria-valuemax={100} aria-valuenow={startupTotalBytes ? Math.min(100, Math.floor(startupLoadedBytes / startupTotalBytes * 100)) : undefined}>
+              <i style={{ width: startupTotalBytes ? `${Math.min(100, startupLoadedBytes / startupTotalBytes * 100)}%` : undefined }} />
+            </div>
+            <div className="latest-launch-preload-detail"><span>开场剧情视频</span><b>{formatMegabytes(startupLoadedBytes)}{startupTotalBytes ? ` / ${formatMegabytes(startupTotalBytes)}` : ''}</b></div>
+            <small className="latest-launch-preload-note">先准备开场视频；后续路线素材会在播放和选择时按需下载。</small>
+            {startupLoadState === 'failed' && <div className="latest-launch-preload-actions"><small>核心视频暂时无法下载，可重试或直接在线播放。</small><button type="button" onClick={() => setStartupRetry((value) => value + 1)}>重试下载</button><button type="button" onClick={() => requestStart('new')}>直接在线播放 →</button></div>}
+          </section>}
         </div>
         <aside className="latest-briefing-board" aria-label="行动简报">
           <header><span>行动简报</span><b>DAY 0 / 14</b></header>
@@ -463,17 +997,29 @@ export function LatestStoryPlay() {
       </section>
       <footer className="latest-launch-footer"><span>队伍：沈岚 · 老周 · 阿杰</span><span>01 / 行动开始</span></footer>
     </main>
+    </>
   )
 
-  if (nodeId === 'INTRO' && !transitionDone) return <OpeningBriefing onContinue={() => setTransitionDone(true)} />
+  if (nodeId === 'INTRO' && !transitionDone) return (
+    <>
+      <OpeningBriefing onContinue={() => setTransitionDone(true)} />
+      <VideoPreload src={LATEST_PUBLIC_VIDEO} />
+    </>
+  )
 
   const timeTransition = nodeId === 'RESULT' ? resultBridge(decisions) : LATEST_TIME_TRANSITIONS[nodeId]
-  if (timeTransition && !transitionDone) return <TimeTransition key={nodeId} {...timeTransition} onComplete={() => setTransitionDone(true)} />
+  const transitionVideo = nodeId === 'RESULT' ? resultVideo : videos[0]
+  if (timeTransition && !transitionDone) return (
+    <>
+      <TimeTransition key={nodeId} {...timeTransition} onComplete={() => setTransitionDone(true)} />
+      {transitionVideo && <VideoPreload key={transitionVideo} src={transitionVideo} />}
+    </>
+  )
 
   if (nodeId === 'INTRO') return (
     <main className="latest-shell latest-shell-video" data-route="PUBLIC">
       <MissionHeader nodeId="PROLOGUE" title="确认机会、期限与路线" route="PUBLIC" />
-      <ProductionVideo clips={[LATEST_PUBLIC_VIDEO]} title="确认机会、期限与路线" onComplete={() => go('P06')} />
+      <ProductionVideo clips={[LATEST_PUBLIC_VIDEO]} title="确认机会、期限与路线" prefetchCandidates={playbackPrefetchCandidates('INTRO', decisions)} onComplete={() => go('P06')} />
       <footer className="latest-footer"><button type="button" onClick={back}>← 返回</button><button type="button" onClick={() => go('P06')}>跳过开场 →</button></footer>
     </main>
   )
@@ -506,14 +1052,18 @@ export function LatestStoryPlay() {
 
   if (!node) return null
   const showChoice = isDecisionNode(node) && (videos.length === 0 || mediaDone)
+  const playbackCandidates = !mediaDone && videos.length > 0
+    ? playbackPrefetchCandidates(nodeId, decisions)
+    : []
 
   return (
+    <>
     <main className="latest-shell" data-route={node.route}>
       <MissionHeader nodeId={node.id} title={node.title} route={node.route} />
       <ExpeditionHud time={node.time} location={node.location} route={node.route} condition={view?.condition ?? '左手需照护'} />
       <section className={`latest-stage${showChoice ? ' latest-stage-choice' : ''}`}>
         {showChoice ? <ChoiceStage key={`${session.attemptId}-${node.id}`} node={node} options={options} decisions={decisions} onSelect={choose} />
-          : videos.length > 0 && !mediaDone ? <ProductionVideo key={nodeId} clips={videos} title={node.title} fallback={node.facts} onComplete={() => isDecisionNode(node) ? setMediaDone(true) : continueNode()} />
+          : videos.length > 0 && !mediaDone ? <ProductionVideo key={nodeId} clips={videos} title={node.title} fallback={node.facts} prefetchCandidates={playbackCandidates} onComplete={() => isDecisionNode(node) ? setMediaDone(true) : continueNode()} />
             : <FrameStage node={node} onContinue={continueNode} />}
       </section>
       <footer className="latest-footer">
@@ -522,5 +1072,6 @@ export function LatestStoryPlay() {
         {videos.length > 0 && !mediaDone && <button type="button" onClick={() => isDecisionNode(node) ? setMediaDone(true) : continueNode()}>跳过本段 →</button>}
       </footer>
     </main>
+    </>
   )
 }

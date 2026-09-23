@@ -3,26 +3,43 @@ import { describe, expect, it } from 'vitest'
 import { ReviewedStoryMapPage } from './ReviewedStoryMapPage'
 import { FINAL_BRANCHES, FINAL_KEYFRAMES, FINAL_NODES, branchFrameSequences, validateFinalStoryMap } from '../demo/finalStoryMap'
 
-describe('FINAL 全分支关键帧地图', () => {
-  it('展示封版节点、18 条代表路径和 55 张 WebGPT 通过关键帧', () => {
+describe('教师用剧情与关键帧总览', () => {
+  it('展示全量节点、代表路径和关键帧，并使用教师可读的说明', () => {
     const html = renderToStaticMarkup(<ReviewedStoryMapPage />)
 
     expect(FINAL_NODES).toHaveLength(33)
     expect(FINAL_BRANCHES).toHaveLength(18)
     expect(FINAL_KEYFRAMES).toHaveLength(55)
+    expect(FINAL_NODES.reduce((total, node) => total + (node.options?.length ?? 0), 0)).toBe(28)
     expect((html.match(/data-branch-id=/g) ?? []).length).toBe(18)
     expect((html.match(/data-keyframe-id=/g) ?? []).length).toBeGreaterThanOrEqual(55)
-    expect(html).toContain('当前 FINAL 全分支与关键帧')
-    expect(html).toContain('WebGPT 复审通过')
-    expect(html).toContain('WebGPT 最终映射复核：PASS · 2026-09-14')
-    expect(html).toContain('P02 单条低成本 Pavo 打样')
-    expect(html).toContain('不授权批量生成或消耗 Pavo 积分')
+    expect(html).toContain('《最后十四天》剧情与关键帧总览')
+    expect(html).toContain('<b>28</b>决策选项')
+    expect(html).toContain('剧情结构检查通过')
+    expect(html).toContain('课堂观察')
+    expect(html).toContain('关键帧图库')
+    expect(html).toContain('href="/teacher"')
+    expect(html).not.toMatch(/WebGPT|Pavo/)
   })
 
   it('每个剧情节点和每条代表路径都有可显示的关键帧', () => {
     for (const node of FINAL_NODES) expect(node.frameIds.length, node.id).toBeGreaterThan(0)
     for (const branch of FINAL_BRANCHES) expect(branch.frameIds.length, branch.id).toBeGreaterThan(0)
     expect(validateFinalStoryMap()).toEqual([])
+  })
+
+  it('跟随实际游玩中的条件节点、选项去向、决策文案和场景背景', () => {
+    const html = renderToStaticMarkup(<ReviewedStoryMapPage />)
+
+    for (const id of ['A4FB1', 'A4FB2', 'A4FB3', 'B4FBDAWN', 'B4FBREST', 'C2FB1', 'C2FB2', 'C04VA', 'C6FB2', 'C04VB', 'D5FB1', 'D5FB2']) {
+      expect(html, `runtime node ${id}`).toContain(`data-node-id="${id}"`)
+    }
+    expect(html).toContain('href="#node-A4FB1"')
+    expect(html).toContain('href="#node-C04VA"')
+    expect(html).toContain('你准备怎么行动？')
+    expect(html).toContain('安全返回，原窗口已失去')
+    expect(html).toContain('/images/decision-stills/A04-continue.webp')
+    expect(html).toContain('/images/decision-stills/B04-steady.webp')
   })
 
   it('只绑定返修后的 A 线和城镇夜景版本', () => {

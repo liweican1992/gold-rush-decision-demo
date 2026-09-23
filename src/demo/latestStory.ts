@@ -95,7 +95,7 @@ export const LATEST_NODE_VIDEOS: Record<string, string[]> = {
   D5FB2: [latestVideo('d5fb2.mp4')],
 }
 
-const VIRTUAL_NODES: Record<string, LatestVirtualNode> = {
+export const LATEST_VIRTUAL_NODES: Record<string, LatestVirtualNode> = {
   A4FB1: {
     id: 'A4FB1', route: 'A', title: '按现在的节奏继续', kind: '剧情',
     time: '约 Day 9—11', location: '山路后段→办事地点',
@@ -173,7 +173,7 @@ const VIRTUAL_NODES: Record<string, LatestVirtualNode> = {
 export const LATEST_NODES_BY_ID = Object.fromEntries(FINAL_NODES.map((node) => [node.id, node])) as Record<string, FinalNode>
 
 export function latestNode(nodeId: string): FinalNode | LatestVirtualNode | undefined {
-  return LATEST_NODES_BY_ID[nodeId] ?? VIRTUAL_NODES[nodeId]
+  return LATEST_NODES_BY_ID[nodeId] ?? LATEST_VIRTUAL_NODES[nodeId]
 }
 
 export function latestFrames(frameIds: string[]) {

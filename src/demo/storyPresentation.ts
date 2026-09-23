@@ -1,4 +1,29 @@
 import { latestNode, type LatestDecision } from "./latestStory"
+import type { FinalRoute } from "./finalStoryMap"
+
+export type LatestDecisionBackdrop = {
+  id: string
+  nodeId: string
+  route: FinalRoute
+  title: string
+  context: string
+  src: string
+}
+
+export const LATEST_DECISION_BACKDROPS: LatestDecisionBackdrop[] = [
+  { id: 'P06', nodeId: 'P06', route: 'PUBLIC', title: '第一次路线选择', context: '共同开场', src: '/images/decision-stills/P06.webp' },
+  { id: 'A02', nodeId: 'A02', route: 'A', title: '风雪中的路线选择', context: '翻山路线', src: '/images/decision-stills/A02.webp' },
+  { id: 'A04-continue', nodeId: 'A04', route: 'A', title: '最后回头点', context: '此前继续推进', src: '/images/decision-stills/A04-continue.webp' },
+  { id: 'A04-rest', nodeId: 'A04', route: 'A', title: '最后回头点', context: '此前暂避风雪', src: '/images/decision-stills/A04-rest.webp' },
+  { id: 'B02', nodeId: 'B02', route: 'B', title: '第一次节奏选择', context: 'Day 6 进度盘点', src: '/images/decision-stills/B02.webp' },
+  { id: 'B04-fast', nodeId: 'B04', route: 'B', title: '第二次节奏选择', context: '此前已提速', src: '/images/decision-stills/B04-fast.webp' },
+  { id: 'B04-steady', nodeId: 'B04', route: 'B', title: '第二次节奏选择', context: '此前保持原节奏', src: '/images/decision-stills/B04-steady.webp' },
+  { id: 'C02', nodeId: 'C02', route: 'C', title: '第一轮天气信息选择', context: '已等待两天', src: '/images/decision-stills/C02.webp' },
+  { id: 'C03', nodeId: 'C03', route: 'C', title: '第二轮天气信息选择', context: '已等待三天', src: '/images/decision-stills/C03.webp' },
+  { id: 'C06', nodeId: 'C06', route: 'C', title: '山路现场再判断', context: '风势比预想退得慢', src: '/images/decision-stills/C06.webp' },
+  { id: 'D03', nodeId: 'D03', route: 'D', title: '天气窗口出现后的选择', context: '已安全等待五天', src: '/images/decision-stills/D03.webp' },
+  { id: 'D05', nodeId: 'D05', route: 'D', title: '反转后的再判断', context: '时间余量已经很少', src: '/images/decision-stills/D05.webp' },
+]
 
 // Times describe this scene, never the possible completion dates of other branches.
 export function presentNode(id: string, decisions: LatestDecision[]) {
@@ -68,5 +93,7 @@ export function presentNode(id: string, decisions: LatestDecision[]) {
 export function decisionBackdrop(id: string, decisions: LatestDecision[]) {
   const suffix = id === "A04" ? (decisions.some(d => d.optionId === "A2-2") ? "rest" : "continue")
     : id === "B04" ? (decisions.some(d => d.optionId === "B2-1") ? "fast" : "steady") : ""
-  return `/images/decision-stills/${id}${suffix ? "-" + suffix : ""}.jpg`
+  const backdropId = `${id}${suffix ? "-" + suffix : ""}`
+  return LATEST_DECISION_BACKDROPS.find((item) => item.id === backdropId)?.src
+    ?? `/images/decision-stills/${backdropId}.webp`
 }
