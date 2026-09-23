@@ -16,8 +16,8 @@ const allPlayableVideos = [
 const uniquePlayableVideos = [...new Set(allPlayableVideos)]
 
 describe('当前成片中文字幕', () => {
-  it('所有 30 条可播放成片都有字幕轨，包括纯环境声片段', () => {
-    expect(uniquePlayableVideos).toHaveLength(30)
+  it('所有 33 条可播放成片都有字幕轨，包括纯环境声片段', () => {
+    expect(uniquePlayableVideos).toHaveLength(33)
     expect(Object.keys(LATEST_SUBTITLE_TRACKS).sort()).toEqual(uniquePlayableVideos.sort())
   })
 
@@ -65,8 +65,9 @@ describe('当前成片中文字幕', () => {
 
   it('纯环境声片段保留空字幕轨，不伪造对白', () => {
     for (const video of [
-      '/videos/latest/sh-town-day.mp4',
-      '/videos/latest/sh-town-night.mp4',
+      '/videos/latest/ending-day-confirmed.mp4',
+      '/videos/latest/ending-night-confirmed.mp4',
+      '/videos/latest/ending-safe.mp4',
       '/videos/latest/sh-valley-travel.mp4',
     ]) {
       expect(latestSubtitleTrack(video)?.cues).toEqual([])

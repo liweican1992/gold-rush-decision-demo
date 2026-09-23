@@ -126,11 +126,13 @@ describe('当前 FINAL 剧情试玩', () => {
     expect(LATEST_NODE_VIDEOS.B4FBREST).toEqual(['/videos/latest/b-final-rest.mp4'])
   })
 
-  it('抵达镜头按结局既定的昼夜标记播放，安全返程不误用办事地点', () => {
-    expect(resultVideoForDecisions(decisions('P06-A', 'A2-1', 'A4-1'))).toBe(LATEST_RESULT_VIDEOS.night)
-    expect(resultVideoForDecisions(decisions('P06-A', 'A2-2', 'A4-1'))).toBe(LATEST_RESULT_VIDEOS.day)
-    expect(resultVideoForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))).toBe(LATEST_RESULT_VIDEOS.day)
-    expect(resultVideoForDecisions(decisions('P06-D', 'D3-1'))).toBeUndefined()
+  it('结局镜头同时匹配昼夜与办理结果，主动安全返回使用独立片段', () => {
+    expect(resultVideoForDecisions(decisions('P06-A', 'A2-1', 'A4-1'))).toBe(LATEST_RESULT_VIDEOS.nightConfirmed)
+    expect(resultVideoForDecisions(decisions('P06-A', 'A2-2', 'A4-1'))).toBe(LATEST_RESULT_VIDEOS.dayConfirmed)
+    expect(resultVideoForDecisions(decisions('P06-B', 'B2-1', 'B4A-2'))).toBe(LATEST_RESULT_VIDEOS.nightAuction)
+    expect(resultVideoForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))).toBe(LATEST_RESULT_VIDEOS.dayAuction)
+    expect(resultVideoForDecisions(decisions('P06-D', 'D3-1'))).toBe(LATEST_RESULT_VIDEOS.safe)
+    expect(resultVideoForDecisions(decisions('P06-C', 'C2-1', 'C3-3'))).toBe(LATEST_RESULT_VIDEOS.safe)
   })
 
   it('抵达后根据期限结果显示完成、重新拍卖或安全返回画面', () => {

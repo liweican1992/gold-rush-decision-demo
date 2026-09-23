@@ -253,14 +253,33 @@
         { "start": 93.88, "end": 96.5, "text": "队长，决定吧" }
       ]
     },
-    "sh-town-day.mp4": {
-      "duration": 5.833,
-      "notes": "纯环境声",
+    "ending-day-confirmed.mp4": {
+      "duration": 24.512,
+      "notes": "柜台确认，无人物对白",
       "cues": []
     },
-    "sh-town-night.mp4": {
-      "duration": 5.833,
-      "notes": "纯环境声",
+    "ending-night-confirmed.mp4": {
+      "duration": 24.512,
+      "notes": "柜台确认，无人物对白",
+      "cues": []
+    },
+    "ending-day-auction.mp4": {
+      "duration": 18.208,
+      "cues": [
+        { "start": 9.66, "end": 11.48, "text": "期限过了，矿权要重新拍卖" },
+        { "start": 12.54, "end": 14.56, "text": "资料带回去，准备下一轮" }
+      ]
+    },
+    "ending-night-auction.mp4": {
+      "duration": 22.512,
+      "cues": [
+        { "start": 9.78, "end": 12.0, "text": "期限过了，矿权要重新拍卖" },
+        { "start": 15.94, "end": 18.04, "text": "资料带回去，准备下一轮" }
+      ]
+    },
+    "ending-safe.mp4": {
+      "duration": 12.256,
+      "notes": "队伍安全返回，无人物对白",
       "cues": []
     },
     "sh-valley-travel.mp4": {

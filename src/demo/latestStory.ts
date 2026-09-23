@@ -37,8 +37,11 @@ function latestVideo(filename: string) {
 export const LATEST_PUBLIC_VIDEO = latestVideo('public-intro.mp4')
 
 export const LATEST_RESULT_VIDEOS = {
-  day: latestVideo('sh-town-day.mp4'),
-  night: latestVideo('sh-town-night.mp4'),
+  dayConfirmed: latestVideo('ending-day-confirmed.mp4'),
+  nightConfirmed: latestVideo('ending-night-confirmed.mp4'),
+  dayAuction: latestVideo('ending-day-auction.mp4'),
+  nightAuction: latestVideo('ending-night-auction.mp4'),
+  safe: latestVideo('ending-safe.mp4'),
 } as const
 
 export type LatestArrivalOutcome = {
@@ -278,7 +281,9 @@ export function arrivalOutcomeForDecisions(decisions: LatestDecision[]): LatestA
 
 export function resultVideoForDecisions(decisions: LatestDecision[]) {
   const branch = branchForDecisions(decisions)
-  if (branch?.frameIds.includes('SH-TOWN-NIGHT')) return LATEST_RESULT_VIDEOS.night
-  if (branch?.id === 'A-05' || branch?.frameIds.includes('SH-TOWN-DAY')) return LATEST_RESULT_VIDEOS.day
-  return undefined
+  if (!branch) return undefined
+  if (branch.deadline === '主动放弃') return LATEST_RESULT_VIDEOS.safe
+  const night = branch.frameIds.includes('SH-TOWN-NIGHT')
+  if (branch.deadline === '按期') return night ? LATEST_RESULT_VIDEOS.nightConfirmed : LATEST_RESULT_VIDEOS.dayConfirmed
+  return night ? LATEST_RESULT_VIDEOS.nightAuction : LATEST_RESULT_VIDEOS.dayAuction
 }
