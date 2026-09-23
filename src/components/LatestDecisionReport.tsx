@@ -4,6 +4,7 @@ import type { LatestDecision } from '../demo/latestStory'
 import './strategyReport.css'
 import { branchForDecisions } from '../demo/latestStory'
 import type { AttemptRecord } from '../demo/storySession'
+import { StrategyConceptGrid } from './StrategyConceptGrid'
 
 export function LatestDecisionReport({ decisions, onRestart, attemptId = "preview", archives = [], explored = false }: { decisions: LatestDecision[]; onRestart: () => void; attemptId?: string; archives?: AttemptRecord[]; explored?: boolean }) {
   const report = buildLatestDecisionReport(decisions)
@@ -81,13 +82,7 @@ function ReportBody({ report, onRestart, attemptId, archives, explored }: { repo
 
       <section className="strategy-section" id="strategy-concepts" aria-labelledby="concepts-heading">
         <header><span>02 / 联系课程</span><h2 id="concepts-heading">你刚才经历了哪些战略问题？</h2><p>每个概念都对应本局行动，再延伸到企业决策。</p></header>
-        <div className="strategy-concept-grid">
-          {report.lessons.map(lesson => <section className="strategy-concept" key={lesson.id}>
-            <small>{lesson.origin}</small><h3>{lesson.title}</h3><p>{lesson.definition}</p>
-            <div className="strategy-concept-evidence"><b>本局证据</b>{lesson.evidence.map(item => <p key={item.optionId}>{item.observation}</p>)}</div>
-            <div className="strategy-transfer"><b>换到企业中</b><p>{lesson.transfer}</p></div>
-          </section>)}
-        </div>
+        <StrategyConceptGrid lessons={report.lessons} />
       </section>
 
       <section className="strategy-section" id="strategy-comparison" aria-labelledby="comparison-heading">

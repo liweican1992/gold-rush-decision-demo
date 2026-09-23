@@ -1,15 +1,15 @@
 import { useEffect } from 'react'
-import { buildLatestDecisionReport, STRATEGY_CONCEPTS } from '../demo/latestReport'
+import { buildLatestDecisionReport } from '../demo/latestReport'
 import type { LatestDecision } from '../demo/latestStory'
+import { StrategyConceptGrid } from './StrategyConceptGrid'
 import './teacherBriefing.css'
 
 // A fixed path through the same report builder used after a real playthrough.
 const exampleReport = buildLatestDecisionReport([
-  { nodeId: 'P06', optionId: 'P06-B', label: '走山谷' },
-  { nodeId: 'B02', optionId: 'B2-1', label: '从今天开始，每天多走一段' },
-  { nodeId: 'B04', optionId: 'B4A-2', label: '把节奏降回可持续状态' },
+  { nodeId: 'P06', optionId: 'P06-D', label: '等天气好转后安全返回' },
+  { nodeId: 'D03', optionId: 'D3-2', label: '利用这次天气窗口，重新走山路' },
+  { nodeId: 'D05', optionId: 'D5-2', label: '放慢脚步，按身体能承受的速度走' },
 ] satisfies LatestDecision[])
-const daySixDecision = exampleReport.decisionEvidence[1]
 
 const routes = [
   {
@@ -69,10 +69,10 @@ export function TeacherBriefingPage() {
         <div className="teacher-hero-copy">
           <p className="teacher-kicker">战略管理 · 互动案例教学说明</p>
           <h1 id="teacher-title">让学生先作判断，<br /><span>再讨论战略。</span></h1>
-          <p className="teacher-hero-lead">把课件中的阿拉斯加土地购买期权案例，变成一场有期限、有代价的第一人称决策。学生先行动，结局报告再把他们的选择与战略管理概念对应起来。</p>
+          <p className="teacher-hero-lead">把课件中的阿拉斯加土地购买期权案例，变成一场有期限、有代价的第一人称决策。玩完后，报告会将本局选择映射到课程概念、行动证据和企业情境。</p>
           <div className="teacher-hero-actions">
             <a className="teacher-primary-link" href="/">进入游戏体验 <span aria-hidden="true">↗</span></a>
-            <a className="teacher-text-link" href="#report-example">看一份报告怎样关联课程 <span aria-hidden="true">↓</span></a>
+            <a className="teacher-text-link" href="#report-example">看报告里的课程关联 <span aria-hidden="true">↓</span></a>
           </div>
           <p className="teacher-source-note">案例依据：蔡临宁《战略管理》课件第 9–13 页；具体人物、日期与分支结果属于互动改编。</p>
         </div>
@@ -83,36 +83,15 @@ export function TeacherBriefingPage() {
       </section>
 
       <section className="teacher-report-sample teacher-section" id="report-example" aria-labelledby="teacher-report-title">
-        <div className="teacher-section-label"><span>01 / 结局报告节选</span><i aria-hidden="true" /></div>
-        <div className="teacher-section-heading">
-          <div><p className="teacher-kicker">选路 → 发现偏差 → 调整行动 → 联系概念</p><h2 id="teacher-report-title">“走得稳”，为什么仍可能赶不上？</h2></div>
-          <p>以下是游戏按一条山谷路径生成的报告样例。它展示如何用当时的事实解释决策，再联系课程知识；选择理由仍由学生自己填写。</p>
-        </div>
-        <div className="teacher-report-shell">
-          <div className="teacher-report-bar"><span>最后十四天 / 战略管理学习复盘</span><b>山谷路径 · {exampleReport.branch.completion} · {exampleReport.branch.deadline}</b></div>
-          <ol className="teacher-report-path" aria-label="这次报告的行动路径">
-            <li><small>Day 0</small><strong>{exampleReport.decisionEvidence[0].choice}</strong></li>
-            <li><small>Day 6</small><strong>{daySixDecision.choice}</strong></li>
-            <li><small>Day 9</small><strong>{exampleReport.decisionEvidence[2].choice}</strong></li>
-          </ol>
-          <div className="teacher-report-columns">
-            <article className="teacher-report-evidence">
-              <span>报告 01 / 回到当时</span>
-              <h3>第六天，偏差已经可见。</h3>
-              <dl>
-                <div><dt>当时信息</dt><dd>{daySixDecision.known}</dd></div>
-                <div><dt>战略分析</dt><dd>{daySixDecision.analysis}</dd></div>
-              </dl>
-              <p><b>报告追问</b>{daySixDecision.question}</p>
-            </article>
-            <article className="teacher-report-concept">
-              <span>报告 02 / 联系课程 · {STRATEGY_CONCEPTS.timing.origin}</span>
-              <h3>{STRATEGY_CONCEPTS.timing.title}</h3>
-              <p>{STRATEGY_CONCEPTS.timing.definition}</p>
-              <div><b>本局证据</b><p>{daySixDecision.observation} 第九天选择恢复节奏，最终在截止时间后到达。</p></div>
-              <div><b>企业迁移</b><p>{STRATEGY_CONCEPTS.timing.transfer}</p></div>
-            </article>
-          </div>
+        <div className="teacher-section-label"><span>01 / 报告中的课程关联</span><i aria-hidden="true" /></div>
+        <p className="teacher-report-context">示例路径：先安全等待 → 第五天天气改善后重新走山路 → 再降低赶路强度。以下四张卡直接使用这条路径最终报告的“联系课程”内容。</p>
+        <div className="teacher-report-excerpt">
+          <header>
+            <span>02 / 联系课程</span>
+            <h2 id="teacher-report-title">你刚才经历了哪些战略问题？</h2>
+            <p>每个概念都对应本局行动，再延伸到企业决策。</p>
+          </header>
+          <StrategyConceptGrid lessons={exampleReport.lessons} />
         </div>
       </section>
 
