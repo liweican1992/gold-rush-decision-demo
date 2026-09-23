@@ -4,27 +4,35 @@ import './teacherBriefing.css'
 const routes = [
   {
     mark: 'A', image: '/images/decision-stills/A02.jpg', title: '立即翻山',
-    choice: '用更高的天气与伤手风险，争取较短的返程时间。',
-    concept: '目标与取舍 · 环境和能力匹配 · 已投入成本',
-    question: '风变大、手失力以后，原来的“快”还成立吗？',
+    benefit: '前段确实更快，争取到时间余量。',
+    echo: '暴风与伤手叠加；走得越深，折返越贵。',
+    core: '环境与自身能力匹配、不可逆性',
+    extension: '承诺升级与已投入成本',
+    question: '已经走到这里，能成为继续的理由吗？',
   },
   {
     mark: 'B', image: '/images/decision-stills/B02.jpg', title: '沿山谷前进',
-    choice: '降低高地暴露，但行程更长，期限逐渐变紧。',
-    concept: '目标与路径匹配 · 调整时机 · 执行代价',
-    question: '一路平稳，如果赶不上期限，还算达成目标吗？',
+    benefit: '高地暴露较低，队伍稳定前行。',
+    echo: '正常节奏赶不上期限；提速又要压缩休息。',
+    core: '目标与取舍、时间压力',
+    extension: '调整时机与缓冲价值',
+    question: '如果为赶期不断牺牲稳妥，还在坚持原战略吗？',
   },
   {
     mark: 'C', image: '/images/decision-stills/C02.jpg', title: '先等天气信息',
-    choice: '获得更清楚的判断，同时消耗不可收回的时间。',
-    concept: '不确定性 · 信息价值 · 等待成本',
-    question: '多知道一天，足以改变接下来的行动吗？',
+    benefit: '两天后确认暴风，再等一天可进一步判断山口。',
+    echo: '信息仍非通行保证，等待已消耗行动时间。',
+    core: '不确定性、时间与竞争压力',
+    extension: '信息价值与停止等待',
+    question: '这条新信息会改变行动，还是只让人更安心？',
   },
   {
     mark: 'D', image: '/images/decision-stills/D03.jpg', title: '等待安全返回',
-    choice: '把人员安全放在前面，保留重新判断的可能。',
-    concept: '目标优先级 · 机会成本 · 动态调整',
-    question: '天气出现新窗口时，坚持原安排还是重新评估？',
+    benefit: '避开最强风雪，左手与体力得到恢复。',
+    echo: '天气改善时已等了五天，重新翻山的余量很少。',
+    core: '目标优先级、价值观与权衡',
+    extension: '战略一致性与动态调整',
+    question: '改变行动，是放弃安全目标，还是重新实现它？',
   },
 ] as const
 
@@ -76,28 +84,52 @@ export function TeacherBriefingPage() {
             <p>因此，游戏把信息按时间释放：选路时看不到结局；行动后，环境和队伍能力可能变化；复盘时再把当时的信息与事后的结果分开。课堂讨论就有了可追问的具体决策，而不只是一句“我会选最快的路”。</p>
           </div>
         </div>
+        <ol className="teacher-causal-loop" aria-label="互动剧情的因果循环">
+          <li><b>判断</b><span>依据当时信息选路</span></li>
+          <li><b>执行</b><span>真的出发、等待或退出</span></li>
+          <li><b>回响</b><span>时间、伤情与退路被保留</span></li>
+          <li><b>再判断</b><span>新条件下重估原方案</span></li>
+        </ol>
+      </section>
+
+      <section className="teacher-world teacher-section" aria-labelledby="teacher-world-title">
+        <div className="teacher-section-label"><span>02 / 同一个世界</span><i aria-hidden="true" /></div>
+        <div className="teacher-world-panel">
+          <div className="teacher-world-intro">
+            <p className="teacher-kicker">统一天气 · 不同处境</p>
+            <h2 id="teacher-world-title">暴风只有一场，<br />决策处境却不一样。</h2>
+            <p>剧情不为每个选项重新发明天气。玩家先前的选择决定了暴风来时队伍在哪里、左手怎样、还剩多少时间。外部环境相同，战略可行性仍会不同。</p>
+          </div>
+          <div className="teacher-world-positions">
+            <p><b>A</b><span>已在山路，直接面对风雪、伤手与撤回成本。</span></p>
+            <p><b>B</b><span>位于谷地，高地风险较低，期限压力继续累积。</span></p>
+            <p><b>C</b><span>留在营地获得天气信息，也支付了等待时间。</span></p>
+            <p><b>D</b><span>留营避开暴风；天气后来改善，又出现重新判断的机会。</span></p>
+          </div>
+          <p className="teacher-world-memory"><b>场景可以汇合，历史不会清零。</b>翻山后撤回、等信息后出发、长期等待后改变主意，即使后来走到同一地点，也带着不同的日期、身体状态和已付代价。</p>
+        </div>
       </section>
 
       <section className="teacher-map teacher-section" id="teaching-map" aria-labelledby="teaching-map-title">
-        <div className="teacher-section-label"><span>02 / 情境与知识点</span><i aria-hidden="true" /></div>
+        <div className="teacher-section-label"><span>03 / 情境与知识点</span><i aria-hidden="true" /></div>
         <div className="teacher-section-heading">
-          <div><p className="teacher-kicker">四种起始策略，不是四个分数</p><h2 id="teaching-map-title">同一个目标，四种不同的取舍。</h2></div>
-          <p>每条路线都保留继续、调整或退出的后续判断。下面列的是教学切口，不预告哪条路“正确”。</p>
+          <div><p className="teacher-kicker">先兑现收益，再出现代价</p><h2 id="teaching-map-title">四条路线，让学生经历四种战略难题。</h2></div>
+          <p>每条起始选择都先证明自己有道理。后续难题来自这次选择真正留下的状态，而不是突然加一场无关事故。</p>
         </div>
         <div className="teacher-route-list">
           {routes.map((route) => (
             <article className="teacher-route" key={route.mark}>
               <div className="teacher-route-image"><img src={route.image} alt={`${route.title}路线的游戏画面`} loading="lazy" /></div>
               <div className="teacher-route-name"><span>{route.mark}</span><h3>{route.title}</h3></div>
-              <p className="teacher-route-choice">{route.choice}</p>
-              <div className="teacher-route-learning"><b>对应概念</b><p>{route.concept}</p><b>课堂追问</b><p>{route.question}</p></div>
+              <div className="teacher-route-causality"><p><b>先兑现</b><span>{route.benefit}</span></p><p><b>后回响</b><span>{route.echo}</span></p></div>
+              <div className="teacher-route-learning"><b>课件核心</b><p>{route.core}</p><b>互动延伸</b><p>{route.extension}</p><b>课堂追问</b><p>{route.question}</p></div>
             </article>
           ))}
         </div>
       </section>
 
       <section className="teacher-knowledge teacher-section" aria-labelledby="teacher-knowledge-title">
-        <div className="teacher-section-label"><span>03 / 课程关系</span><i aria-hidden="true" /></div>
+        <div className="teacher-section-label"><span>04 / 课程关系</span><i aria-hidden="true" /></div>
         <h2 id="teacher-knowledge-title">一层对应课件核心，一层来自互动延伸。</h2>
         <div className="teacher-knowledge-grid">
           <article>
@@ -113,10 +145,11 @@ export function TeacherBriefingPage() {
             <small>游戏中的证据：Day 2 的信息判断、Day 6 的谷地进度、山路回头点、安全等待后的新窗口。</small>
           </article>
         </div>
+        <p className="teacher-knowledge-rule"><b>概念在复盘时出现。</b>剧情中的队友只谈天气、路线、手伤和时间；学生先经历取舍，再用战略管理术语解释它。这样人物说话仍像人物，课堂解释也有了具体证据。</p>
       </section>
 
       <section className="teacher-example teacher-section" aria-labelledby="teacher-example-title">
-        <div className="teacher-section-label"><span>04 / 一个教学回合</span><i aria-hidden="true" /></div>
+        <div className="teacher-section-label"><span>05 / 一个教学回合</span><i aria-hidden="true" /></div>
         <div className="teacher-section-heading">
           <div><p className="teacher-kicker">以山谷路线为例</p><h2 id="teacher-example-title">同样是提速，何时决定会改变代价。</h2></div>
           <p>这段分支把“路线稳妥”与“目标可达”分开，让学生讨论调整发生的时间，而不只讨论最终有没有赶上。</p>
@@ -127,10 +160,11 @@ export function TeacherBriefingPage() {
           <article><span>第九天</span><h3>再次判断</h3><p>较早提速的队伍已经累了；一直稳走的队伍面临更急的冲刺。相同动作的可行性与成本发生变化。</p></article>
         </div>
         <p className="teacher-example-question"><b>教师可追问</b>“你在第六天掌握了什么证据？如果到第九天才改变节奏，额外代价来自哪里？”</p>
+        <p className="teacher-example-transfer"><b>迁移到企业</b>一个订单项目生产稳定，但按现有产能将晚于客户截止日期。学生需要说明何时调整产能、范围或交期，以及这样调整会牺牲什么。</p>
       </section>
 
       <section className="teacher-classroom teacher-section" id="classroom" aria-labelledby="teacher-classroom-title">
-        <div className="teacher-section-label"><span>05 / 课堂使用</span><i aria-hidden="true" /></div>
+        <div className="teacher-section-label"><span>06 / 课堂使用</span><i aria-hidden="true" /></div>
         <div className="teacher-section-heading">
           <div><p className="teacher-kicker">可直接带进讨论</p><h2 id="teacher-classroom-title">从一次选择，走到一次有依据的复盘。</h2></div>
           <p>教师可以先让学生独立玩一条路径，再让不同路径的小组比较。讨论的重点是当时掌握什么、接受什么代价、何时更新判断。</p>
@@ -151,7 +185,7 @@ export function TeacherBriefingPage() {
       </section>
 
       <section className="teacher-boundary teacher-section" aria-labelledby="teacher-boundary-title">
-        <div className="teacher-section-label"><span>06 / 使用边界</span><i aria-hidden="true" /></div>
+        <div className="teacher-section-label"><span>07 / 使用边界</span><i aria-hidden="true" /></div>
         <div className="teacher-boundary-grid">
           <h2 id="teacher-boundary-title">结果用于追问，不用于给人贴标签。</h2>
           <p>游戏的具体天气、到达时间、角色与办理细节是互动叙事设定，不是教师原案给定的概率或真实法律规则。结局只说明本局条件下发生了什么；一次按期到达不能证明决策普遍正确，一次超期也不能直接判定学生能力。教师仍需结合学生写下的理由和课堂讨论作判断。</p>

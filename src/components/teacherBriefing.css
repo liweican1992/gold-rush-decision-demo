@@ -1,5 +1,5 @@
 /* Hallmark · genre: editorial field report · tone: calm, evidence-led · palette anchor: expedition gold
- * macrostructure: split evidence cover → argument → route crosswalk → course provenance → classroom guide
+ * macrostructure: split evidence cover → causal loop → shared-world comparison → route crosswalk → classroom guide
  * pre-emit critique: P5 H5 E4 S5 R5 V5 · contrast: pass (40–41) · mobile: pass (34, 49–57)
  */
 .teacher-page {
@@ -54,9 +54,24 @@
 .teacher-thesis-grid > div { max-width: 37rem; padding-top: var(--space-xs); color: var(--color-brief-muted); font-size: var(--text-md); }
 .teacher-thesis-grid p { margin-bottom: var(--space-md); }
 .teacher-thesis-grid p:last-child { margin-bottom: 0; }
+.teacher-causal-loop { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: var(--space-2xl) 0 0; padding: var(--space-md) 0 0; border-top: var(--rule-bold) solid var(--color-brief-ink); list-style: none; }
+.teacher-causal-loop li { display: grid; align-content: start; gap: var(--space-xs); min-width: 0; padding: var(--space-sm) var(--space-lg); border-right: var(--rule-hair) solid var(--color-brief-rule); }
+.teacher-causal-loop li:first-child { padding-left: 0; }
+.teacher-causal-loop li:last-child { padding-right: 0; border-right: 0; }
+.teacher-causal-loop b { color: var(--color-brief-blue); font-size: var(--text-md); }
+.teacher-causal-loop span { color: var(--color-brief-muted); font-size: var(--text-sm); line-height: 1.5; }
 .teacher-section-heading { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); align-items: end; gap: clamp(var(--space-lg), 5vw, var(--space-3xl)); margin-bottom: var(--space-xl); }
 .teacher-section-heading .teacher-kicker { margin-bottom: var(--space-sm); color: var(--color-brief-blue); }
 .teacher-section-heading > p { max-width: 28rem; margin: 0; color: var(--color-brief-muted); }
+
+.teacher-world-panel { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: var(--space-xl) clamp(var(--space-xl), 6vw, var(--space-3xl)); padding: clamp(var(--space-lg), 4vw, var(--space-2xl)); color: var(--color-ink); background: var(--color-brief-dark); }
+.teacher-world h2 { margin: var(--space-sm) 0 var(--space-lg); color: var(--color-ink); }
+.teacher-world-intro > p:last-child { max-width: 39rem; margin: 0; color: var(--color-ink-soft); }
+.teacher-world-positions { border-top: var(--rule-hair) solid color-mix(in oklch, var(--color-ink) 25%, transparent); }
+.teacher-world-positions p { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: var(--space-md); align-items: baseline; margin: 0; padding: var(--space-sm) 0; border-bottom: var(--rule-hair) solid color-mix(in oklch, var(--color-ink) 25%, transparent); color: var(--color-ink-soft); font-size: var(--text-brief-small); }
+.teacher-world-positions b { color: var(--color-accent-soft); font-family: var(--font-body); font-size: var(--text-lg); }
+.teacher-world-memory { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(12rem, .55fr) minmax(0, 1fr); gap: var(--space-lg); margin: 0; padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-brief-gold); color: var(--color-ink-soft); font-size: var(--text-sm); }
+.teacher-world-memory b { color: var(--color-accent-soft); font-size: var(--text-base); }
 
 .teacher-map { padding-bottom: var(--space-3xl); }
 .teacher-route-list { border-top: var(--rule-bold) solid var(--color-brief-ink); }
@@ -66,7 +81,9 @@
 .teacher-route-name { display: flex; align-items: baseline; gap: var(--space-sm); min-width: 0; }
 .teacher-route-name span { color: var(--color-brief-gold); font-family: var(--font-outlier); font-size: clamp(2.8rem, 4vw, 4rem); font-weight: 900; line-height: 1; }
 .teacher-route-name h3 { margin: 0; color: var(--color-brief-ink); font-size: var(--text-lg); line-height: 1.2; }
-.teacher-route-choice { margin: 0; color: var(--color-brief-muted); font-size: var(--text-brief-small); }
+.teacher-route-causality { display: grid; gap: var(--space-sm); }
+.teacher-route-causality p { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: var(--space-xs); margin: 0; color: var(--color-brief-muted); font-size: var(--text-brief-small); line-height: 1.45; }
+.teacher-route-causality b { color: var(--color-brief-blue); font-size: var(--text-xs); white-space: nowrap; }
 .teacher-route-learning { display: grid; grid-template-columns: 4.8rem minmax(0, 1fr); gap: var(--space-xs) var(--space-md); padding-left: var(--space-lg); border-left: var(--rule-hair) solid var(--color-brief-rule); }
 .teacher-route-learning b { color: var(--color-brief-blue); font-size: var(--text-xs); white-space: nowrap; }
 .teacher-route-learning p { margin: 0; color: var(--color-brief-ink); font-size: var(--text-brief-small); line-height: 1.5; }
@@ -79,6 +96,8 @@
 .teacher-knowledge-grid h3 { max-width: 24rem; margin: var(--space-lg) 0 var(--space-md); color: var(--color-brief-ink); font-size: clamp(var(--text-lg), 2.4vw, var(--text-2xl)); line-height: 1.25; }
 .teacher-knowledge-grid p { max-width: 38rem; margin: 0 0 var(--space-xl); color: var(--color-brief-muted); }
 .teacher-knowledge-grid small { display: block; margin-top: auto; padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-brief-rule); color: var(--color-brief-blue); font-size: var(--text-sm); line-height: 1.6; }
+.teacher-knowledge-rule { display: grid; grid-template-columns: minmax(10rem, .25fr) minmax(0, 1fr); gap: var(--space-lg); align-items: baseline; margin: var(--space-lg) 0 0; padding: var(--space-lg); border-top: var(--rule-hair) solid var(--color-brief-rule); color: var(--color-brief-muted); background: var(--color-brief-panel); font-size: var(--text-sm); }
+.teacher-knowledge-rule b { color: var(--color-brief-blue); font-size: var(--text-base); }
 
 .teacher-example-timeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: var(--rule-bold) solid var(--color-brief-ink); border-bottom: var(--rule-hair) solid var(--color-brief-rule); }
 .teacher-example-timeline article { min-width: 0; padding: var(--space-lg); border-right: var(--rule-hair) solid var(--color-brief-rule); }
@@ -87,12 +106,13 @@
 .teacher-example-timeline span { color: var(--color-brief-blue); font-size: var(--text-xs); font-weight: 850; letter-spacing: .12em; }
 .teacher-example-timeline h3 { margin: var(--space-lg) 0 var(--space-sm); font-size: var(--text-lg); }
 .teacher-example-timeline p { max-width: 25rem; margin: 0; color: var(--color-brief-muted); font-size: var(--text-sm); }
-.teacher-example-question { display: flex; align-items: baseline; gap: var(--space-lg); max-width: 60rem; margin: var(--space-lg) 0 0; font-size: var(--text-md); }
-.teacher-example-question b { flex: 0 0 auto; color: var(--color-brief-blue); font-size: var(--text-xs); white-space: nowrap; }
+.teacher-example-question, .teacher-example-transfer { display: flex; align-items: baseline; gap: var(--space-lg); max-width: 65rem; margin: var(--space-lg) 0 0; font-size: var(--text-md); }
+.teacher-example-transfer { margin-top: var(--space-md); padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-brief-rule); color: var(--color-brief-muted); font-size: var(--text-base); }
+.teacher-example-question b, .teacher-example-transfer b { flex: 0 0 auto; color: var(--color-brief-blue); font-size: var(--text-xs); white-space: nowrap; }
 
 .teacher-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-lg); }
 .teacher-steps article { min-width: 0; padding: var(--space-lg) 0; border-top: var(--rule-bold) solid var(--color-brief-ink); }
-.teacher-steps article > span { color: var(--color-brief-blue); font-family: var(--font-outlier); font-size: var(--text-lg); font-weight: 900; }
+.teacher-steps article > span { color: var(--color-brief-blue); font-family: var(--font-body); font-size: var(--text-lg); font-weight: 900; }
 .teacher-steps h3 { margin: var(--space-lg) 0 var(--space-sm); font-size: var(--text-xl); }
 .teacher-steps p { max-width: 27rem; margin: 0; color: var(--color-brief-muted); font-size: var(--text-sm); }
 .teacher-evidence { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--space-xl); margin-top: var(--space-xl); padding: clamp(var(--space-lg), 4vw, var(--space-2xl)); color: var(--color-ink); background: var(--color-brief-blue); }
@@ -121,18 +141,24 @@
   .teacher-hero { grid-template-columns: minmax(0, 1fr); }
   .teacher-hero-copy { padding-block: var(--space-2xl); }
   .teacher-hero-figure, .teacher-hero-figure img { min-height: 20rem; max-height: 27rem; }
-  .teacher-thesis-grid, .teacher-section-heading, .teacher-knowledge-grid, .teacher-evidence, .teacher-boundary-grid { grid-template-columns: minmax(0, 1fr); }
+  .teacher-thesis-grid, .teacher-section-heading, .teacher-knowledge-grid, .teacher-knowledge-rule, .teacher-world-panel, .teacher-world-memory, .teacher-evidence, .teacher-boundary-grid { grid-template-columns: minmax(0, 1fr); }
+  .teacher-causal-loop { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .teacher-causal-loop li:nth-child(2) { border-right: 0; }
+  .teacher-causal-loop li:nth-child(-n+2) { border-bottom: var(--rule-hair) solid var(--color-brief-rule); }
+  .teacher-causal-loop li:nth-child(3) { padding-left: 0; }
+  .teacher-world-memory { gap: var(--space-sm); }
   .teacher-steps { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .teacher-example-timeline { grid-template-columns: minmax(0, 1fr); }
   .teacher-example-timeline article, .teacher-example-timeline article:first-child, .teacher-example-timeline article:last-child { padding: var(--space-lg) 0; border-right: 0; border-bottom: var(--rule-hair) solid var(--color-brief-rule); }
   .teacher-example-timeline article:last-child { border-bottom: 0; }
   .teacher-example-timeline h3 { margin-top: var(--space-sm); }
-  .teacher-example-question { display: grid; gap: var(--space-xs); }
+  .teacher-example-question, .teacher-example-transfer { display: grid; gap: var(--space-xs); }
   .teacher-steps article { padding-block: var(--space-lg); }
   .teacher-steps h3 { margin-top: var(--space-sm); }
   .teacher-route { grid-template-columns: minmax(6rem, 9rem) minmax(0, 1fr); gap: var(--space-sm) var(--space-md); }
-  .teacher-route-image { grid-row: span 2; height: 8.5rem; }
-  .teacher-route-choice { align-self: start; }
+  .teacher-route-image { grid-row: 1; height: 7.5rem; }
+  .teacher-route-name { align-self: center; }
+  .teacher-route-causality { grid-column: 1 / -1; }
   .teacher-route-learning { grid-column: 1 / -1; padding: var(--space-sm) 0 0; border-left: 0; border-top: var(--rule-hair) solid var(--color-brief-rule); }
 }
 @media (max-width: 26rem) {
