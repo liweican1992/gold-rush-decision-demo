@@ -326,8 +326,8 @@ function ChoiceStage({ node, options, decisions, onSelect }: { node: FinalNode; 
         <h1>{node.question ?? node.title}</h1>
         <p>{node.facts}</p>
       </div>
-      <details className="latest-decision-note">
-        <summary>写下选择理由（选填）</summary>
+      <details className="latest-decision-note" open={node.id === 'P06'}>
+        <summary>先记下一句判断依据（选填，结局后对照）</summary>
         <label htmlFor="decision-reason">{node.id === 'P06' ? '你优先保住什么？愿意为此放弃什么？' : '哪条信息支持你的决定？什么变化会让你调整？'}</label>
         <textarea id="decision-reason" rows={2} maxLength={1200} value={reason} onChange={event => setReason(event.target.value)} placeholder="用一句话记录此刻的判断，结局后可以回来对照。" />
       </details>
