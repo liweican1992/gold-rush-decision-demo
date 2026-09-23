@@ -10,6 +10,7 @@ import {
   latestNode,
   nextLatestNode,
   optionTarget,
+  resultSceneTitleForDecisions,
   resultVideoForDecisions,
   visibleOptions,
   type LatestDecision,
@@ -344,7 +345,7 @@ function ChoiceStage({ node, options, decisions, onSelect }: { node: FinalNode; 
   )
 }
 
-export function ArrivalOutcomeStage({ decisions, onContinue }: { decisions: LatestDecision[]; onContinue: () => void }) {
+export function ArrivalOutcomeStage({ decisions }: { decisions: LatestDecision[] }) {
   const branch = branchForDecisions(decisions)
   const outcome = arrivalOutcomeForDecisions(decisions)
   if (!branch || !outcome) return null
@@ -355,7 +356,7 @@ export function ArrivalOutcomeStage({ decisions, onContinue }: { decisions: Late
         <figcaption>{outcome.eyebrow}</figcaption>
       </figure>
       <div className="latest-arrival-copy">
-        <span>ARRIVAL RECORD · {branch.id}</span>
+        <span>ACTION RECORD · {branch.id}</span>
         <h1>{outcome.title}</h1>
         <p>{outcome.detail}</p>
         <dl>
@@ -363,7 +364,6 @@ export function ArrivalOutcomeStage({ decisions, onContinue }: { decisions: Late
           <div><dt>人员状态</dt><dd>{branch.people}</dd></div>
           <div><dt>核心取舍</dt><dd>{branch.tradeoff}</dd></div>
         </dl>
-        <button autoFocus type="button" onClick={onContinue}>查看这一路的复盘 <b>→</b></button>
       </div>
     </section>
   )
@@ -402,12 +402,8 @@ export function LatestStoryPlay() {
     catch { return freshSession() }
   })
   const [awaitResume, setAwaitResume] = useState(session.nodeId !== 'launch')
-  const [arrivalSceneDone, setArrivalSceneDone] = useState(false)
   const [saveError, setSaveError] = useState(false)
-  const { nodeId, decisions, mediaDone, transitionDone } = session
-  useEffect(() => {
-    if (nodeId !== 'RESULT' || !mediaDone) setArrivalSceneDone(false)
-  }, [nodeId, mediaDone, session.attemptId])
+  const { nodeId, decisions, mediaDone, transitionDone, arrivalSceneDone } = session
   useEffect(() => {
     if (awaitResume) return
     try { window.localStorage.setItem(SESSION_KEY, JSON.stringify(session)); setSaveError(false) }
@@ -418,10 +414,11 @@ export function LatestStoryPlay() {
   const videos = LATEST_NODE_VIDEOS[nodeId] ?? []
   const resultBranch = nodeId === 'RESULT' ? branchForDecisions(decisions) : undefined
   const resultVideo = nodeId === 'RESULT' ? resultVideoForDecisions(decisions) : undefined
-  const arrivalTitle = resultBranch ? `抵达办事地点 · ${resultBranch.completion}` : '抵达办事地点'
+  const arrivalTitle = resultSceneTitleForDecisions(decisions)
   const options = useMemo(() => node && isDecisionNode(node) ? visibleOptions(node, decisions) : [], [node, decisions])
   const setMediaDone = (value: boolean) => setSession(s => ({ ...s, mediaDone: value }))
   const setTransitionDone = (value: boolean) => setSession(s => ({ ...s, transitionDone: value }))
+  const setArrivalSceneDone = (value: boolean) => setSession(s => ({ ...s, arrivalSceneDone: value }))
   const go = (nextNodeId: string, nextDecisions = decisions) => setSession(s => advanceSession(s, nextNodeId, nextDecisions))
   const continueNode = () => { const next = nextLatestNode(nodeId); if (next) go(next) }
   const choose = (option: FinalOption, reason: string) => {
@@ -491,9 +488,9 @@ export function LatestStoryPlay() {
 
   if (nodeId === 'RESULT' && !arrivalSceneDone) return (
     <main className="latest-shell latest-shell-arrival" data-route="SHARED">
-      <MissionHeader nodeId="OUTCOME" title="抵达与办理结果" route="SHARED" />
+      <MissionHeader nodeId="OUTCOME" title={resultBranch?.deadline === '主动放弃' ? '安全返程结果' : '返程与办理结果'} route="SHARED" />
       <section className="latest-stage">
-        <ArrivalOutcomeStage decisions={decisions} onContinue={() => setArrivalSceneDone(true)} />
+        <ArrivalOutcomeStage decisions={decisions} />
       </section>
       <footer className="latest-footer"><button type="button" onClick={back}>← 返回上一步</button><button type="button" onClick={() => setArrivalSceneDone(true)}>进入复盘 →</button></footer>
     </main>

@@ -252,6 +252,17 @@ export function confirmationStatus(branch: FinalBranch) {
   return '原窗口已失去 · 未在期限内完成本人确认'
 }
 
+export function resultSceneTitleForDecisions(decisions: LatestDecision[]) {
+  const branch = branchForDecisions(decisions)
+  if (!branch) return '返程结果'
+  if (branch.deadline === '主动放弃') {
+    const day = branch.completion.match(/约Day\s*\d+/)?.[0]
+    return day ? `队伍安全返回 · ${day}` : '队伍安全返回'
+  }
+  if (!/Day\s*\d+/.test(branch.completion)) return '返回镇上 · 原窗口已失去'
+  return `抵达办理点 · ${branch.completion}`
+}
+
 export function arrivalOutcomeForDecisions(decisions: LatestDecision[]): LatestArrivalOutcome | undefined {
   const branch = branchForDecisions(decisions)
   if (!branch) return undefined
@@ -272,7 +283,7 @@ export function arrivalOutcomeForDecisions(decisions: LatestDecision[]): LatestA
   }
   return {
     image: `/images/decision-stills/arrival-auction-${light}.webp`,
-    eyebrow: `抵达时间 · ${branch.completion}`,
+    eyebrow: /Day\s*\d+/.test(branch.completion) ? `抵达时间 · ${branch.completion}` : '安全抵达 · 原窗口已失去',
     title: '矿权进入重新拍卖',
     detail: '队伍和资料最终到达，但原购买期限已经过去，矿权重新进入拍卖流程。安全抵达和按期完成目标，是两个不同的结果。',
     tone: 'auction',

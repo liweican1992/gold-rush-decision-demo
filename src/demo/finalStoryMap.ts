@@ -167,11 +167,11 @@ export const FINAL_NODES: FinalNode[] = [
   ] }),
 
   node({ id: 'C01', route: 'C', title: '等待不是空白', kind: '剧情', time: 'Day 0—2', location: '营地', facts: '两天过去；天气逐渐变化；队伍观察；左手休息但未痊愈；剩12天。', knowledge: '等待成本', frameIds: ['C01A', 'C01B'] }),
-  node({ id: 'C02', route: 'C', title: '第一份信息只解决了一半', kind: '决策', time: 'Day 2 · 09:00', location: '营地', facts: '已确认高地会受暴风影响；山口是否可通仍不确定；再等约1天可获得更可靠判断。', question: '第三天的信息值不值得再买？', knowledge: '信息价值、停止等待', frameIds: ['C02', 'C2FB-2'], options: [
+  node({ id: 'C02', route: 'C', title: '第一份信息只解决了一半', kind: '决策', time: 'Day 2 · 09:00', location: '营地', facts: '已确认高地会受暴风影响；山口是否可通仍不确定。再等约一天可核实山口是否已封死及风势后续走向，但仍不能保证一路顺利。', question: '第三天的信息值不值得再买？', knowledge: '信息价值、停止等待', frameIds: ['C02', 'C2FB-2'], options: [
     opt('C2-1', '再等一天，拿到更完整的山路判断', '再花1天；只剩约11天', 'Day 3进入第二次信息决策', 'C03'),
     opt('C2-2', '现在转山谷，不再继续等', '已经等了两天，还要走更长的谷地路线', '约Day 18返回，原窗口基本失去', 'C04V'),
   ] }),
-  node({ id: 'C03', route: 'C', title: '买到的是依据，不是答案', kind: '决策', time: 'Day 3 · 09:00', location: '营地', facts: '山口未确认完全封死；最差天气后有改善趋势；仍无人保证一路顺利；只剩约11天。', question: '信息已经到这里，现在怎么行动？', knowledge: '更多信息 vs 足够行动的信息', frameIds: ['C03'], options: [
+  node({ id: 'C03', route: 'C', title: '买到的是依据，不是答案', kind: '决策', time: 'Day 3 · 09:00', location: '营地', facts: '新消息是：山口尚未确定封死，最强的风过去后预计会缓和；这仍不是通行保证。离期限只剩约11天。', question: '信息已经到这里，现在怎么行动？', knowledge: '更多信息 vs 足够行动的信息', frameIds: ['C03'], options: [
     opt('C3-1', '按这份判断走山路', '消息更明确了，但山口仍可能不好走', 'Day 3进入低处山路', 'C04M'),
     opt('C3-2', '改走山谷', '已经等了三天，谷地路程仍然很长', '约Day 19返回，明确超期', 'C04V'),
     opt('C3-3', '放弃这次购买机会，等安全时再回去', '主动放弃原窗口', '进入安全返程结算', 'X02'),

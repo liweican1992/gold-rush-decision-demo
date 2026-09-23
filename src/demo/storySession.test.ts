@@ -8,6 +8,16 @@ function completed() {
  s=advanceSession(s,"INTRO");s=advanceSession(s,"P06");s=advanceSession(s,"A01",[a]);s=advanceSession(s,"A02");s=advanceSession(s,"A03A",[a,b]);s=advanceSession(s,"A04");s=advanceSession(s,"A4FB1",[a,b,c]);return advanceSession(s,"RESULT")
 }
 describe("本局存档与原始选择",()=>{
+ it("结局复盘阶段刷新后仍停留在复盘，换节点时重置",()=>{
+  const s=completed()
+  expect(s.arrivalSceneDone).toBe(false)
+  const inReport={...s,mediaDone:true,transitionDone:true,arrivalSceneDone:true}
+  expect(restoreSession(JSON.stringify(inReport))?.arrivalSceneDone).toBe(true)
+  expect(advanceSession(inReport,"P06").arrivalSceneDone).toBe(false)
+  const oldSave={...s} as Record<string, unknown>
+  delete oldSave.arrivalSceneDone
+  expect(restoreSession(JSON.stringify(oldSave))?.arrivalSceneDone).toBe(false)
+ })
  it("刷新后恢复节点、理由和完整历史",()=>{
   const s=completed();expect(restoreSession(JSON.stringify(s))).toEqual(s)
   expect(restoreSession(JSON.stringify({...s,nodeId:"A04",decisions:[a,b],mediaDone:true}))).toBeTruthy()

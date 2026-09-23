@@ -74,7 +74,7 @@ export function buildLatestDecisionReport(decisions: LatestDecision[]) {
     const lesson = CHOICE_TEACHING[decision.optionId]
     if (!node || !option || !lesson) throw new Error('缺少选择对应的教学分析：' + decision.optionId)
     let known = presentNode(node.id, decisions.slice(0, index))?.node.facts ?? node.facts
-    if (node.id === 'P06') known = '期权只剩十四天，需本人返回完成确认；翻山顺利通常七到十天，但可能遇暴风或伤手失力；谷地通常两到三周。两天后可确认是否有暴风，再等一天可进一步判断山路；此时仍不知道具体天气结果。'
+    if (node.id === 'P06') known = '期权只剩十四天，镇上确认点全天值守，但第十四天上午九点截止，需本人完成确认；翻山顺利通常七到十天，但可能遇暴风或伤手失力；谷地通常两到三周。两天后可确认是否有暴风，再等一天可进一步判断山路；此时仍不知道具体天气结果。'
     if (node.id === 'D03') known = '已在营地等了约五天，左手与体力有所恢复；风势减弱，出现短暂改善窗口，但山路仍非绝对安全，期限只剩约八天半。'
     const outcome = index === decisions.length - 1 ? `本局结局：${branch.completion}；${branch.people}。` : undefined
     return { reason: decision.reason?.trim() || '当时未填写', recordedAt: decision.recordedAt, optionId: option.id, stage: presentNode(node.id, decisions.slice(0, index))?.node.title ?? node.title, choice: option.label, known, cost: option.cost, ...lesson, outcome }

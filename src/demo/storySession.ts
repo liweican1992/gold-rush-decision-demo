@@ -4,15 +4,15 @@ export const SESSION_KEY = "gold-story-session-v2"
 export type StorySnapshot = { nodeId: string; decisions: LatestDecision[] }
 export type AttemptRecord = StorySnapshot & { id: string; completed: boolean; savedAt: string }
 export type StorySession = StorySnapshot & {
-  version: 2; attemptId: string; history: StorySnapshot[]; mediaDone: boolean; transitionDone: boolean
+  version: 2; attemptId: string; history: StorySnapshot[]; mediaDone: boolean; transitionDone: boolean; arrivalSceneDone: boolean
   archives: AttemptRecord[]; explored: boolean; seenOutcome: boolean
 }
 const uid = () => globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`
 export function freshSession(): StorySession {
-  return {version:2, attemptId:uid(), nodeId:"launch", decisions:[], history:[], mediaDone:false, transitionDone:false, archives:[], explored:false, seenOutcome:false}
+  return {version:2, attemptId:uid(), nodeId:"launch", decisions:[], history:[], mediaDone:false, transitionDone:false, arrivalSceneDone:false, archives:[], explored:false, seenOutcome:false}
 }
 export function advanceSession(s:StorySession, nodeId:string, decisions=s.decisions):StorySession {
-  return {...s, nodeId, decisions, history:[...s.history,{nodeId:s.nodeId,decisions:s.decisions}],mediaDone:false,transitionDone:false,seenOutcome:s.seenOutcome || nodeId === "RESULT"}
+  return {...s, nodeId, decisions, history:[...s.history,{nodeId:s.nodeId,decisions:s.decisions}],mediaDone:false,transitionDone:false,arrivalSceneDone:false,seenOutcome:s.seenOutcome || nodeId === "RESULT"}
 }
 export function rewindSession(s:StorySession):StorySession {
   const previous = s.history.at(-1)
@@ -22,7 +22,7 @@ export function rewindSession(s:StorySession):StorySession {
   const record = {nodeId:s.nodeId,decisions:s.decisions,id:s.attemptId,completed:s.nodeId === "RESULT",savedAt:new Date().toISOString()}
   const archived = !s.decisions.length ? s.archives : existing < 0 ? [...s.archives, record]
     : record.completed && !s.archives[existing].completed ? s.archives.map((a,i) => i === existing ? record : a) : s.archives
-  return {...s, ...previous, attemptId:uid(), archives:archived, history:s.history.slice(0,-1),mediaDone:true,transitionDone:true,explored:true}
+  return {...s, ...previous, attemptId:uid(), archives:archived, history:s.history.slice(0,-1),mediaDone:true,transitionDone:true,arrivalSceneDone:false,explored:true}
 }
 // Validate saves against the live graph, including history-specific options.
 function validSnapshot(raw: unknown): raw is StorySnapshot {
@@ -53,6 +53,8 @@ export function restoreSession(serialized: string | null): StorySession | undefi
     if(!Array.isArray(s.history) || !s.history.every(validSnapshot) || !Array.isArray(s.archives)) return undefined
     if(!s.archives.every(a=>validSnapshot(a) && typeof a.id === "string" && typeof a.completed === "boolean" && typeof a.savedAt === "string")) return undefined
     if(![s.mediaDone,s.transitionDone,s.explored,s.seenOutcome].every(v=>typeof v === "boolean")) return undefined
-    return s
+    if(s.arrivalSceneDone !== undefined && typeof s.arrivalSceneDone !== "boolean") return undefined
+    if(s.arrivalSceneDone && (s.nodeId !== "RESULT" || !s.mediaDone)) return undefined
+    return {...s, arrivalSceneDone:s.arrivalSceneDone ?? false}
   } catch { return undefined }
 }

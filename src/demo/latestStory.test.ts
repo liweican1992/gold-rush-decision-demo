@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { LATEST_NODE_VIDEOS, LATEST_RESULT_VIDEOS, LATEST_TIME_TRANSITIONS, arrivalOutcomeForDecisions, branchForDecisions, confirmationStatus, nextLatestNode, optionTarget, resultVideoForDecisions, visibleOptions, type LatestDecision } from './latestStory'
+import { LATEST_NODE_VIDEOS, LATEST_RESULT_VIDEOS, LATEST_TIME_TRANSITIONS, arrivalOutcomeForDecisions, branchForDecisions, confirmationStatus, nextLatestNode, optionTarget, resultSceneTitleForDecisions, resultVideoForDecisions, visibleOptions, type LatestDecision } from './latestStory'
 import { FINAL_NODES } from './finalStoryMap'
 
 const decisions = (...optionIds: string[]): LatestDecision[] => optionIds.map((optionId) => ({
@@ -140,6 +140,13 @@ describe('当前 FINAL 剧情试玩', () => {
     expect(arrivalOutcomeForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))?.tone).toBe('auction')
     expect(arrivalOutcomeForDecisions(decisions('P06-B', 'B2-2', 'B4B-2'))?.title).toBe('矿权进入重新拍卖')
     expect(arrivalOutcomeForDecisions(decisions('P06-D', 'D3-1'))?.tone).toBe('safe')
+  })
+
+  it('不同结局的镜头标题不把安全返回说成办理确认', () => {
+    expect(resultSceneTitleForDecisions(decisions('P06-D', 'D3-1'))).toBe('队伍安全返回 · 约Day 40')
+    expect(resultSceneTitleForDecisions(decisions('P06-C', 'C2-1', 'C3-3'))).toBe('队伍安全返回')
+    expect(resultSceneTitleForDecisions(decisions('P06-A', 'A2-3'))).toBe('返回镇上 · 原窗口已失去')
+    expect(arrivalOutcomeForDecisions(decisions('P06-A', 'A2-3'))?.eyebrow).toBe('安全抵达 · 原窗口已失去')
   })
 
   it('C线转谷地先播放整装反馈，再进入晚状态谷地', () => {
