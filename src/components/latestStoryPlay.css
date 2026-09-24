@@ -206,6 +206,7 @@
   position: relative;
   isolation: isolate;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto auto minmax(0, 1fr) auto;
   gap: var(--space-sm);
   height: 100svh;
@@ -502,7 +503,7 @@
 .latest-report-restart { display: flex; align-items: center; justify-content: center; gap: var(--space-md); margin: var(--space-md) auto 0; }
 
 .latest-footer { display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm); min-height: 2.9rem; }
-.latest-footer > span { max-width: 62%; overflow: hidden; color: var(--color-muted); font-size: var(--text-xs); text-overflow: ellipsis; white-space: nowrap; }
+.latest-footer > span { min-width: 0; max-width: 62%; overflow: hidden; color: var(--color-muted); font-size: var(--text-xs); text-overflow: ellipsis; white-space: nowrap; }
 .latest-footer button { min-height: 2.5rem; padding-inline: var(--space-md); border: var(--rule-hair) solid var(--latest-line); border-radius: var(--radius-sm); color: var(--color-ink-soft); background: var(--latest-panel); cursor: pointer; transition: border-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out); }
 .latest-footer button:hover { border-color: var(--latest-route-color); color: var(--color-ink); }
 
@@ -545,6 +546,7 @@
   .latest-shell-video { grid-template-rows: auto auto auto; align-content: start; }
   .latest-video-caption { padding: var(--space-sm); }
   .latest-video-caption-actions { gap: var(--space-xs); }
+  .latest-footer > span { flex: 1 1 0; }
   .latest-video-title { display: none; }
   .latest-frame-stage,
   .latest-result { grid-template-columns: minmax(0, 1fr); }
