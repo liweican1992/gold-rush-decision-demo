@@ -2,6 +2,8 @@ node_modules/
 dist/
 *.tsbuildinfo
 .DS_Store
+__pycache__/
+*.pyc
 
 # Production source packs stay local; the GitHub repository is the playable Web app.
 短剧制作资料/
@@ -31,3 +33,7 @@ docs/superpowers/
 /WebGPT当前封版_隔离工作集_20260912/
 /WebGPT脑暴资料包/
 /部署交付/
+
+# Local review backups; the playable cuts are already in public/videos/latest/.
+/历史归档/
+/视频压缩预览/
