@@ -1,7 +1,10 @@
 import { renderToStaticMarkup } from 'react-dom/server'
+import { existsSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { ReviewedStoryMapPage } from './ReviewedStoryMapPage'
 import { FINAL_BRANCHES, FINAL_KEYFRAMES, FINAL_NODES, branchFrameSequences, validateFinalStoryMap } from '../demo/finalStoryMap'
+import { LATEST_ENDING_SCENES, latestPlayablePaths } from '../demo/latestStory'
+import { LATEST_DECISION_BACKDROPS } from '../demo/storyPresentation'
 
 describe('教师用剧情与关键帧总览', () => {
   it('展示全量节点、代表路径和关键帧，并使用教师可读的说明', () => {
@@ -11,6 +14,9 @@ describe('教师用剧情与关键帧总览', () => {
     expect(FINAL_BRANCHES).toHaveLength(18)
     expect(FINAL_KEYFRAMES).toHaveLength(55)
     expect(FINAL_NODES.reduce((total, node) => total + (node.options?.length ?? 0), 0)).toBe(28)
+    expect(latestPlayablePaths()).toHaveLength(20)
+    expect(FINAL_NODES.find((node) => node.id === 'A04')?.frameIds).toEqual(['A04C'])
+    expect(FINAL_NODES.find((node) => node.id === 'B04')?.frameIds).toEqual(['B04A-DECISION', 'B04B-DECISION'])
     expect((html.match(/data-branch-id=/g) ?? []).length).toBe(18)
     expect((html.match(/data-keyframe-id=/g) ?? []).length).toBeGreaterThanOrEqual(55)
     expect(html).toContain('《最后十四天》剧情与关键帧总览')
@@ -36,10 +42,39 @@ describe('教师用剧情与关键帧总览', () => {
     }
     expect(html).toContain('href="#node-A4FB1"')
     expect(html).toContain('href="#node-C04VA"')
+    expect(html).toContain('href="#node-RESULT"')
     expect(html).toContain('你准备怎么行动？')
+    expect(html).toContain('<b>20</b>实际可玩路径')
+    expect(html).toContain('<b>18</b>结局分组')
     expect(html).toContain('安全返回，原窗口已失去')
-    expect(html).toContain('/images/decision-stills/A04-continue.webp')
-    expect(html).toContain('/images/decision-stills/B04-steady.webp')
+    expect(html).toContain('Day 9 · 行动状态沿用 Day 6 的选择')
+    expect(html).not.toContain('约Day 21—23')
+    expect(html).toContain('P06-A &gt; A2-1/A2-2 &gt; A4-3')
+    expect(html).toContain('前置情况：')
+  })
+
+  it('列出当前游戏实际使用的全部决策背景，并确认资源文件存在', () => {
+    const html = renderToStaticMarkup(<ReviewedStoryMapPage />)
+    expect(LATEST_DECISION_BACKDROPS).toHaveLength(12)
+    for (const item of LATEST_DECISION_BACKDROPS) {
+      expect(html, item.id).toContain(`data-decision-background-id="${item.id}"`)
+      expect(existsSync(`public${item.src}`), item.src).toBe(true)
+    }
+  })
+
+  it('把登记所的五种实际视频结局及办理过程纳入故事地图', () => {
+    const html = renderToStaticMarkup(<ReviewedStoryMapPage />)
+    expect(LATEST_ENDING_SCENES).toHaveLength(5)
+    for (const scene of LATEST_ENDING_SCENES) {
+      expect(html).toContain(`data-ending-scene="${scene.id}"`)
+      expect(existsSync(`public${scene.poster}`), scene.poster).toBe(true)
+      expect(existsSync(`public${scene.video}`), scene.video).toBe(true)
+    }
+    expect(html).toContain('进入登记所大厅')
+    expect(html).toContain('本人完成最后确认')
+    expect(html).toContain('资料带回去，准备下一轮')
+    expect(html).toContain('安全返程不进入登记所')
+    expect(html).toContain('href="#ending-scenes"')
   })
 
   it('只绑定返修后的 A 线和城镇夜景版本', () => {

@@ -11,6 +11,8 @@ public/images/*
 !public/images/decision-stills/**
 !public/images/final-story-keyframes
 !public/images/final-story-keyframes/**
+!public/images/story-map-endings
+!public/images/story-map-endings/**
 !public/videos
 public/videos/*
 !public/videos/latest

@@ -146,7 +146,7 @@ export const FINAL_NODES: FinalNode[] = [
   node({ id: 'A03A', route: 'A', title: '继续后的账单', kind: '剧情', time: 'Day 4 · 18:00左右', location: '山路中后段', facts: '时间优势仍在；左手已不能再按“偶尔失力”处理，队伍必须重新分工。', knowledge: '承诺升级、执行能力', frameIds: ['A03A1', 'A03A2'] }),
   node({ id: 'A03B', route: 'A', title: '暂避后的账单', kind: '剧情', time: 'Day 5 · 12:00左右', location: '背风处→山路中后段', facts: '最差天气已过；人员状态更稳；约两天时间缓冲已经花掉。', knowledge: '缓冲价值、风险调整', frameIds: ['A2FB-S1', 'A03B'] }),
   node({ id: 'A03R', route: 'A', title: '撤回转谷地', kind: '过渡', time: 'Day 3或Day 5—6后', location: '山路撤回→谷地', facts: '已投入时间无法收回；转谷地不是重置为B线开头；原14天窗口基本不可恢复。', knowledge: '止损、不可逆性、已投入成本', frameIds: ['A03R-D3', 'A03R-D5', 'SH-VAL-WEB'] }),
-  node({ id: 'A04', route: 'A', title: '最后的回头点', kind: '决策', time: '约Day 5—6', location: '山路后段', facts: '强推者伤手更差但时间更宽；暂避者身体更稳但时间更紧；撤回代价已显著上升。', question: '继续当前山路，还是调整／撤回？', knowledge: '已投入很多是否构成继续理由', frameIds: ['A04C', 'A4FB-2'], options: [
+  node({ id: 'A04', route: 'A', title: '最后的回头点', kind: '决策', time: '约Day 5—6', location: '山路后段', facts: '最后一处容易折返的位置；时间和伤手状态继承前序选择。', question: '继续当前山路，还是调整／撤回？', knowledge: '已投入很多是否构成继续理由', frameIds: ['A04C'], options: [
     opt('A4-1', '按现在的节奏继续', '继续赶路，伤手和体力仍需留意', 'Day 9 18:00或Day 11 12:00', 'X01'),
     opt('A4-2', '继续走山路，但把节奏降下来', '预计多花约1天', 'Day 10 18:00或Day 12 12:00', 'X01'),
     opt('A4-3', '趁现在还能退，撤回改走山谷', '需要先折返，再绕行更长的谷地路线', '原窗口基本无法保住', 'A03R'),
@@ -159,7 +159,7 @@ export const FINAL_NODES: FinalNode[] = [
   ] }),
   node({ id: 'B03A', route: 'B', title: '早提速：时间追回来了，人开始欠账', kind: '剧情', time: 'Day 9', location: '谷地后段休整点', facts: '连续三天缩短休整、傍晚多走；追回约一天；疲劳和伤手负担可见。', knowledge: '早调整的代价', frameIds: ['B03A-FATIGUE'] }),
   node({ id: 'B03B', route: 'B', title: '一直稳走：人没垮，时间先没了', kind: '剧情', time: 'Day 9', location: '谷地后段休整点', facts: '人员状态较好；若继续当前节奏，原窗口基本保不住。', knowledge: '选择空间随时间收缩', frameIds: ['B04B-DECISION'] }),
-  node({ id: 'B04', route: 'B', title: '第二次判断：现在还要不要改变节奏', kind: '决策', time: 'Day 9', location: '谷地后段休整点', facts: '前情决定可见状态；同一个“提速”在Day 6与Day 9成本不同。', question: '根据Day 6的选择：继续／恢复，或最后冲刺／继续稳走？', knowledge: '越晚调整为什么越贵', frameIds: ['B04A-DECISION', 'B04B-DECISION', 'B4FB-REST', 'B4FB-DAWN'], options: [
+  node({ id: 'B04', route: 'B', title: '第二次判断：现在还要不要改变节奏', kind: '决策', time: 'Day 9', location: '谷地后段休整点', facts: 'Day 9的队伍状态和可见选项，分别继承Day 6是否提速。', question: '现在还要保持当前节奏吗？', knowledge: '越晚调整为什么越贵', frameIds: ['B04A-DECISION', 'B04B-DECISION'], options: [
     opt('B4A-1', '保持这几天的强度，继续赶', '休息更少，疲劳会继续加重', 'Day 13 19:00', 'X01'),
     opt('B4A-2', '把节奏降回可持续状态', '增加休息，就要少走一些路', 'Day 14 21:00', 'X01'),
     opt('B4B-1', '现在开始最后冲刺', '短时间内加紧赶路，体力消耗更大', 'Day 14 01:00', 'X01'),
@@ -167,7 +167,7 @@ export const FINAL_NODES: FinalNode[] = [
   ] }),
 
   node({ id: 'C01', route: 'C', title: '等待不是空白', kind: '剧情', time: 'Day 0—2', location: '营地', facts: '两天过去；天气逐渐变化；队伍观察；左手休息但未痊愈；剩12天。', knowledge: '等待成本', frameIds: ['C01A', 'C01B'] }),
-  node({ id: 'C02', route: 'C', title: '第一份信息只解决了一半', kind: '决策', time: 'Day 2 · 09:00', location: '营地', facts: '已确认高地会受暴风影响；山口是否可通仍不确定。再等约一天可核实山口是否已封死及风势后续走向，但仍不能保证一路顺利。', question: '第三天的信息值不值得再买？', knowledge: '信息价值、停止等待', frameIds: ['C02', 'C2FB-2'], options: [
+  node({ id: 'C02', route: 'C', title: '第一份信息只解决了一半', kind: '决策', time: 'Day 2 · 09:00', location: '营地', facts: '已确认高地会受暴风影响；山口是否可通仍不确定。再等一天能进一步判断，但仍不能保证一路顺利。', question: '再等一天，还是现在改走山谷？', knowledge: '信息价值、停止等待', frameIds: ['C02'], options: [
     opt('C2-1', '再等一天，拿到更完整的山路判断', '再花1天；只剩约11天', 'Day 3进入第二次信息决策', 'C03'),
     opt('C2-2', '现在转山谷，不再继续等', '已经等了两天，还要走更长的谷地路线', '约Day 18返回，原窗口基本失去', 'C04V'),
   ] }),
@@ -177,9 +177,9 @@ export const FINAL_NODES: FinalNode[] = [
     opt('C3-3', '放弃这次购买机会，等安全时再回去', '主动放弃原窗口', '进入安全返程结算', 'X02'),
   ] }),
   node({ id: 'C04M', route: 'C', title: '进入共享山路：带着信息行动', kind: '过渡', time: 'Day 3起', location: '低处山路／山脊远景', facts: '已用3天换来判断；Day 3—4先留在低处，不直接进入高地最差天气；山口是否顺利仍有不确定性。', knowledge: '信息转化为行动', frameIds: ['C04M', 'SH-MTN-01'] }),
-  node({ id: 'C04V', route: 'C', title: '进入较晚状态谷地', kind: '过渡', time: 'Day 2／Day 3／Day 7以后', location: '谷地行进空间', facts: '这是带着等待或现场更新历史的谷地，不是B线Day 0开局；期限已显著恶化。', knowledge: '信息改变行动；未来选择空间缩小', frameIds: ['C04V-A', 'C04V-B', 'SH-VAL-WEB'] }),
+  node({ id: 'C04V', route: 'C', title: '谷地场景：按进入时点分成三种处境', kind: '过渡', time: 'Day 2／Day 3／Day 7以后', location: '谷地行进空间', facts: '当前游戏按进入时点分别展示：Day 2停止等待后转谷地、Day 3收到更多天气消息后转谷地、Day 7根据现场更新后下撤。既有等待与行程时间不会重置。', knowledge: '共享环境；状态和已花时间继续继承', frameIds: ['C04V-A', 'C04V-B', 'SH-VAL-WEB'] }),
   node({ id: 'C05', route: 'C', title: '信息第一次证明自己有用', kind: '剧情', time: 'Day 3—7', location: '共享山路前中段', facts: 'Day 3—4在低处推进，Day 5—6随天气改善进入更高路线；行动总体符合Day 3判断，但仍不等于一路安全。', knowledge: '信息不是白买', frameIds: ['C05', 'SH-MTN-01'] }),
-  node({ id: 'C06', route: 'C', title: '现实继续更新', kind: '决策', time: '约Day 7', location: '山路现场', facts: '风在减弱，但比先前预计的慢。前方仍有通行的可能；按原计划还来得及，再停下来观察就会少一些赶路时间。', question: '旧判断还应该占多大权重？', knowledge: '旧信息权重、更新判断', frameIds: ['C06', 'C6FB-2', 'C04V-B'], options: [
+  node({ id: 'C06', route: 'C', title: '现实继续更新', kind: '决策', time: '约Day 7', location: '山路现场', facts: '风势比预想退得慢；按原计划仍有机会，继续观察会减少赶路余量。', question: '风比预想退得慢，还按原计划走吗？', knowledge: '旧信息权重、更新判断', frameIds: ['C06'], options: [
     opt('C6-1', '继续按原计划推进', '前方风势尚未完全缓和', 'Day 11 21:00', 'X01'),
     opt('C6-2', '放慢脚步，再观察前方天气', '多花时间观察，会减少赶路的余地', 'Day 13 09:00', 'X01'),
     opt('C6-3', '不再往高处走，下撤改走山谷', '下撤并改路会额外耗时', '原窗口已失去', 'C04V'),
@@ -187,20 +187,20 @@ export const FINAL_NODES: FinalNode[] = [
 
   node({ id: 'D01', route: 'D', title: '安全选择真的买到了东西', kind: '剧情', time: 'Day 0—5', location: '营地', facts: '玩家未进入山地；暴风真实发生；左手、体力和人员状态得到恢复。', knowledge: '安全与价值排序', frameIds: ['D01A', 'D01B'] }),
   node({ id: 'D02', route: 'D', title: '世界后来变了', kind: '剧情', time: 'Day 5 · 下午', location: '营地', facts: '风比前几天小多了，出现短暂改善窗口；这不代表比Day 0更安全，也不是绝对安全；只剩约8天半。', knowledge: '环境变化、假设更新', frameIds: ['D02-D03'] }),
-  node({ id: 'D03', route: 'D', title: '还坚持原计划吗', kind: '决策', time: 'Day 5 · 下午', location: '营地', facts: '前期安全收益已兑现；天气依据变化；时间已经花掉。', question: '继续安全等待，还是利用新窗口重新走山路？', knowledge: '战略一致性、反转证据', frameIds: ['D02-D03', 'D3FB-1', 'D3FB-2'], options: [
+  node({ id: 'D03', route: 'D', title: '还坚持原计划吗', kind: '决策', time: 'Day 5 · 下午', location: '营地', facts: '已等了五天，手和体力有所恢复。风势减弱，出现短暂窗口，但山路仍有风险；离截止只剩八天多。', question: '趁现在出发，还是继续等？', knowledge: '战略一致性、反转证据', frameIds: ['D02-D03'], options: [
     opt('D3-1', '继续留在营地，等天气稳定再走', '剩余行动时间会继续流失', '约Day 40安全返回', 'D04A'),
     opt('D3-2', '利用这次天气窗口，重新走山路', '已花约5天；后期容错极低', 'Day 5—6进入晚状态山路', 'D04B'),
   ] }),
   node({ id: 'D04A', route: 'D', title: '把安全等待真正兑现', kind: '剧情', time: 'Day 5以后→约Day 40', location: '长期等待／安全返程', facts: '人员与身体持续恢复；原购买窗口明确过去；最终安全返回。', knowledge: '退出／安全不是失败', frameIds: ['D04A2', 'SH-SAFE-01', 'SH-SAFE-02'] }),
   node({ id: 'D04B', route: 'D', title: '反转：进入共享山路', kind: '过渡', time: 'Day 5—6', location: '低处山路／暴风峰值后', facts: '身体比Day 0稳；天气比峰值好；但只剩极窄时间窗口。', knowledge: '反转成本、同动作不同状态', frameIds: ['D04B', 'SH-MTN-01'] }),
-  node({ id: 'D05', route: 'D', title: '反转后的再判断', kind: '决策', time: '约Day 8—9', location: '山路后段', facts: '山路总体顺利；伤手、疲劳、局部天气造成普通小减速；因为前面等了5天，这点减速变得很贵。', question: '把反转执行到底，还是重新把人员安全放第一？', knowledge: '反转理由是否仍成立', frameIds: ['D05', 'D5FB-1', 'D5FB-2'], options: [
+  node({ id: 'D05', route: 'D', title: '反转后的再判断', kind: '决策', time: '约Day 8—9', location: '山路后段', facts: '山路总体顺利；伤手、疲劳和局部天气造成普通减速。此前等待五天后，这点延误会压缩本已很少的余量。', question: '时间所剩不多，还要保持这个速度吗？', knowledge: '反转理由是否仍成立', frameIds: ['D05'], options: [
     opt('D5-1', '保持较快节奏，继续争取窗口', '如果再有延误，可能赶不上期限', 'Day 14 03:00', 'X01'),
     opt('D5-2', '放慢脚步，按身体能承受的速度走', '降低强度会消耗最后余量', 'Day 14 18:00', 'X01'),
   ] }),
 
-  node({ id: 'X01', route: 'SHARED', title: '期限与确认结算', kind: '结算', time: '按路径动态', location: '镇／相关办事地点', facts: '显示本人完成最后确认的实际时间、期限是否仍开放、人员状态以及哪次选择造成关键代价；抵达镜头本身不等于完成确认。', knowledge: '客观结局；保住／失去什么', frameIds: ['SH-TOWN-DAY', 'SH-TOWN-NIGHT'] }),
-  node({ id: 'X02', route: 'SHARED', title: '安全返回／主动放弃结算', kind: '结算', time: '按路径动态', location: '营地→安全返程／尾声', facts: '明确原窗口被主动放弃或已过去，同时人员与能力得到保护。', knowledge: '退出保护了什么；放弃了什么', frameIds: ['SH-SAFE-01', 'SH-SAFE-02'] }),
-  node({ id: 'R01', route: 'SHARED', title: '战略经历复盘', kind: '报告', time: '游戏结束', location: 'Web结果页', facts: '回放初始目标、关键假设、现实变化、再判断与最终取舍；不把一局行为定性为永久人格。', knowledge: '完整学生报告', frameIds: ['SH-TOWN-DAY', 'SH-SAFE-02'] }),
+  node({ id: 'X01', route: 'SHARED', title: '登记所办理与期限结算', kind: '结算', time: '按路径动态', location: '小镇登记所 · 门廊与柜台', facts: '按期路径进入登记所，由队长本人完成最后确认并取得回执；超期路径也进入仍开放的大厅，但原窗口已过，文件不被受理，队伍保留资料准备下一轮拍卖。白天与夜间各有对应视频，抵达本身不等于完成确认。', knowledge: '客观结局；到达与完成是两种状态', frameIds: ['SH-TOWN-DAY', 'SH-TOWN-NIGHT'] }),
+  node({ id: 'X02', route: 'SHARED', title: '安全返回／主动放弃结算', kind: '结算', time: '按路径动态', location: '小镇门廊 · 安全返程尾声', facts: '主动放弃路径在天气稳定后安全返回，队伍在门廊休息；不进入登记所办理，原窗口失去，人员、资料与后续行动能力得到保护。', knowledge: '退出保护了什么；放弃了什么', frameIds: ['SH-SAFE-01', 'SH-SAFE-02'] }),
+  node({ id: 'R01', route: 'SHARED', title: '战略经历复盘', kind: '报告', time: '结局视频之后', location: 'Web结果页', facts: '先看到本人确认、重新拍卖或安全返程的客观结果，再回放初始目标、关键假设、现实变化、再判断与最终取舍；不把一局行为定性为永久人格。', knowledge: '完整学生报告', frameIds: ['SH-TOWN-DAY', 'SH-SAFE-02'] }),
 ]
 
 const branch = (value: FinalBranch) => value
@@ -209,7 +209,7 @@ export const FINAL_BRANCHES: FinalBranch[] = [
   branch({ id: 'A-02', route: 'A', name: 'A翻山→继续→主动降速', sequence: 'P06-A > A2-1 > A4-2', completion: 'Day 10 18:00', deadline: '按期', people: '伤手受限，但执行更可持续', tradeoff: '保目标但调整执行', review: '战略一致性是否允许降速？', frameIds: ['A01', 'A02A', 'A02B', 'A02C', 'A03A1', 'A03A2', 'A04C', 'A4FB-2', 'SH-TOWN-NIGHT'] }),
   branch({ id: 'A-03', route: 'A', name: 'A翻山→暂避→保持节奏', sequence: 'P06-A > A2-2 > A4-1', completion: 'Day 11 12:00', deadline: '按期', people: '身体更稳、时间缓冲明显变窄', tradeoff: '安全换时间', review: '保留缓冲是不是战略资源？', frameIds: ['A01', 'A02A', 'A02B', 'A02C', 'A2FB-S1', 'A03B', 'A04C', 'SH-TOWN-DAY'] }),
   branch({ id: 'A-04', route: 'A', name: 'A翻山→暂避→再降速', sequence: 'P06-A > A2-2 > A4-2', completion: 'Day 12 12:00', deadline: '按期', people: '身体最好但余量最小', tradeoff: '两次降低风险都会花时间', review: '降低一种风险会不会放大另一种？', frameIds: ['A01', 'A02A', 'A02B', 'A02C', 'A2FB-S1', 'A03B', 'A04C', 'A4FB-2', 'SH-TOWN-DAY'] }),
-  branch({ id: 'A-05', route: 'A', name: 'A翻山→中途撤回转谷地', sequence: 'P06-A > A2-3 或 A4-3', completion: '约Day 21—23', deadline: '超期', people: '人员风险下降，但机会窗口失去', tradeoff: '止损 vs 已投入成本', review: '已经投入很多，是继续的理由吗？', frameIds: ['A01', 'A02A', 'A02B', 'A02C'], frameVariants: [
+  branch({ id: 'A-05', route: 'A', name: 'A翻山→中途撤回转谷地', sequence: 'P06-A > A2-3；或 P06-A > A2-1/A2-2 > A4-3', completion: '安全返回，原窗口已失去', deadline: '超期', people: '队伍最终安全返回；投入时间无法收回，原购买窗口已失去', tradeoff: '撤回时点不同，已投入的时间无法收回；较晚退出需要额外下撤与改路', review: '已经投入很多，是继续的理由吗？', frameIds: ['A01', 'A02A', 'A02B', 'A02C'], frameVariants: [
     { label: 'Day 3直接撤回', frameIds: ['A03R-D3', 'SH-VAL-WEB', 'SH-TOWN-DAY'] },
     { label: '到A04后晚撤回（中间可来自继续或暂避，省略互斥前序）', frameIds: ['A04C', 'A03R-D5', 'SH-VAL-WEB', 'SH-TOWN-DAY'] },
   ] }),

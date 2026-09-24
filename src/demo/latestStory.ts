@@ -44,6 +44,34 @@ export const LATEST_RESULT_VIDEOS = {
   safe: latestVideo('ending-safe.mp4'),
 } as const
 
+export const LATEST_ENDING_SCENES = [
+  {
+    id: 'dayConfirmed', title: '白天抵达 · 本人完成确认', condition: '期限内抵达 · 白天',
+    video: LATEST_RESULT_VIDEOS.dayConfirmed, poster: '/images/story-map-endings/ending-day-confirmed.jpg',
+    beats: ['从门廊进入登记所大厅，队长与三名队员始终站在柜台公众一侧。', '沈岚递交文件，阿杰放下矿样箱；队长本人完成最后确认。', '文件受理并交回回执。按期完成目标，沿途付出的时间与人员代价仍进入复盘。'],
+  },
+  {
+    id: 'nightConfirmed', title: '夜间抵达 · 本人完成确认', condition: '期限内抵达 · 夜间',
+    video: LATEST_RESULT_VIDEOS.nightConfirmed, poster: '/images/story-map-endings/ending-night-confirmed.jpg',
+    beats: ['按本案预约办理设定，夜间抵达仍可进入同一登记所。', '队长与队员留在柜台公众一侧；队长本人完成最后确认。', '文件受理、取得回执；结果页显示本局的具体完成时间。'],
+  },
+  {
+    id: 'dayAuction', title: '白天抵达 · 原窗口已过', condition: '超期抵达 · 白天',
+    video: LATEST_RESULT_VIDEOS.dayAuction, poster: '/images/story-map-endings/ending-day-auction.jpg',
+    beats: ['队伍进入仍在开放的登记所大厅，但原购买期限已过。', '沈岚说：“期限过了，矿权要重新拍卖。”文件与矿样没有被受理。', '老周说：“资料带回去，准备下一轮。”队伍保留资料离开柜台。'],
+  },
+  {
+    id: 'nightAuction', title: '夜间抵达 · 原窗口已过', condition: '超期抵达 · 夜间',
+    video: LATEST_RESULT_VIDEOS.nightAuction, poster: '/images/story-map-endings/ending-night-auction.jpg',
+    beats: ['夜间抵达同一登记所；超期不是建筑关闭，而是原期权窗口已经失去。', '沈岚说：“期限过了，矿权要重新拍卖。”文件与矿样没有被受理。', '老周说：“资料带回去，准备下一轮。”队伍带着资料准备后续竞价。'],
+  },
+  {
+    id: 'safe', title: '主动放弃 · 队伍安全返回', condition: '不再争取原期限',
+    video: LATEST_RESULT_VIDEOS.safe, poster: '/images/story-map-endings/ending-safe.jpg',
+    beats: ['天气稳定后，队伍到达小镇门廊，三名队员卸下背包、坐下休息。', '安全返程不进入登记所办理，也不出现最后确认或受理回执。', '原购买窗口被主动放弃；人员、资料和后续行动能力得到保留。'],
+  },
+] as const
+
 export type LatestArrivalOutcome = {
   image: string
   eyebrow: string
@@ -216,6 +244,30 @@ export function visibleOptions(node: FinalNode, decisions: LatestDecision[]) {
   return node.options.filter((option) => accelerated ? option.id.startsWith('B4A') : option.id.startsWith('B4B'))
 }
 
+export function latestPlayablePaths() {
+  const paths: LatestDecision[][] = []
+  const visit = (nodeId: string, decisions: LatestDecision[], ancestry: Set<string>) => {
+    if (nodeId === 'RESULT') {
+      paths.push(decisions)
+      return
+    }
+    if (ancestry.has(nodeId)) return
+    const node = latestNode(nodeId)
+    if (!node) return
+    const nextAncestry = new Set(ancestry).add(nodeId)
+    if ('options' in node && node.options?.length) {
+      for (const option of visibleOptions(node, decisions)) {
+        visit(optionTarget(option), [...decisions, { nodeId, optionId: option.id, label: option.label }], nextAncestry)
+      }
+      return
+    }
+    const next = nextLatestNode(nodeId)
+    if (next) visit(next, decisions, nextAncestry)
+  }
+  visit('P06', [], new Set())
+  return paths
+}
+
 function chose(decisions: LatestDecision[], optionId: string) {
   return decisions.some((decision) => decision.optionId === optionId)
 }
@@ -293,8 +345,12 @@ export function arrivalOutcomeForDecisions(decisions: LatestDecision[]): LatestA
 export function resultVideoForDecisions(decisions: LatestDecision[]) {
   const branch = branchForDecisions(decisions)
   if (!branch) return undefined
-  if (branch.deadline === '主动放弃') return LATEST_RESULT_VIDEOS.safe
+  return LATEST_RESULT_VIDEOS[endingSceneIdForBranch(branch)]
+}
+
+export function endingSceneIdForBranch(branch: FinalBranch): keyof typeof LATEST_RESULT_VIDEOS {
+  if (branch.deadline === '主动放弃') return 'safe'
   const night = branch.frameIds.includes('SH-TOWN-NIGHT')
-  if (branch.deadline === '按期') return night ? LATEST_RESULT_VIDEOS.nightConfirmed : LATEST_RESULT_VIDEOS.dayConfirmed
-  return night ? LATEST_RESULT_VIDEOS.nightAuction : LATEST_RESULT_VIDEOS.dayAuction
+  if (branch.deadline === '按期') return night ? 'nightConfirmed' : 'dayConfirmed'
+  return night ? 'nightAuction' : 'dayAuction'
 }
