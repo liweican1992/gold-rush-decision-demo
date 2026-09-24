@@ -314,7 +314,7 @@ function playbackPrefetchCandidates(nodeId: string, decisions: LatestDecision[])
   return [...new Set(candidates)]
 }
 
-function ProductionVideo({
+export function ProductionVideo({
   clips,
   title,
   onComplete,
@@ -462,9 +462,7 @@ function ProductionVideo({
           onSeeked={(event) => setSubtitle(activeLatestSubtitle(subtitleTrack?.cues ?? [], event.currentTarget.currentTime))}
           onEnded={finishClip}
           onError={() => setFailed(true)}
-        >
-          {subtitleTrack && <track kind="captions" src={subtitleTrack.src} srcLang="zh-CN" label="中文字幕" />}
-        </video>
+        />
       )}
       {!failed && !mediaReady && (
         <div className="latest-media-loader" role="status" aria-live="polite">

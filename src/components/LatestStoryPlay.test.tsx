@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { dayFromTime, LatestStoryPlay } from './LatestStoryPlay'
+import { dayFromTime, LatestStoryPlay, ProductionVideo } from './LatestStoryPlay'
 import { advanceSession, freshSession } from '../demo/storySession'
 
 describe('latest story day counter', () => {
@@ -33,5 +33,15 @@ describe('opening briefing', () => {
     expect(html).toContain('未下载完成时点击开始会先提示')
     expect(html.indexOf('下载完整视频资源包')).toBeLessThan(html.indexOf('开场剧情视频'))
     expect(html).toContain('33')
+  })
+})
+
+describe('video captions', () => {
+  it('does not give Safari a native caption track when the page renders captions itself', () => {
+    const html = renderToStaticMarkup(
+      <ProductionVideo clips={['/videos/latest/public-intro.mp4']} title="开场" onComplete={() => {}} />,
+    )
+    expect(html).toContain('<video')
+    expect(html).not.toContain('<track')
   })
 })
