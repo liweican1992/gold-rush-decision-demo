@@ -8,6 +8,8 @@ describe('app pathname surface', () => {
     expect(appSurfaceForPath('/play/story')).toBe('text-play')
     expect(appSurfaceForPath('/docs/story-map')).toBe('story-map')
     expect(appSurfaceForPath('/docs/story-map/')).toBe('story-map')
+    expect(appSurfaceForPath('/docs/story-outline')).toBe('story-outline')
+    expect(appSurfaceForPath('/docs/story-outline/')).toBe('story-outline')
     expect(appSurfaceForPath('/teacher')).toBe('teacher')
     expect(appSurfaceForPath('/teacher/')).toBe('teacher')
     expect(appSurfaceForPath('/teacher/unknown')).toBe('game')

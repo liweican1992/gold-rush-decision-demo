@@ -14,6 +14,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/docs/story-outline/:path*",
+      "destination": "/index.html"
+    },
+    {
       "source": "/play/story/:path*",
       "destination": "/index.html"
     }

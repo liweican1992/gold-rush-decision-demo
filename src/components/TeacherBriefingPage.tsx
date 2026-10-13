@@ -60,7 +60,8 @@ export function TeacherBriefingPage() {
         <nav aria-label="页面导航">
           <a href="#report-example">报告样例</a>
           <a href="#teaching-map">路径与概念</a>
-          <a href="/docs/story-map">剧情与关键帧总览</a>
+          <a href="/docs/story-outline">故事大纲</a>
+          <a href="/docs/story-map">完整制作资料</a>
           <a href="#classroom">课堂使用</a>
           <a className="teacher-header-play" href="/">打开游戏 <span aria-hidden="true">↗</span></a>
         </nav>
@@ -77,7 +78,7 @@ export function TeacherBriefingPage() {
             <p><b>老师怎么用</b><span>先独立体验，再用结局报告讨论当时的依据。</span></p>
           </div>
           <div className="teacher-hero-actions">
-            <a className="teacher-primary-link" href="/docs/story-map">查看完整剧情与关键帧 <span aria-hidden="true">↗</span></a>
+            <a className="teacher-primary-link" href="/docs/story-outline">查看故事大纲 <span aria-hidden="true">↗</span></a>
             <a className="teacher-text-link" href="/">试玩一条路线 <span aria-hidden="true">↗</span></a>
             <a className="teacher-text-link" href="#report-example">看结局报告样例 <span aria-hidden="true">↓</span></a>
           </div>
