@@ -105,8 +105,33 @@ export function TeacherStoryOutlinePage() {
       <section className="final-map-section final-design-rationale" id="why-this-design">
         <div className="final-section-title">
           <span>02 / WHY THIS DESIGN</span>
-          <h2>为什么不把它做成一道选择题？</h2>
-          <p>因为战略管理不只是出发前选一个方案。真正的难点，是在行动产生代价、情况继续变化之后，判断原方案的依据是否还成立。</p>
+          <h2>为什么它不是“选对得奖、选错受罚”的分支树？</h2>
+          <p>因为四条路线都各有合理性。游戏不会因为学生选了某条路就临时制造坏天气或事故，而是让同一套世界规则持续运行，让选择改变学生与这些事实的关系。</p>
+        </div>
+        <article className="final-world-rule">
+          <span>原始大纲的首要世界原则</span>
+          <h3>世界不因为玩家选了什么而改变事实；<br />玩家的选择改变的是自己与事实的关系。</h3>
+          <p>暴风固定在同一时间到来，十四天期限也不会迁就任何路线。不同的是：暴风到来时，队伍在哪里、已经花了多少时间、手伤和体力怎样、掌握了哪些信息，以及还剩多少调整空间。</p>
+          <div className="final-world-weather" aria-label="同一场暴风在四条路线中的不同处境">
+            <div><b>A · 已在山路</b><span>直接承受风雪、伤手和撤回成本。</span></div>
+            <div><b>B · 位于谷地</b><span>高地风险较低，但期限继续收紧。</span></div>
+            <div><b>C · 留在营地</b><span>得到天气信息，同时支付等待时间。</span></div>
+            <div><b>D · 安全等待</b><span>避开暴风，但后来要面对是否反转。</span></div>
+          </div>
+        </article>
+        <article className="final-design-engine">
+          <div><span>不是奖惩机制，而是因果机制</span><h3>一次选择会先被执行，再通过状态变化产生延迟回响。</h3><p>如果删掉前面的选择，后面的局面还能原样发生，那就只是编剧强加的新难题；只有由前序选择和统一世界共同造成的后果，才进入正式剧情。</p></div>
+          <ol aria-label="互动剧情的因果循环">
+            {['观察', '判断', '承诺', '执行', '即时反馈', '延迟回响', '再判断'].map((step, index) => <li key={step}><span>{String(index + 1).padStart(2, '0')}</span><b>{step}</b></li>)}
+          </ol>
+        </article>
+        <div className="final-design-grid">
+          <article><span>巧思一</span><h3>先兑现选择的价值</h3><p>A 线真的更快，B 线真的更稳，C 线真的获得更多信息，D 线真的保护了人员状态。</p><strong>不把某条路线预设成错误答案</strong></article>
+          <article><span>巧思二</span><h3>代价来自共同约束</h3><p>距离、暴风、伤手和期限始终存在。后果来自这些事实与当前位置的组合，不靠随机事故惩罚玩家。</p><strong>结果可解释，也能被复盘</strong></article>
+          <article><span>巧思三</span><h3>场景汇合，历史不清零</h3><p>两条路径可以走到同一地点，但此前花掉的时间、身体状态、承诺和已关闭的退路仍被保留。</p><strong>同一地点不等于同一处境</strong></article>
+          <article><span>巧思四</span><h3>同一动作会因时机改变</h3><p>Day 6 提速和 Day 9 提速不是同一笔成本；Day 0 翻山和 Day 5 再翻山也不是同一个战略。</p><strong>让学生体验调整时机</strong></article>
+          <article><span>巧思五</span><h3>信息有价值，却不是答案</h3><p>等待会提高判断质量，也同步消耗行动窗口；知道更多以后，学生仍要在不确定中行动。</p><strong>避免“等到正确答案出现”</strong></article>
+          <article><span>巧思六</span><h3>按当时依据复盘</h3><p>报告回到每次选择时学生已经知道的事实，不因结局好坏倒推选择对错，也不给学生贴人格标签。</p><strong>评价决策质量，而非运气</strong></article>
         </div>
         <article className="final-core-concept">
           <span>本案例最终呈现的底层知识点</span>
@@ -114,12 +139,6 @@ export function TeacherStoryOutlinePage() {
           <p>行动必须持续匹配<strong>目标与约束</strong>、<strong>外部环境</strong>和<strong>自身资源能力</strong>。天气、期限、进度或人员能力改变后，学生需要重新检验原判断：继续、改路、降速或退出，哪一个更能服务当前目标？</p>
           <div aria-label="底层逻辑">目标与约束 <b>×</b> 外部环境 <b>×</b> 资源与能力 <b>→</b> 行动选择 <b>→</b> 现实反馈 <b>→</b> 重新判断</div>
         </article>
-        <div className="final-design-grid">
-          <article><span>设计一</span><h3>信息分批出现</h3><p>学生不能事后拥有全部信息，只能依据当时所知作决定。</p><strong>呈现：不确定性与信息价值</strong></article>
-          <article><span>设计二</span><h3>每种方案都有代价</h3><p>山路、山谷、等待和退出分别保护不同目标，没有脱离约束的最佳路线。</p><strong>呈现：战略取舍与目标排序</strong></article>
-          <article><span>设计三</span><h3>选择后仍要再决策</h3><p>天气、进度和伤手持续变化，原先合理的方案可能不再适用。</p><strong>呈现：战略一致性与动态调整</strong></article>
-          <article><span>设计四</span><h3>报告引用本局证据</h3><p>系统用学生自己的选择和后果解释概念，避免只凭结局倒推对错。</p><strong>呈现：过程复盘与决策质量</strong></article>
-        </div>
       </section>
 
       <section className="final-map-section" id="four-routes">
