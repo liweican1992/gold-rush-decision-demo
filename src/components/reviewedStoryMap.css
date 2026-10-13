@@ -73,16 +73,21 @@
 .final-route-outline.route-C { border-top-color: #8b7131; }
 .final-route-outline.route-D { border-top-color: #53644f; }
 .final-route-outline > img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; background: #d5d8d2; }
-.final-route-outline > header, .final-route-outline > p, .final-route-outline > dl { margin-inline: 20px; }
+.final-route-outline > header, .final-route-outline > p, .final-route-knowledge, .final-route-outcome { margin-inline: 20px; }
 .final-route-outline > header { position: relative; margin-top: 18px; padding-right: 170px; }
 .final-route-outline > header span { color: var(--ochre); font-size: 12px; font-weight: 850; letter-spacing: .1em; }
 .final-route-outline > header h3 { margin: 3px 0 0; font-size: 25px; }
 .final-route-outline > header em { position: absolute; top: 4px; right: 0; color: var(--pine); font-size: 13px; font-style: normal; font-weight: 750; }
 .final-route-outline > p { color: var(--muted); }
-.final-route-outline dl { margin-bottom: 20px; border-top: 1px solid var(--line); }
-.final-route-outline dl div { display: grid; grid-template-columns: 88px 1fr; gap: 10px; padding: 11px 0; border-bottom: 1px solid #dddcd3; }
-.final-route-outline dt { color: var(--pine); font-size: 12px; font-weight: 800; }
-.final-route-outline dd { margin: 0; }
+.final-route-knowledge { margin-top: 18px; border-top: 1px solid var(--line); }
+.final-route-knowledge > h4 { margin: 14px 0 2px; color: var(--pine); font-size: 12px; letter-spacing: .08em; }
+.final-route-knowledge article { padding: 12px 0; border-bottom: 1px solid #dddcd3; }
+.final-route-knowledge strong { display: block; margin-bottom: 4px; font-size: 15px; }
+.final-route-knowledge p { margin: 0 0 7px; color: var(--muted); font-size: 13px; }
+.final-route-knowledge small { display: block; color: #526057; line-height: 1.5; }
+.final-route-knowledge small b { color: var(--ochre); }
+.final-route-outcome { display: grid; grid-template-columns: 88px 1fr; gap: 10px; margin-top: 12px; margin-bottom: 20px; padding: 13px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.final-route-outcome b { color: var(--pine); font-size: 12px; }
 
 .final-outcome-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .final-outcome-grid article, .final-teaching-grid article { min-width: 0; padding: 23px; border: 1px solid var(--line); background: rgba(255,255,255,.58); }

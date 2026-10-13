@@ -15,6 +15,8 @@ describe('教师故事大纲', () => {
     for (const route of ['立即翻山', '走山谷', '先等天气信息', '优先安全']) expect(html).toContain(route)
     for (const outcome of ['按期完成确认', '超期抵达，进入重新拍卖', '主动放弃，安全返回']) expect(html).toContain(outcome)
     for (const concept of ['目标与约束', '信息价值', '战略一致性与动态调整', '沉没成本与退出边界']) expect(html).toContain(concept)
+    for (const routeConcept of ['环境、资源与能力匹配', '里程碑与调整时机', '等待成本与机会成本', '目标层级与价值排序']) expect(html).toContain(routeConcept)
+    expect((html.match(/放到企业中：/g) ?? []).length).toBe(12)
     expect(html).toContain('为什么不把它做成一道选择题？')
     expect(html).toContain('本案例最终呈现的底层知识点')
     expect(html).toContain('战略适配与动态调整')

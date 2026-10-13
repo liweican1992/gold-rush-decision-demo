@@ -5,25 +5,41 @@ const routes = [
   {
     id: 'A', image: '/images/decision-stills/A02.webp', title: '立即翻山', stance: '用风险换时间',
     story: '队伍抢先进入山路，却在高地遇到暴风和伤手失力。学生需要判断：继续推进、暂避，还是及时撤回；到最后回头点还要再次决定是否坚持。',
-    concepts: '风险收益权衡 · 承诺升级 · 沉没成本',
+    knowledge: [
+      { name: '环境、资源与能力匹配', inGame: '山路原本更快，但暴风和伤手让“快路线”未必仍然可行。', enterprise: '机会再好，也要与组织当下的资源和执行能力匹配。' },
+      { name: '风险收益与可逆性', inGame: '继续前进能争取时间，却会逐步失去安全折返和改路的空间。', enterprise: '比较收益时，还要看失败代价以及决定能否撤回。' },
+      { name: '沉没成本与承诺升级', inGame: '走得越远越容易因为“不甘心”继续，但已走的路不能证明下一步仍值得。', enterprise: '追加投入应依据未来收益和风险，而不是过去已经投入多少。' },
+    ],
     outcomes: '可能按期完成；也可能因撤回改路失去原窗口。',
   },
   {
     id: 'B', image: '/images/decision-stills/B02.webp', title: '走山谷', stance: '用可控性换速度',
     story: '谷地更稳，却天然慢于期限。学生会在第六天和第九天两次核算进度，决定是否提速，以及在疲劳出现后是否继续维持强度。',
-    concepts: '战略与目标匹配 · 调整时机 · 执行代价',
+    knowledge: [
+      { name: '战略与目标匹配', inGame: '山谷更安全、更稳定，却可能无法满足十四天的硬期限。', enterprise: '方案本身稳健，不代表它符合本次任务的关键目标。' },
+      { name: '里程碑与调整时机', inGame: '第六天和第九天的进度差距相同，但越晚纠偏，可用余量越少。', enterprise: '设置中间检查点，是为了在代价仍可承受时调整，而不是只记录进度。' },
+      { name: '执行强度与可持续性', inGame: '提速能追回时间，也会压缩休息并积累疲劳。', enterprise: '战略落地要检验组织能否持续承担执行强度。' },
+    ],
     outcomes: '提早调整仍可能按期；调整太晚或保持原节奏会超期。',
   },
   {
     id: 'C', image: '/images/decision-stills/C02.webp', title: '先等天气信息', stance: '用时间购买信息',
     story: '队伍先等两天确认暴风，再决定是否多等一天了解山口。即使获得判断，进入现场后仍会出现偏差，学生仍需更新计划。',
-    concepts: '信息价值 · 等待成本 · 停止规则 · 动态调整',
+    knowledge: [
+      { name: '信息价值', inGame: '等待能提高对暴风和山口的判断质量，却不能保证道路一定可走。', enterprise: '信息的价值在于改善决策，而不是消除所有不确定性。' },
+      { name: '等待成本与机会成本', inGame: '每多等一天，路线判断更充分，但十四天窗口也同步缩短。', enterprise: '调研和论证也有成本，晚行动可能失去市场窗口。' },
+      { name: '停止规则与情景规划', inGame: '学生需要决定等到什么信息、最多等多久，以及信息不利时转向哪条路。', enterprise: '决策前先设等待上限和备选方案，可避免无休止地收集信息。' },
+    ],
     outcomes: '信息用得及时可以按期；继续等待或改走谷地可能超期，也可主动退出。',
   },
   {
     id: 'D', image: '/images/decision-stills/D03.webp', title: '优先安全', stance: '先保人员与行动能力',
     story: '队伍留营等待，人员状态恢复，但期限持续流失。第五天天气出现短暂窗口，学生要判断是否推翻原安排；若重新上山，还要承担时间压力。',
-    concepts: '价值排序 · 战略反转 · 退出边界',
+    knowledge: [
+      { name: '目标层级与价值排序', inGame: '购买矿权、人员安全和保留后续行动能力无法同时最大化。', enterprise: '重大决策前要说清楚首要目标和不可突破的底线。' },
+      { name: '战略一致性与动态调整', inGame: '天气改善后重新出发，改变的是行动手段，未必改变最终目标。', enterprise: '一致性是让行动服务目标，不是环境变化后仍机械重复原方案。' },
+      { name: '退出边界与能力保全', inGame: '主动返回会失去本次窗口，但能保住人员、资料和再次行动的能力。', enterprise: '退出要同时评估当期损失与为未来保留下来的选择权。' },
+    ],
     outcomes: '可以安全返回；也可能利用窗口按期完成，或在降速后超期。',
   },
 ] as const
@@ -118,7 +134,11 @@ export function TeacherStoryOutlinePage() {
               <img src={route.image} alt={`${route.title}路线的游戏场景`} />
               <header><span>路线 {route.id}</span><h3>{route.title}</h3><em>{route.stance}</em></header>
               <p>{route.story}</p>
-              <dl><div><dt>对应知识</dt><dd>{route.concepts}</dd></div><div><dt>可能结果</dt><dd>{route.outcomes}</dd></div></dl>
+              <section className="final-route-knowledge" aria-label={`${route.title}对应知识`}>
+                <h4>对应知识</h4>
+                {route.knowledge.map((item) => <article key={item.name}><strong>{item.name}</strong><p>{item.inGame}</p><small><b>放到企业中：</b>{item.enterprise}</small></article>)}
+              </section>
+              <div className="final-route-outcome"><b>可能结果</b><span>{route.outcomes}</span></div>
             </article>
           ))}
         </div>
